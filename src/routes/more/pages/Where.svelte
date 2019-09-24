@@ -1,7 +1,4 @@
-<section class="gg">
-        <div class="divider-top colorChange"></div>
-        <div class="divider-top black"></div>
-        
+
         <div data-aos="fade-up" data-aos-offset="-300" class="cc">
             <div class="mini">
                 <div class="icon colorChange"></div>
@@ -12,6 +9,4 @@
                 enables transformational opportunities for your business.</p>
 
         </div>
-        <div class="divider-bottom colorChange"></div>
-        <div class="divider-bottom black"></div>
-    </section>
+        

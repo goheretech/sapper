@@ -1,11 +1,33 @@
 <script>
     let page = 0;
+    let visible = false;
+    import {onMount} from 'svelte';
+
+    onMount(()=>{
+        visible = true;
+        switch(window.location.hash){
+            case '#who':
+                page = 0;
+                break;
+            case '#what':
+                page = 1;
+                break;
+            case '#where':
+                page = 2;
+                break;
+            case '#work':
+                page = 3;
+                break;
+        }
+    });
+    
     import { fade } from 'svelte/transition';
+    import { quintOut } from 'svelte/easing';
     import Who from './pages/Who.svelte'
     import What from './pages/What.svelte'
     import Where from './pages/Where.svelte'
     import Work from './pages/Work.svelte'
-    let planet = ['/img/Planets/planet1.png','/img/Planets/planet2.png','/img/Planets/planet3.png','/img/Planets/planet4.png']
+    let planet = ['/img/Planets/planet1-min.png','/img/Planets/planet2-min.png','/img/Planets/planet3-min.png','/img/Planets/planet4-min.png']
     let titleColor = 'Brilliance'
     let title = ['Envisioneers','Creators','Inventors','Thinkers']
     let tag = ['Nerd Alert','Masterminds','Unstoppable','Powerful']
@@ -22,26 +44,53 @@
         }
     }
     function goWho(){
+        visible = false;
+        console.log('fade out')
         page = 0;
+        
+        setTimeout(()=>{
+            console.log('fade in')
+            visible = true;
+        }, 500)
     }
     function goWhat(){
+        visible = false;
         page = 1;
+        
+        setTimeout(()=>{
+            console.log('fade in')
+            visible = true;
+        }, 500)
     }
     function goWhere(){
+        visible = false;
         page = 2;
+        
+        setTimeout(()=>{
+            console.log('fade in')
+            visible = true;
+        }, 500)
     }
     function goWork(){
+        visible = false;
         page = 3;
+        
+        setTimeout(()=>{
+            console.log('fade in')
+            visible = true;
+        }, 500)
     }
 </script>
-
 <style>
-    .changer{
-        position:fixed;
-        top:10;
-        right:10;
-        z-index:9999;
-
+    .bottom{
+        height:auto !important;
+        min-height:800px;
+    }
+    .bottom .hold{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
     }
 </style>
     <header>
@@ -52,11 +101,11 @@
         </div>
         
         <ul class="nav-link">
-            <li><a on:click="{goWho}" href="more"><span>who</span></a></li>
-            <li> <a on:click="{goWhat}" href="more"><span>what</span></a></li>
-            <li><a on:click="{goWhere}" href="more"><span>where</span></a></li>
-            <li><a on:click="{goWork}" href="more"><span>work</span></a></li>
-            <li><a on:click="{goWho}" href="more"><span>contact</span></a></li>
+            <li><a on:click="{goWho}" href="more#who"><span>who</span></a></li>
+            <li> <a on:click="{goWhat}" href="more#what"><span>what</span></a></li>
+            <li><a on:click="{goWhere}" href="more#where"><span>where</span></a></li>
+            <li><a on:click="{goWork}" href="more#work"><span>work</span></a></li>
+            <li><a on:click="{goWho}" href="more#contact"><span>contact</span></a></li>
         </ul>
 
         <div class="burger">
@@ -72,19 +121,21 @@
     <section class="Hero who">
         <div class="cont">
 
-            <div class="HomeHero-Col">
-                <img src="{planet[page]}" alt="" class="planet">
-                <h1 class="creative fixed"><span class="colorChange bril">{titleColor}</span><br>
-                    <span transition:fade class="lh">{title[page]}</span>
+            {#if visible}
+            <div transition:fade="{{delay: 250, duration: 300}}" class="HomeHero-Col">
+                <img  src="{planet[page]}" alt="" class="planet">
+                <h1  class="creative fixed"><span class="colorChange bril">{titleColor}</span><br>
+                    <span  class="lh">{title[page]}</span>
                 </h1>
             </div>
+            {/if}
         </div>
-        <canvas id="canvasSpace"></canvas>
         <div class="divider-bottom colorChange"></div>
         <div class="divider-bottom black"></div>
     </section>
     <section class="sec black gg">
-        <div data-aos="fade-up" data-aos-offset="-400" class="cc">
+        {#if visible}
+        <div transition:fade="{{delay: 150, duration: 300}}" data-aos="fade-up" data-aos-offset="-400" class="cc">
             <div class="mini">
                 <div class="icon colorChange"></div>
                 <h6>{tag[page]}</h6>
@@ -93,17 +144,28 @@
             <p>{par[page]}</p>
             <a href="{buttonHref}">{button}</a>
         </div>
+        {/if}
     </section>
-    {#if page == 0}
-        <Who/>
+    <section class="gg bottom">
+        <div class="divider-top colorChange"></div>
+        <div class="divider-top black"></div>
+    {#if visible}
+        <div class="hold" transition:fade="{{delay: 150, duration: 300}}">
+            {#if page == 0}
+                <Who/>
+            {/if}
+            {#if page == 1}
+                <What/>
+            {/if}
+            {#if page == 2}
+                <Where/>
+            {/if}
+            {#if page == 3}
+                <Work/>
+            {/if}
+        </div>
     {/if}
-    {#if page == 1}
-        <What/>
-    {/if}
-    {#if page == 2}
-        <Where/>
-    {/if}
-    {#if page == 3}
-        <Work/>
-    {/if}
+        <div class="divider-bottom colorChange"></div>
+        <div class="divider-bottom black"></div>
+    </section>
 </div>

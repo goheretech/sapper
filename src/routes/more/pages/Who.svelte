@@ -167,7 +167,4 @@
             </div>
 
         </div>
-        <div class="divider-top colorChange"></div>
-        <div class="divider-top black"></div>
-        <!-- <div class="divider-bottom pink"></div> -->
     </div>
