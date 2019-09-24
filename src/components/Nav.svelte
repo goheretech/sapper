@@ -4,7 +4,7 @@
 <header>
     <nav>
         <div style="position:relative">
-            <a href="home" class='logo'>go<strong>Here</strong></a>
+            <a href="/" class='logo'>go<strong>Here</strong></a>
             <img src="/img/newLogo1.png" style="width:70px;position:absolute; top:-10px" alt="">
         </div>
         

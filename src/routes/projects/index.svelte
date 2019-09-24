@@ -1,4 +1,5 @@
 <script context="module">
+	
 	export function preload({ params, query }) {
 		return this.fetch(`projects.json`).then(r => r.json()).then(posts => {
 			return { posts };
@@ -7,28 +8,46 @@
 </script>
 
 <script>
+import TransWrapper from '../../components/TransWrapper';
 	export let posts;
 </script>
 
-<style>
-	ul {
-		margin: 0 0 1em 0;
-		line-height: 1.5;
-	}
-</style>
 
-<svelte:head>
-	<title>Blog</title>
-</svelte:head>
+<TransWrapper>
+    <section class="Hero work">
+        <div class="cont">
 
-<h1>Recent posts</h1>
+            <div class="HomeHero-Col" style="width:100%">
+                <img src="/img/Planets/planet5.png" alt="" class="planet" >
+                <h1 class="creative fixed"><span class="colorChange">Creative</span><br>
+                    <span class="lh">Partners</span>
+                </h1>
+            </div>
+        </div>
+        <!-- <canvas id="canvasSpace"></canvas> -->
+        <div class="divider-bottom colorChange"></div>
+        <div class="divider-bottom black"></div>
+    </section>
+    <section class="sec black gg">
+        <div data-aos="fade-up" data-aos-offset="-400" class="cc">
+            <div class="mini">
+                <div class="icon colorChange"></div>
+                <h6>Aiding Awesomeness</h6>
+            </div>
+            <h2>Our Amazing Partners</h2>
+            <p>We develop a creative partnership with each of our clients to deliver the best results. We select brands that we can add value to — <b>brands we can be passionate about helping.</b></p>
+        </div>
+    </section>
+    <div class="altSection">
+        <div class="divider-top colorChange"></div>
+        <div class="divider-top black"></div>
+        <!-- <canvas class="sec black" id="canvasHex"></canvas> -->
+        <div data-aos="fade-up" data-aos-offset="-300"  id="partnersHolder">
+            
 
-<ul>
-	{#each posts as post}
-		<!-- we're using the non-standard `rel=prefetch` attribute to
-				tell Sapper to load the data for the page as soon as
-				the user hovers over the link or taps it, instead of
-				waiting for the 'click' event -->
-		<li><a rel='prefetch' href='projects/{post.slug}'>{post.title}</a></li>
-	{/each}
-</ul>
+
+        </div>
+        <div class="divider-bottom colorChange"></div>
+        <div class="divider-bottom black"></div>
+    </div>
+	</TransWrapper>

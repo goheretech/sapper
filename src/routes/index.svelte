@@ -1,12 +1,22 @@
 <script>
-	// import {build} from '../components/home.js'
-	import TransWrapper from '../components/TransWrapper';
+    import Index from '../components/3d.js'
+    import TransWrapper from '../components/TransWrapper'
+    import {onMount} from 'svelte'
+    onMount(()=>{
+        
+        let create3d = new Index();
+        
+    })
+    
+    
+
 </script>
 
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>Home</title>
 </svelte:head>
-<TransWrapper>
+
+    <!-- <TransWrapper> -->
 <div class="bg">
         <canvas id="canvas"></canvas>
     </div>
@@ -73,4 +83,4 @@
         <!-- <div class="divider-top purple"></div>
         <div class="divider-bottom purple"></div> -->
     </section>
-	</TransWrapper>
+    <!-- </TransWrapper> -->

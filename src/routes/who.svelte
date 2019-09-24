@@ -5,7 +5,7 @@
 
 	afterUpdate(() => {
 		// document.addEventListener('scroll', fadeHero);
-        console.log('lol');
+        // console.log('lol');
         
 	});
 </script>

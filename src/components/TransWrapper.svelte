@@ -11,7 +11,7 @@
     div{position:relative;opacity:0%;}
 </style>
 {#if visible}
-    <div transition:fade >
+    <div transition:fade="{{transition:4700}}" >
         <slot><!-- optional fallback --></slot>
     </div>
 {/if}
