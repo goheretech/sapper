@@ -9,10 +9,10 @@
         </div>
         
         <ul class="nav-link">
-            <li><a href="who"><span>who</span></a></li>
-            <li> <a href="what"><span>what</span></a></li>
-            <li><a href="where"><span>where</span></a></li>
-            <li><a href="projects"><span>work</span></a></li>
+            <li><a href="more"><span>who</span></a></li>
+            <li> <a href="more"><span>what</span></a></li>
+            <li><a href="more"><span>where</span></a></li>
+            <li><a href="more"><span>work</span></a></li>
             <li><a href="contact"><span>contact</span></a></li>
         </ul>
 
