@@ -18,7 +18,7 @@ import TransWrapper from '../../components/TransWrapper';
         <div class="cont">
 
             <div class="HomeHero-Col" style="width:100%">
-                <img src="/img/Planets/planet5.png" alt="" class="planet" >
+                <img src="/img/Planets/planet6.png" alt="" class="planet" >
                 <h1 class="creative fixed"><span class="colorChange">Creative</span><br>
                     <span class="lh">Partners</span>
                 </h1>
