@@ -553,7 +553,7 @@ section {
             position: fixed;
             left: -10px;
             bottom: 0;
-            animation: colorRotate2 10s linear infinite;
+            animation: colorRotate2 2s linear infinite;
         }
 
         @media screen and (max-width: $break-tablet) {

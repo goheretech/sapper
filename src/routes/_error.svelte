@@ -15,6 +15,7 @@
 		flex-direction: column;
 
 	}
+	h1{font-size:166px;padding:0;margin:0;}
 </style>
 
 <svelte:head>
