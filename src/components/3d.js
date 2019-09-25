@@ -529,13 +529,13 @@ export default class Index{
             function loadTextures() {
                 return new Promise((resolve, reject) => {
                     var textureLoader = new THREE.TextureLoader();
-                    textureLoader.load('img/Planets/Gaseous2-2.png', function(
+                    textureLoader.load('img/Planets/GAS2.png', function(
                         map
                     ) {
                         moonTex = map;
                     });
                     var textureLoader = new THREE.TextureLoader();
-                    textureLoader.load('img/Planets/gasGiant.png', function(
+                    textureLoader.load('img/Planets/GAS1.png', function(
                         map
                     ) {
                         planetTex = map;
@@ -577,7 +577,7 @@ export default class Index{
                 var x = 1;
                 var p1 = new Promise((resolve, reject) => {
                     var textureLoader = new THREE.TextureLoader();
-                    textureLoader.load('img/Planets/Gaseous2-2.png', function(
+                    textureLoader.load('img/Planets/GAS2.png', function(
                         map
                     ) {
                         moonTex = map;
@@ -593,7 +593,7 @@ export default class Index{
                     .then(x => {
                         x++;
                         var textureLoader = new THREE.TextureLoader();
-                        textureLoader.load('img/Planets/gasGiant.png', function(
+                        textureLoader.load('img/Planets/GAS1.png', function(
                             map
                         ) {
                             planetTex = map;
