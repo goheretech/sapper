@@ -35,14 +35,14 @@
     import What from './pages/What.svelte'
     import Where from './pages/Where.svelte'
     import Work from './pages/Work.svelte'
-    let planet = ['/img/Planets/planet6.png','/img/Planets/planet6.png','/img/Planets/planet6.png','/img/Planets/planet6.png']
+    let planet = ['/img/Planets/np1.png','/img/Planets/np2.png','/img/Planets/np3.png','/img/Planets/planet6.png']
     let titleColor = 'Brilliance'
     let title = ['Envisioneers','Creators','Inventors','Thinkers']
     let tag = ['Nerd Alert','Masterminds','Unstoppable','Powerful']
     let head = ['New Strategies. Old Values.','Sharpening The Cutting Edge','Creating Beauty Daily', 'Our Amazing Partners']
     let par = ['As members of the first generation to grow up in the age of the internet, the founders of goHere have a deep understanding of how tastes and technology have evolved coupled with an unmatched talent for predicting where they are headed.','At goHere we develop and apply technology in creative ways, adding value to your organization. Technology enables transformational opportunities for your business.','At goHere we develop and apply technology in creative ways, adding value to your organization. Technology enables transformational opportunities for your business.','We develop a creative partnership with each of our clients to deliver the best results. We select brands that we can add value to — brands we can be passionate about helping.']
     let button = 'Learn More'
-    let buttonHref = '#what'
+    let buttonHref = 'more#what'
 
     function changePage(){
         console.log(page)
@@ -113,7 +113,7 @@
     .divider-top{z-index:11;}
     .divider-bottom{z-index:11;}
     .planet{
-        width:800px !important;
+        /* width:800px !important; */
     }
 </style>
     <svelte:window bind:scrollY={y}/>
@@ -166,7 +166,7 @@
             </div>
             <h2>{head[page]}</h2>
             <p>{par[page]}</p>
-            <a href="{buttonHref}">{button}</a>
+            <a on:click="{goWhat}" href="{buttonHref}">{button}</a>
         </div>
         {/if}
     </section>
