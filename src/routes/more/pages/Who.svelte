@@ -1,45 +1,15 @@
+
+<script>
+    import Bio from '../components/Bio.svelte'
+    import {employees} from '../components/Employees.js'
+    console.log(employees)
+</script>
 <div class="bioHolder">
         <!-- <canvas class="" id="canvasHex"></canvas> -->
-        <div data-aos="fade-up" data-aos-offset="-300" class="bio chris">
-            <div class="whoCol left">
-                <h5 class="name">
-                    christopher reid - lead growth envisioneer
-                </h5>
-                <h2 class="nick colorChange">
-                    Ginger King
-                </h2>
-                <h3 class="main">
-                    Christopher brings with him over a decade of experience working at the highest levels of the tech
-                    world.
-                </h3>
-                <p class="desc">Using his vast knowledge of psychology and design expertise, Christopher is the architect behind our distinctly beautiful designs and the ways that they mesh perfectly with target users. He is known for his ability to imperceptibly engineer the desired thoughts, impressions, and experiences in consumers.
-                    Some people outgrow childish shenanigans…some people master them. Chris certainly falls into the latter category; he combines his playful energy with his technology expertise to create unique user experiences that engage customers in a way no one else can.
-                </p>
-            </div>
-            <div class="whoCol right">
-                <div class="headShot chris"></div>
-                <div class="stats">
-                    <h5>Marketing</h5>
-                    <div class="statLine c1">
-                        <div class="inside"></div>
-                    </div>
-                </div>
-                <div class="stats">
-                    <h5>Design</h5>
-                    <div class="statLine c2">
-                        <div class="inside"></div>
-                    </div>
-                </div>
-                <div class="stats">
-                    <h5>Fear</h5>
-                    <div class="statLine c3">
-                        <div class="inside"></div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div data-aos="fade-up" data-aos-offset="-300" class="bio chris">
+        {#each employees as employee}
+            <Bio {...employee}/>
+        {/each}
+        <!-- <div data-aos="fade-up" data-aos-offset="-300" class="bio chris">
             <div class="whoCol left">
                 <h5 class="name">
                     christopher reid - lead growth envisioneer
@@ -166,5 +136,5 @@
                 </div>
             </div>
 
-        </div>
+        </div> -->
     </div>

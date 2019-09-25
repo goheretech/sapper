@@ -25,38 +25,38 @@ export default class Index{
             var topSec, midSec, bottomSec;
 
             const fragmentShader = `
-        #include <common>
-        #define TWO_PI 6.28318530718
-        uniform vec2 iResolution;
-        uniform float iTime;
+    #include <common>
+    #define TWO_PI 6.28318530718
+    uniform vec2 iResolution;
+    uniform float iTime;
 
-        //  Function from Iñigo Quiles
-        //  https://www.shadertoy.com/view/MsS3Wc
-        vec3 hsb2rgb( in vec3 c ){
-            vec3 rgb = clamp(abs(mod(c.x*6.0+vec3(0.0,4.0,2.0),
-                                    6.0)-3.0)-1.0,
-                            0.0,
-                            1.0 );
-            rgb = rgb*rgb*(3.0-2.0*rgb);
-            return c.z * mix( vec3(1.0), rgb, c.y);
-        }
+    //  Function from Iñigo Quiles
+    //  https://www.shadertoy.com/view/MsS3Wc
+    vec3 hsb2rgb( in vec3 c ){
+        vec3 rgb = clamp(abs(mod(c.x*6.0+vec3(0.0,4.0,2.0),
+                                6.0)-3.0)-1.0,
+                        0.0,
+                        1.0 );
+        rgb = rgb*rgb*(3.0-2.0*rgb);
+        return c.z * mix( vec3(1.0), rgb, c.y);
+    }
 
-        void main(){
-            vec2 st = gl_FragCoord.xy/iResolution;
-            vec3 color = vec3(0.0);
+    void main(){
+        vec2 st = gl_FragCoord.xy/iResolution;
+        vec3 color = vec3(0.0);
 
-            // Use polar coordinates instead of cartesian
-            vec2 toCenter = vec2(0.5)-st;
-            float angle = atan(toCenter.y,toCenter.x);
-            float radius = length(toCenter)*2.0;
+        // Use polar coordinates instead of cartesian
+        vec2 toCenter = vec2(0.5)-st;
+        float angle = atan(toCenter.y,toCenter.x);
+        float radius = length(toCenter)*2.0;
 
-            // Map the angle (-PI to PI) to the Hue (from 0 to 1)
-            // and the Saturation to the radius
-            color = hsb2rgb(vec3((angle/TWO_PI)+0.5+iTime/10.,radius,1.0));
+        // Map the angle (-PI to PI) to the Hue (from 0 to 1)
+        // and the Saturation to the radius
+        color = hsb2rgb(vec3((angle/TWO_PI)+0.5+iTime/10.,radius,1.0));
 
-            gl_FragColor = vec4(color,abs(sin(iTime))+0.1);
-        }
-        `;
+        gl_FragColor = vec4(color,abs(sin(iTime))+0.1);
+    }
+    `;
             const canvasDemo = document.querySelector('#canvDemo');
             const canvasDemo2 = document.querySelector('#canvDemo2');
             //Initial Values
@@ -88,7 +88,7 @@ export default class Index{
             init();
 
             async function init() {
-                // promiseTest();
+                promiseTest();
 
                 uniforms = {
                     iTime: { value: 0 },
@@ -102,7 +102,10 @@ export default class Index{
                     // transparency: true
                 });
 
-                
+                await loadTextures()
+                    .then(createMaterials)
+                    .catch(err => console.log(err));
+                // await loadModel();
 
                 canvas = document.getElementById('canvas');
                 topSec = document.getElementById('topSec');
@@ -161,7 +164,7 @@ export default class Index{
                 // renderer.setClearColor(0x8a8988, 1);
                 renderer.render(scene, camera);
                 requestAnimationFrame(render);
-                // removeLoad();
+                removeLoad();
                 window.addEventListener('scroll', scrolling);
                 scrolling();
             }
@@ -293,7 +296,8 @@ export default class Index{
                     metalness: 0.9,
                     roughness: 0.6,
                     opacity: 0.95,
-                    transparent: true
+                    transparent: true,
+                    map: reflMap
                 });
                 const matMiddle = new THREE.MeshStandardMaterial({
                     color: 0x999999, //grey
@@ -522,7 +526,7 @@ export default class Index{
                 phase = 1;
             }
 
-            async function loadTextures() {
+            function loadTextures() {
                 return new Promise((resolve, reject) => {
                     var textureLoader = new THREE.TextureLoader();
                     textureLoader.load('img/Planets/Gaseous2-2.png', function(
@@ -569,77 +573,73 @@ export default class Index{
                 });
             }
 
-            async function main(){
-                        var test = await promiseTest(
-                            'img/Planets/gasGiant.png',
-                            moonTex
-                        );
-                        console.log('Test:', test);
-                    }
-
-                    main();
-
-            function promiseTest(path, texture) {
-
-
-                return new Promise(function(){
+            function promiseTest() {
+                var x = 1;
+                var p1 = new Promise((resolve, reject) => {
                     var textureLoader = new THREE.TextureLoader();
-                    console.log(`Path:${path} Texture:${texture}`);
-                    textureLoader.load(path.toString(), function(map) {
-                        moonTex = map;                        
-                        moonMat = new THREE.MeshStandardMaterial({
-                            map: moonTex,
-                            metalness: 0.1,
-                            roughness: 0.5
+                    textureLoader.load('img/Planets/Gaseous2-2.png', function(
+                        map
+                    ) {
+                        moonTex = map;
+                        if (moonTex) {
+                            console.log(`Moon texture loaded. stage:${x}`);
+                            resolve(x);
+                        } else {
+                            reject('No moon texture');
+                        }
+                    });
+                    x++;
+                })
+                    .then(x => {
+                        x++;
+                        var textureLoader = new THREE.TextureLoader();
+                        textureLoader.load('img/Planets/gasGiant.png', function(
+                            map
+                        ) {
+                            planetTex = map;
+                            if (planetTex) {
+                                console.log(
+                                    `Planet texture loaded. stage:${x}`
+                                );
+                                return x;
+                            } else {
+                                reject('No go #2');
+                            }
                         });
                     })
-                });
-                var defineText = [
-                    {
-                        path: 'img/Planets/gasGiant.png',
-                        texture: moonTex
-                    },
-                    {
-                        path: 'img/Planets/gasGiant.png',
-                        texture: planetTex
-                    },
-                    {
-                        path: 'img/Planets/Clouds4.png',
-                        texture: atmo1Tex
-                    },
-                    {
-                        path: 'img/Planets/Volcanic.png',
-                        texture: earthTex
-                    }
-                ];
-
-                return new Promise((resolve, reject) => {
-                    resolve(loadTexture(defineText[0].path, moonTex));
+                    .then(x => {
+                        x++;
+                        var textureLoader = new THREE.TextureLoader();
+                        textureLoader.load('img/Planets/Clouds4.png', function(
+                            map
+                        ) {
+                            atmo1Tex = map;
+                            if (atmo1Tex) {
+                                console.log(`Planet atmo loaded. stage:${x}`);
+                                return x;
+                            } else {
+                                reject('No go #3');
+                            }
+                        });
                     })
-
-                    
-                    // .then(result => {
-                    //     console.log(result);
-                    //     return loadTexture(defineText[2].path, planetTex);
-                    // })
-                    // .then(result => {
-                    //     console.log(result);
-                    //     return loadTexture(defineText[3].path, atmo1Tex);
-                    //     console.log('Loaded 4');
-                    // })
-                    // .then(result => {
-                    //     console.log(result);
-                    //     loadTexture(defineText[3].path, earthTex);
-                        
-                    //     return createMaterials();
-                    // })
-                    
-                    
-                    
-                    
+                    .then(x => {
+                        x++;
+                        var textureLoader = new THREE.TextureLoader();
+                        textureLoader.load('img/Planets/Volcanic.png', function(
+                            map
+                        ) {
+                            earthTex = map;
+                            if (earthTex) {
+                                console.log(`earth loaded. stage:${x}`);
+                                return x;
+                            } else {
+                                reject('No go #4');
+                            }
+                        });
+                    });
             }
 
-            async function createMaterials() {
+            function createMaterials() {
                 earthMat = new THREE.MeshStandardMaterial({
                     map: earthTex,
                     metalness: 0.1,
@@ -689,6 +689,7 @@ export default class Index{
                     })
                 ];
             }
+
     }
 }
 

@@ -353,148 +353,146 @@ body {
         .whoCol {
             width: 50%;
 
+            .name {
+                color: purple;
+                font-size: 20px;
+                margin: 0;
+                text-transform: uppercase;
+            }
+
+            .nick {
+                color: purple;
+                // font-family: 'Major Mono Display',
+                // monospace;
+                font-size: 170px;
+                margin: 0;
+                text-transform: uppercase;
+                line-height: 100%;
+            }
+
+            .main {
+                color: white;
+                font-size: 24px;
+            }
+
+            .desc {
+                color: white;
+                font-size: 22px;
+            }
+
+            &.switch {
+                order: 2;
+                padding-left: 80px;
+                padding-right: 0px;
+            }
+
             &.left {
 
                 text-align: left;
                 padding-right: 80px;
 
-                .name {
-                    color: purple;
-                    font-size: 20px;
-                    margin: 0;
-                    text-transform: uppercase;
+                
+            }
+            .headShot {
+                width: 100%;
+                height: 400px;
+                background-color: blue;
+                margin-bottom: 50px;
+                background-position: center;
+                background-size: cover;
+
+                &.chris {
+                    background-image: url('/img/headshots/chris.png')
                 }
 
-                .nick {
-                    color: purple;
-                    // font-family: 'Major Mono Display',
-                    // monospace;
-                    font-size: 170px;
-                    margin: 0;
-                    text-transform: uppercase;
-                    line-height: 100%;
+                &.teddy {
+                    background-image: url('/img/headshots/teddy.png')
                 }
 
-                .main {
-                    color: white;
-                    font-size: 24px;
+                &.jack {
+                    background-image: url('/img/headshots/jack.png')
                 }
+            }
 
-                .desc {
+            .stats {
+                h5 {
                     color: white;
                     font-size: 22px;
+                    margin: 0;
+                    margin-top: 15px;
+                    margin-bottom: 7px;
                 }
 
-                &.switch {
-                    order: 2;
-                    padding-left: 80px;
-                    padding-right: 0px;
-                }
-            }
-
-            &.right {
-
-                .headShot {
+                .statLine {
+                    background-color: rgba(128, 128, 128, 0.308);
                     width: 100%;
-                    height: 400px;
-                    background-color: blue;
-                    margin-bottom: 50px;
-                    background-position: center;
-                    background-size: cover;
+                    height: 30px;
+                    border-radius: 7px;
 
-                    &.chris {
-                        background-image: url('/img/headshots/chris.png')
-                    }
-
-                    &.teddy {
-                        background-image: url('/img/headshots/teddy.png')
-                    }
-
-                    &.jack {
-                        background-image: url('/img/headshots/jack.png')
-                    }
-                }
-
-                .stats {
-                    h5 {
-                        color: white;
-                        font-size: 22px;
-                        margin: 0;
-                        margin-top: 15px;
-                        margin-bottom: 7px;
-                    }
-
-                    .statLine {
-                        background-color: rgba(128, 128, 128, 0.308);
+                    .inside {
                         width: 100%;
-                        height: 30px;
+                        height: 100%;
+                        background-color: lightblue;
                         border-radius: 7px;
-
-                        .inside {
-                            width: 100%;
-                            height: 100%;
-                            background-color: lightblue;
-                            border-radius: 7px;
-                        }
-
-                        &.c1 {
-                            .inside {
-                                width: 85%;
-                            }
-                        }
-
-                        &.c2 {
-                            .inside {
-                                width: 80%;
-                            }
-                        }
-
-                        &.c3 {
-                            .inside {
-                                width: 3%;
-                            }
-                        }
-
-                        &.t1 {
-                            .inside {
-                                width: 78%;
-                            }
-                        }
-
-                        &.t2 {
-                            .inside {
-                                width: 75%;
-                            }
-                        }
-
-                        &.t3 {
-                            .inside {
-                                width: 50%;
-                            }
-                        }
-
-                        &.j1 {
-                            .inside {
-                                width: 90%;
-                            }
-                        }
-
-                        &.j2 {
-                            .inside {
-                                width: 85%;
-                            }
-                        }
-
-                        &.j3 {
-                            .inside {
-                                width: 18%;
-                            }
-                        }
-
                     }
-                }
 
+                    &.c1 {
+                        .inside {
+                            width: 85%;
+                        }
+                    }
+
+                    &.c2 {
+                        .inside {
+                            width: 80%;
+                        }
+                    }
+
+                    &.c3 {
+                        .inside {
+                            width: 3%;
+                        }
+                    }
+
+                    &.t1 {
+                        .inside {
+                            width: 78%;
+                        }
+                    }
+
+                    &.t2 {
+                        .inside {
+                            width: 75%;
+                        }
+                    }
+
+                    &.t3 {
+                        .inside {
+                            width: 50%;
+                        }
+                    }
+
+                    &.j1 {
+                        .inside {
+                            width: 90%;
+                        }
+                    }
+
+                    &.j2 {
+                        .inside {
+                            width: 85%;
+                        }
+                    }
+
+                    &.j3 {
+                        .inside {
+                            width: 18%;
+                        }
+                    }
+
+                }
             }
+            
         }
     }
 }

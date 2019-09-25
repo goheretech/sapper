@@ -5,7 +5,6 @@ function getPerct() {
     var planet = document.querySelector('.planet');
     var computer = document.querySelector('#contact');
     // Get percent scrolled
-    console.log('yahhh');
     var h = document.documentElement,
         b = document.body,
         st = 'scrollTop',
@@ -26,21 +25,7 @@ function getPerct() {
     // if (computer) {computer.style.transform = `scale(${computerScale})`;}
     // console.log(scrollInv, planet.style.transform);
 
-    if (scrolled > 25) {
-        if (heroText) {
-            heroText.style.opacity = 0;
-        }
-        if (planet) {
-            planet.style.opacity = 0;
-        }
-    } else {
-        if (heroText) {
-            heroText.style.opacity = 1;
-        }
-        if (planet) {
-            planet.style.opacity = 1;
-        }
-    }
+    
 }
 getPerct();
 

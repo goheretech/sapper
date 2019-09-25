@@ -2,24 +2,31 @@
     let page = 0;
     let visible = false;
     import {onMount} from 'svelte';
-
+    let y;
+    $: console.log(y)
     onMount(()=>{
         visible = true;
         switch(window.location.hash){
             case '#who':
+                window.scrollTo(0,0);
                 page = 0;
                 break;
             case '#what':
+                window.scrollTo(0,0);
                 page = 1;
                 break;
             case '#where':
+                window.scrollTo(0,0);
                 page = 2;
                 break;
             case '#work':
+                window.scrollTo(0,0);
                 page = 3;
                 break;
         }
     });
+
+    
     
     import { fade } from 'svelte/transition';
     import { quintOut } from 'svelte/easing';
@@ -27,7 +34,7 @@
     import What from './pages/What.svelte'
     import Where from './pages/Where.svelte'
     import Work from './pages/Work.svelte'
-    let planet = ['/img/Planets/planet1-min.png','/img/Planets/planet2-min.png','/img/Planets/planet3-min.png','/img/Planets/planet4-min.png']
+    let planet = ['/img/Planets/planet6.png','/img/Planets/planet6.png','/img/Planets/planet6.png','/img/Planets/planet6.png']
     let titleColor = 'Brilliance'
     let title = ['Envisioneers','Creators','Inventors','Thinkers']
     let tag = ['Nerd Alert','Masterminds','Unstoppable','Powerful']
@@ -91,8 +98,20 @@
         flex-direction:column;
         justify-content:center;
         align-items:center;
+        height:100%;
+    }
+    .space{ width:100%;
+        background:url(img/Planets/space.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        z-index:10;}
+    .divider-top{z-index:11;}
+    .divider-bottom{z-index:11;}
+    .planet{
+        width:800px !important;
     }
 </style>
+    <svelte:window bind:scrollY={y}/>
     <header>
     <nav>
         <div style="position:relative">
@@ -122,7 +141,7 @@
         <div class="cont">
 
             {#if visible}
-            <div transition:fade="{{delay: 250, duration: 300}}" class="HomeHero-Col">
+            <div transition:fade="{{delay: 150, duration: 300}}" class="HomeHero-Col">
                 <img  src="{planet[page]}" alt="" class="planet">
                 <h1  class="creative fixed"><span class="colorChange bril">{titleColor}</span><br>
                     <span  class="lh">{title[page]}</span>
@@ -149,8 +168,9 @@
     <section class="gg bottom">
         <div class="divider-top colorChange"></div>
         <div class="divider-top black"></div>
+        <div class="space">
     {#if visible}
-        <div class="hold" transition:fade="{{delay: 150, duration: 300}}">
+            <div class="hold" transition:fade="{{delay: 150, duration: 300}}">
             {#if page == 0}
                 <Who/>
             {/if}
@@ -165,6 +185,8 @@
             {/if}
         </div>
     {/if}
+        </div>
+        
         <div class="divider-bottom colorChange"></div>
         <div class="divider-bottom black"></div>
     </section>

@@ -43,7 +43,7 @@
             <h2>Do you want to engage customers and attract business?</h2>
             <p>goHere is sharpening the cutting edge with state-of-the art technology, advanced
                 designs, and tailored user experiences that will attract customers to your business.</p>
-            <a href="what.html">Get Started</a>
+            <a href="more#who">Get Started</a>
         </div>
     </section>
     <section class="gg " >
@@ -66,7 +66,7 @@
             </div>
             <h2>Is your business using technology to its full potential?</h2>
             <p>We develop and implement brand new technology in creative ways aimed at adding value and enabling transformational opportunities for your business.</p>
-            <a href="work.html">Let's Talk</a>
+            <a href="more#work">Let's Talk</a>
         </div>
     </section>
     <section class="gg" >
