@@ -20,6 +20,7 @@ export default class Index{
             var windowHalfY = window.innerHeight / 2;
             var lastScroll = 0;
             var sections, secHolder;
+            var amb;
             var reflMap, uniforms, matEdge;
 
             var topSec, midSec, bottomSec;
@@ -135,7 +136,7 @@ export default class Index{
                 );
 
                 //Ambient Lighting
-                var amb = new THREE.AmbientLight(0xf2e1ed, 0.1);
+                amb = new THREE.AmbientLight(0xf2e1ed, 0.1);
                 scene.add(amb);
 
                 //Create sun
@@ -176,6 +177,16 @@ export default class Index{
                     case 0:
                         break;
                     case 1:
+
+                        var colorChange = parseInt(Math.abs(Math.sin(time/3)*360));
+                        console.log(colorChange);
+                        var colorChange2 = parseInt(Math.abs(Math.cos(time)*50));
+                        sun.color = new THREE.Color(
+                            `hsl(${colorChange},30%,90%)`
+                        );
+                            // console.log(amb.color);
+
+                        // console.log(amb.color);
                         uniforms.iResolution.value.set(
                             canvas.width,
                             canvas.height
