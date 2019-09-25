@@ -2,25 +2,26 @@
     let page = 0;
     let visible = false;
     import {onMount} from 'svelte';
+    import * as animateScroll from "svelte-scrollto";
     let y;
     $: console.log(y)
     onMount(()=>{
         visible = true;
         switch(window.location.hash){
             case '#who':
-                window.scrollTo(0,0);
+                animateScroll.scrollToTop()
                 page = 0;
                 break;
             case '#what':
-                window.scrollTo(0,0);
+                animateScroll.scrollToTop()
                 page = 1;
                 break;
             case '#where':
-                window.scrollTo(0,0);
+                animateScroll.scrollToTop()
                 page = 2;
                 break;
             case '#work':
-                window.scrollTo(0,0);
+                animateScroll.scrollToTop()
                 page = 3;
                 break;
         }
@@ -56,6 +57,7 @@
         page = 0;
         
         setTimeout(()=>{
+            animateScroll.scrollToTop()
             console.log('fade in')
             visible = true;
         }, 500)
@@ -65,6 +67,7 @@
         page = 1;
         
         setTimeout(()=>{
+            animateScroll.scrollToTop()
             console.log('fade in')
             visible = true;
         }, 500)
@@ -74,6 +77,7 @@
         page = 2;
         
         setTimeout(()=>{
+            animateScroll.scrollToTop()
             console.log('fade in')
             visible = true;
         }, 500)
@@ -83,6 +87,7 @@
         page = 3;
         
         setTimeout(()=>{
+            animateScroll.scrollToTop()
             console.log('fade in')
             visible = true;
         }, 500)
