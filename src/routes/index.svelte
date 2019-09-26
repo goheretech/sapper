@@ -1,5 +1,6 @@
 <script>
     import Index from '../components/3d.js'
+    import Nav from '../components/Nav.svelte';
     import TransWrapper from '../components/TransWrapper'
     import {onMount} from 'svelte'
     onMount(()=>{
@@ -15,7 +16,7 @@
 <svelte:head>
 	<title>Home</title>
 </svelte:head>
-
+<Nav />
     <!-- <TransWrapper> -->
 <div class="bg">
         <canvas id="canvas"></canvas>

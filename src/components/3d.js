@@ -165,7 +165,7 @@ export default class Index{
                 // renderer.setClearColor(0x8a8988, 1);
                 renderer.render(scene, camera);
                 requestAnimationFrame(render);
-                removeLoad();
+                // removeLoad();
                 window.addEventListener('scroll', scrolling);
                 scrolling();
             }
@@ -178,11 +178,11 @@ export default class Index{
                         break;
                     case 1:
 
-                        var colorChange = parseInt(Math.abs(Math.sin(time/3)*360));
-                        console.log(colorChange);
+                        var colorChange = parseInt(Math.abs(Math.sin(time/10)*360));
+                        // console.log(colorChange);
                         var colorChange2 = parseInt(Math.abs(Math.cos(time)*50));
                         sun.color = new THREE.Color(
-                            `hsl(${colorChange},30%,90%)`
+                            `hsl(${colorChange},90%,80%)`
                         );
                             // console.log(amb.color);
 
@@ -198,6 +198,7 @@ export default class Index{
 
                         moon.rotation.y += ((3 * Math.PI) / 180) * delta;
                         planet.rotation.y += ((3 * Math.PI) / 180) * delta;
+                        earth.rotation.y += ((3 * Math.PI) / 180) * delta;
                         break;
                     case 2:
                         // console.log('Phase 2');
@@ -244,7 +245,7 @@ export default class Index{
                 canvasDemo.style.transform = `translate(0,${test}px)`;
                 canvasDemo2.style.transform = `translate(0,${test2}px)`;
 
-                console.log(x);
+                // console.log(x);
 
                 //Fade Sections
                 if (x > 1) {
@@ -475,7 +476,7 @@ export default class Index{
 
                 function createRing(innerW, width, color, z) {
                     var random = Math.floor(Math.random() * Math.floor(4)) / 10;
-                    console.log(random);
+                    // console.log(random);
 
                     var uniformsRing = {
                         iTime: { value: random },
@@ -506,7 +507,7 @@ export default class Index{
                     var ring = new THREE.Mesh(ringGeo, ringMat);
                     if (z) {
                         ring.position.z = z;
-                        console.log('set z: ' + z);
+                        // console.log('set z: ' + z);
                     }
                     ring.rotation.x = (-90 * Math.PI) / 180;
                     moon.add(ring);
@@ -532,7 +533,7 @@ export default class Index{
                 scene.add(earth);
                 scene.add(planet);
                 scene.add(moon);
-                earth.add(atmo1);
+                // earth.add(atmo1);
                 scene.add(sun);
                 phase = 1;
             }
@@ -546,7 +547,7 @@ export default class Index{
                         moonTex = map;
                     });
                     var textureLoader = new THREE.TextureLoader();
-                    textureLoader.load('img/Planets/GAS1.png', function(
+                    textureLoader.load('img/Planets/GAS3.png', function(
                         map
                     ) {
                         planetTex = map;
@@ -565,7 +566,7 @@ export default class Index{
                         }
                     );
                     var textureLoader = new THREE.TextureLoader();
-                    textureLoader.load('img/Planets/Volcanic.png', function(
+                    textureLoader.load('img/Planets/GAS1.png', function(
                         map
                     ) {
                         earthTex = map;
@@ -593,7 +594,7 @@ export default class Index{
                     ) {
                         moonTex = map;
                         if (moonTex) {
-                            console.log(`Moon texture loaded. stage:${x}`);
+                          // console.log(`Moon texture loaded. stage:${x}`);
                             resolve(x);
                         } else {
                             reject('No moon texture');
@@ -604,14 +605,14 @@ export default class Index{
                     .then(x => {
                         x++;
                         var textureLoader = new THREE.TextureLoader();
-                        textureLoader.load('img/Planets/GAS1.png', function(
+                        textureLoader.load('img/Planets/GAS3.png', function(
                             map
                         ) {
                             planetTex = map;
                             if (planetTex) {
-                                console.log(
-                                    `Planet texture loaded. stage:${x}`
-                                );
+                              // console.log(
+                                //     `Planet texture loaded. stage:${x}`
+                                // );
                                 return x;
                             } else {
                                 reject('No go #2');
@@ -626,7 +627,7 @@ export default class Index{
                         ) {
                             atmo1Tex = map;
                             if (atmo1Tex) {
-                                console.log(`Planet atmo loaded. stage:${x}`);
+                              // console.log(`Planet atmo loaded. stage:${x}`);
                                 return x;
                             } else {
                                 reject('No go #3');
@@ -636,12 +637,12 @@ export default class Index{
                     .then(x => {
                         x++;
                         var textureLoader = new THREE.TextureLoader();
-                        textureLoader.load('img/Planets/Volcanic.png', function(
+                        textureLoader.load('img/Planets/GAS1.png', function(
                             map
                         ) {
                             earthTex = map;
                             if (earthTex) {
-                                console.log(`earth loaded. stage:${x}`);
+                              // console.log(`earth loaded. stage:${x}`);
                                 return x;
                             } else {
                                 reject('No go #4');
