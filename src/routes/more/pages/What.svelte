@@ -34,7 +34,11 @@
         display:flex;
         padding: 250px 0px;
     }
-
+    .service{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
     .serv{padding: 0 60px}
     
     .serv h2::before {
