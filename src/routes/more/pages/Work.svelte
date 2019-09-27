@@ -1,8 +1,9 @@
 
         <script>
             import {clients} from '../components/Clients.js'
+            let clientID;
             export let viewerOpen = false;
-
+            import Review from '../components/Review.svelte'
             function checkHash(){
                 viewerOpen = !viewerOpen;
             }
@@ -19,10 +20,11 @@
         <div data-aos="fade-up" data-aos-offset="-300" class="cc">
         {#if !viewerOpen}
             {#each clients as client,index}
-                <h2 on:click="{checkHash}">{client.name}</h2>
+                <h2 on:click="{() => {clientID = client.slug; console.log(client.slug); checkHash()}}">{client.name}</h2>
             {/each}   
         {:else}
-            <ShowWork/>
+            <button on:click="{checkHash}">Back</button>
+            <Review clientID={clientID}/>
         {/if}
 
         </div>
