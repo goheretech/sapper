@@ -51,7 +51,9 @@
             </div>
             <div class="whoCol right">
             {#if side == 'right'}
-                <div class="headShot" style="background-image:url({picture})"></div>
+                <div class="backNeb">
+                        <div class="headShot" style="background-image:url({picture})"></div>
+                    </div>
                 <!-- <div class="stats">
                     <h5>{stats[0].name}</h5>
                     <div class="statLine c1">
