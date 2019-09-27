@@ -33,10 +33,11 @@
         <div data-aos="fade-up" data-aos-offset="-300" class="cc">
         {#if !viewerOpen}
             {#each clients as client,index}
-                <h2 in:fade="{{delay:200, duration: 300}}" out:fade="{{delay:200}}" on:click="{() => {clientID = client.slug; console.log(client.slug); checkHash()}}">{client.name}</h2>
-            {/each}   
-        {:else}
-            <div in:fade="{{delay:200, duration: 300}}" out:fade="{{duration:200}}" class="clientHolder">
+                 <h2  on:click="{() => {clientID = client.slug; console.log(client.slug); checkHash()}}">{client.name}</h2> 
+            {/each}
+        {/if}  
+        {#if viewerOpen}
+            <div class="clientHolder">
                 <Review clientID={clientID}/>
                 <button on:click="{checkHash}">Back</button>
             </div>

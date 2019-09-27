@@ -3,8 +3,11 @@
     let showing = false;
     import {onMount} from 'svelte';
     import * as animateScroll from "svelte-scrollto";
-    onMount(()=>{
 
+    $:  console.log(page);
+    onMount(()=>{
+        
+       
         let logo = document.getElementById('logo');
         let blur = document.getElementById('logoBlur');
         let rotation = 1;
@@ -58,13 +61,7 @@
     let button = 'Learn More'
     let buttonHref = 'more#what'
 
-    function changePage(){
-        console.log(page)
-        page++
-        if (page > 3){
-            page =0;
-        }
-    }
+    
     function goWho(){
      showing = false;
         console.log('fade out')
