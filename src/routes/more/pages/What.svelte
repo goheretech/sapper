@@ -1,20 +1,18 @@
 <script>
     let hidden = [true,true,true]
-    import { fade } from 'svelte/transition';
-    let services = [
-        {
-            title: "Design",
-            content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, cumque? Nam rem ullam consectetur eum explicabo in culpa fugiat eos dignissimos rerum odio harum eveniet perferendis corrupti iusto velit, fugit voluptatum nisi quidem id quo. Quidem nisi distinctio, magnam porro repellendus aperiam veniam ducimus nobis! Maxime minima totam, modi harum voluptas eaque vero sit aperiam possimus aut illum quo repellendus.",
-            hidden: 'true'
-        },{
-            title: "Disrupt",
-            content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, cumque? Nam rem ullam consectetur eum explicabo in culpa fugiat eos dignissimos rerum odio harum eveniet perferendis corrupti iusto velit, fugit voluptatum nisi quidem id quo. Quidem nisi distinctio, magnam porro repellendus aperiam veniam ducimus nobis! Maxime minima totam, modi harum voluptas eaque vero sit aperiam possimus aut illum quo repellendus.",
-            hidden: 'true'
-        },{
-            title: "Dominate",
-            content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, cumque? Nam rem ullam consectetur eum explicabo in culpa fugiat eos dignissimos rerum odio harum eveniet perferendis corrupti iusto velit, fugit voluptatum nisi quidem id quo. Quidem nisi distinctio, magnam porro repellendus aperiam veniam ducimus nobis! Maxime minima totam, modi harum voluptas eaque vero sit aperiam possimus aut illum quo repellendus.",
-            hidden: 'true'
-    }];
+    import { fade, slide, fly } from 'svelte/transition';
+    import { quintOut } from 'svelte/easing';
+    import {services} from '../components/Services'
+    let turnedOn = false;
+
+    import {onMount} from 'svelte';
+
+    onMount(()=>{
+        turnedOn = true;
+    });
+
+
+    console.log(services)
     function openUp(x){
         let parent = x.target.dataset.index;
         hidden[parent] = false;
@@ -38,14 +36,15 @@
         display:flex;
         align-items:center;
         justify-content:center;
+        height:200px;
     }
-    .serv{padding: 0 60px}
-    
+    .serv{padding: 0 60px; min-width:400px}
+    .clicker{width:100%; height:100%; position:absolute; top:0;left:0; bottom:0; right:0; z-index:40;}
     .serv h2::before {
         color: white;
         content: attr(data-before);
         position: absolute;
-        left: 0;
+        top: 25px;
         z-index: -1;    
         background-clip: text;
         -webkit-background-clip: text;
@@ -56,7 +55,21 @@
         animation: colorScroll 20s linear infinite;
         filter:blur(10px)
     }
-    .info{width:100% !important;}
+    .info{width:100% !important; font-size:50px; margin:0;padding:0 0 10px 0;position:relative}
+    .info::before {
+        color: white;
+        content: attr(data-before);
+        position: absolute;
+        top: 0;
+        z-index: -1;    
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(to right, green, #22d8d8, purple, #d624a6, #f7a140, green);
+        background-size: 600%;
+        animation: colorScroll 20s linear infinite;
+        filter:blur(8px)
+    }
 
     .serv h2{font-size:120px;position:relative;z-index:20;color:white;}
     @keyframes colorScroll {
@@ -70,19 +83,23 @@
 }
 
 </style>
-        
+{#if turnedOn}
 <div data-aos="fade-up" data-aos-offset="-300" class="cc">
     
     <div class="services">
         {#each services as service, index}
+            
             <div class="{index} service"  style="position:relative">
-            <div data-index="{index}" on:mouseover={openUp} on:mouseout={closeUp} style="width:100%, height:100%; position:absolute; top:0;left:0; bottom:0; right:0; z-index:40;">
+            <div class="clicker" data-index="{index}" on:mouseover={openUp} on:mouseout={closeUp}>
             </div>
                 <div class="serv {service.title}">
-                    <h2  data-before="{service.title}" >{service.title}</h2>
-                    {#if hidden[index] != true}
-                        <div transition:fade class="hidden" style="width:100%">
-                            <p class="info">{service.content}</p>
+                    {#if hidden[index] == true}
+                    <h2   data-before="{service.title}" >{service.title}</h2>
+                    {:else}
+                        <div class="hidden">
+                            {#each service.services as ss}
+                                <h3 data-before="{ss}" class="info">{ss}</h3>
+                            {/each}
                         </div>
                     {/if}
                 </div>
@@ -92,3 +109,4 @@
         
     </div> 
 </div>
+{/if}

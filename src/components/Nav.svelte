@@ -9,7 +9,7 @@
             rotation++
             let newR = rotation/10
             let wave = Math.abs(Math.sin(newR/10));
-            console.log(wave)
+            // console.log(wave)
             // console.log(logo.style.transform)
             logo.style.transform = `rotate(${newR}deg)`;
             blur.style.transform = `rotate(${newR}deg)`;

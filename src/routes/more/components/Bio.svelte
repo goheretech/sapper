@@ -26,8 +26,10 @@
                     </p>
                 {/if}
                 {#if side == 'left'}
-                    <div class="headShot" style="background-image:url({picture})"></div>
-                    <div class="stats">
+                    <div class="backNeb">
+                        <div class="headShot" style="background-image:url({picture})"></div>
+                    </div>
+                    <!-- <div class="stats">
                         <h5>{stats[0].name}</h5>
                         <div class="statLine c1">
                             <div class="inside" style='width:{stats[0].value}%'></div>
@@ -44,13 +46,13 @@
                         <div class="statLine c3">
                             <div class="inside" style='width:{stats[2].value}%'></div>
                         </div>
-                    </div>
+                    </div> -->
                 {/if}
             </div>
             <div class="whoCol right">
             {#if side == 'right'}
                 <div class="headShot" style="background-image:url({picture})"></div>
-                <div class="stats">
+                <!-- <div class="stats">
                     <h5>{stats[0].name}</h5>
                     <div class="statLine c1">
                         <div class="inside" style='width:{stats[0].value}%'></div>
@@ -67,7 +69,7 @@
                     <div class="statLine c3">
                         <div class="inside" style='width:{stats[2].value}%'></div>
                     </div>
-                </div>
+                </div> -->
         {/if}
         {#if side == 'left'}
              <h5 class="name">

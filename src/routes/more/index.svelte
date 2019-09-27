@@ -1,12 +1,12 @@
 <script>
     let page = 0;
-    let visible = false;
+    let showing = false;
     import {onMount} from 'svelte';
     import * as animateScroll from "svelte-scrollto";
     onMount(()=>{
 
-        let logo = document.querySelector('#logo');
-        let blur = document.querySelector('#logoBlur');
+        let logo = document.getElementById('logo');
+        let blur = document.getElementById('logoBlur');
         let rotation = 1;
         function rotate(){
             rotation++
@@ -21,7 +21,7 @@
         }
         setInterval(rotate, 20)
 
-        visible = true;
+     showing = true;
         switch(window.location.hash){
             case '#who':
                 animateScroll.scrollToTop()
@@ -66,44 +66,44 @@
         }
     }
     function goWho(){
-        visible = false;
+     showing = false;
         console.log('fade out')
         page = 0;
         
         setTimeout(()=>{
             animateScroll.scrollToTop()
             console.log('fade in')
-            visible = true;
+         showing = true;
         }, 500)
     }
     function goWhat(){
-        visible = false;
+     showing = false;
         page = 1;
         
         setTimeout(()=>{
             animateScroll.scrollToTop()
             console.log('fade in')
-            visible = true;
+         showing = true;
         }, 500)
     }
     function goWhere(){
-        visible = false;
+     showing = false;
         page = 2;
         
         setTimeout(()=>{
             animateScroll.scrollToTop()
             console.log('fade in')
-            visible = true;
+         showing = true;
         }, 500)
     }
     function goWork(){
-        visible = false;
+     showing = false;
         page = 3;
         
         setTimeout(()=>{
             animateScroll.scrollToTop()
             console.log('fade in')
-            visible = true;
+         showing = true;
         }, 500)
     }
 </script>
@@ -170,7 +170,7 @@
     <section class="Hero who">
         <div class="cont">
 
-            {#if visible}
+            {#if showing}
             <div transition:fade="{{delay: 150, duration: 300}}" class="HomeHero-Col">
                 <img  src="{planet[page]}" alt="" class="planet">
                 <h1  class="creative fixed"><span class="colorChange bril">{titleColor}</span><br>
@@ -183,7 +183,7 @@
         <div class="divider-bottom black"></div>
     </section>
     <section class="sec black gg">
-        {#if visible}
+        {#if showing}
         <div transition:fade="{{delay: 150, duration: 300}}" data-aos="fade-up" data-aos-offset="-400" class="cc">
             <div class="mini">
                 <div class="icon colorChange"></div>
@@ -199,7 +199,7 @@
         <div class="divider-top colorChange"></div>
         <div class="divider-top black"></div>
         <div class="space">
-    {#if visible}
+    {#if showing}
             <div class="hold" transition:fade="{{delay: 150, duration: 300}}">
             {#if page == 0}
                 <Who/>

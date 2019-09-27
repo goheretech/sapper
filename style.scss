@@ -333,7 +333,7 @@ body {
 .bioHolder {
     display: flex;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.45);
+    // background: rgba(0, 0, 0, 0.45);
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -393,14 +393,23 @@ body {
 
                 
             }
+
+            .backNeb{
+                background-position: center;
+                background-image: url('/img/headshots/background.png');
+                background-attachment: fixed;
+                background-size: contain;
+                animation: colorRotate2 5s linear infinite;
+
+            }
             .headShot {
                 width: 100%;
-                height: 400px;
-                background-color: blue;
+                height: 600px;
                 margin-bottom: 50px;
                 background-position: center;
                 background-size: cover;
-
+                // background:white;
+                
                 &.chris {
                     background-image: url('/img/headshots/chris.png')
                 }
@@ -1167,5 +1176,14 @@ section {
 
     100% {
         filter: hue-rotate(-359deg) saturate(80%);
+    }
+}
+@keyframes colorRotate3 {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(-359deg);
     }
 }
