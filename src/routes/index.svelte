@@ -2,20 +2,38 @@
     import Index from '../components/3d.js'
     import Nav from '../components/Nav.svelte';
     import TransWrapper from '../components/TransWrapper'
-    import {onMount} from 'svelte'
+    import Loader from '../components/Loader.svelte';
+    import {onMount, onDestroy} from 'svelte'
+    let loaderShowing = true;
     onMount(()=>{
         
-        let create3d = new Index();
         
+        var createScene = new Promise((resolve, reject)=>{
+            let create3d = new Index();
+            resolve(create3d);
+        })
+        createScene.then((value)=>{
+            setTimeout(function() {
+                loaderShowing = false;   
+            }, 600);                     
+            console.log('done')
+        })
+        
+    })
+
+    onDestroy(()=>{
+        loaderShowing = true;    
     })
     
     
 
 </script>
-
 <svelte:head>
 	<title>Home</title>
 </svelte:head>
+{#if loaderShowing}
+	<Loader />
+{/if}
 <Nav />
     <!-- <TransWrapper> -->
 <div class="bg">

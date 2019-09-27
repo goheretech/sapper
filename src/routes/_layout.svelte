@@ -1,5 +1,10 @@
 <script>
 	import Nav from '../components/Nav.svelte';
+	
+	import { onMount } from 'svelte';
+	
+
+
 </script>
 
 <style>

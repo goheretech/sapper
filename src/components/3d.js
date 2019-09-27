@@ -5,7 +5,9 @@ export default class Index{
         // console.log('constructor working');
             // console.log('It Worked');
             var THREE = require('three');
+            let loaded = false;
             var scene = new THREE.Scene();
+            let loader = new THREE.TextureLoader();
             var camera, renderer, canvas;
             var sunGeo, sunMat, sun;
             var planetGeo, planetTex, planetMat, planet;
@@ -22,7 +24,14 @@ export default class Index{
             var sections, secHolder;
             var amb;
             var reflMap, uniforms, matEdge;
-
+            let fileArray = [
+                { name: 'earth', url: 'GAS1.png' },
+                { name: 'moon', url: 'GAS2.png' },
+                { name: 'planet', url: 'GAS3.png' }
+            ];
+            let promiseArray = [],
+                path = 'img/Planets/';
+                let texturesArray = [];
             var topSec, midSec, bottomSec;
 
             const fragmentShader = `
@@ -85,11 +94,10 @@ export default class Index{
             // var earthPosition = { x: 9000, y: 0, z: -6000 }; //mid
             // var earthPosition = { x: 29000, y: 0, z: -20000 }; //start
             var earthPosition = { x: -25, y: -50, z: -3250 }; //start
-
+            loadTextures();
             init();
 
-            async function init() {
-                promiseTest();
+            function init() {
 
                 uniforms = {
                     iTime: { value: 0 },
@@ -103,9 +111,7 @@ export default class Index{
                     // transparency: true
                 });
 
-                await loadTextures()
-                    .then(createMaterials)
-                    .catch(err => console.log(err));
+                // loadTextures();
                 // await loadModel();
 
                 canvas = document.getElementById('canvas');
@@ -146,19 +152,9 @@ export default class Index{
                 generateGradient();
 
                 //Create Planets
-                createPlanets();
+                // createPlanets();
 
-                //Asteroid
-                astHolder = new THREE.Mesh();
-                asteroid.forEach(i => {
-                    astHolder.add(i);
-                });
-                astHolder.position.set(
-                    asterPosition.x,
-                    asterPosition.y,
-                    asterPosition.z
-                );
-                scene.add(astHolder);
+                
                 // console.log(scene);
 
                 renderer.setClearColor(0x050505, 0);
@@ -166,8 +162,7 @@ export default class Index{
                 renderer.render(scene, camera);
                 requestAnimationFrame(render);
                 // removeLoad();
-                window.addEventListener('scroll', scrolling);
-                scrolling();
+                
             }
 
             function render() {
@@ -192,7 +187,7 @@ export default class Index{
                             canvas.height
                         );
                         uniforms.iTime.value = time;
-                        astHolder.rotation.y += ((2 * Math.PI) / 180) * delta;
+                        // astHolder.rotation.y += ((2 * Math.PI) / 180) * delta;
                         earth.rotation.y += ((1 * Math.PI) / 180) * delta;
                         atmo1.rotation.y += ((1 * Math.PI) / 180) * delta;
 
@@ -538,168 +533,114 @@ export default class Index{
                 phase = 1;
             }
 
-            function loadTextures() {
-                return new Promise((resolve, reject) => {
-                    var textureLoader = new THREE.TextureLoader();
-                    textureLoader.load('img/Planets/GAS2.png', function(
-                        map
-                    ) {
-                        moonTex = map;
-                    });
-                    var textureLoader = new THREE.TextureLoader();
-                    textureLoader.load('img/Planets/GAS3.png', function(
-                        map
-                    ) {
-                        planetTex = map;
-                    });
-                    var textureLoader = new THREE.TextureLoader();
-                    textureLoader.load('img/Planets/Clouds4.png', function(
-                        map
-                    ) {
-                        atmo1Tex = map;
-                    });
-                    var textureLoader = new THREE.TextureLoader();
-                    textureLoader.load(
-                        './img/noiseRefl_reflective-map1.png',
-                        function(map) {
-                            reflMap = map;
+            function loadTextures(callback) {
+                console.log('starting');
+                fileArray.forEach(function(fileOBJ) {
+                    
+                    promiseArray.push(                        
+                        new Promise(function(resolve, reject) {
+                            console.log('hellO?');
+                            loader.load(
+                                path + fileOBJ.url,                                
+                                function(texture) {
+                                    texturesArray.push(texture);
+                                    var modelOBJ = new Object();
+                                    console.log(texture);
+                                    modelOBJ[fileOBJ.name] = texture;
+
+                                    if (
+                                        modelOBJ[fileOBJ.name] instanceof
+                                        THREE.Texture
+                                    )
+                                        resolve(modelOBJ);
+                                },
+
+                                function(xhr) {
+                                    console.log(
+                                        (xhr.loaded / xhr.total) * 100 +
+                                            '% loaded'
+                                    );
+                                },
+
+                                function(xhr) {
+                                    reject(
+                                        new Error(
+                                            xhr +
+                                                'An error occurred loading while loading' +
+                                                fileOBJ.url
+                                        )
+                                    );
+                                }
+                            );
+                        })
+                    );
+                });
+
+                Promise.all(promiseArray)
+                    .then(
+                        function(textures) {
+                                               // sanity check as an array:
+                                               for (
+                                                   var i = 0;
+                                                   i < textures.length;
+                                                   i++
+                                               ) {
+                                                   console.log(textures[i]);
+                                                }
+                                                console.log(texturesArray);
+                                                createMaterials(textures);
+                                                
+                                               if (
+                                                   callback &&
+                                                   typeof callback ===
+                                                       'function' &&
+                                                   fileArray.length ==
+                                                       textures.length
+                                               )
+                                                   callback(textures);
+                                           },
+                        function(error) {
+                            callback(error);
+                        }
+                    )
+                    .then(
+                        () => {
+                            createPlanets();
+                        },
+                        function(error) {
+                            callback(error);
+                        }
+                    )
+                    .then(
+                        () => {
+                            loaded = true;
+                            window.addEventListener('scroll', scrolling);
+                            scrolling();
+                        },
+                        function(error) {
+                            callback(error);
                         }
                     );
-                    var textureLoader = new THREE.TextureLoader();
-                    textureLoader.load('img/Planets/GAS1.png', function(
-                        map
-                    ) {
-                        earthTex = map;
-                        if (
-                            earthTex &&
-                            moonTex &&
-                            atmo1Tex &&
-                            planetTex &&
-                            reflMap
-                        ) {
-                            resolve();
-                        } else {
-                            reject('Didnt work');
-                        }
-                    });
-                });
             }
 
-            function promiseTest() {
-                var x = 1;
-                var p1 = new Promise((resolve, reject) => {
-                    var textureLoader = new THREE.TextureLoader();
-                    textureLoader.load('img/Planets/GAS2.png', function(
-                        map
-                    ) {
-                        moonTex = map;
-                        if (moonTex) {
-                          // console.log(`Moon texture loaded. stage:${x}`);
-                            resolve(x);
-                        } else {
-                            reject('No moon texture');
-                        }
-                    });
-                    x++;
-                })
-                    .then(x => {
-                        x++;
-                        var textureLoader = new THREE.TextureLoader();
-                        textureLoader.load('img/Planets/GAS3.png', function(
-                            map
-                        ) {
-                            planetTex = map;
-                            if (planetTex) {
-                              // console.log(
-                                //     `Planet texture loaded. stage:${x}`
-                                // );
-                                return x;
-                            } else {
-                                reject('No go #2');
-                            }
-                        });
-                    })
-                    .then(x => {
-                        x++;
-                        var textureLoader = new THREE.TextureLoader();
-                        textureLoader.load('img/Planets/Clouds4.png', function(
-                            map
-                        ) {
-                            atmo1Tex = map;
-                            if (atmo1Tex) {
-                              // console.log(`Planet atmo loaded. stage:${x}`);
-                                return x;
-                            } else {
-                                reject('No go #3');
-                            }
-                        });
-                    })
-                    .then(x => {
-                        x++;
-                        var textureLoader = new THREE.TextureLoader();
-                        textureLoader.load('img/Planets/GAS1.png', function(
-                            map
-                        ) {
-                            earthTex = map;
-                            if (earthTex) {
-                              // console.log(`earth loaded. stage:${x}`);
-                                return x;
-                            } else {
-                                reject('No go #4');
-                            }
-                        });
-                    });
-            }
-
-            function createMaterials() {
+            function createMaterials(textures) {
                 earthMat = new THREE.MeshStandardMaterial({
-                    map: earthTex,
+                    map: texturesArray[0],
                     metalness: 0.1,
                     roughness: 0.5
                 });
 
                 moonMat = new THREE.MeshStandardMaterial({
-                    map: moonTex,
+                    map: texturesArray[1],
                     metalness: 0.1,
                     roughness: 0.5
-                });
-
-                atmo1Mat = new THREE.MeshStandardMaterial({
-                    map: atmo1Tex,
-                    metalness: 0.2,
-                    roughness: 0.6,
-                    transparent: true,
-                    opacity: 0.95
                 });
 
                 planetMat = new THREE.MeshStandardMaterial({
-                    map: planetTex,
+                    map: texturesArray[2],
                     metalness: 0.1,
                     roughness: 0.5
                 });
-
-                asterMat = [
-                    new THREE.MeshPhysicalMaterial({
-                        metalness: 1.0,
-                        roughness: 0,
-                        transparent: true,
-                        opacity: 0.05,
-                        color: 0x17bbd1
-                        //displacementMap: astDMap,
-                        // normalMap: gemMap,
-                        // normalScale: new THREE.Vector2(.20, .20)
-                    }),
-                    new THREE.MeshPhysicalMaterial({
-                        // map:astTex,
-                        // normalMap:astNMap,
-                        // displacementMap:astDMap,
-                        metalness: 0.06,
-                        roughness: 0.65,
-                        color: 0x373842
-                        //displacementMap: astMap,
-                        //displacementScale: new THREE.Vector2(.2, -.2)
-                    })
-                ];
             }
 
     }

@@ -7,9 +7,7 @@
     h3{
         padding:0; margin:0;
     }
-    .desc{
-        width:100% !important;
-    }
+    
     
 </style>
 {#each clients as client}
