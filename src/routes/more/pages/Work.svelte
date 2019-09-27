@@ -1,6 +1,7 @@
 
         <script>
             import {clients} from '../components/Clients.js'
+            import { fade } from 'svelte/transition';
             let clientID;
             export let viewerOpen = false;
             import Review from '../components/Review.svelte'
@@ -15,16 +16,30 @@
                 font-size:90px !important;
                 
             }
-            .viewer{position: fixed; top:50px; left:50px; right:50px; bottom:50px; z-index:20000; background:black;}
+            .clientHolder{
+                display:flex;
+                flex-direction: column;
+                align-items:center;
+                justify-content: space-evenly;
+            }
+            button{
+                border:white 1px solid;
+                background:transparent;
+                color:white;
+                padding: 15px 30px;
+                margin-top:50px;
+            }
         </style>
         <div data-aos="fade-up" data-aos-offset="-300" class="cc">
         {#if !viewerOpen}
             {#each clients as client,index}
-                <h2 on:click="{() => {clientID = client.slug; console.log(client.slug); checkHash()}}">{client.name}</h2>
+                <h2 in:fade="{{delay:200, duration: 300}}" out:fade="{{delay:200}}" on:click="{() => {clientID = client.slug; console.log(client.slug); checkHash()}}">{client.name}</h2>
             {/each}   
         {:else}
-            <button on:click="{checkHash}">Back</button>
-            <Review clientID={clientID}/>
+            <div in:fade="{{delay:200, duration: 300}}" out:fade="{{duration:200}}" class="clientHolder">
+                <Review clientID={clientID}/>
+                <button on:click="{checkHash}">Back</button>
+            </div>
         {/if}
 
         </div>

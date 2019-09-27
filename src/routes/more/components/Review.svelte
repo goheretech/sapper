@@ -8,11 +8,15 @@
     h3{
         padding:0; margin:0;
     }
+    .desc{
+        width:100% !important;
+    }
+    
 </style>
 {#each clients as client}
         {#if client.slug == clientID}
             <h2>{client.name}</h2>
-            <p>{client.desc}</p>
+            <p class="desc">{client.desc}</p>
             
                 {#each client.services as service}
                     <h3>{service}</h3>
