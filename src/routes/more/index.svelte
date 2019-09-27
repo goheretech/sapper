@@ -199,22 +199,22 @@
         <div class="divider-top colorChange"></div>
         <div class="divider-top black"></div>
         <div class="space">
-    {#if showing}
-            <div class="hold" transition:fade="{{delay: 150, duration: 300}}">
-            {#if page == 0}
-                <Who/>
+            {#if showing}
+                    <div class="hold" transition:fade="{{delay: 150, duration: 300}}">
+                    {#if page == 0}
+                        <Who/>
+                    {/if}
+                    {#if page == 1}
+                        <What/>
+                    {/if}
+                    {#if page == 2}
+                        <Where/>
+                    {/if}
+                    {#if page == 3}
+                        <Work/>
+                    {/if}
+                </div>
             {/if}
-            {#if page == 1}
-                <What/>
-            {/if}
-            {#if page == 2}
-                <Where/>
-            {/if}
-            {#if page == 3}
-                <Work/>
-            {/if}
-        </div>
-    {/if}
         </div>
         
         <div class="divider-bottom colorChange"></div>

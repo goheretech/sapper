@@ -1,14 +1,28 @@
 
-        
-        
+        <script>
+            import {clients} from '../components/Clients.js'
+            export let viewerOpen = false;
+
+            function checkHash(){
+                viewerOpen = !viewerOpen;
+            }
+        </script>
+        <style>
+            .cc{margin: 200px 0px;}
+            h2{
+                padding-bottom:20px;
+                font-size:90px !important;
+                
+            }
+            .viewer{position: fixed; top:50px; left:50px; right:50px; bottom:50px; z-index:20000; background:black;}
+        </style>
         <div data-aos="fade-up" data-aos-offset="-300" class="cc">
-            <div class="mini">
-                <div class="icon colorChange"></div>
-                <h6>street-smart strategists</h6>
-            </div>
-            <h2>This is The Work Page</h2>
-            <p>At goHere we develop and apply technology in creative ways, adding value to your organization. Technology
-                enables transformational opportunities for your business.</p>
+        {#if !viewerOpen}
+            {#each clients as client,index}
+                <h2 on:click="{checkHash}">{client.name}</h2>
+            {/each}   
+        {:else}
+            <ShowWork/>
+        {/if}
 
         </div>
-        
