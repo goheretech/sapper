@@ -11,18 +11,22 @@
         </script>
         <style>
             .cc{margin: 200px 0px;}
-            h2{
-                padding-bottom:20px;
-                font-size:90px !important;
-                
-            }
             .clientHolder{
                 display:flex;
                 flex-direction: column;
                 align-items:center;
                 justify-content: space-evenly;
             }
-            button{
+            .goTo{
+                background:transparent;
+                padding-bottom:20px;
+                font-size:90px !important;
+                border: none;
+                color:white;
+                width:100%;
+                font-family: 'Abel', sans-serif;
+            }
+            #back{
                 border:white 1px solid;
                 background:transparent;
                 color:white;
@@ -33,13 +37,13 @@
         <div data-aos="fade-up" data-aos-offset="-300" class="cc">
         {#if !viewerOpen}
             {#each clients as client,index}
-                 <h2  on:click="{() => {clientID = client.slug; console.log(client.slug); checkHash()}}">{client.name}</h2> 
+                 <button  class="goTo" on:click="{() => {clientID = client.slug; console.log(client.slug); checkHash()}}">{client.name}</button> 
             {/each}
         {/if}  
         {#if viewerOpen}
             <div class="clientHolder">
                 <Review clientID={clientID}/>
-                <button on:click="{checkHash}">Back</button>
+                <button id="back" on:click="{checkHash}">Back</button>
             </div>
         {/if}
 
