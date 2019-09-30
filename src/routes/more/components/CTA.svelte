@@ -1,57 +1,52 @@
 <style>
-    .CTA{
-        background:black;
-        z-index: 10;
-        color:white;
-        flex-direction: column;
-        justify-content:center;
-        align-items:center;
+    .clH{
+        display:flex;
+        flex-direction: row;
     }
-    h2{
-        font-size:150px;
-        /* padding-bottom:20px; */
-    }
-    h3{
-        padding-bottom:20px;
-    }
-    a{
-        margin: 0px 10px;
-    }
-    form{
+    .cl{
         width:100%;
     }
-    label{
+    .leftCol{
+        text-align:left;
+        width:60%;
+    }
+    .rightCol{
+        width:40%;
+    }
+    .ctaform{
+        margin-top:30px;
+        width:100%;
+    }
+    .ctalabel{
         font-size: 32px;
         padding:10px 0px;
         width:100%;
     }
-    input{height:40px; width:100%;}
+    .ctainput{height:40px; width:100%;}
 </style>
-
 <section class="CTA gg">
-<div class="cc">
-<div class="mini">
-        <div class="icon ico-purple"></div>
-        <h6>be creative</h6>
+    <div class="cc clH">
+        <div class="cl leftCol">            
+            <h2>We Can Help</h2>
+            <h3>Let's Create Beauty Together</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus magni atque inventore iusto molestias nam culpa ipsam odit, deleniti neque hic, fugit laboriosam accusantium officia sapiente voluptatibus? Ut laboriosam consectetur nobis. Corporis quia sed autem ducimus accusantium! Vel ullam quibusdam voluptatibus porro maxime quidem tenetur, voluptas, quia eum ipsam repudiandae quam optio natus corrupti qui.</p>
+        </div>
+        <div class="cl rightCol">
+            <form class="ctaform">
+                <label class="ctalabel">
+                <span>E-Mail:</span><br> 
+                <input class="ctainput" type="text">
+                </label>  <br> 
+                <label class="ctalabel">
+                <span>Industry:</span><br> 
+                <input class="ctainput" type="text">
+                </label>    <br> 
+                <label class="ctalabel">
+            <span>Reference:</span><br> 
+                <input class="ctainput" type="text">
+                </label>   
+                <button>Submit</button>
+            </form>
+        </div>
     </div>
-    <h2>Let's Get IT Poppin'</h2>
-    <h3>Apply Today: Let's Create Something Beautiful</h3>
-    <div class="buttonHold"><a href="more#apply">Apply Now</a><a href="more#contact">Contact Us</a></div>
-    <!-- <form>
-        <label>
-        <span>E-Mail:</span><br> 
-        <input type="text">
-        </label>  <br> 
-        <label>
-        <span>Industry:</span><br> 
-        <input type="text">
-        </label>    <br> 
-        <label>
-       <span>Reference:</span><br> 
-        <input type="text">
-        </label>   
-    </form> -->
-</div>
-    
-    
 </section>

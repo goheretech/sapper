@@ -8,6 +8,9 @@
 
 
 ## Changelog
+### v0.9.13
+* Added to CTA
+* Started Contact Page
 ### v0.9.12
 * Started CTA Section
 * Added Headers for Pages

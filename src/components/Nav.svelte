@@ -51,8 +51,7 @@
   <nav>
     <div style="position:relative">
       <a href="/" class="logo">
-        go
-        <strong>Here</strong>
+        go<strong>Here</strong>
       </a>
       <div class="logoHolder" style="">
         <img src="/img/newLogo1.png" style=" z-index:2;" alt="" id="logo" />
@@ -86,7 +85,7 @@
         </a>
       </li>
       <li>
-        <a href="contact">
+        <a href="more#contact">
           <span>contact</span>
         </a>
       </li>

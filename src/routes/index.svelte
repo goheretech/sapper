@@ -104,7 +104,7 @@
                 <h6>be creative</h6>
             </div>
             <h2 class="bigBoy">Join us at<br>the Cutting Edge</h2>            
-            <a href="contact.html">Get Started</a>
+            <a href="more#contact">Get Started</a>
         </div>
         <!-- <div class="divider-top purple"></div>
         <div class="divider-bottom purple"></div> -->

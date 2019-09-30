@@ -24,7 +24,24 @@ $break-tablet: 1100px;
 
 ;
 
+button{
+    text-decoration: none;
+    color: white;
+    border: solid white;
+    padding: 10px 20px;
+    transition: all 500ms;
+    background:transparent;
+    &:hover {
+        padding: 12px 25px;
+    }
+    &::before{
+        content:'';
 
+    }
+}
+input:active{
+    border:solid 1px red;
+}
 #space {
     background-image: url(/img/Planets/space.jpg);
     background-attachment: fixed;
