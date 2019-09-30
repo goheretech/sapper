@@ -8,6 +8,9 @@
 
 
 ## Changelog
+### v0.9.12
+* Started CTA Section
+* Added Headers for Pages
 ### v0.9.1
 * Added Picture of Pippi
 * Optimized Website

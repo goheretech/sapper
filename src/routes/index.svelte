@@ -28,8 +28,15 @@
     
 
 </script>
+
+<style>
+    .bigBoy{
+        font-size:80px !important;
+        margin-bottom:20px !important;
+    }
+</style>
 <svelte:head>
-	<title>Home</title>
+	<title>goHere | Creative Solutions</title>
 </svelte:head>
 {#if loaderShowing}
 	<Loader />
@@ -96,9 +103,8 @@
                 <div class="icon ico-black"></div>
                 <h6>be creative</h6>
             </div>
-            <h2>Join us at the Cutting Edge</h2>
-            <p>goHere’s creative technology and business solutions will make your business stand out and stay ahead of the competition.</p>
-            <a href="contact.html">Learn More</a>
+            <h2 class="bigBoy">Join us at<br>the Cutting Edge</h2>            
+            <a href="contact.html">Get Started</a>
         </div>
         <!-- <div class="divider-top purple"></div>
         <div class="divider-bottom purple"></div> -->

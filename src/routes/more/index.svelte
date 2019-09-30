@@ -5,12 +5,14 @@
     import { fade } from 'svelte/transition';
     import { quintOut } from 'svelte/easing';
     import {pages} from './components/Pages.js';
+    import CTA from './components/CTA.svelte';
     import Who from './pages/Who.svelte'
     import What from './pages/What.svelte'
     import Where from './pages/Where.svelte'
     import Work from './pages/Work.svelte'
 
     let page = 0;
+    let pageName = "Who";
     let showing = false;
     onMount(()=>{
         let logo = document.getElementById('logo'); 
@@ -37,14 +39,17 @@
                 break;
             case '#what':
                 animateScroll.scrollToTop()
+                pageName = 'What';
                 page = 1;
                 break;
             case '#where':
                 animateScroll.scrollToTop()
+                pageName = 'Where';
                 page = 2;
                 break;
             case '#work':
                 animateScroll.scrollToTop()
+                pageName = 'Work';
                 page = 3;
                 break;
         }
@@ -53,7 +58,7 @@
     function goWho(){
      showing = false;
         page = 0;
-        
+        pageName = 'Who';
         setTimeout(()=>{
             animateScroll.scrollToTop()
             console.log('fade in')
@@ -63,7 +68,7 @@
     function goWhat(){
      showing = false;
         page = 1;
-        
+        pageName = 'What';
         setTimeout(()=>{
             animateScroll.scrollToTop()
          showing = true;
@@ -72,7 +77,7 @@
     function goWhere(){
      showing = false;
         page = 2;
-        
+        pageName = 'Where';
         setTimeout(()=>{
             animateScroll.scrollToTop()
          showing = true;
@@ -81,7 +86,7 @@
     function goWork(){
      showing = false;
         page = 3;
-        
+        pageName = 'Work';
         setTimeout(()=>{
             animateScroll.scrollToTop()
          showing = true;
@@ -120,6 +125,9 @@
     }
 
     </style>
+    <svelte:head>
+        <title>{pageName} | goHere</title>
+    </svelte:head>
     <header>
     <nav>
         <div style="position:relative">
@@ -202,3 +210,4 @@
         <div class="divider-bottom black"></div>
     </section>
 </div>
+<CTA />
