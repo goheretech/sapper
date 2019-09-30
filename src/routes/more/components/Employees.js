@@ -26,13 +26,13 @@ export const employees = [
            },
            {
                name: 'Meghan Breinig',
-               title: 'Lead Growth Envisioneer',
+               title: 'Lead Optimization Envisioneer',
                nick: 'The Meg',
                bioStart:
-                   'When it comes to overcoming obstacles, Teddy has an intimate knowledge that sets him apart in everything he does. ',
+                   'Meghan has expertise in business consulting, project management, teaching, marketing, volunteerism, and entrepreneurship. Yup—we all wish we could be Meghan',
                bio:
-                   'After losing his leg as an adult, Teddy was faced with the challenge of learning how to walk again. With a smile and determination, he has learned true strength through his struggles, achieving levels of success that few rarely see. His ability to persevere through challenges makes him our best solutions man. Teddy tackles his work with unstoppable determination and creative energy.',
-               picture: 'img/headshots/meg4.png',
+                   'Meghan’s work with goHere centers on project management, and her skillset adds value to just about everything we do. Her creative and uplifting energy gives everyone around her the drive to reach the next level and the inspiration to think outside the box.',
+               picture: 'img/headshots/meg3.png',
                stats: [
                    {
                        name: 'Marketing',
@@ -77,11 +77,11 @@ export const employees = [
            {
                name: 'Theodore Balistreri',
                title: 'Lead Growth Envisioneer',
-               nick: 'The Meg',
+               nick: 'Odd Job',
                bioStart:
-                   'When it comes to overcoming obstacles, Teddy has an intimate knowledge that sets him apart in everything he does. ',
+                   'When it comes to determination, Teddy stands above the rest—on one leg.',
                bio:
-                   'After losing his leg as an adult, Teddy was faced with the challenge of learning how to walk again. With a smile and determination, he has learned true strength through his struggles, achieving levels of success that few rarely see. His ability to persevere through challenges makes him our best solutions man. Teddy tackles his work with unstoppable determination and creative energy.',
+                   'Teddy lost his leg as an adult and was faced with the challenge of learning how to walk again. His ability to overcome obstacles sets him apart in everything he does. Bringing that same determination and fight to his work has launched Teddy to levels of success that few rarely see. We mostly keep Teddy around to tell jokes and do our dishes.',
                picture: 'img/headshots/teddy.png',
                stats: [
                    {
@@ -100,13 +100,12 @@ export const employees = [
                side: 'left'
            },
            {
-               name: 'Elizabeth "Pippi" Balistreri',
-               title: 'Lead Growth Envisioneer',
+               name: 'Elisabeth "Pippi" Balistreri',
+               title: 'Content Envisioneer',
                nick: 'Long- stocking',
-               bioStart:
-                   'When it comes to overcoming obstacles, Teddy has an intimate knowledge that sets him apart in everything he does. ',
+               bioStart: ' ',
                bio:
-                   'After losing his leg as an adult, Teddy was faced with the challenge of learning how to walk again. With a smile and determination, he has learned true strength through his struggles, achieving levels of success that few rarely see. His ability to persevere through challenges makes him our best solutions man. Teddy tackles his work with unstoppable determination and creative energy.',
+                   'While studying psychology, research, and writing at Washington and Lee University, Pippi’s talent for storytelling and ability to understand and translate complex information is what brings any topic she writes about to life.  Pippi’s greatest passion in life is helping people, so she strives to make a positive impact by managing our work with charities and non-profits.',
                picture: 'img/headshots/pip1.png',
                stats: [
                    {

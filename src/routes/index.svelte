@@ -57,19 +57,20 @@
         <div data-aos="fade" data-aos-offset="-400" class="cc">
             <div class="mini">
                 <div class="icon ico-purple"></div>
+                
                 <h6>Masterminds</h6>
             </div>
-            <h2>Do you want to engage customers and attract business?</h2>
-            <p>goHere is sharpening the cutting edge with state-of-the art technology, advanced
-                designs, and tailored user experiences that will attract customers to your business.</p>
-            <a href="more#who">Get Started</a>
+            
+            <h2>What are Creative solutions?</h2>
+            <p>We build completely customized, cutting-edge technology to solve any problem, optimize any system, and maximize any business’s profitability.</p>
+            <a href="more#work">Let's Talk</a>
         </div>
     </section>
     <section class="gg " >
         
         <div data-aos="fade" data-aos-offset="-300" class="cc al-left" id="midSec">
             
-            <h2>Creative Solutions <br>are our business.</h2>
+            <h2>Do I Need <br/>Creative Solutions?</h2>
             <p>At goHere we develop and apply technology in creative ways, adding value to your organization. Technology
                 enables transformational opportunities for your business.</p>
 
@@ -83,9 +84,9 @@
                 <div class="icon ico-purple"></div>
                 <h6>INCITING INSPIRATION</h6>
             </div>
-            <h2>Is your business using technology to its full potential?</h2>
-            <p>We develop and implement brand new technology in creative ways aimed at adding value and enabling transformational opportunities for your business.</p>
-            <a href="more#work">Let's Talk</a>
+            <h2>Creative Solutions <br>are our business.</h2>
+            <p>Our stunning designs and targeted marketing strategies will captivate your customers and attract new business.</p>
+            <a href="more#who">Get Started</a>
         </div>
     </section>
     <section class="gg" >
@@ -93,10 +94,10 @@
         <div id="lastSec"  data-aos="fade" data-aos-offset="-300" class="cc">
             <div class="mini">
                 <div class="icon ico-black"></div>
-                <h6>INCITING INSPIRATION</h6>
+                <h6>be creative</h6>
             </div>
-            <h2>Does your brand image <br>stand out in the marketplace?</h2>
-            <p>Our team of graphic designers, content creators, and marketing experts will build a powerful and engaging brand image for your business. You will fall back in love with your branding, and your customers with be captivated by our unique interactive designs and 3D modeling.</p>
+            <h2>Join us at the Cutting Edge</h2>
+            <p>goHere’s creative technology and business solutions will make your business stand out and stay ahead of the competition.</p>
             <a href="contact.html">Learn More</a>
         </div>
         <!-- <div class="divider-top purple"></div>

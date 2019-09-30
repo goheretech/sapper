@@ -8,7 +8,7 @@
     onMount(()=>{
         
        
-        let logo = document.getElementById('logo');
+        let logo = document.getElementById('logo'); 
         let blur = document.getElementById('logoBlur');
         let rotation = 1;
         function rotate(){

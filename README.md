@@ -1,17 +1,20 @@
 # goHere Website v2.2
-[Old Deployment](https://gohere-test.herokuapp.com/)
 [Deployment](https://gh-gh.herokuapp.com/)
+
+[Old Deployment](https://gohere-test.herokuapp.com/)
 
 ~~[Asteroid Testing Grounds](https://gohere-test.herokuapp.com/testgrounds.html)~~
 
 
 
 ## Changelog
+### v0.9.1
+* Added Picture of Pippi
 ### v0.9.0
 * Remade in Sapper/Svelte
 * New textures
 * New Profile Pictures: Megan, Chris, Jack
-* Fixed Texture laoding problem
+* Fixed Texture loading problem
 * Created What Page
 
 ### v0.8.0
