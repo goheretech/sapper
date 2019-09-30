@@ -10,6 +10,7 @@
 ## Changelog
 ### v0.9.1
 * Added Picture of Pippi
+* Optimized Website
 ### v0.9.0
 * Remade in Sapper/Svelte
 * New textures

@@ -1,13 +1,18 @@
 <script>
-    let page = 0;
-    let showing = false;
+    
     import {onMount} from 'svelte';
     import * as animateScroll from "svelte-scrollto";
+    import { fade } from 'svelte/transition';
+    import { quintOut } from 'svelte/easing';
+    import {pages} from './components/Pages.js';
+    import Who from './pages/Who.svelte'
+    import What from './pages/What.svelte'
+    import Where from './pages/Where.svelte'
+    import Work from './pages/Work.svelte'
 
-    $:  console.log(page);
+    let page = 0;
+    let showing = false;
     onMount(()=>{
-        
-       
         let logo = document.getElementById('logo'); 
         let blur = document.getElementById('logoBlur');
         let rotation = 1;
@@ -45,26 +50,8 @@
         }
     });
 
-    
-    import { fade } from 'svelte/transition';
-    import { quintOut } from 'svelte/easing';
-    import Who from './pages/Who.svelte'
-    import What from './pages/What.svelte'
-    import Where from './pages/Where.svelte'
-    import Work from './pages/Work.svelte'
-    let planet = ['/img/Planets/np1.png','/img/Planets/np2.png','/img/Planets/np3.png','/img/Planets/planet6.png']
-    let titleColor = 'Brilliance'
-    let title = ['Envisioneers','Creators','Inventors','Thinkers']
-    let tag = ['Nerd Alert','Masterminds','Unstoppable','Powerful']
-    let head = ['New Strategies. Old Values.','Sharpening The Cutting Edge','Creating Beauty Daily', 'Our Amazing Partners']
-    let par = ['As members of the first generation to grow up in the age of the internet, the founders of goHere have a deep understanding of how tastes and technology have evolved coupled with an unmatched talent for predicting where they are headed.','At goHere we develop and apply technology in creative ways, adding value to your organization. Technology enables transformational opportunities for your business.','At goHere we develop and apply technology in creative ways, adding value to your organization. Technology enables transformational opportunities for your business.','We develop a creative partnership with each of our clients to deliver the best results. We select brands that we can add value to — brands we can be passionate about helping.']
-    let button = 'Learn More'
-    let buttonHref = 'more#what'
-
-    
     function goWho(){
      showing = false;
-        console.log('fade out')
         page = 0;
         
         setTimeout(()=>{
@@ -79,7 +66,6 @@
         
         setTimeout(()=>{
             animateScroll.scrollToTop()
-            console.log('fade in')
          showing = true;
         }, 500)
     }
@@ -89,7 +75,6 @@
         
         setTimeout(()=>{
             animateScroll.scrollToTop()
-            console.log('fade in')
          showing = true;
         }, 500)
     }
@@ -99,7 +84,6 @@
         
         setTimeout(()=>{
             animateScroll.scrollToTop()
-            console.log('fade in')
          showing = true;
         }, 500)
     }
@@ -169,9 +153,9 @@
 
             {#if showing}
             <div transition:fade="{{delay: 150, duration: 300}}" class="HomeHero-Col">
-                <img  src="{planet[page]}" alt="" class="planet">
-                <h1  class="creative fixed"><span class="colorChange bril">{titleColor}</span><br>
-                    <span  class="lh">{title[page]}</span>
+                <img  src="{pages[page].planet}" alt="" class="planet">
+                <h1  class="creative fixed"><span class="colorChange bril">{pages[page].titleColor}</span><br>
+                    <span  class="lh">{pages[page].title}</span>
                 </h1>
             </div>
             {/if}
@@ -184,11 +168,11 @@
         <div transition:fade="{{delay: 150, duration: 300}}" data-aos="fade-up" data-aos-offset="-400" class="cc">
             <div class="mini">
                 <div class="icon colorChange"></div>
-                <h6>{tag[page]}</h6>
+                <h6>{pages[page].tag}</h6>
             </div>
-            <h2>{head[page]}</h2>
-            <p>{par[page]}</p>
-            <a on:click="{goWhat}" href="{buttonHref}">{button}</a>
+            <h2>{pages[page].head}</h2>
+            <p>{pages[page].par}</p>
+            <a on:click="{goWhat}" href="{pages[page].buttonHref}">{pages[page].button}</a>
         </div>
         {/if}
     </section>
