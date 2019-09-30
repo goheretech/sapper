@@ -328,7 +328,7 @@
 {#if page < 4}
   <div class="blackback">
     {#if !frmShow}
-      <section class="CTA gg">
+      <section class="CTA gg" transition:fade={{ delay: 150, duration: 300 }}>
         <div class="cc">
           <div class="mini">
             <div class="icon ico-purple" />
@@ -349,7 +349,8 @@
         </div>
       </section>
     {:else}
-      <CTA />
+    <div transition:fade={{ delay: 150, duration: 300 }}><CTA /></div>
+      
     {/if}
 
   </div>
