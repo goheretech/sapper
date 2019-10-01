@@ -32,7 +32,10 @@
 <style>
     .bigBoy{
         font-size:80px !important;
+        padding:0 !important;
         margin-bottom:20px !important;
+        font-weight:800 !important;
+        text-transform: uppercase;
     }
 </style>
 <svelte:head>
@@ -103,7 +106,7 @@
                 <div class="icon ico-black"></div>
                 <h6>be creative</h6>
             </div>
-            <h2 class="bigBoy">Join us at<br>the Cutting Edge</h2>            
+            <h2 >Join us at</h2><h2 class="bigBoy">the Cutting Edge</h2>            
             <a href="more#contact">Get Started</a>
         </div>
         <!-- <div class="divider-top purple"></div>
