@@ -8,9 +8,12 @@
 
 
 ## Changelog
+### v0.9.22
+* Input borders
 ### v0.9.21
 * Colored form inputs
 * Bug Fixes
+* Rounded Planet
 ### v0.9.2
 * Heavy Bugfixes and ANimations
 * Updated Contact Page

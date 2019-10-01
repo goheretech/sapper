@@ -39,8 +39,8 @@ button{
 
     }
 }
-input:active{
-    border:solid 1px red;
+input:focus {
+   border:solid 2px red;
 }
 #space {
     background-image: url(/img/Planets/space.jpg);

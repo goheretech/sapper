@@ -310,7 +310,7 @@ export default class Index{
                     color: 0x999999, //grey
                     // color: 0x906094, //purple
                     metalness: 0.9,
-                    roughness: 0.1,
+                    roughness: 0.2,
                     opacity: 0.5,
                     transparent: true
                     // roughnessMap: reflMap
