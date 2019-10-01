@@ -8,6 +8,10 @@
 
 
 ## Changelog
+### v0.9.2
+* Heavy Bugfixes and ANimations
+* Updated Contact Page
+* Updated CTA
 ### v0.9.13
 * Added to CTA
 * Started Contact Page

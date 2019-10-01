@@ -18,11 +18,14 @@
         width:100%;
     }
     .ctalabel{
-        font-size: 32px;
+        font-size: 24px;
         padding:10px 0px;
         width:100%;
     }
-    .ctainput{height:40px; width:100%;}
+    .ctainput{height:20px; width:100%;}
+    button{
+        margin-top:20px;
+    }
 </style>
 <section class="CTA gg">
     <div class="cc clH">
@@ -34,7 +37,10 @@
         <div class="cl rightCol">
             <form class="ctaform">
                 <label class="ctalabel">
-                <span>E-Mail:</span><br> 
+                <span>Name:</span><br> 
+                <input class="ctainput" type="text">
+                <label class="ctalabel">
+                <span>Contact E-Mail:</span><br> 
                 <input class="ctainput" type="text">
                 </label>  <br> 
                 <label class="ctalabel">
@@ -42,7 +48,7 @@
                 <input class="ctainput" type="text">
                 </label>    <br> 
                 <label class="ctalabel">
-            <span>Reference:</span><br> 
+                <span>Website:</span><br> 
                 <input class="ctainput" type="text">
                 </label>   
                 <button>Submit</button>

@@ -312,7 +312,7 @@
             <Work />
           {/if}
           {#if page == 4}
-            <Contact />
+            <CTA />
           {/if}
           {#if page == 5}
             <App />

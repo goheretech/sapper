@@ -1,11 +1,14 @@
 
         <script>
+            import * as animateScroll from "svelte-scrollto";
             import {clients} from '../components/Clients.js'
             import { fade } from 'svelte/transition';
             let clientID;
             export let viewerOpen = false;
             import Review from '../components/Review.svelte'
             function checkHash(){
+                let spot = document.getElementById("hh");
+                animateScroll.scrollTo({element: spot, offset: -350}); 
                 viewerOpen = !viewerOpen;
             }
         </script>
@@ -19,14 +22,13 @@
             }
             .goTo{
                 background:transparent;
-                padding:50px;
                 font-size:100px !important;
                 border: none;
                 color:white;
                 width:100%;
                 font-family: 'Abel', sans-serif;
                 text-align: center;
-                padding-bottom: 50px;
+                padding-bottom: 20px;
                 padding-left: 50px;
                 padding-right: 50px;
                 display: flex;
@@ -34,6 +36,7 @@
                 justify-content: center;
                 align-items: center;
                 position: relative;
+                outline:none;
             }
 
             .goTo span{
@@ -83,10 +86,10 @@
                 margin-top:50px;
             }
         </style>
-        <div data-aos="fade-up" data-aos-offset="-300" class="cc" style="width:100%">
+        <div data-aos="fade-up" data-aos-offset="-300" class="cc" style="width:100%" id="hh">
         {#if !viewerOpen}
             {#each clients as client,index}
-                 <button  class="goTo" on:click="{() => {clientID = client.slug; console.log(client.slug); checkHash()}}"><span data-before="{client.name}">{client.name}</span></button> 
+                 <button  class="goTo" on:click={() => {clientID = client.slug; checkHash()}}><span data-before="{client.name}">{client.name}</span></button> 
             {/each}
         {/if}  
         {#if viewerOpen}
