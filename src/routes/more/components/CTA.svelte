@@ -26,7 +26,7 @@
         justify-content: flex-start;
         align-items: flex-start;
     }
-    .ctainput{height:35px; width:100%;background:url('img/headshots/background (2).png');background-attachment: fixed;background-size: contain;animation: colorRotate2 2s infinite;}
+    .ctainput{ width:100%;background:url('img/headshots/background (2).png');background-attachment: fixed;background-size: contain;animation: colorRotate2 2s infinite;color:white; padding:10px;}
     button{
         margin-top:20px;
     }
@@ -44,19 +44,19 @@
         <div class="cl rightCol">
             <form class="ctaform">
                 <label class="ctalabel">
-                    <span>Name:</span>
+                    <span>Name</span>
                     <input class="ctainput" type="text">
                 </label>
                 <label class="ctalabel">
-                    <span>Contact E-Mail:</span>
+                    <span>E-Mail</span>
                     <input class="ctainput" type="text">
                 </label>
                 <label class="ctalabel">
-                    <span>Industry:</span>
+                    <span>Phone Number</span>
                     <input class="ctainput" type="text">
                 </label>
                 <label class="ctalabel">
-                    <span>Website:</span>
+                    <span>Website</span>
                     <input class="ctainput" type="text">
                 </label>   
                 <button>Submit</button>
