@@ -30,7 +30,6 @@
 * New Profile Pictures: Megan, Chris, Jack
 * Fixed Texture loading problem
 * Created What Page
-
 ### v0.8.0
 * Added new load screen
 * Remade work page to better feature clients

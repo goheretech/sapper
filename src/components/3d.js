@@ -444,7 +444,7 @@ export default class Index{
             }
 
             function createPlanets() {
-                planetGeo = new THREE.SphereGeometry(5000, 5000, 20, 20);
+                planetGeo = new THREE.SphereGeometry(5000, 5000, 30, 30);
                 planet = new THREE.Mesh(planetGeo, planetMat);
                 moonGeo = new THREE.SphereGeometry(1500, 1500, 20, 20);
                 moon = new THREE.Mesh(moonGeo, moonMat);
