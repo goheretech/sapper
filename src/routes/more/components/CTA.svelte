@@ -21,10 +21,17 @@
         font-size: 24px;
         padding:10px 0px;
         width:100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
-    .ctainput{height:20px; width:100%;}
+    .ctainput{height:35px; width:100%;background:url('img/headshots/background (2).png');background-attachment: fixed;background-size: contain;animation: colorRotate2 2s infinite;}
     button{
         margin-top:20px;
+    }
+    span{
+        text-align:left;
     }
 </style>
 <section class="CTA gg">
@@ -37,19 +44,20 @@
         <div class="cl rightCol">
             <form class="ctaform">
                 <label class="ctalabel">
-                <span>Name:</span><br> 
-                <input class="ctainput" type="text">
+                    <span>Name:</span>
+                    <input class="ctainput" type="text">
+                </label>
                 <label class="ctalabel">
-                <span>Contact E-Mail:</span><br> 
-                <input class="ctainput" type="text">
-                </label>  <br> 
+                    <span>Contact E-Mail:</span>
+                    <input class="ctainput" type="text">
+                </label>
                 <label class="ctalabel">
-                <span>Industry:</span><br> 
-                <input class="ctainput" type="text">
-                </label>    <br> 
+                    <span>Industry:</span>
+                    <input class="ctainput" type="text">
+                </label>
                 <label class="ctalabel">
-                <span>Website:</span><br> 
-                <input class="ctainput" type="text">
+                    <span>Website:</span>
+                    <input class="ctainput" type="text">
                 </label>   
                 <button>Submit</button>
             </form>

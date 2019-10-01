@@ -8,6 +8,8 @@
 
 
 ## Changelog
+### v0.9.21
+* Colored form inputs
 ### v0.9.2
 * Heavy Bugfixes and ANimations
 * Updated Contact Page
