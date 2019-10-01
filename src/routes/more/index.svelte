@@ -204,7 +204,7 @@
 <header>
   <nav>
     <div style="position:relative">
-      <a href="/" class="logo">
+      <a rel=prefetch href="/" class="logo">
         go<strong>Here</strong>
       </a>
       <div class="logoHolder" style="">
@@ -218,28 +218,28 @@
     </div>
 
     <ul class="nav-link">
-      <li>
-        <a on:click={goWho} href="more#who">
+      <li class:active="{page === 0}">
+        <a rel=prefetch on:click={goWho} href="more#who">
           <span>who</span>
         </a>
       </li>
-      <li>
-        <a on:click={goWhat} href="more#what">
+      <li class:active="{page === 1}">
+        <a rel=prefetch on:click={goWhat} href="more#what">
           <span>what</span>
         </a>
       </li>
-      <li>
-        <a on:click={goWhere} href="more#where">
+      <li class:active="{page === 2}">
+        <a rel=prefetch on:click={goWhere} href="more#where">
           <span>where</span>
         </a>
       </li>
-      <li>
-        <a on:click={goWork} href="more#work">
+      <li class:active="{page === 3}">
+        <a rel=prefetch on:click={goWork} href="more#work">
           <span>work</span>
         </a>
       </li>
-      <li>
-        <a on:click={goContact} href="more#contact">
+      <li class:active="{page === 4}">
+        <a rel=prefetch on:click={goContact} href="more#contact">
           <span>contact</span>
         </a>
       </li>
@@ -262,7 +262,11 @@
         <div
           transition:fade={{ delay: 150, duration: 300 }}
           class="HomeHero-Col">
-          <img src={pages[page].planet} alt="" class="planet" />
+          {#if page < 4}
+            <img src={pages[page].planet} alt="" class="planet" />
+          {:else}
+            <img src={pages[page].planet} alt="" class="planet" style="left:-400px;bottom:-300px;"/>
+          {/if}
           <h1 class="creative fixed">
             <span class="colorChange bril">{pages[page].titleColor}</span>
             <br />
@@ -287,7 +291,7 @@
         </div>
         <h2>{pages[page].head}</h2>
         <p>{pages[page].par}</p>
-        <a on:click={goWhat} href={pages[page].buttonHref}>
+        <a rel=prefetch on:click={goWhat} href={pages[page].buttonHref}>
           {pages[page].button}
         </a>
       </div>
@@ -342,7 +346,7 @@
           <h3 class="ctah3">Let's Create Something Beautiful</h3>
           <div class="buttonHold">
             <a class="ctaa" on:click={toggleFrm}>Apply Now</a>
-            <a class="ctaa" on:click={goContact} href="more#contact">
+            <a rel=prefetch class="ctaa" on:click={goContact} href="more#contact">
               Contact Us
             </a>
           </div>

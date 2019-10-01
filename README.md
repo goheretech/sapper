@@ -8,14 +8,19 @@
 
 
 ## Changelog
+### v0.9.3
+* Deployed SendGrid for transational emails
+* Leads populate into Google Firebase
 ### v0.9.22
 * Input borders
+* Moved Computer into position
+* Active color on current page
 ### v0.9.21
 * Colored form inputs
 * Bug Fixes
 * Rounded Planet
 ### v0.9.2
-* Heavy Bugfixes and ANimations
+* Heavy Bugfixes and Animations
 * Updated Contact Page
 * Updated CTA
 ### v0.9.13

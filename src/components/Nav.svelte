@@ -50,7 +50,7 @@
 <header>
   <nav>
     <div style="position:relative">
-      <a href="/" class="logo">
+      <a rel=prefetch href="/" class="logo">
         go<strong>Here</strong>
       </a>
       <div class="logoHolder" style="">
@@ -65,27 +65,27 @@
 
     <ul class="nav-link nav-active">
       <li>
-        <a href="more#who">
+        <a rel=prefetch href="more#who">
           <span>who</span>
         </a>
       </li>
       <li>
-        <a href="more#what">
+        <a rel=prefetch href="more#what">
           <span>what</span>
         </a>
       </li>
       <li>
-        <a href="more#where">
+        <a rel=prefetch href="more#where">
           <span>where</span>
         </a>
       </li>
       <li>
-        <a href="more#work">
+        <a rel=prefetch href="more#work">
           <span>work</span>
         </a>
       </li>
       <li>
-        <a href="more#contact">
+        <a rel=prefetch href="more#contact">
           <span>contact</span>
         </a>
       </li>
