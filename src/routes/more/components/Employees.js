@@ -4,9 +4,9 @@ export const employees = [
                title: 'Lead Growth Envisioneer',
                nick: 'Ginger King',
                bioStart:
-                   'Christopher brings with him over a decade of experience working at the highest levels of the tech world.',
+                   'Christopher brings with him a spirit of excellence and over a decade of experience creating solutions in the tech world.',
                bio:
-                   'Using his vast knowledge of psychology and design expertise, Christopher is the architect behind our distinctly beautiful designs and the ways that they mesh perfectly with target users. He is known for his ability to imperceptibly engineer the desired thoughts, impressions, and experiences in consumers. Some people outgrow childish shenanigans…some people master them. Chris certainly falls into the latter category; he combines his playful energy with his technology expertise to create unique user experiences that engage customers in a way no one else can.',
+                   'Using his vast knowledge of psychology, artistic eye, and creative mind, Christopher is the architect of the distinctly beautiful and insightful designs you see in all goHere’s work. Everything he creates is meant to mesh perfectly with the user, imperceptibly engineering their thoughts, impressions, and experiences. You can tell Chris has gone into “mad genius mode” when his ginger beard reaches a certain level of wild.',
                picture: 'img/headshots/chris.png',
                stats: [
                    {
@@ -56,7 +56,7 @@ export const employees = [
                bioStart:
                    'Texas raised, Jack has been bringing his creative mind and energy to the tech world since 2010.',
                bio:
-                   'While attending the Art Institute of Austin for Web Development and Graphic Design, he fatefully moved in next door to Chris. Thus began their entrepreneurial adventures. With expert knowledge in all things IT, Jack ensures that your company receives technology solutions that are on the cutting edge and extremely effective. His commitment to excellence is matched only by the passion he brings to every project.',
+                   'While attending the Art Institute of Austin for Web Development and Graphic Design, he fatefully moved in next door to Chris. Thus began their entrepreneurial adventures. If Chris is the architect, Jack is the builder. With expert knowledge in all things IT, he builds technology solutions that are on the cutting edge and extremely effective. His commitment to excellence is matched only by the passion he brings to his work.',
                picture: 'img/headshots/jack.png',
                stats: [
                    {
@@ -74,31 +74,31 @@ export const employees = [
                ],
                side: 'right'
            },
-        //    {
-        //        name: 'Theodore Balistreri',
-        //        title: 'Lead Growth Envisioneer',
-        //        nick: 'Odd Job',
-        //        bioStart:
-        //            'When it comes to determination, Teddy stands above the rest—on one leg.',
-        //        bio:
-        //            'Teddy lost his leg as an adult and was faced with the challenge of learning how to walk again. His ability to overcome obstacles sets him apart in everything he does. Bringing that same determination and fight to his work has launched Teddy to levels of success that few rarely see. We mostly keep Teddy around to tell jokes and do our dishes.',
-        //        picture: 'img/headshots/teddy.png',
-        //        stats: [
-        //            {
-        //                name: 'Marketing',
-        //                value: 90
-        //            },
-        //            {
-        //                name: 'Marketing',
-        //                value: 85
-        //            },
-        //            {
-        //                name: 'Marketing',
-        //                value: 80
-        //            }
-        //        ],
-        //        side: 'left'
-        //    }
+           //    {
+           //        name: 'Theodore Balistreri',
+           //        title: 'Lead Growth Envisioneer',
+           //        nick: 'Odd Job',
+           //        bioStart:
+           //            'When it comes to determination, Teddy stands above the rest—on one leg.',
+           //        bio:
+           //            'Teddy lost his leg as an adult and was faced with the challenge of learning how to walk again. His ability to overcome obstacles sets him apart in everything he does. Bringing that same determination and fight to his work has launched Teddy to levels of success that few rarely see. We mostly keep Teddy around to tell jokes and do our dishes.',
+           //        picture: 'img/headshots/teddy.png',
+           //        stats: [
+           //            {
+           //                name: 'Marketing',
+           //                value: 90
+           //            },
+           //            {
+           //                name: 'Marketing',
+           //                value: 85
+           //            },
+           //            {
+           //                name: 'Marketing',
+           //                value: 80
+           //            }
+           //        ],
+           //        side: 'left'
+           //    }
            {
                name: 'Elisabeth "Pippi" Balistreri',
                title: 'Content Envisioneer',

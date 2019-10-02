@@ -7,7 +7,7 @@ export let pages = [
                tag: 'Nerd Alert',
                head: 'New Strategies. Old Values.',
                par:
-                   'As members of the first generation to grow up in the age of the internet, the founders of goHere have a deep understanding of how tastes and technology have evolved coupled with an unmatched talent for predicting where they are headed.',
+                   'The founders of goHere have watched and experienced how tastes and technology have evolved since the internet’s inception, giving them a particular talent for predicting—and shaping—where things are headed next.',
                button: 'Check It Out',
                buttonHref: 'more#what'
            },
@@ -28,10 +28,9 @@ export let pages = [
                planet: '/img/Planets/np3.png',
                titleColor: 'Brilliance',
                title: 'Inventors',
-               tag: 'Unstoppable',
-               head: 'Creating Beauty Daily',
-               par:
-                   'At goHere we develop and apply technology in creative ways, adding value to your organization. Technology enables transformational opportunities for your business.',
+               tag: 'Noticeably Nationwide',
+               head: 'The Creative Agency of Miami Beach',
+               par:'Immersed in the design culture characteristic of Miami, goHere easily brings inspiration and artistry to its work with clients all over the U.S.',
                button: 'Check It Out',
                buttonHref: 'more#what'
            },

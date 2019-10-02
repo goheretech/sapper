@@ -72,7 +72,7 @@
             </div>
             
             <h2>What are Creative solutions?</h2>
-            <p>We build completely customized, cutting-edge technology to solve any problem, optimize any system, and maximize any business’s profitability.</p>
+            <p>The completely customized, technology-based strategies we use to help you solve problems, optimize growth, and reach your unique goals.</p>
             <a href="more#work">Let's Talk</a>
         </div>
     </section>
@@ -80,9 +80,8 @@
         
         <div data-aos="fade" data-aos-offset="-300" class="cc al-left" id="midSec">
             
-            <h2>Do I Need <br/>Creative Solutions?</h2>
-            <p>At goHere we develop and apply technology in creative ways, adding value to your organization. Technology
-                enables transformational opportunities for your business.</p>
+            <h2>Creative Solutions <br>Are Our Business.</h2>
+            <p>And with our stunning designs and tailored content, your brand image will reflect your business’s fundamental values.</p>
 
         </div>
         <!-- <div class="divider-top pink"></div>
@@ -94,8 +93,8 @@
                 <div class="icon ico-purple"></div>
                 <h6>INCITING INSPIRATION</h6>
             </div>
-            <h2>Creative Solutions <br>are our business.</h2>
-            <p>Our stunning designs and targeted marketing strategies will captivate your customers and attract new business.</p>
+            <h2>Different!!!</h2>
+            <p>Our solutions spark powerful outcomes that open up a world of opportunities for your business and set you up for success. </p>
             <a href="more#who">Get Started</a>
         </div>
     </section>

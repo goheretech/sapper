@@ -22,7 +22,7 @@
                     <h3 class="main">
                         {bioStart}
                     </h3>
-                    <p class="desc">{bio}
+                    <p class="desc" v-html="rawHtml">{bio}
                     </p>
                 {/if}
                 {#if side == 'left'}
@@ -83,7 +83,7 @@
             <h3 class="main">
                 {bioStart}
             </h3>
-            <p class="desc">{bio}
+            <p class="desc" v-html="rawHtml">{bio}
             </p>
         {/if}
             </div>

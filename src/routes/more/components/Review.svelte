@@ -13,7 +13,7 @@
 {#each clients as client}
         {#if client.slug == clientID}
             <h2>{client.name}</h2>
-            <p class="desc">{client.desc}</p>
+            <p class="desc">{@html client.desc}</p>
             
                 {#each client.services as service}
                     <h3>{service}</h3>

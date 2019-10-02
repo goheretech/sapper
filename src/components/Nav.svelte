@@ -1,6 +1,11 @@
 <script>
   import { onMount } from "svelte";
-
+  let displayMenu = false;
+  function toggleMenu(){
+    displayMenu = !displayMenu;
+    console.log(displayMenu);
+    
+  }
   onMount(() => {
     let logo = document.querySelector("#logo");
     let blur = document.querySelector("#logoBlur");
@@ -63,7 +68,7 @@
       </div>
     </div>
 
-    <ul class="nav-link nav-active">
+    <ul class="nav-link">
       <li>
         <a rel=prefetch href="more#who">
           <span>who</span>
@@ -91,7 +96,7 @@
       </li>
     </ul>
 
-    <div class="burger">
+    <div class="burger" class:toggle='{displayMenu}' on:click='{toggleMenu}'>
       <div class="line1" />
       <div class="line2" />
       <div class="line3" />
