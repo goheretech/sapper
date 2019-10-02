@@ -30,7 +30,7 @@
       burger.addEventListener("click", () => {
         console.log("clicked");
 
-        nav.classList.toggle("nav-active");
+        // nav.classList.toggle("nav-active");
       });
     };
 
@@ -68,29 +68,29 @@
       </div>
     </div>
 
-    <ul class="nav-link">
-      <li>
+    <ul class="nav-link" class:nav-active={displayMenu}>
+      <li class:act="{displayMenu}">
         <a rel=prefetch href="more#who">
           <span>who</span>
         </a>
       </li>
-      <li>
-        <a rel=prefetch href="more#what">
+      <li class:act="{displayMenu}">
+        <a  rel=prefetch href="more#what">
           <span>what</span>
         </a>
       </li>
-      <li>
-        <a rel=prefetch href="more#where">
+      <li class:act="{displayMenu}">
+        <a  rel=prefetch href="more#where">
           <span>where</span>
         </a>
       </li>
-      <li>
-        <a rel=prefetch href="more#work">
+      <li class:act="{displayMenu}">
+        <a  rel=prefetch href="more#work">
           <span>work</span>
         </a>
       </li>
-      <li>
-        <a rel=prefetch href="more#contact">
+      <li class:act="{displayMenu}">
+        <a  rel=prefetch href="more#contact">
           <span>contact</span>
         </a>
       </li>
