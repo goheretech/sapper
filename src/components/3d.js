@@ -125,7 +125,7 @@ export default class Index{
                     alpha: true
                 });
                 renderer.setPixelRatio(window.divicePixelRatio);
-                renderer.setSize(window.innerWidth, window.innerHeight);
+                renderer.setSize(window.innerWidth, window.outerHeight);
 
                 //Camera
                 camera = new THREE.PerspectiveCamera(
