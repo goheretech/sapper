@@ -17,7 +17,7 @@
       showThanks = true;
     } catch (e) {
       console.log(";(", e);
-      // alert("Big Error: " + e);
+     console.log("Big Error: " + e);
       error = true;
     }
   }
