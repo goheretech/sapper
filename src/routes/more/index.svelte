@@ -13,16 +13,15 @@
   import Contact from "./pages/Contact.svelte";
 
   let frmShow = false;
-
-  $: console.log(hash);
-  function toggleFrm() {
-    frmShow = !frmShow;
-  }
-  let hash = window.location.hash;
+  let hash;
   let page = 0;
   let pageName = "Who";
   let showing = false;
+  function toggleFrm() {
+    frmShow = !frmShow;
+  }
   onMount(() => {
+    hash = window.location.hash;
     let logo = document.getElementById("logo");
     let blur = document.getElementById("logoBlur");
     let rotation = 1;

@@ -144,7 +144,7 @@
               <small>Please enter your website</small>
             {/if}
           </label>
-          <button on:click={sendContactMessage}>Submit</button>
+          <div on:click={sendContactMessage}>Submit</div>
         </form>
       </div>
     {:else}
