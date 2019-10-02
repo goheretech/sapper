@@ -9,11 +9,11 @@
   let showThanks = false;
 
   async function sendContactMessage() {
-    console.log("Send form...", contactForm);
+    // console.log("Send form...", contactForm);
     let db = firebase.firestore();
     try {
-      await db.collection("contactForm").add(contactForm);
-      console.log("Submitting");
+      await db.collection("leads").add(contactForm);
+      // console.log("Submitting");
       showThanks = true;
     } catch (e) {
       console.log(";(", e);
