@@ -13,6 +13,7 @@
   import Contact from "./pages/Contact.svelte";
 
   let frmShow = false;
+  let displayMenu = false;
   let hash;
   let page = 0;
   let pageName = "Who";
@@ -133,6 +134,12 @@
       showing = true;
     }, 500);
   }
+
+  function toggleMenu(){
+    displayMenu = !displayMenu;
+    console.log(displayMenu);
+    
+  }
 </script>
 
 <style>
@@ -216,35 +223,35 @@
       </div>
     </div>
 
-    <ul class="nav-link">
-      <li class:active="{page === 0}">
+    <ul class="nav-link" class:nav-active={displayMenu}>
+      <li class:active="{page === 0}" class:act="{displayMenu}">
         <a rel=prefetch on:click={goWho} href="more#who">
           <span>who</span>
         </a>
       </li>
-      <li class:active="{page === 1}">
+      <li class:active="{page === 1}" class:act="{displayMenu}">
         <a rel=prefetch on:click={goWhat} href="more#what">
           <span>what</span>
         </a>
       </li>
-      <li class:active="{page === 2}">
+      <li class:active="{page === 2}" class:act="{displayMenu}"> 
         <a rel=prefetch on:click={goWhere} href="more#where">
           <span>where</span>
         </a>
       </li>
-      <li class:active="{page === 3}">
+      <li class:active="{page === 3}" class:act="{displayMenu}">
         <a rel=prefetch on:click={goWork} href="more#work">
           <span>work</span>
         </a>
       </li>
-      <li class:active="{page === 4}">
+      <li class:active="{page === 4}" class:act="{displayMenu}">
         <a rel=prefetch on:click={goContact} href="more#contact">
           <span>contact</span>
         </a>
       </li>
     </ul>
 
-    <div class="burger">
+    <div class="burger" class:toggle='{displayMenu}' on:click='{toggleMenu}'>
       <div class="line1" />
       <div class="line2" />
       <div class="line3" />

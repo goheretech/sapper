@@ -154,6 +154,10 @@ body {
                         display: flex;
                         justify-content: center;
                         opacity: 0;
+
+                        &.act{
+                            opacity: 1;
+                        }
                     }
                 }
 

@@ -8,6 +8,10 @@
 
 
 ## Changelog
+### v0.9.6
+* Mobile Formating - Menu
+### v0.9.5
+* Added random stars
 ### v0.9.4
 * Bugfixes for SendGrid
 ### v0.9.3

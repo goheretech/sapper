@@ -5,6 +5,7 @@
   numStars = 10;
   let width = 1920;
   let height = 1080;
+  
 
   for (let i = 0; i < numStars; i++) {
     genCoord();
@@ -12,10 +13,10 @@
   
 
   function genCoord() {
-    console.log(stars);
+    // console.log(stars);
     let x = parseInt(Math.random() * width);
     let y = parseInt(Math.random() * height);
-    let hg = parseInt(Math.random() * 50 + 10);
+    let hg = parseInt(Math.random() * 20 + 20);
     let color = parseInt(Math.random() * 360);
     let opacity = parseInt(Math.random() * 50 + 50)/100;
     stars.push({ 
@@ -35,7 +36,7 @@
           let foundStars = document.getElementById("starfield");
           // console.log(foundStars);
           if(foundStars){
-              // foundStars.style.opacity = Math.abs(Math.sin(x/10)); 
+              foundStars.style.opacity = Math.abs(Math.sin(x/1)); 
 
           }
         }
@@ -63,15 +64,13 @@
 </style>
 
   <div id="starfield" style="opacity:1">
-  {#if stars.length < 3}
-    Small Potatoes
-  {:else}
+  
       {#each stars as star}
       <div
         class="star"
         style="left:{star.x}px; top:{star.y}px; filter:hue-rotate({star.hue}deg); width:{star.height}px; height:{star.height}px; opacity:{star.opacity}"/>
     {/each}
-  {/if}
+ 
     
   </div>
 
