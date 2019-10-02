@@ -23,7 +23,10 @@ $break-tablet: 1100px;
 }
 
 ;
-
+html{
+    width:100vw;
+    overflow-x:none;
+}
 button{
     text-decoration: none;
     color: white;
