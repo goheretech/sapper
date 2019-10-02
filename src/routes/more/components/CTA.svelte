@@ -95,7 +95,7 @@
         </p>
       </div>
       <div class="cl rightCol">
-        <form class="ctaform">
+        <div class="ctaform">
           <label class="ctalabel">
             <span>Name</span>
             <input
@@ -144,8 +144,8 @@
               <small>Please enter your website</small>
             {/if}
           </label>
-          <div on:click={sendContactMessage}>Submit</div>
-        </form>
+          <button on:click={sendContactMessage}>Submit</button>
+        </div>
       </div>
     {:else}
       <div class="thanks">

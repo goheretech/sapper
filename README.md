@@ -8,6 +8,8 @@
 
 
 ## Changelog
+### v0.9.4
+* Bugfixes for SendGrid
 ### v0.9.3
 * Deployed SendGrid for transational emails
 * Leads populate into Google Firebase
