@@ -544,7 +544,7 @@ body {
     position: fixed;
     top: 0;
     width: 100vw;
-    height: 100vh;
+    height: 110vh;
     background-image: url('/img/Planets/space.jpg');
     z-index: 1;
 
@@ -1105,7 +1105,7 @@ section {
 
 #loader {
     width: 100vw;
-    height: 100vh;
+    height: 110vh;
     background: black;
     position: fixed;
     z-index: 999;
@@ -1113,7 +1113,7 @@ section {
 
 .loading {
     width: 100vw;
-    height: 100vh;
+    height: 110vh;
     position: fixed;
     background: black;
     z-index: 999;
