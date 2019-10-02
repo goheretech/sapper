@@ -130,7 +130,7 @@ export default class Index{
                 //Camera
                 camera = new THREE.PerspectiveCamera(
                     35,
-                    window.innerWidth / window.innerHeight,
+                    window.innerWidth / window.outerHeight,
                     1000,
                     300000
                 );
@@ -166,9 +166,9 @@ export default class Index{
                 
             }
             function onWindowResize() {
-                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.aspect = window.innerWidth / window.outerHeight;
                 camera.updateProjectionMatrix();
-                renderer.setSize(window.innerWidth, window.innerHeight);
+                renderer.setSize(window.innerWidth, window.outerHeight);
             }
             function render() {
                 delta = clock.getDelta();
