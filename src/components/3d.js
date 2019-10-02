@@ -162,9 +162,14 @@ export default class Index{
                 renderer.render(scene, camera);
                 requestAnimationFrame(render);
                 // removeLoad();
+                window.addEventListener('resize', onWindowResize, false);
                 
             }
-
+            function onWindowResize() {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            }
             function render() {
                 delta = clock.getDelta();
                 var time = clock.elapsedTime;
