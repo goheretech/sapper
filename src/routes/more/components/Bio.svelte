@@ -14,9 +14,11 @@
 
 </script>
 <style>
-      .flipped{
-          order:2;
-      }
+      @media screen and (max-width:500px) {
+            .flipped{
+                order:2;
+            }
+    } 
 </style>
 
 <div data-aos="fade-up" data-aos-offset="-300" class="bio chris">

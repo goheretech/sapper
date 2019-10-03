@@ -292,7 +292,7 @@
             <img src={pages[page].planet} alt="" class="planet" style="left:-400px;bottom:-300px;"/>
           {/if}
           <h1 class="creative fixed">
-            <span class="colorChange bril">{pages[page].titleColor}</span>
+            <span class="colorChange bril" data-glow='{pages[page].titleColor}'>{pages[page].titleColor}</span>
             <br />
             <span class="lh">{pages[page].title}</span>
           </h1>

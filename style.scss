@@ -691,7 +691,7 @@ section {
                     position: relative;
 
                     &.bril::after {
-                        content: 'Brilliance';
+                        content: attr(data-glow);
                         position: absolute;
                         top: 10;
                         left: 0;
@@ -707,7 +707,7 @@ section {
                     }
 
                     &::after {
-                        content: 'Creative';
+                        content: attr(data-glow);
                         position: absolute;
                         top: 10;
                         left: 0;
