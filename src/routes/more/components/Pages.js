@@ -19,7 +19,7 @@ export let pages = [
                tag: 'Masterminds',
                head: 'Sharpening The Cutting Edge',
                par:
-                   'At goHere we develop and apply technology in creative ways, adding value to your organization. Technology enables transformational opportunities for your business.',
+                   'We develop and apply technology in creative ways aimed at adding value to your organization. Every move we make is client focused and carefully calculated using the latest insights and analytics.',
                button: 'Check It Out',
                buttonHref: 'more#what'
            },
