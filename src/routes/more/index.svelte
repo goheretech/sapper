@@ -202,6 +202,17 @@
     margin: 0px 10px;
     cursor: pointer;
   }
+  @media screen and (max-width:500px) {
+           
+           .space{
+             height:100%;
+           }
+           .hold{
+             height:auto;
+             padding: 80px 0px;
+           }
+           
+        }
 </style>
 
 <svelte:head>

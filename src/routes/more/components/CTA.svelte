@@ -28,6 +28,20 @@
     display: flex;
     flex-direction: row;
   }
+  @media screen and (max-width:500px) {
+           .clH{
+             flex-direction:column;
+           }
+           .cl.leftCol{
+             width:90%;
+           }
+           .cl.rightCol{
+             width:90%;
+           }
+           .CTA{
+             height:auto;
+           }
+        }
   .cl {
     width: 100%;
   }
@@ -76,6 +90,7 @@
   .thanks h1{
     font-size:42px;
   }
+
 </style>
 
 <section class="CTA gg">
