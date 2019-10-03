@@ -41,6 +41,9 @@
            .CTA{
              height:auto;
            }
+           .ctainput {
+             background-size:cover;
+           }
         }
   .cl {
     width: 100%;
