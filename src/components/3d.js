@@ -125,12 +125,12 @@ export default class Index{
                     alpha: true
                 });
                 renderer.setPixelRatio(window.divicePixelRatio);
-                renderer.setSize(window.innerWidth, window.outerHeight);
+                renderer.setSize(window.innerWidth, window.innerHeight);
 
                 //Camera
                 camera = new THREE.PerspectiveCamera(
                     35,
-                    window.innerWidth / window.outerHeight,
+                    window.innerWidth / window.innerHeight,
                     1000,
                     300000
                 );
