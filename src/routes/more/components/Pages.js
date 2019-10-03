@@ -37,7 +37,7 @@ export let pages = [
            },
            {
                page: 'Work',
-               planet: '/img/Planets/planet6.png',
+               planet: '/img/Planets/np3.png',
                titleColor: 'Tech',
                title: 'Renaissance',
                tag: 'Powerful',
