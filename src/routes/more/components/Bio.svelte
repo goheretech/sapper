@@ -8,13 +8,19 @@
     export let stats = [];
     export let side;
 
+    function checkSide(side){
+        return side === 'right'
+    }
+
 </script>
 <style>
-      
+      .flipped{
+          order:2;
+      }
 </style>
 
 <div data-aos="fade-up" data-aos-offset="-300" class="bio chris">
-            <div class="whoCol left">
+            <div class="whoCol left" class:flipped="{!checkSide(side)}">
                 {#if side == 'right'}
                     <h5 class="name">
                         {name} - {title}
@@ -29,7 +35,7 @@
                     </p>
                 {/if}
                 {#if side == 'left'}
-                    <div class="backNeb">
+                    <div class="backNeb" >
                         <div class="headShot" style="background-image:url({picture})"></div>
                     </div>
                     <!-- <div class="stats">
@@ -52,7 +58,7 @@
                     </div> -->
                 {/if}
             </div>
-            <div class="whoCol right">
+            <div class="whoCol right" class:flipped="{checkSide(side)}">
             {#if side == 'right'}
                 <div class="backNeb">
                         <div class="headShot" style="background-image:url({picture})"></div>

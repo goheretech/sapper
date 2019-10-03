@@ -8,6 +8,8 @@
 
 
 ## Changelog
+### v0.9.75
+* Who Page fix alignment of pictures
 ### v0.9.7
 *  Mobile Formatting 
     - Who Page

@@ -384,14 +384,15 @@ body {
         width: $containerWidth;
         margin-bottom: 150px;
         @media screen and (max-width:500px) {
-            display:block;
+            display:flex;
+            flex-direction:column;
             width:100vw;
         }
 
         .whoCol {
             width: 50%;
             @media screen and (max-width:500px) {
-                width: 100vw;
+                width: 90vw;
             }
             .name {
                 color: purple;
@@ -657,6 +658,9 @@ section {
                     position: fixed;
                     bottom: 1.5em;
                     right: .7em;
+                     @media screen and (max-width:$break-tablet) {
+                         bottom:5.5em;
+                     }
                 }
 
                 @media screen and (max-width:$break-tablet) {
