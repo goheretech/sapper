@@ -225,27 +225,27 @@
 
     <ul class="nav-link" class:nav-active={displayMenu}>
       <li class:active="{page === 0}" class:act="{displayMenu}">
-        <a rel=prefetch on:click={goWho} href="more#who">
+        <a rel=prefetch on:click={()=>{goWho();toggleMenu()}} href="more#who">
           <span>who</span>
         </a>
       </li>
       <li class:active="{page === 1}" class:act="{displayMenu}">
-        <a rel=prefetch on:click={goWhat} href="more#what">
+        <a rel=prefetch on:click={()=>{goWhat();toggleMenu()}} href="more#what">
           <span>what</span>
         </a>
-      </li>
+      <!-- </li>
       <li class:active="{page === 2}" class:act="{displayMenu}"> 
-        <a rel=prefetch on:click={goWhere} href="more#where">
+        <a rel=prefetch on:click={()=>{goWhere();toggleMenu()}} href="more#where">
           <span>where</span>
         </a>
-      </li>
+      </li> -->
       <li class:active="{page === 3}" class:act="{displayMenu}">
-        <a rel=prefetch on:click={goWork} href="more#work">
+        <a rel=prefetch on:click={()=>{goWork();toggleMenu()}} href="more#work">
           <span>work</span>
         </a>
       </li>
       <li class:active="{page === 4}" class:act="{displayMenu}">
-        <a rel=prefetch on:click={goContact} href="more#contact">
+        <a rel=prefetch on:click={()=>{goContact();toggleMenu()}} href="more#contact">
           <span>contact</span>
         </a>
       </li>

@@ -79,11 +79,11 @@
           <span>what</span>
         </a>
       </li>
-      <li class:act="{displayMenu}">
+      <!-- <li class:act="{displayMenu}">
         <a  rel=prefetch href="more#where">
           <span>where</span>
         </a>
-      </li>
+      </li> -->
       <li class:act="{displayMenu}">
         <a  rel=prefetch href="more#work">
           <span>work</span>

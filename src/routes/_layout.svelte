@@ -8,7 +8,10 @@
 </script>
 
 <style>
-	
+	main{
+		overflow-x:hidden;
+		width:100vw;
+	}
 </style>
 
 <!-- <Nav/> -->
