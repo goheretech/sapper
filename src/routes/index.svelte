@@ -93,7 +93,7 @@
                 <div class="icon ico-purple"></div>
                 <h6>INCITING INSPIRATION</h6>
             </div>
-            <h2>Different!!!</h2>
+            <h2>Be Different</h2>
             <p>Our solutions spark powerful outcomes that open up a world of opportunities for your business and set you up for success. </p>
             <a href="more#who">Get Started</a>
         </div>
