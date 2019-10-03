@@ -55,7 +55,7 @@
         <div class="cont" id="topSec" data-aos="fade">
 
             <div class="HomeHero-Col">
-                <h1 class="creative"><span class="colorChange">Creative</span><br>
+                <h1 class="creative"><span class="colorChange" data-glow="Creative">Creative</span><br>
                     <span class="lh">Solutions</span>
                 </h1>
             </div>
