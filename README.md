@@ -8,6 +8,11 @@
 
 
 ## Changelog
+### v0.9.7
+*  Mobile Formatting 
+    - Who Page
+    - Work Page
+    - Menu Fix 
 ### v0.9.6
 * Mobile Formating - Menu
 ### v0.9.5
