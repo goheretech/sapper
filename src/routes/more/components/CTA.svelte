@@ -28,23 +28,7 @@
     display: flex;
     flex-direction: row;
   }
-  @media screen and (max-width:500px) {
-           .clH{
-             flex-direction:column;
-           }
-           .cl.leftCol{
-             width:90%;
-           }
-           .cl.rightCol{
-             width:90%;
-           }
-           .CTA{
-             height:auto;
-           }
-           .ctainput {
-             background-size:cover;
-           }
-        }
+ 
   .cl {
     width: 100%;
   }
@@ -77,6 +61,7 @@
     color: white;
     padding: 10px;
     outline: none;
+
   }
   button {
     margin-top: 20px;
@@ -94,6 +79,23 @@
     font-size:42px;
   }
 
+   @media screen and (max-width:500px) {
+           .clH{
+             flex-direction:column;
+           }
+           .cl.leftCol{
+             width:90%;
+           }
+           .cl.rightCol{
+             width:90%;
+           }
+           .CTA{
+             height:auto;
+           }
+           .ctainput {
+             background-size:cover;
+           }
+        }
 </style>
 
 <section class="CTA gg">
