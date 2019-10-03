@@ -9,6 +9,9 @@
     export let side;
 
 </script>
+<style>
+      
+</style>
 
 <div data-aos="fade-up" data-aos-offset="-300" class="bio chris">
             <div class="whoCol left">

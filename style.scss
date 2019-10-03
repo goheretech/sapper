@@ -371,6 +371,10 @@ body {
     padding-top: 250px;
     position: relative;
 
+    @media screen and (max-width:500px) {
+        padding-top:0px;
+    }
+
     .bio {
         display: flex;
         flex-direction: horizontal;
@@ -379,11 +383,16 @@ body {
         justify-content: center;
         width: $containerWidth;
         margin-bottom: 150px;
-
+        @media screen and (max-width:500px) {
+            display:block;
+            width:100vw;
+        }
 
         .whoCol {
             width: 50%;
-
+            @media screen and (max-width:500px) {
+                width: 100vw;
+            }
             .name {
                 color: purple;
                 font-size: 20px;
@@ -396,6 +405,9 @@ body {
                 // font-family: 'Major Mono Display',
                 // monospace;
                 font-size: 170px;
+                @media screen and (max-width:500px) {
+                   font-size:75px;
+                }
                 margin: 0;
                 text-transform: uppercase;
                 line-height: 100%;
@@ -404,11 +416,17 @@ body {
             .main {
                 color: white;
                 font-size: 24px;
+                @media screen and (max-width:500px) {
+                    font-size:22px;
+                }
             }
 
             .desc {
                 color: white;
                 font-size: 22px;
+                @media screen and (max-width:500px) {
+                font-size:18px;
+            }
             }
 
             &.switch {
@@ -421,7 +439,9 @@ body {
 
                 text-align: left;
                 padding-right: 80px;
-
+                @media screen and (max-width:500px) {
+                    padding-right:0px;
+                }
 
             }
 
@@ -440,6 +460,11 @@ body {
                 margin-bottom: 50px;
                 background-position: center;
                 background-size: cover;
+
+                 @media screen and (max-width:500px) {
+                     height:200px;
+                 }
+                
                 // background:white;
 
                 &.chris {
