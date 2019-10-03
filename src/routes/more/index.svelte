@@ -146,6 +146,7 @@
   .bottom {
     height: auto !important;
     min-height: 800px;
+     
   }
   .bottom .hold {
     display: flex;
@@ -211,8 +212,14 @@
              height:auto;
              padding: 80px 0px;
            }
+            .bottom{
+                     min-height:auto;
+                   }
            
-        }
+    }
+        
+        
+                  
 </style>
 
 <svelte:head>

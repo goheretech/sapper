@@ -85,6 +85,16 @@
                 padding: 15px 30px;
                 margin-top:50px;
             }
+
+             @media screen and (max-width:500px) {
+                    #hh{
+                        margin: 0;
+                    }
+                    .goTo{
+                        font-size:42px !important;
+                    }
+                    .goTo span{font-size: 42px;}
+                }
         </style>
         <div data-aos="fade-up" data-aos-offset="-300" class="cc" style="width:100%" id="hh">
         {#if !viewerOpen}

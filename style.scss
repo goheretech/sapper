@@ -785,6 +785,9 @@ section {
     #canvasHex {
         position: absolute;
         height: $sectionHeight !important;
+         @media screen and (max-width:500px) {
+             height: auto !important;
+         }
     }
 
     #midSec {
