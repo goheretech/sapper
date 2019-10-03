@@ -12,7 +12,9 @@
 *  Mobile Formatting 
     - Who Page
     - Work Page
-    - Menu Fix? 
+    - Menu Fix
+    - What Page
+    - Form Background
 ### v0.9.6
 * Mobile Formating - Menu
 ### v0.9.5

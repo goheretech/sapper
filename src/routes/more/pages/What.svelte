@@ -80,7 +80,16 @@
     100% {
         background-position: 0%;
     }
+
+    
 }
+@media screen and (max-width:500px) {
+        .services{
+            flex-direction:column;
+            padding: 50px 0px;
+        }
+        .hidden{padding-top: 40px; }
+    }
 
 </style>
 {#if turnedOn}
