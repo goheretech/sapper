@@ -25,9 +25,9 @@ export default class Index{
             var amb;
             var reflMap, uniforms, matEdge;
             let fileArray = [
-                { name: 'earth', url: 'GAS1.png' },
-                { name: 'moon', url: 'GAS2.png' },
-                { name: 'planet', url: 'GAS3.png' }
+                { name: 'earth', url: 'GAS1-ns.png' },
+                { name: 'moon', url: 'GAS2-ns.png' },
+                { name: 'planet', url: 'GAS3-ns.png' }
             ];
             let promiseArray = [],
                 path = 'img/Planets/';

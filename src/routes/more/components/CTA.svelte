@@ -105,13 +105,9 @@
         <h2>We Can Help</h2>
         <h3>Let's Create Beauty Together</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-          magni atque inventore iusto molestias nam culpa ipsam odit, deleniti
-          neque hic, fugit laboriosam accusantium officia sapiente voluptatibus?
-          Ut laboriosam consectetur nobis. Corporis quia sed autem ducimus
-          accusantium! Vel ullam quibusdam voluptatibus porro maxime quidem
-          tenetur, voluptas, quia eum ipsam repudiandae quam optio natus
-          corrupti qui.
+          From small local businesses to global giants; from start-ups to industry leaders; from real estate agencies to sports bars; goHere can add value to any organization. Our dynamic team of experts is equipped to understand your unique needs and meet them in beautiful and effective ways. 
+          
+          Think you can’t afford our services? We choose our clients based on harmony, not purse strings; we'd love to hear from you regardless of your budget.
         </p>
       </div>
       <div class="cl rightCol">

@@ -55,7 +55,7 @@ export let pages = [
                tag: 'Lets Go!',
                head: 'We Want to Hear from You',
                par:
-                   'We develop a creative partnership with each of our clients to deliver the best results. We select brands that we can add value to — brands we can be passionate about helping.',
+                   'We work with organizations of all types across all industries. Stand out from the competition and stay ahead of the trends with goHere.',
                button: 'Apply Today',
                buttonHref: 'more#app'
            },
