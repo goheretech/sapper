@@ -1,5 +1,6 @@
 
 <script>
+    export let particleNumber = 63;
     var THREE = require('three');
     var POSTPROCESSING =  require("postprocessing");
     let scene, camera, renderer;
@@ -9,6 +10,7 @@
         new THREE.Color("hsl(30, 50%, 70%)"),
         new THREE.Color("hsl(60, 100%, 90%)")
     ]
+    let newHue, newS, newL;
     let redLight, orangeLight, blueLight;
     var clock = new THREE.Clock();
     function init() {
@@ -41,12 +43,26 @@
     }
     function render() {
         let delta = clock.getDelta();
-        console.log(clock.elapsedTime);
         
         cloudParticles.forEach(p => {
             p.rotation.z -=0.001;
         });
+
+        newHue= [Math.abs(Math.sin(clock.elapsedTime/3)*200), Math.abs(Math.sin(clock.elapsedTime/6)*200),Math.abs(Math.sin(clock.elapsedTime/8)*200)]
+        newS= [parseInt(Math.abs(Math.sin(clock.elapsedTime/11)*100)), parseInt(Math.abs(Math.sin(clock.elapsedTime/6)*100)),parseInt(Math.abs(Math.sin(clock.elapsedTime/20)*100))]
+        newL= [parseInt(Math.abs(Math.sin(clock.elapsedTime/7)*100)), parseInt(Math.abs(Math.sin(clock.elapsedTime/12)*100)),parseInt(Math.abs(Math.sin(clock.elapsedTime/13)*100))]
+
+        colors.forEach((color, i) => {
+            colors[i] = new THREE.Color('hsl('+newHue[i]+', '+newS[i]+'%, 50%)')
+        });
         orangeLight.color = colors[0];
+        console.log(orangeLight.color);
+        redLight.color = colors[1];
+        blueLight.color = colors[2];
+
+        orangeLight.position.z += Math.sin(clock.elapsedTime)*2;
+        redLight.position.z -= Math.sin(clock.elapsedTime)*2;
+        blueLight.position.z += Math.cos(clock.elapsedTime)*2;
 
         renderer.render(scene,camera);
         requestAnimationFrame(render);
@@ -62,7 +78,7 @@
         
         scene.add(orangeLight);
         redLight = new THREE.PointLight(colors[1],50,450,1.7);
-        redLight.position.set(100,300,100);
+        redLight.position.set(100,300,150);
         scene.add(redLight);
         blueLight = new THREE.PointLight(colors[2],50,450,2.7);
         blueLight.position.set(200,300,200);
@@ -77,7 +93,7 @@
                 map:texture,
                 transparent: true
             });
-            for(let p=0; p<50; p++) {
+            for(let p=0; p<particleNumber; p++) {
                 let cloud = new THREE.Mesh(cloudGeo, cloudMaterial);
                 cloud.position.set(
                     Math.random()*800 -400,
