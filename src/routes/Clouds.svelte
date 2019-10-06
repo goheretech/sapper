@@ -40,6 +40,9 @@
         render();
     }
     function render() {
+        let delta = clock.getDelta();
+        console.log(clock.elapsedTime);
+        
         cloudParticles.forEach(p => {
             p.rotation.z -=0.001;
         });

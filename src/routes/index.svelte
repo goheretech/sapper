@@ -81,7 +81,7 @@
         <div data-aos="fade" data-aos-offset="-300" class="cc al-left" id="midSec">
             
             <h2>Creative Solutions <br>Are Our Business.</h2>
-            <p>And with our stunning designs and tailored content, your brand image will reflect your business’s fundamental values.</p>
+            <p>Our handiwork sparks powerful outcomes that will open up a world of opportunities for your business. Plus, our stunning designs and tailored content will give your brand the look and feel of excellence.</p>
 
         </div>
         <!-- <div class="divider-top pink"></div>
@@ -93,8 +93,8 @@
                 <div class="icon ico-purple"></div>
                 <h6>INCITING INSPIRATION</h6>
             </div>
-            <h2>Be Different</h2>
-            <p>Our solutions spark powerful outcomes that open up a world of opportunities for your business and set you up for success. </p>
+            <h2>Be Exceptional</h2>
+            <p>At goHere, we have built a community where uninhibited creativity can flourish, a spirit of excellence is embraced, and adding value is a way of life. Helping you dream big is what we love to do.</p>
             <a href="more#who">Get Started</a>
         </div>
     </section>
