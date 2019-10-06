@@ -15,7 +15,7 @@
     var clock = new THREE.Clock();
     function init() {
         console.log(colors);
-        
+        const canvas = document.getElementById('nebula');        
         scene = new THREE.Scene();
         camera = new THREE.PerspectiveCamera(60,window.innerWidth / window.innerHeight,1,1000);
         camera.position.z = 1;
@@ -26,7 +26,11 @@
         setLights();
         let ambient = new THREE.AmbientLight(0x555555);
         scene.add(ambient);
-        renderer = new THREE.WebGLRenderer({ alpha: true });
+        renderer = new THREE.WebGLRenderer({ 
+            canvas: canvas,
+            antialias: true,
+            alpha: true 
+        });
         renderer.setSize(window.innerWidth,window.innerHeight);
         scene.fog = new THREE.FogExp2(0x03544e, 0.000);
         renderer.setClearColor( 0x000000, .1 );

@@ -11,6 +11,7 @@
   import Work from "./pages/Work.svelte";
   import App from "./pages/App.svelte";
   import Contact from "./pages/Contact.svelte";
+  import Clouds from './components/Clouds.svelte'
 
   let frmShow = false;
   let displayMenu = false;
@@ -203,6 +204,15 @@
     margin: 0px 10px;
     cursor: pointer;
   }
+
+  #nebula{
+    width:100vw;
+    height:300px;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:2;
+  }
   @media screen and (max-width:500px) {
            
            .space{
@@ -281,15 +291,17 @@
   <!-- <button class="changer" on:click="{changePage}">Next Page</button> -->
   <section class="Hero who">
     <div class="cont">
-
+      <canvas id="nebula" ></canvas>
       {#if showing}
         <div
           transition:fade={{ delay: 150, duration: 300 }}
           class="HomeHero-Col">
+          
           {#if page < 4}
             <img src={pages[page].planet} alt="" class="planet" />
           {:else}
-            <img src={pages[page].planet} alt="" class="planet" style="left:-400px;bottom:-300px;"/>
+            
+            <Clouds />
           {/if}
           <h1 class="creative fixed">
             <span class="colorChange bril" data-glow='{pages[page].titleColor}'>{pages[page].titleColor}</span>
