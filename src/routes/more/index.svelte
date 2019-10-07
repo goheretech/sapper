@@ -296,13 +296,13 @@
         <div
           transition:fade={{ delay: 150, duration: 300 }}
           class="HomeHero-Col">
-          
-          {#if page < 4}
-            <img src={pages[page].planet} alt="" class="planet" />
-          {:else}
+            {#if page<4}
+              <img src={pages[page].planet} alt="" class="planet" />
+            {:else}
+              <img  alt="" class="planet" />
+            {/if}
             
-            <Clouds />
-          {/if}
+         
           <h1 class="creative fixed">
             <span class="colorChange bril" data-glow='{pages[page].titleColor}'>{pages[page].titleColor}</span>
             <br />
@@ -340,19 +340,19 @@
       {#if showing}
         <div class="hold" transition:fade={{ delay: 150, duration: 300 }}>
           {#if page == 0}
-            <Who />
+            <Who /><Clouds />
           {/if}
           {#if page == 1}
-            <What />
+            <What /><Clouds />
           {/if}
           {#if page == 2}
-            <Where />
+            <Where /><Clouds />
           {/if}
           {#if page == 3}
-            <Work />
+            <Work /><Clouds />
           {/if}
           {#if page == 4}
-            <CTA />
+            <CTA /><Clouds />
           {/if}
           {#if page == 5}
             <App />

@@ -6,9 +6,9 @@
     let scene, camera, renderer;
     let cloudParticles = [];
     let colors = [
-        new THREE.Color("hsl(2, 100%, 50%)"),
-        new THREE.Color("hsl(30, 50%, 70%)"),
-        new THREE.Color("hsl(60, 100%, 90%)")
+        new THREE.Color("hsl("+parseInt(Math.random()*250)+", 100%, 50%)"),
+        new THREE.Color("hsl("+parseInt(Math.random()*250)+", 50%, 70%)"),
+        new THREE.Color("hsl("+parseInt(Math.random()*250)+", 100%, 90%)")
     ]
     let newHue, newS, newL;
     let redLight, orangeLight, blueLight;
@@ -18,7 +18,7 @@
         const canvas = document.getElementById('nebula');        
         scene = new THREE.Scene();
         camera = new THREE.PerspectiveCamera(60,window.innerWidth / window.innerHeight,1,1000);
-        camera.position.z = 1;
+        camera.position.z = 320;
         camera.rotation.x = 1.16;
         camera.rotation.y = -0.12;
         camera.rotation.z = 0.27;
@@ -60,7 +60,6 @@
             colors[i] = new THREE.Color('hsl('+newHue[i]+', '+newS[i]+'%, 50%)')
         });
         orangeLight.color = colors[0];
-        console.log(orangeLight.color);
         redLight.color = colors[1];
         blueLight.color = colors[2];
 
@@ -78,10 +77,11 @@
 
         orangeLight = new THREE.PointLight(colors[0],50,450,1.7);
         orangeLight.position.set(200,300,100);
-        console.log(orangeLight);
         
         scene.add(orangeLight);
         redLight = new THREE.PointLight(colors[1],50,450,1.7);
+        console.log(redLight);
+        
         redLight.position.set(100,300,150);
         scene.add(redLight);
         blueLight = new THREE.PointLight(colors[2],50,450,2.7);
