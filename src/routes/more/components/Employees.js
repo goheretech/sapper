@@ -74,31 +74,31 @@ export const employees = [
                ],
                side: 'right'
            },
-           //    {
-           //        name: 'Theodore Balistreri',
-           //        title: 'Lead Growth Envisioneer',
-           //        nick: 'Odd Job',
-           //        bioStart:
-           //            'When it comes to determination, Teddy stands above the rest—on one leg.',
-           //        bio:
-           //            'Teddy lost his leg as an adult and was faced with the challenge of learning how to walk again. His ability to overcome obstacles sets him apart in everything he does. Bringing that same determination and fight to his work has launched Teddy to levels of success that few rarely see. We mostly keep Teddy around to tell jokes and do our dishes.',
-           //        picture: 'img/headshots/teddy.png',
-           //        stats: [
-           //            {
-           //                name: 'Marketing',
-           //                value: 90
-           //            },
-           //            {
-           //                name: 'Marketing',
-           //                value: 85
-           //            },
-           //            {
-           //                name: 'Marketing',
-           //                value: 80
-           //            }
-           //        ],
-           //        side: 'left'
-           //    }
+              {
+                  name: 'Theodore Balistreri',
+                  title: 'Lead Growth Envisioneer',
+                  nick: 'Odd Job',
+                  bioStart:
+                      'When it comes to determination, Teddy stands above the rest—on one leg.',
+                  bio:
+                      'Teddy lost his leg as an adult and was faced with the challenge of learning how to walk again. His ability to overcome obstacles sets him apart in everything he does. Bringing that same determination and fight to his work has launched Teddy to levels of success that few rarely see. We mostly keep Teddy around to tell jokes and do our dishes.',
+                  picture: 'img/headshots/ted1.png',
+                  stats: [
+                      {
+                          name: 'Marketing',
+                          value: 90
+                      },
+                      {
+                          name: 'Marketing',
+                          value: 85
+                      },
+                      {
+                          name: 'Marketing',
+                          value: 80
+                      }
+                  ],
+                  side: 'left'
+              },
            {
                name: 'Elisabeth "Pippi" Balistreri',
                title: 'Content Envisioneer',
@@ -121,6 +121,6 @@ export const employees = [
                        value: 80
                    }
                ],
-               side: 'left'
+               side: 'right'
            }
        ];
