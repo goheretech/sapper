@@ -109,8 +109,8 @@ export default class Index{
             // var earthPosition = { x: 29000, y: 0, z: -20000 }; //start
             var earthPosition = { x: -25, y: -50, z: -3250 }; //start
             // createClouds(22000,  -4000, 31000,65)
-            createClouds(8000,  -1700, 14000, 12)
-            createClouds(50,  50, -8000,6)
+            createClouds(8000,  -1700, 14000, 6)
+            createClouds(50,  50, -8000,3)
             loadTextures();
             init();
 
@@ -220,7 +220,7 @@ export default class Index{
                         // cloud.rotation.x = 5 * Math.PI/180;
                         // cloud.rotation.y = -5* Math.PI/180;
                         cloud.rotation.z = Math.random() * 2 * Math.PI;
-                        cloud.material.opacity = 0.35;
+                        cloud.material.opacity = 0.65;
                         cloudParticles.push(cloud);
                         scene.add(cloud);
                         

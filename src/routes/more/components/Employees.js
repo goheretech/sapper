@@ -1,7 +1,7 @@
 export const employees = [
            {
                name: 'Christopher Reid',
-               title: 'Lead Growth Envisioneer',
+               title: 'Lead Envisioneer',
                nick: 'Ginger King',
                bioStart:
                    'Christopher brings with him a spirit of excellence and over a decade of experience creating solutions in the tech world.',
