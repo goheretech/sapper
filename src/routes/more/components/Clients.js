@@ -22,7 +22,7 @@ export let clients = [
                slug: 'barnes',
                name: 'Barnes Homebuilders',
                desc:
-                   'PLM has always had an impeccable reputation for their commitment to service with integrity; what they were missing was a brand story and web presence that matches the excellence of their work. <br> goHere partnered with PLM to showcase what makes them stand out in the marketplace in all their projects: craftsmanship, quality, pride, and high standards.',
+                   'Barnes Homebuilders has always had an impeccable reputation for their commitment to service with integrity; what they were missing was a brand story and web presence that matches the excellence of their work. <br> goHere partnered with Barnes to showcase what makes them stand out in the marketplace in all their projects: craftsmanship, quality, pride, and high standards.',
                shortD:
                    'A new vision for 2019. With over 35 years of experience, PLM is one of the largest concrete and asphalt maintenance companies in Wisconsin.',
                services: [
