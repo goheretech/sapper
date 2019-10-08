@@ -64,7 +64,7 @@
         <!-- <div class="divider-bottom purple"></div> -->
     </section>
     <section class="sec gg" id="canvDemo">
-        <div data-aos="fade" data-aos-offset="-400" class="cc">
+        <div data-aos="fade" data-aos-offset="-400" class="cc mx1" >
             <div class="mini">
                 <div class="icon ico-purple"></div>
                 
@@ -88,7 +88,7 @@
         <div class="divider-bottom pink"></div> -->
     </section>
     <section class="sec gg" id="canvDemo2">
-        <div data-aos="fade" data-aos-offset="-300" class="cc">
+        <div data-aos="fade" data-aos-offset="-300" class="cc mx2" >
             <div class="mini">
                 <div class="icon ico-purple"></div>
                 <h6>INCITING INSPIRATION</h6>

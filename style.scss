@@ -589,6 +589,18 @@ body {
     }
 }
 
+.mx1{
+    @media screen and (max-width:$break-phone) {
+         margin-top:270px;
+    }
+   
+}
+.mx2{
+    @media screen and (max-width:$break-phone) {
+            margin-top:120px;
+        }
+   
+}
 
 section {
     height: $sectionHeight;
@@ -804,7 +816,10 @@ section {
         height: 100vh;
         opacity: 0;
 
-
+        @media screen and (max-width:$break-phone) {
+                left: 0;
+                width:100%;
+            }
     }
 
     #lastSec {
@@ -832,12 +847,19 @@ section {
         position: relative;
         z-index: 15;
 
+
+
         &.al-left {
             align-items: flex-start;
             text-align: left;
             width: 80%;
             padding-right: 320px;
             padding-left: 120px;
+            @media screen and (max-width:$break-phone) {
+                padding-left: 20px;
+                padding-right:20px;
+                width:100%;
+            }
         }
 
         @media screen and (max-width:$break-tablet) {

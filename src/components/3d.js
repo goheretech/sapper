@@ -179,7 +179,7 @@ export default class Index{
                 renderer.render(scene, camera);
                 requestAnimationFrame(render);
                 // removeLoad();
-                addGUI();
+                // addGUI();
                 window.addEventListener('resize', onWindowResize, false);
                 
             }
