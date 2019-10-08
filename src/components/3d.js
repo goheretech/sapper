@@ -105,7 +105,7 @@ export default class Index{
             var earthPosition = { x: -25, y: -50, z: -3250 }; //start
             // createClouds(22000,  -4000, 31000,65)
             createClouds(8000,  -1700, 14000, 12)
-            createClouds(50,  50, -8000,12)
+            createClouds(50,  50, -8000,6)
             loadTextures();
             init();
 
@@ -155,7 +155,7 @@ export default class Index{
 
                 //Ambient Lighting
                 amb = new THREE.AmbientLight(0xf2e1ed, 0.1);
-                scene.add(amb);
+                // scene.add(amb);
 
                 //Create sun
                 genSun();
@@ -196,10 +196,10 @@ export default class Index{
                         cloud.position.set(
                             x + (Math.random() * 10000 - 5000),
                             y + (Math.random() * 5000 - 2500),
-                            z + (Math.random() * 6000 - 3000)
+                            z + (Math.random() * -500)
                         );
-                        // cloud.rotation.x = 1.16;
-                        // cloud.rotation.y = -0.12;
+                        // cloud.rotation.x = 5 * Math.PI/180;
+                        // cloud.rotation.y = -5* Math.PI/180;
                         cloud.rotation.z = Math.random() * 2 * Math.PI;
                         cloud.material.opacity = 0.35;
                         cloudParticles.push(cloud);
@@ -208,31 +208,42 @@ export default class Index{
                          //Add Lights
                          let orangeLight = new THREE.PointLight(
                              colors[0],
-                             50,
-                             450,
-                             2.7
+                             800,
+                             800,
+                             20
                          );
                          orangeLight.position.set(
                              x + (Math.random() * 4000 - 2000),
                              y + (Math.random() * 2000 - 1000),
-                             z + (Math.random() * 2000 - 1000)
+                             z + Math.random() * -200
                          );
-
                          scene.add(orangeLight);
+
                          let redLight = new THREE.PointLight(
                              colors[1],
-                             50,
-                             450,
-                             2.7
+                             800,
+                             800,
+                             20
                          );
-                         console.log(redLight);
-
                          redLight.position.set(
-                             x + (Math.random() * 4000 - 2000),
-                             y + (Math.random() * 2000 - 1000),
-                             z + (Math.random() * 2000 - 1000)
+                             x + Math.random() * -2000,
+                             y + (Math.random() * 4000 - 2000),
+                             z + Math.random() * -200
                          );
                          scene.add(redLight);
+
+                         let blueLight = new THREE.PointLight(
+                             colors[2],
+                             8000,
+                             800,
+                             20
+                         );
+                         blueLight.position.set(
+                             x + (Math.random() * 2000),
+                             y + (Math.random() * 4000 - 2000),
+                             z + (Math.random() * -200)
+                         );
+                         scene.add(blueLight);
                     }
                 });
             }
