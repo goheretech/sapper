@@ -5,6 +5,7 @@ export default class Index{
         // console.log('constructor working');
             // console.log('It Worked');
             var THREE = require('three');
+            var THREEGUI = require('three/examples/jsm/libs/dat.gui.module.js');
             let particleNumber = 63;
             let cloudParticles = [];
             let loaded = false;
@@ -16,6 +17,10 @@ export default class Index{
             var moonGeo, moonTex, moonMat, moon;
             var earthGeo, earthTex, earthMat, earth;
             var atmo1Geo, atmo1Tex, atmo1Mat, atmo1;
+            let params = {
+                intensity:4, 
+                distance: 4000, 
+                falloff: 3.5};
             let colors = [
                 new THREE.Color(
                     'hsl(' + parseInt(Math.random() * 250) + ', 100%, 50%)'
@@ -174,6 +179,7 @@ export default class Index{
                 renderer.render(scene, camera);
                 requestAnimationFrame(render);
                 // removeLoad();
+                addGUI();
                 window.addEventListener('resize', onWindowResize, false);
                 
             }
@@ -182,6 +188,19 @@ export default class Index{
                 camera.updateProjectionMatrix();
                 renderer.setSize(window.innerWidth, window.outerHeight);
             }
+
+            function addGUI(){
+                                 // gui
+                                 var gui = new THREEGUI.GUI();
+                                 gui.add(params, 'intensity')
+                                     .name('intensity')
+                                     .onChange((v)=>{
+                                        params.intensity = v;
+                                        console.log(v);
+                                        render();
+                                     })
+                                     
+                             }
             function createClouds(x,y,z, part){
                 let particleNumber = part;
                 let loader = new THREE.TextureLoader();
@@ -204,44 +223,46 @@ export default class Index{
                         cloud.material.opacity = 0.35;
                         cloudParticles.push(cloud);
                         scene.add(cloud);
+                        
 
+                        let factor = [8,10000,200]
                          //Add Lights
                          let orangeLight = new THREE.PointLight(
                              colors[0],
-                             800,
-                             800,
-                             20
+                             params.intesity,
+                             params.distance,
+                             params.falloff
                          );
                          orangeLight.position.set(
-                             x + (Math.random() * 4000 - 2000),
-                             y + (Math.random() * 2000 - 1000),
-                             z + Math.random() * -200
+                             x + 0,
+                             y + 0,
+                             z + 0
                          );
                          scene.add(orangeLight);
 
                          let redLight = new THREE.PointLight(
                              colors[1],
-                             800,
-                             800,
-                             20
+                             params.intesity,
+                             params.distance,
+                             params.falloff
                          );
                          redLight.position.set(
-                             x + Math.random() * -2000,
-                             y + (Math.random() * 4000 - 2000),
-                             z + Math.random() * -200
+                             x + -200,
+                             y + 300,
+                             z + 0
                          );
                          scene.add(redLight);
 
                          let blueLight = new THREE.PointLight(
                              colors[2],
-                             8000,
-                             800,
-                             20
+                             params.intesity,
+                             params.distance,
+                             params.falloff
                          );
                          blueLight.position.set(
-                             x + (Math.random() * 2000),
-                             y + (Math.random() * 4000 - 2000),
-                             z + (Math.random() * -200)
+                             x + 100,
+                             y + -500,
+                             z + 0
                          );
                          scene.add(blueLight);
                     }
