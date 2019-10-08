@@ -92,9 +92,9 @@ export default class Index{
             // var earthPosition = { x: 9000, y: 0, z: -6000 }; //mid
             // var earthPosition = { x: 29000, y: 0, z: -20000 }; //start
             var earthPosition = { x: -25, y: -50, z: -3250 }; //start
-            createClouds(22000,  -4000, 33000,65)
+            createClouds(22000,  -4000, 31000,65)
             createClouds(8000,  -1700, 14000, 12)
-            // createClouds(14000,  -4000, 35000,12)
+            createClouds(50,  50, -8000,12)
             loadTextures();
             init();
 
