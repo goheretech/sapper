@@ -103,7 +103,7 @@
     {#if !showThanks}
       <div class="cl leftCol">
         <h2>We Can Help</h2>
-        <h3>Let's Create Beauty Together</h3>
+        <h3>Let's Create Together</h3>
         <p>
           From small local businesses to global giants; from start-ups to industry leaders; from real estate agencies to sports bars; goHere can add value to any organization. Our dynamic team of experts is equipped to understand your unique needs and meet them in beautiful and effective ways. 
           

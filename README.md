@@ -8,6 +8,10 @@
 
 
 ## Changelog
+### v0.9.81
+* Bug Fixes
+* Content Changes
+* Added Teddy's Picture
 ### v0.9.8
 * Big Fixes
 * Mobile Formating

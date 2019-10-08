@@ -376,13 +376,13 @@
             <h6>be creative</h6>
           </div>
           <h2 class="ctah2">
-            Your Adventure
+            Let's Create
             <br />
-            Starts Here
+            Something Beautiful
           </h2>
-          <h3 class="ctah3">Let's Create Something Beautiful</h3>
+          <h3 class="ctah3">Reach out today and find out what goHere can do for you.</h3>
           <div class="buttonHold">
-            <a class="ctaa" on:click={toggleFrm}>Apply Now</a>
+            <a class="ctaa" on:click={toggleFrm}>Lets Go</a>
             <a rel=prefetch class="ctaa" on:click={goContact} href="more#contact">
               Contact Us
             </a>
