@@ -5,6 +5,8 @@ export default class Index{
         // console.log('constructor working');
             // console.log('It Worked');
             var THREE = require('three');
+            let particleNumber = 63;
+            let cloudParticles = [];
             let loaded = false;
             var scene = new THREE.Scene();
             let loader = new THREE.TextureLoader();
@@ -74,10 +76,6 @@ export default class Index{
             // var cameraStart = { x: 17920, y: -2333, z: 21600 }; //mid
             var cameraStart = { x: 17920, y: -2333, z: 47600 }; //start
 
-            // var asterPosition = { x: -10, y: 0, z: -50 }; //og - end
-            // var asterPosition = { x: -10, y: 0, z: -30 }; //mid
-            var asterPosition = { x: -25, y: 0, z: -80 }; //start
-
             // var sunPosition = { x: -33700, y: 0, z: 25000 }; //og - end
             // var sunPosition = { x: 33700, y: 0, z: 25000 }; //mid
             var sunPosition = { x: 33700, y: 0, z: 45000 }; //start
@@ -94,6 +92,9 @@ export default class Index{
             // var earthPosition = { x: 9000, y: 0, z: -6000 }; //mid
             // var earthPosition = { x: 29000, y: 0, z: -20000 }; //start
             var earthPosition = { x: -25, y: -50, z: -3250 }; //start
+            createClouds(22000,  -4000, 33000)
+            createClouds(10000,  -1700, 14000)
+            // createClouds(12000,  -4000, 45000)
             loadTextures();
             init();
 
@@ -170,6 +171,31 @@ export default class Index{
                 camera.updateProjectionMatrix();
                 renderer.setSize(window.innerWidth, window.outerHeight);
             }
+            function createClouds(x,y,z){
+                let loader = new THREE.TextureLoader();
+                loader.load('img/smoke-1.png', function(texture) {
+                    let cloudGeo = new THREE.PlaneBufferGeometry(5000, 5000);
+                    let cloudMaterial = new THREE.MeshLambertMaterial({
+                        map: texture,
+                        transparent: true
+                    });
+                    for (let p = 0; p < particleNumber; p++) {
+                        let cloud = new THREE.Mesh(cloudGeo, cloudMaterial);
+                        cloud.position.set(
+                            x + (Math.random() * 10000 - 5000),
+                            y + (Math.random() * 5000 - 2500),
+                            z + (Math.random() * 6000 - 3000)
+                        );
+                        // cloud.rotation.x = 1.16;
+                        // cloud.rotation.y = -0.12;
+                        cloud.rotation.z = Math.random() * 2 * Math.PI;
+                        cloud.material.opacity = 0.35;
+                        cloudParticles.push(cloud);
+                        scene.add(cloud);
+
+                    }
+                });
+            }
             function render() {
                 delta = clock.getDelta();
                 var time = clock.elapsedTime;
@@ -191,6 +217,9 @@ export default class Index{
                             canvas.width,
                             canvas.height
                         );
+                        cloudParticles.forEach(p => {
+                            p.rotation.z -= 0.001;
+                        });
                         uniforms.iTime.value = time;
                         // astHolder.rotation.y += ((2 * Math.PI) / 180) * delta;
                         earth.rotation.y += ((1 * Math.PI) / 180) * delta;
@@ -539,18 +568,18 @@ export default class Index{
             }
 
             function loadTextures(callback) {
-                console.log('starting');
+              // console.log('starting');
                 fileArray.forEach(function(fileOBJ) {
                     
                     promiseArray.push(                        
                         new Promise(function(resolve, reject) {
-                            console.log('hellO?');
+                          // console.log('hellO?');
                             loader.load(
                                 path + fileOBJ.url,                                
                                 function(texture) {
                                     texturesArray.push(texture);
                                     var modelOBJ = new Object();
-                                    console.log(texture);
+                                  // console.log(texture);
                                     modelOBJ[fileOBJ.name] = texture;
 
                                     if (
@@ -561,10 +590,10 @@ export default class Index{
                                 },
 
                                 function(xhr) {
-                                    console.log(
-                                        (xhr.loaded / xhr.total) * 100 +
-                                            '% loaded'
-                                    );
+                                  // console.log(
+                                    //     (xhr.loaded / xhr.total) * 100 +
+                                    //         '% loaded'
+                                    // );
                                 },
 
                                 function(xhr) {
@@ -590,9 +619,9 @@ export default class Index{
                                                    i < textures.length;
                                                    i++
                                                ) {
-                                                   console.log(textures[i]);
+                                                 // console.log(textures[i]);
                                                 }
-                                                console.log(texturesArray);
+                                              // console.log(texturesArray);
                                                 createMaterials(textures);
                                                 
                                                if (
