@@ -92,9 +92,9 @@ export default class Index{
             // var earthPosition = { x: 9000, y: 0, z: -6000 }; //mid
             // var earthPosition = { x: 29000, y: 0, z: -20000 }; //start
             var earthPosition = { x: -25, y: -50, z: -3250 }; //start
-            createClouds(22000,  -4000, 33000)
-            createClouds(10000,  -1700, 14000)
-            // createClouds(12000,  -4000, 45000)
+            createClouds(22000,  -4000, 33000,65)
+            createClouds(8000,  -1700, 14000, 12)
+            // createClouds(14000,  -4000, 35000,12)
             loadTextures();
             init();
 
@@ -171,7 +171,8 @@ export default class Index{
                 camera.updateProjectionMatrix();
                 renderer.setSize(window.innerWidth, window.outerHeight);
             }
-            function createClouds(x,y,z){
+            function createClouds(x,y,z, part){
+                let particleNumber = part;
                 let loader = new THREE.TextureLoader();
                 loader.load('img/smoke-1.png', function(texture) {
                     let cloudGeo = new THREE.PlaneBufferGeometry(5000, 5000);
