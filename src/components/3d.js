@@ -375,7 +375,7 @@ export default class Index{
                     (119 / 50) * Math.pow(x, 2) - 519 * x + 28100;
 
                 //Move sun
-                sun.position.x = (-6740 / 7) * x + 45700;
+                // sun.position.x = (-6740 / 7) * x + 45700;
 
                 camera.position.x = scrolledInv * 25.6 * 7;
                 camera.position.y = scrolledInv * -3.33333 * 7;
