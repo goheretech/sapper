@@ -729,10 +729,10 @@ export default class Index{
             }
 
             function createMaterials(textures) {
-                earthMat = new THREE.MeshStandardMaterial({
+                earthMat = new THREE.MeshBasicMaterial({
                     map: texturesArray[0],
-                    metalness: 0.1,
-                    roughness: 0.5
+                    // metalness: 0.1,
+                    // roughness: 0.5
                 });
 
                 moonMat = new THREE.MeshStandardMaterial({
