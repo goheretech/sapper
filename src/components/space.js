@@ -10,19 +10,20 @@ export default class Index{
             sun: new THREE.Vector3(640, 0, 620),
             main: new THREE.Vector3(0, 0, 0),
             sec: new THREE.Vector3(100, 0, -300),
-            third: new THREE.Vector3(70, 0, -70),
+            third: new THREE.Vector3(70, 0, 0),
         };
         let mid = {
-            camera: new THREE.Vector3(-280, -10, 0),
+            camera: new THREE.Vector3(-290, -10, -20),
             mainPivot: 0,
             secPivot: 1.35,
-            thirdPivot: 0.1
+            thirdPivot: 3.2
         };
         let end = {
-            camera: new THREE.Vector3(-400, -23, -80),
+            // camera: new THREE.Vector3(-400, -23, -80),
+            camera: new THREE.Vector3(-367, -19, -80),
             mainPivot: 0, 
             secPivot: 1.65,
-            thirdPivot:  0.4
+            thirdPivot:  7.25
         };
         let planets = [];
         let pivots = [];
@@ -57,7 +58,7 @@ export default class Index{
                 0.1,
                 3000
             );
-            camera.position.set(mid.camera.x, mid.camera.y, mid.camera.z);
+            camera.position.set(start.camera.x, start.camera.y, start.camera.z);
             scene.add(camera);
             loadTextures();
             renderer.setClearColor(0xeb4034, 0);
@@ -69,7 +70,7 @@ export default class Index{
             // })
             
             planets.forEach((planet, i)=>{
-                planet.obj.rotation.y += (delta*(i-0.91) * 20 * Math.PI) / 180;
+                planet.obj.rotation.y += (delta/10*(i-0.5) * 20 * Math.PI) / 180;
             })
             renderer.render(scene, camera);
             requestAnimationFrame(render);
