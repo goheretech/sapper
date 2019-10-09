@@ -542,7 +542,7 @@ export default class Index{
                     emissive: 0xf5e6f0 // darkgrey
                 });
                 sunGeo = new THREE.IcosahedronGeometry(0.2, 6);
-                sun = new THREE.PointLight(0xeee4f5, 1.3, 1500000, .11);
+                sun = new THREE.PointLight(0xeee4f5, 1.3, 15000000, .01);
                 sun.add(new THREE.Mesh(sunGeo, sunMat));
                 sun.position.set(sunPosition.x, sunPosition.y, sunPosition.z);
                 scene.add(sun);
