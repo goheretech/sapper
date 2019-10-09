@@ -94,7 +94,7 @@ export default class Index{
 
             // var sunPosition = { x: -33700, y: 0, z: 25000 }; //og - end
             // var sunPosition = { x: 33700, y: 0, z: 25000 }; //mid
-            var sunPosition = { x: 33700, y: 0, z: 45000 }; //start
+            var sunPosition = { x: 13700, y: 0, z: 25000 }; //start
 
             // var planetPosition = { x: 12000, y: -4000, z: 30000 }; //og - end
             // var planetPosition = { x: 28000, y: -4000, z: 30000 }; //mid
@@ -275,7 +275,6 @@ export default class Index{
                     case 0:
                         break;
                     case 1:
-
                         var colorChange = parseInt(Math.abs(Math.sin(time/10)*360));
                         // console.log(colorChange);
                         var colorChange2 = parseInt(Math.abs(Math.cos(time)*50));
@@ -543,7 +542,7 @@ export default class Index{
                     emissive: 0xf5e6f0 // darkgrey
                 });
                 sunGeo = new THREE.IcosahedronGeometry(0.2, 6);
-                sun = new THREE.PointLight(0xeee4f5, 1.0, 1500000, 1);
+                sun = new THREE.PointLight(0xeee4f5, 3.0, 1500000, .2);
                 sun.add(new THREE.Mesh(sunGeo, sunMat));
                 sun.position.set(sunPosition.x, sunPosition.y, sunPosition.z);
                 scene.add(sun);
