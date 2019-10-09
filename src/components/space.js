@@ -5,6 +5,7 @@ export default class Index{
         let THREE = require('three');
         let camera, scene = new THREE.Scene(), renderer, canvas;
         let loader = new THREE.TextureLoader();
+       
         let start = {
             camera: new THREE.Vector3(70, 15, 200),
             sun: new THREE.Vector3(640, 0, 620),
@@ -19,15 +20,26 @@ export default class Index{
             thirdPivot: 3.2
         };
         let end = {
-            // camera: new THREE.Vector3(-400, -23, -80),
             camera: new THREE.Vector3(-367, -19, -80),
             mainPivot: 0, 
             secPivot: 1.65,
             thirdPivot:  7.25
         };
         let planets = [];
+        let lights = [];
         let pivots = [];
         let empties = [];
+        let clouds = [];
+        let cloudPos = {
+            start: new THREE.Vector3(90, 0, 100),
+            mid: new THREE.Vector3(-180, -10, -20),
+            end: new THREE.Vector3(-367, -19, -180)
+        };
+        let colors = {
+            orange: new THREE.Color("hsl(32, 85%, 44%)"),
+            blue: new THREE.Color("hsl(186, 85%, 44%)"),
+            purple: new THREE.Color("hsl(308, 85%, 44%)")
+        }
         let clock = new THREE.Clock(),
             phase = 0,
             delta;
@@ -60,23 +72,75 @@ export default class Index{
             );
             camera.position.set(start.camera.x, start.camera.y, start.camera.z);
             scene.add(camera);
+            createClouds(cloudPos.start, 15, 4, 2, 5);
+            createClouds(cloudPos.mid, 30, 6, 4, 10);
+            createClouds(cloudPos.end, 15, 5, 5, 5);
             loadTextures();
             renderer.setClearColor(0xeb4034, 0);
         }
         function render(){            
-            let delta = clock.getDelta();
-            // pivots.forEach((pivot, i)=>{
-            //     pivot.obj.rotation.y += (delta*i * 10 * Math.PI) / 180;
-            // })
-            
+            let delta = clock.getDelta();            
             planets.forEach((planet, i)=>{
                 planet.obj.rotation.y += (delta/10*(i-0.5) * 20 * Math.PI) / 180;
+            })
+            clouds.forEach(p => {
+                p.rotation.z -= 0.001;
+            });
+            let sin = Math.sin(clock.elapsedTime/1000) ;
+            
+            lights.forEach(p =>{
+                p.color.offsetHSL(delta / 5, delta, 0);
+                
+                console.log(p.color);
+                
             })
             renderer.render(scene, camera);
             requestAnimationFrame(render);
         }
-        function createClouds(){
+        function createClouds(pos, num, x,y,z){
+            loader.load('img/smoke-1.png', ((texture)=>{
+                const geo = new THREE.PlaneBufferGeometry(50, 50);
+                const mat = new THREE.MeshLambertMaterial({
+                    map: texture,
+                    transparent: true
+                });
+                for (let p = 0; p < num; p++) {
+                    const cloud = new THREE.Mesh(geo,mat)
+                    cloud.position.set(
+                        pos.x + (Math.random() * 20 * x - 10*x),
+                        pos.y + (Math.random() * 20 * y - 10*y),
+                        pos.z + (Math.random() * 20 * z - 10*z)
+                    );
+                    cloud.rotation.z = Math.random()* 2 * Math.PI;
+                    cloud.material.opacity = 0.65;
+                    clouds.push(cloud);
+                    scene.add(cloud);
+                }
+            }))
+            createLight(colors.orange);
+            createLight(colors.blue);
+            createLight(colors.purple);
 
+            function createLight(color){
+                let params = {
+                    intensity: 10,
+                    distance: 200,
+                    falloff: 10
+                };
+                const light = new THREE.PointLight(
+                    color,
+                    params.intensity,
+                    params.distance,
+                    params.falloff
+                );
+                light.position.set(
+                    pos.x + (Math.random() * 10 - 5), 
+                    pos.y + (Math.random() * 10 - 5), 
+                    pos.z + (Math.random() * 5)
+                );
+                lights.push(light)
+                scene.add(light);
+            }
         }
         function loadTextures(callback){
             
@@ -175,9 +239,6 @@ export default class Index{
                 detail
             );
             let planet = new THREE.Mesh(planetGeo, planetMat);
-            // gumbo(pivot, true);
-            // gumbo(empty, false);
-            // pivot.position.set(parent.position.x, parent.position.y, parent.position.z);
             pivot.rotation.z = Math.PI/180 * angle;
             parent.add(pivot)         
             pivot.add(planet);
@@ -211,13 +272,6 @@ export default class Index{
                 ((h[st] || b[st]) /
                     ((h[sh] || b[sh]) - h.clientHeight)) *
                 100; //0 to 100
-            // pivots.forEach((pivot, i)=>{
-            //     if (i == 1){
-            //         pivot.obj.rotation.y = (y/50) * Math.PI;
-            //         console.log(pivot.obj.rotation.y);
-                    
-            //     }
-            // })
             if (y < 50){
                 let v = y * 0.02;
                 console.log(v);
@@ -258,16 +312,12 @@ export default class Index{
                 );    
             }
             
-            // camera.position.x = start.camera.x - y*30;
-            // camera.position.z = start.camera.z - y*10;
-           
-            
         }
         function lerp(min, max, value){
             return (max - min) * value + min;
         }
         function removeLoad(){
-
+            
         }
     }
 }
