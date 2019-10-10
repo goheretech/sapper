@@ -7,7 +7,7 @@
 </script>
 <style>
     #hh{
-        height:2300px;
+        height:6300px;
     }
     canvas{
         position:fixed;
