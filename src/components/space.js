@@ -32,7 +32,7 @@ export default class Index{
         let clouds = [];
         let cloudPos = {
             start: new THREE.Vector3(90, -10, 100),
-            mid: new THREE.Vector3(130, 25, -420),
+            mid: new THREE.Vector3(130, 25, -220),
             end: new THREE.Vector3(280, 30, -700)
         };
         let colors = {
@@ -138,7 +138,7 @@ export default class Index{
         }
         function createClouds(pos, num, x,y,z){
             loader.load('img/smoke-1.png', ((texture)=>{
-                const geo = new THREE.PlaneBufferGeometry(70, 70);
+                const geo = new THREE.PlaneBufferGeometry(80, 80);
                 const mat = new THREE.MeshLambertMaterial({
                     map: texture,
                     transparent: true
@@ -151,7 +151,7 @@ export default class Index{
                         pos.z + (Math.random() * 20 * z - 10*z)
                     );
                     cloud.rotation.z = Math.random()* 2 * Math.PI;
-                    cloud.material.opacity = 0.43;
+                    cloud.material.opacity = 0.20;
                     clouds.push(cloud);
                     scene.add(cloud);
                 }
@@ -162,9 +162,9 @@ export default class Index{
 
             function createLight(color){
                 let params = {
-                    intensity: 1,
-                    distance: 2000,
-                    falloff: 10
+                    intensity: 10,
+                    distance: 200,
+                    falloff: 9
                 };
                 const light = new THREE.PointLight(
                     color,
@@ -254,7 +254,7 @@ export default class Index{
                 emissive: 0xf5e6f0 // darkgrey
             });
             let sunGeo = new THREE.IcosahedronGeometry(0.2, 6);
-            let sun = new THREE.PointLight(0xeee4f5, 0, 15000000, 0.01);
+            let sun = new THREE.PointLight(0xeee4f5, 1.1, 15000000, 0.01);
             sun.add(new THREE.Mesh(sunGeo, sunMat));
             scene.add(sun);
             sun.position.set(start.sun.x, start.sun.y, start.sun.z);
