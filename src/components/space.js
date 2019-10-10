@@ -20,7 +20,7 @@ export default class Index{
             thirdPivot: 1.7 * Math.PI
         };
         let end = {
-            camera: new THREE.Vector3(274.2, 29.55, -520),
+            camera: new THREE.Vector3(274.2, 29.65, -520),
             mainPivot: 0,
             secPivot: -0.12 * Math.PI,
             thirdPivot: 3.10 * Math.PI
@@ -127,7 +127,7 @@ export default class Index{
             let sin = Math.sin(clock.elapsedTime/1000) ;
             
             lights.forEach(p =>{
-                p.color.offsetHSL(delta / 5, delta, 0);        
+                p.color.offsetHSL(delta / 3, delta, 0);        
             })
 
             uniforms.iResolution.value.set(canvas.width, canvas.height);
@@ -138,7 +138,7 @@ export default class Index{
         }
         function createClouds(pos, num, x,y,z){
             loader.load('img/smoke-1.png', ((texture)=>{
-                const geo = new THREE.PlaneBufferGeometry(50, 50);
+                const geo = new THREE.PlaneBufferGeometry(70, 70);
                 const mat = new THREE.MeshLambertMaterial({
                     map: texture,
                     transparent: true
@@ -151,7 +151,7 @@ export default class Index{
                         pos.z + (Math.random() * 20 * z - 10*z)
                     );
                     cloud.rotation.z = Math.random()* 2 * Math.PI;
-                    cloud.material.opacity = 0.25;
+                    cloud.material.opacity = 0.37;
                     clouds.push(cloud);
                     scene.add(cloud);
                 }
@@ -164,7 +164,7 @@ export default class Index{
                 let params = {
                     intensity: 10,
                     distance: 200,
-                    falloff: 10
+                    falloff: 9
                 };
                 const light = new THREE.PointLight(
                     color,
