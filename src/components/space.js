@@ -40,6 +40,7 @@ export default class Index{
             blue: new THREE.Color("hsl(186, 85%, 44%)"),
             purple: new THREE.Color("hsl(308, 85%, 44%)")
         }
+        let uniforms;
         let clock = new THREE.Clock(),
             phase = 0,
             delta;
@@ -52,9 +53,44 @@ export default class Index{
             texturePromiseArray = [],
             path = 'img/Planets/',
             texturesArray = [];
+        const fragmentShader = `
+            #include <common>
+            #define TWO_PI 6.28318530718
+            uniform vec2 iResolution;
+            uniform float iTime;
 
+            //  Function from Iñigo Quiles
+            //  https://www.shadertoy.com/view/MsS3Wc
+            vec3 hsb2rgb( in vec3 c ){
+                vec3 rgb = clamp(abs(mod(c.x*6.0+vec3(0.0,4.0,2.0),
+                                        6.0)-3.0)-1.0,
+                                0.0,
+                                1.0 );
+                rgb = rgb*rgb*(3.0-2.0*rgb);
+                return c.z * mix( vec3(1.0), rgb, c.y);
+            }
+
+            void main(){
+                vec2 st = gl_FragCoord.xy/iResolution;
+                vec3 color = vec3(0.0);
+
+                // Use polar coordinates instead of cartesian
+                vec2 toCenter = vec2(0.5)-st;
+                float angle = atan(toCenter.y,toCenter.x);
+                float radius = length(toCenter)*2.0;
+
+                // Map the angle (-PI to PI) to the Hue (from 0 to 1)
+                // and the Saturation to the radius
+                color = hsb2rgb(vec3((angle/TWO_PI)+0.5+iTime/10.,radius,1.0));
+
+                gl_FragColor = vec4(color,abs(sin(iTime))+0.1);
+            }`;
         init();
         function init(){
+            uniforms = {
+                iTime: { value: 0 },
+                iResolution: { value: new THREE.Vector2() }
+            };
             canvas = document.getElementById('canvas');
             renderer = new THREE.WebGLRenderer({
                 canvas: canvas,
@@ -74,12 +110,14 @@ export default class Index{
             scene.add(camera);
             createClouds(cloudPos.start, 9, 4, 0.5, 5);
             createClouds(cloudPos.mid, 45, 9, 6, 20);
-            createClouds(cloudPos.end, 33, 9, 6, 5);
+            createClouds(cloudPos.end, 33, 9, 6, 5);            
+
             loadTextures();
             renderer.setClearColor(0xeb4034, 0);
         }
         function render(){            
             let delta = clock.getDelta();            
+            var time = clock.elapsedTime;
             planets.forEach((planet, i)=>{
                 planet.obj.rotation.y += (delta/10*(i-0.5) * 20 * Math.PI) / 180;
             })
@@ -89,11 +127,12 @@ export default class Index{
             let sin = Math.sin(clock.elapsedTime/1000) ;
             
             lights.forEach(p =>{
-                p.color.offsetHSL(delta / 5, delta, 0);
-                
-                console.log(p.color);
-                
+                p.color.offsetHSL(delta / 5, delta, 0);        
             })
+
+            uniforms.iResolution.value.set(canvas.width, canvas.height);
+            uniforms.iTime.value = time;
+
             renderer.render(scene, camera);
             requestAnimationFrame(render);
         }
@@ -204,7 +243,7 @@ export default class Index{
             createPlanet('main', 60, texturesArray[0], start.main, scene, 25, 5);
             createPlanet('secondary', 22, texturesArray[1], start.sec, pivots[0].obj, 20, 5);
             createPlanet('third', 4, texturesArray[2], start.third, empties[1].obj, 15, 0);
-            console.log(planets);                        
+            
             renderer.render(scene, camera);
             requestAnimationFrame(render);
             window.addEventListener('scroll', onScroll);            
@@ -257,8 +296,30 @@ export default class Index{
                 name: name+'Empty',
                 obj: empty
             });
+            if (name == 'secondary'){
+                console.log(pivots);
+                
+                var rings = [
+                    createRing(28, 2, 1),
+                    createRing(33, 2, 3),
+                    createRing(36, 4, -2),
+                    createRing(48, 4, 1),
+                    createRing(43, 1, -3)
+                ];
+            }
         }
-        
+        function createRing(innerW, width, z) {
+            let mat = new THREE.ShaderMaterial({
+                fragmentShader,
+                uniforms,
+                side: THREE.DoubleSide
+            });
+            let geo = new THREE.RingGeometry(innerW, innerW + width, 38);
+            var ring = new THREE.Mesh(geo, mat);
+            ring.rotation.x = (-90 * Math.PI) / 180;
+            planets[2].obj.add(ring);
+            return ring;
+        }
         function onWindowResize(){
 
         }
@@ -274,7 +335,6 @@ export default class Index{
                 100; //0 to 100
             if (y < 50){
                 let v = y * 0.02;
-                console.log(v);
                 camera.position.x = lerp(start.camera.x, mid.camera.x, v);
                 camera.position.y = lerp(start.camera.y, mid.camera.y, v);
                 camera.position.z = lerp(start.camera.z, mid.camera.z, v);
@@ -283,7 +343,6 @@ export default class Index{
                 pivots[2].obj.rotation.y = lerp(0, mid.thirdPivot, v)                
             }else {
                 let v = (y * 0.02) - 1
-                console.log(v)
                 camera.position.x = lerp(
                     mid.camera.x,
                     end.camera.x,
