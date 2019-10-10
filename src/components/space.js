@@ -20,7 +20,7 @@ export default class Index{
             thirdPivot: 1.7 * Math.PI
         };
         let end = {
-            camera: new THREE.Vector3(280, 30, -570),
+            camera: new THREE.Vector3(281, 29, -570),
             mainPivot: 0,
             secPivot: -0.12 * Math.PI,
             thirdPivot: 2.75 * Math.PI
@@ -32,8 +32,8 @@ export default class Index{
         let clouds = [];
         let cloudPos = {
             start: new THREE.Vector3(90, -10, 100),
-            mid: new THREE.Vector3(-150, -10, -20),
-            end: new THREE.Vector3(-367, -19, -200)
+            mid: new THREE.Vector3(130, 25, -220),
+            end: new THREE.Vector3(280, 30, -700)
         };
         let colors = {
             orange: new THREE.Color("hsl(32, 85%, 44%)"),
@@ -72,9 +72,9 @@ export default class Index{
             );
             camera.position.set(start.camera.x, start.camera.y, start.camera.z);
             scene.add(camera);
-            // createClouds(cloudPos.start, 9, 4, 0.5, 5);
-            // createClouds(cloudPos.mid, 15, 6, 2, 10);
-            // createClouds(cloudPos.end, 7, 5, 3, 1);
+            createClouds(cloudPos.start, 9, 4, 0.5, 5);
+            createClouds(cloudPos.mid, 45, 9, 6, 20);
+            createClouds(cloudPos.end, 33, 9, 6, 5);
             loadTextures();
             renderer.setClearColor(0xeb4034, 0);
         }
@@ -112,7 +112,7 @@ export default class Index{
                         pos.z + (Math.random() * 20 * z - 10*z)
                     );
                     cloud.rotation.z = Math.random()* 2 * Math.PI;
-                    cloud.material.opacity = 0.65;
+                    cloud.material.opacity = 0.25;
                     clouds.push(cloud);
                     scene.add(cloud);
                 }
