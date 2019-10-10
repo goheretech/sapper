@@ -8,22 +8,22 @@ export default class Index{
        
         let start = {
             camera: new THREE.Vector3(70, 15, 200),
-            sun: new THREE.Vector3(640, 0, 620),
+            sun: new THREE.Vector3(1340, 0, 620),
             main: new THREE.Vector3(0, 0, 0),
-            sec: new THREE.Vector3(100, 0, -300),
-            third: new THREE.Vector3(70, 0, 0),
+            sec: new THREE.Vector3(100, 0, -600),
+            third: new THREE.Vector3(80, 0, 0),
         };
         let mid = {
-            camera: new THREE.Vector3(-290, -10, -20),
+            camera: new THREE.Vector3(250, 45, -390),
             mainPivot: 0,
-            secPivot: 1.35,
-            thirdPivot: 3.2
+            secPivot: -0.1 * Math.PI,
+            thirdPivot: 1.7 * Math.PI
         };
         let end = {
-            camera: new THREE.Vector3(-367, -19, -80),
-            mainPivot: 0, 
-            secPivot: 1.65,
-            thirdPivot:  7.25
+            camera: new THREE.Vector3(280, 30, -570),
+            mainPivot: 0,
+            secPivot: -0.12 * Math.PI,
+            thirdPivot: 2.75 * Math.PI
         };
         let planets = [];
         let lights = [];
@@ -72,9 +72,9 @@ export default class Index{
             );
             camera.position.set(start.camera.x, start.camera.y, start.camera.z);
             scene.add(camera);
-            createClouds(cloudPos.start, 9, 4, 0.5, 5);
-            createClouds(cloudPos.mid, 15, 6, 2, 10);
-            createClouds(cloudPos.end, 7, 5, 3, 1);
+            // createClouds(cloudPos.start, 9, 4, 0.5, 5);
+            // createClouds(cloudPos.mid, 15, 6, 2, 10);
+            // createClouds(cloudPos.end, 7, 5, 3, 1);
             loadTextures();
             renderer.setClearColor(0xeb4034, 0);
         }
@@ -215,7 +215,7 @@ export default class Index{
                 emissive: 0xf5e6f0 // darkgrey
             });
             let sunGeo = new THREE.IcosahedronGeometry(0.2, 6);
-            let sun = new THREE.PointLight(0xeee4f5, 1.3, 15000000, 0.01);
+            let sun = new THREE.PointLight(0xeee4f5, 1.1, 15000000, 0.01);
             sun.add(new THREE.Mesh(sunGeo, sunMat));
             scene.add(sun);
             sun.position.set(start.sun.x, start.sun.y, start.sun.z);
