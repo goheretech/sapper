@@ -1,7 +1,7 @@
 import { init } from 'svelte/internal';
-
+export let loaded = false;
 export default class Index{
-    constructor(){
+    constructor(){     
         let THREE = require('three');
         let camera, scene = new THREE.Scene(), renderer, canvas;
         let loader = new THREE.TextureLoader();
@@ -243,10 +243,12 @@ export default class Index{
             createPlanet('main', 60, texturesArray[0], start.main, scene, 25, 5);
             createPlanet('secondary', 22, texturesArray[1], start.sec, pivots[0].obj, 20, 5);
             createPlanet('third', 0.5, texturesArray[2], start.third, empties[1].obj, 15, 0);
-            
             renderer.render(scene, camera);
             requestAnimationFrame(render);
-            window.addEventListener('scroll', onScroll);            
+            window.addEventListener('scroll', onScroll);
+            window.addEventListener('resize', onWindowResize, false);
+            loaded = true;     
+            
         }
         function genSun() {
             let sunMat = new THREE.MeshStandardMaterial({
@@ -319,8 +321,10 @@ export default class Index{
             planets[2].obj.add(ring);
             return ring;
         }
-        function onWindowResize(){
-
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.outerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.outerHeight);
         }
         function onScroll(){
             //Get percent scrolled

@@ -1,17 +1,28 @@
 <script>
-    import Index from '../components/space.js'    
+    import Index from '../components/space.js';
     import { fade } from "svelte/transition";
-    import Section from '../components/Section.svelte'
-    import {onMount} from 'svelte';
+    import Loader from '../components/Loader.svelte';
+    import Section from '../components/Section.svelte'    
+    import Nav from '../components/Nav.svelte';
+    import {onMount} from 'svelte';    
     let phase = 1;
+    let loaded = false;
     let topSec, midSec, bottomSec;
-    $: console.log(phase);
     onMount(()=>{
-        let create3d = new Index();
+        var createScene = new Promise((resolve, reject)=>{
+            let create3d = new Index();
+            resolve(create3d);
+        })
         window.addEventListener('scroll', fadeScroll);
         topSec = document.getElementById('topSec');
         midSec = document.getElementById('midSec');
         bottomSec = document.getElementById('lastSec');
+        createScene.then((value)=>{
+            setTimeout(function() {
+                loaded = true;   
+            }, 600);                     
+            console.log('done')
+        })
     })
 
     function fadeScroll(){
@@ -115,10 +126,21 @@
         z-index:1;
         top:0;
     }
+    .bigBoy{
+        font-size:80px !important;
+        padding:0 !important;
+        margin-bottom:20px !important;
+        font-weight:800 !important;
+        text-transform: uppercase;
+    }
 </style>
 <svelte:head>
 	<title>goHere | Creative Solutions</title>
 </svelte:head>
+{#if !loaded}
+    <Loader />
+{/if}
+<Nav />
 <div class="spacer top">
     <canvas id="canvas"></canvas>
 </div>
@@ -131,7 +153,7 @@
     {#if phase == 1}
         <div class="crt" id="topSec" transition:fade={{ duration: 300 }}>
             <div class="colored" data-glow="Creative">Creative</div>
-            Boobies
+            Solutions
         </div>   
     {/if} 
     {#if phase == 2}

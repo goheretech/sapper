@@ -94,10 +94,10 @@
             animation: colorScroll 20s linear infinite;
         }
         .divider.color.bottom{        
-            bottom:-155px;
+            bottom:-160px;
         }
         .divider.color.top{        
-            top:-155px;
+            top:-160px;
         }
     @media screen and (max-width:500px) {
 

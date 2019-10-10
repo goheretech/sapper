@@ -8,6 +8,8 @@
 
 
 ## Changelog
+### v0.9.83
+* Rebuilt Index
 ### v0.9.81
 * Bug Fixes
 * Content Changes

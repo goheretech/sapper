@@ -1,5 +1,5 @@
 <script>
-  import { onMount } from "svelte";
+  import { onMount, onDestroy } from "svelte";
   import * as animateScroll from "svelte-scrollto";
   import { fade } from "svelte/transition";
   import { quintOut } from "svelte/easing";
@@ -38,6 +38,9 @@
       blur.style.filter = `blur(${wave * 5}px) hue-rotate(${newR * 15}deg)`;
       blur.style.opacity = `${1 - wave}`;
     }
+    onDestroy(()=>{
+        document.getElementById('nebula').remove(); 
+    })
     setInterval(rotate, 20);
 
     showing = true;
