@@ -1,6 +1,7 @@
 <script>
     import Index from '../components/space.js'    
     import { fade } from "svelte/transition";
+    import Section from '../components/Section.svelte'
     import {onMount} from 'svelte';
     let phase = 1;
     let topSec, midSec, bottomSec;
@@ -38,10 +39,32 @@
     function lerp(min, max, value){
         return (max - min) * value + min;
     }
+    const sect = [
+        {
+            tag: 'Masterminds',
+            head: 'What are Creative solutions?',
+            par: 'The completely customized, technology-based strategies we use to help you solve problems, optimize growth, and reach your unique goals.',
+            button: "Let's Talk",
+            link: 'more#contact',
+        },
+        {
+            tag: 'INCITING INSPIRATION',
+            head: 'Be Exceptional',
+            par: 'At goHere, we have built a community where uninhibited creativity can flourish, a spirit of excellence is embraced, and adding value is a way of life. Helping you dream big is what we love to do.',
+            button: 'Learn More',
+            link: 'more#who',
+        }
+    ]
 </script>
 <style>
-    #hh{
-        height:5300px;
+    .spacer{
+        height:1000px;
+    }
+    .spacer.top{
+        height:1800px;
+    }
+    .spacer.mid{
+        height:1800px;
     }
     .overlay{
         position:fixed;
@@ -96,9 +119,14 @@
 <svelte:head>
 	<title>goHere | Creative Solutions</title>
 </svelte:head>
-<div id="hh">
+<div class="spacer top">
     <canvas id="canvas"></canvas>
 </div>
+<Section {...sect[0]}/>
+<div class="spacer mid" />
+<Section {...sect[1]}/>
+<div class="spacer" />
+
 <div class="overlay">
     {#if phase == 1}
         <div class="crt" id="topSec" transition:fade={{ duration: 300 }}>
@@ -126,4 +154,5 @@
         </div>
     </section>
     {/if} 
+    
 </div>

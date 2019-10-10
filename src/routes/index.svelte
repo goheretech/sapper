@@ -6,8 +6,6 @@
     import {onMount, onDestroy} from 'svelte'
     let loaderShowing = true;
     onMount(()=>{
-        
-        
         var createScene = new Promise((resolve, reject)=>{
             let create3d = new Index();
             resolve(create3d);
@@ -18,7 +16,6 @@
             }, 600);                     
             console.log('done')
         })
-        
     })
 
     onDestroy(()=>{
