@@ -1,7 +1,10 @@
 <script>
-    import Index from '../components/space.js'
+    import Index from '../components/space.js'    
+    import { fade } from "svelte/transition";
     import {onMount} from 'svelte';
+    let phase = 1;
     let topSec, midSec, bottomSec;
+    $: console.log(phase);
     onMount(()=>{
         let create3d = new Index();
         window.addEventListener('scroll', fadeScroll);
@@ -21,22 +24,14 @@
                 ((h[sh] || b[sh]) - h.clientHeight)) *
             100; //0 to 100
         
-        if (y > 3) {
-            topSec.style.opacity = 0;
-        } else {
-            topSec.style.opacity = 1;
-        }
-
-        if (y > 48 && y < 67) {
-            midSec.style.opacity = 1;
-        } else {
-            midSec.style.opacity = 0;
-        }
-
-        if (y > 99) {
-            bottomSec.style.opacity = 1;
-        } else {
-            bottomSec.style.opacity = 0;
+        if (y < 3) {
+            phase = 1;
+        } else if (y > 48 && y < 67) {
+            phase = 2;
+        } else if (y > 99) {
+            phase = 3;
+        } else{
+            phase = 0;
         }
         
     }
@@ -105,18 +100,23 @@
     <canvas id="canvas"></canvas>
 </div>
 <div class="overlay">
-    <div class="crt" id="topSec">
-        <div class="colored" data-glow="Creative">Creative</div>
-        Boobies
-    </div>    
-    <section class="gg">
-        <div class="cc al-left" id="midSec">
+    {#if phase == 1}
+        <div class="crt" id="topSec" transition:fade={{ duration: 300 }}>
+            <div class="colored" data-glow="Creative">Creative</div>
+            Boobies
+        </div>   
+    {/if} 
+    {#if phase == 2}
+    <section class="gg" transition:fade={{ duration: 300 }}>
+        <div class="cc al-left" id="midSec" style="opacity:1;">
             <h2>Creative Solutions <br>Are Our Business.</h2>
             <p>Our handiwork sparks powerful outcomes that will open up a world of opportunities for your business. Plus, our stunning designs and tailored content will give your brand the look and feel of excellence.</p>
         </div>
     </section>
-    <section class="gg">
-        <div id="lastSec" class="cc">
+    {/if} 
+    {#if phase == 3}
+    <section class="gg" transition:fade={{ duration: 300 }}>
+        <div id="lastSec" class="cc" style="opacity:1;" >
             <div class="mini">
                 <div class="icon ico-purple"></div>
                 <h6>be creative</h6>
@@ -125,4 +125,5 @@
             <a href="more#contact">Get Started</a>
         </div>
     </section>
+    {/if} 
 </div>
