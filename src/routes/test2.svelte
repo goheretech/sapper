@@ -21,13 +21,13 @@
                 ((h[sh] || b[sh]) - h.clientHeight)) *
             100; //0 to 100
         
-        if (y > 1) {
+        if (y > 3) {
             topSec.style.opacity = 0;
         } else {
             topSec.style.opacity = 1;
         }
 
-        if (y > 44 && y < 56) {
+        if (y > 48 && y < 67) {
             midSec.style.opacity = 1;
         } else {
             midSec.style.opacity = 0;
