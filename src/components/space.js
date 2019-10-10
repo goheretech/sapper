@@ -11,19 +11,19 @@ export default class Index{
             sun: new THREE.Vector3(1340, 0, 620),
             main: new THREE.Vector3(0, 0, 0),
             sec: new THREE.Vector3(100, 0, -600),
-            third: new THREE.Vector3(80, 0, 0),
+            third: new THREE.Vector3(38, 0, 0),
         };
         let mid = {
-            camera: new THREE.Vector3(250, 45, -390),
+            camera: new THREE.Vector3(265, 40, -470),
             mainPivot: 0,
             secPivot: -0.1 * Math.PI,
             thirdPivot: 1.7 * Math.PI
         };
         let end = {
-            camera: new THREE.Vector3(281, 29, -570),
+            camera: new THREE.Vector3(274.2, 29.55, -520),
             mainPivot: 0,
             secPivot: -0.12 * Math.PI,
-            thirdPivot: 2.75 * Math.PI
+            thirdPivot: 3.10 * Math.PI
         };
         let planets = [];
         let lights = [];
@@ -242,7 +242,7 @@ export default class Index{
             genSun();
             createPlanet('main', 60, texturesArray[0], start.main, scene, 25, 5);
             createPlanet('secondary', 22, texturesArray[1], start.sec, pivots[0].obj, 20, 5);
-            createPlanet('third', 4, texturesArray[2], start.third, empties[1].obj, 15, 0);
+            createPlanet('third', 0.5, texturesArray[2], start.third, empties[1].obj, 15, 0);
             
             renderer.render(scene, camera);
             requestAnimationFrame(render);
@@ -297,14 +297,13 @@ export default class Index{
                 obj: empty
             });
             if (name == 'secondary'){
-                console.log(pivots);
-                
                 var rings = [
-                    createRing(28, 2, 1),
-                    createRing(33, 2, 3),
-                    createRing(36, 4, -2),
-                    createRing(48, 4, 1),
-                    createRing(43, 1, -3)
+                    createRing(28, .1, 1),
+                    createRing(33, 1.1, 3),
+                    createRing(36, .3, -2),
+                    createRing(43, 3.1, -3),
+                    createRing(48, .4, 1),
+                    createRing(43, .4, 1),
                 ];
             }
         }
@@ -314,7 +313,7 @@ export default class Index{
                 uniforms,
                 side: THREE.DoubleSide
             });
-            let geo = new THREE.RingGeometry(innerW, innerW + width, 38);
+            let geo = new THREE.RingGeometry(innerW, innerW + width, 360);
             var ring = new THREE.Mesh(geo, mat);
             ring.rotation.x = (-90 * Math.PI) / 180;
             planets[2].obj.add(ring);
