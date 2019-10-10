@@ -106,7 +106,7 @@
 </div>
 <div class="overlay">
     <div class="crt" id="topSec">
-        <div class="colored" data-glow="Big">Big</div>
+        <div class="colored" data-glow="Creative">Creative</div>
         Boobies
     </div>    
     <section class="gg">
