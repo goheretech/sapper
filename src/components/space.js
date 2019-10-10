@@ -31,9 +31,9 @@ export default class Index{
         let empties = [];
         let clouds = [];
         let cloudPos = {
-            start: new THREE.Vector3(90, 0, 100),
-            mid: new THREE.Vector3(-180, -10, -20),
-            end: new THREE.Vector3(-367, -19, -180)
+            start: new THREE.Vector3(90, -10, 100),
+            mid: new THREE.Vector3(-150, -10, -20),
+            end: new THREE.Vector3(-367, -19, -200)
         };
         let colors = {
             orange: new THREE.Color("hsl(32, 85%, 44%)"),
@@ -72,9 +72,9 @@ export default class Index{
             );
             camera.position.set(start.camera.x, start.camera.y, start.camera.z);
             scene.add(camera);
-            createClouds(cloudPos.start, 15, 4, 2, 5);
-            createClouds(cloudPos.mid, 30, 6, 4, 10);
-            createClouds(cloudPos.end, 15, 5, 5, 5);
+            createClouds(cloudPos.start, 9, 4, 0.5, 5);
+            createClouds(cloudPos.mid, 15, 6, 2, 10);
+            createClouds(cloudPos.end, 7, 5, 3, 1);
             loadTextures();
             renderer.setClearColor(0xeb4034, 0);
         }
