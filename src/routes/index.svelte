@@ -138,7 +138,7 @@
     }
     @media screen and (max-width:500px) {
         .overlay .crt{
-            padding:40px;
+            padding:20px;
             font-size:90px;
         }
     }
