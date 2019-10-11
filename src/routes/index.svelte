@@ -92,10 +92,11 @@
     }
     .overlay .crt{
         
-        font-size:140px;
+        font-size:160px;
         padding:80px;
         text-align:right;
         font-weight:bold;
+        line-height:80%;
     }
     .colored{
         background-image: linear-gradient(to right, #d624a6, #f7a140, green, #22d8d8, purple, #d624a6);
@@ -135,6 +136,12 @@
         font-weight:800 !important;
         text-transform: uppercase;
     }
+    @media screen and (max-width:500px) {
+        .overlay .crt{
+            padding:40px;
+            font-size:90px;
+        }
+    }
 </style>
 <svelte:head>
 	<title>goHere | Creative Solutions</title>
@@ -153,7 +160,7 @@
 
 <div class="overlay">
     {#if phase == 1}
-        <div class="crt" id="topSec" transition:fade={{ duration: 300 }}>
+        <div class="crt" style="" id="topSec" transition:fade={{ duration: 300 }}>
             <div class="colored" data-glow="Creative">Creative</div>
             Solutions
         </div>   

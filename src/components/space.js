@@ -7,9 +7,9 @@ export default class Index{
         let loader = new THREE.TextureLoader();
        
         let start = {
-            camera: new THREE.Vector3(70, 15, 200),
-            sun: new THREE.Vector3(1340, 0, 620),
-            main: new THREE.Vector3(0, 0, 0),
+            camera: new THREE.Vector3(70, 15, 800),
+            sun: new THREE.Vector3(2340, 0, 1320),
+            main: new THREE.Vector3(-5, 0, 600),
             sec: new THREE.Vector3(100, 0, -600),
             third: new THREE.Vector3(38, 0, 0),
         };
@@ -31,8 +31,8 @@ export default class Index{
         let empties = [];
         let clouds = [];
         let cloudPos = {
-            start: new THREE.Vector3(90, -10, 100),
-            mid: new THREE.Vector3(130, 25, -220),
+            start: new THREE.Vector3(90, -10, 700),
+            mid: new THREE.Vector3(130, 25, 220),
             end: new THREE.Vector3(280, 30, -700)
         };
         let colors = {
@@ -240,7 +240,7 @@ export default class Index{
         }
         function generateSpace(){
             genSun();
-            createPlanet('main', 60, texturesArray[0], start.main, scene, 25, 5);
+            createPlanet('main', 70, texturesArray[0], start.main, scene, 25, 5);
             createPlanet('secondary', 22, texturesArray[1], start.sec, pivots[0].obj, 20, 5);
             createPlanet('third', 0.5, texturesArray[2], start.third, empties[1].obj, 15, 0);
             renderer.render(scene, camera);

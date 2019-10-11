@@ -100,7 +100,34 @@
             top:-160px;
         }
     @media screen and (max-width:500px) {
-
+        h2{
+            font-size:40px;
+        }
+        .space{
+            width:85%;
+            z-index:12;
+        }
+        .bg-black{
+            height:auto;
+            z-index:30;
+            padding: 80px 0px;
+        }
+        .divider{
+            height:100px;
+        }
+        .divider.top{
+            top:-99px;
+        }
+        .divider.bottom{
+             bottom:-99px;
+        }
+        .divider.color.bottom{
+            bottom:-105px;
+            
+        }
+        .divider.color.top{
+            top:-105px;
+        }
     }
 </style>
 <section class="bg-black">
