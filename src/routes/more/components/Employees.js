@@ -44,7 +44,7 @@ export const employees = [
                    },
                    {
                        name: 'Marketing',
-                       value: 80
+                       value: 8
                    }
                ],
                side: 'left'
