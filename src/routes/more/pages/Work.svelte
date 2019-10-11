@@ -8,7 +8,7 @@
             import Review from '../components/Review.svelte'
             function checkHash(){
                 let spot = document.getElementById("hh");
-                animateScroll.scrollTo({element: spot, offset: -350}); 
+                animateScroll.scrollTo({element: spot, offset: -270}); 
                 viewerOpen = !viewerOpen;
             }
         </script>
@@ -78,7 +78,7 @@
                 animation: colorScroll 20s linear infinite;
                 filter:blur(8px)
             }
-            #back{
+            button{
                 border:white 1px solid;
                 background:transparent;
                 color:white;
@@ -105,8 +105,8 @@
         {#if viewerOpen}
             <div class="clientHolder">
                 <Review clientID={clientID}/>
+                <button id="back" >View Website</button>
                 <button id="back" on:click="{checkHash}">Back</button>
             </div>
         {/if}
-
         </div>

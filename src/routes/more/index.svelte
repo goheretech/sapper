@@ -295,7 +295,6 @@
   <section class="Hero who">
     <div class="cont">
       <canvas id="nebula" ></canvas>
-      <div class="test">test</div>
       {#if showing}
         <div
           transition:fade={{ delay: 150, duration: 300 }}
