@@ -23,9 +23,7 @@
         border: 1px solid #000;
         transition: 0.5s;
     }
-    .box:hover{
-        transform:scale(1.01);
-    }
+    
     .box::before{
         content: '';
         position: absolute;
@@ -38,10 +36,14 @@
         transform: skew(1deg,1deg);
         background-size: 600%;
         animation: colorScroll 20s linear infinite;
-        transition:0.7s;
+        transition:0.3s;
     }
     .box:hover::before{
-        transform: skew(2deg, 2deg);
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+        /* transform: skew(2deg, 2deg); */
     }
     .box:nth-child(2):before{
         background-image: linear-gradient(to right, #f7a140, green, #22d8d8, purple, #d624a6, #f7a140);
@@ -54,7 +56,7 @@
     }
     .content{
         position:relative;
-        padding: 20px;
+        padding: 40px;
 
     }
     h2{
@@ -68,18 +70,18 @@
         transition: 0.5s;
     }
     .box:hover h2{
-        top:-100px;
+        top:-90px;
     }
     h3{
         margin: 0 0 30px;
         padding: 0;
-        font-size: 20px;
+        font-size: 24px;
         color:#fff;
     }
     h4{
         margin: 0 0 10px;
         padding: 0;
-        font-size: 40px;
+        font-size: 36px;
         font-weight: 500;
         color:#fff;
     }
@@ -174,13 +176,13 @@
                 <h3>Creative Solutions</h3>
                 <h4>Use Your Imagination!</h4>
                 <p>We’re a company that thinks outside the box and has the technological versatility and expertise to back it up. Think you could reach your goals using technology? Run it by us!</p>
-                <!-- <ul>
+                <ul>
                     <li>Brand Identity Development</li>
                     <li>Logo Creation</li>
                     <li>Graphic Design</li>
                     <li>Asset Production</li>
                     <li>SEO</li>
-                </ul> -->
+                </ul>
                 <a href="#">Apply Now</a>
             </div>
         </div>
