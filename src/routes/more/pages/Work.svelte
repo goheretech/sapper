@@ -92,8 +92,16 @@
                     }
                     .goTo{
                         font-size:42px !important;
+                        padding:20px 10px;
+                        margin-top:10px;
                     }
-                    .goTo span{font-size: 42px;}
+                    .goTo span{
+                        font-size: 42px;
+                        padding:10px;
+                    }
+                    .goTo span::before{
+                        top:10px;
+                    }
                 }
         </style>
         <div data-aos="fade-up" data-aos-offset="-300" class="cc" style="width:100%" id="hh">

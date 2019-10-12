@@ -71,6 +71,23 @@ export let clients = [
                img: '/img/clients/majors.png'
            },
            {
+               slug: 'divine-chiro',
+               name: 'Divine Chiropractic',
+               desc:
+                   'Divine is a unique business that specializes in a one-of-a-kind approach to health. We worked with Divine to give their brand a completely new look and feel. After creating several concepts for their online presence, branded content, and overall tone of their message, they selected the concept they felt was most compatible with who they are as a company. We then used this new brand image to create a collection of  brand assets for Divine to continue using in their communications and marketing.',
+               shortD:
+                   'The premier chiropractic and nutrition center in Tulsa, OK.',
+               services: [
+                   'UX',
+                   'Visual Design',
+                   'Branding',
+                   'Creative Direction'
+               ],
+               year: '2018',
+               url: 'https://divinechiro.com',
+               img: '/img/clients/divine.png'
+           },
+           {
                slug: 'alexanders',
                name: 'Alexanders of Door County',
                desc:
@@ -103,23 +120,7 @@ export let clients = [
                url: 'https://www.bosmanchiropractic.com/',
                img: '/img/clients/bosman.png'
            },
-           {
-               slug: 'divine-chiro',
-               name: 'Divine Chiropractic',
-               desc:
-                   'Divine is a unique business that specializes in a one-of-a-kind approach to health. We worked with Divine to give their brand a completely new look and feel. After creating several concepts for their online presence, branded content, and overall tone of their message, they selected the concept they felt was most compatible with who they are as a company. We then used this new brand image to create a collection of  brand assets for Divine to continue using in their communications and marketing.',
-               shortD:
-                   'The premier chiropractic and nutrition center in Tulsa, OK.',
-               services: [
-                   'UX',
-                   'Visual Design',
-                   'Branding',
-                   'Creative Direction'
-               ],
-               year: '2018',
-               url: 'https://divinechiro.com',
-               img: '/img/clients/divine.png'
-           },
+
            {
                slug: 'mim',
                name: 'Michigan Intergrative Medicine',
