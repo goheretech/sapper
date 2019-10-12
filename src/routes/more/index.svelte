@@ -12,6 +12,7 @@
   import App from "./pages/App.svelte";
   import Contact from "./pages/Contact.svelte";
   import Clouds from './components/Clouds.svelte'
+  import SelectService from './components/SelectService.svelte'
 
   let frmShow = false;
   let displayMenu = false;
@@ -370,9 +371,11 @@
 </div>
 {#if page < 4}
   <div class="blackback">
-    {#if !frmShow}
+        <SelectService />
+    <!-- {#if !frmShow}
       <section class="CTA gg" transition:fade={{ delay: 150, duration: 300 }}>
         <div class="cc">
+        
           <div class="mini">
             <div class="icon ico-purple" />
             <h6>be creative</h6>
@@ -389,12 +392,12 @@
               Contact Us
             </a>
           </div>
-        </div>
+        </div> 
       </section>
     {:else}
     <div transition:fade={{ delay: 150, duration: 300 }}><CTA /></div>
       
-    {/if}
+    {/if}-->
 
   </div>
 {/if}

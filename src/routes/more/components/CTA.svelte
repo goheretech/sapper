@@ -7,7 +7,6 @@
   };
   let error = false;
   let showThanks = false;
-
   async function sendContactMessage() {
     // console.log("Send form...", contactForm);
     let db = firebase.firestore();
