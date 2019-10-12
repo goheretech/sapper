@@ -100,7 +100,6 @@
                         padding:10px;
                     }
                     .goTo span::before{
-                        top:10px;
                         padding:10px;
                     }
                 }
