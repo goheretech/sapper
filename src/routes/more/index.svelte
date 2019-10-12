@@ -215,7 +215,7 @@
     position:fixed;
     top:0;
     left:0;
-    z-index:2;
+    z-index:1;
   }
   @media screen and (max-width:500px) {
            
@@ -228,6 +228,9 @@
            }
             .bottom{
                      min-height:auto;
+                   }
+                   #nebula{
+                     position:absolute;
                    }
            
     }
@@ -291,7 +294,7 @@
   </nav>
 </header>
 
-<div style="background:black">
+<div>
   <!-- <button class="changer" on:click="{changePage}">Next Page</button> -->
   <section class="Hero who">
     <div class="cont">
