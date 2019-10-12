@@ -56,15 +56,15 @@
         {
             tag: 'Masterminds',
             head: 'What are Creative solutions?',
-            par: 'The completely customized, technology-based strategies we use to help you solve problems, optimize growth, and reach your unique goals.',
-            button: "Let's Talk",
+            par: 'We develop customized, technology-based strategies to help you solve problems, optimize growth, and reach your unique goals.',
+            button: "Learn More",
             link: 'more#contact',
         },
         {
             tag: 'INCITING INSPIRATION',
             head: 'Be Exceptional',
             par: 'At goHere, we have built a community where uninhibited creativity can flourish, a spirit of excellence is embraced, and adding value is a way of life. Helping you dream big is what we love to do.',
-            button: 'Learn More',
+            button: 'Get Started',
             link: 'more#who',
         }
     ]
@@ -169,7 +169,7 @@
     <section class="gg" transition:fade={{ duration: 300 }}>
         <div class="cc al-left" id="midSec" style="opacity:1;">
             <h2>Creative Solutions <br>Are Our Business.</h2>
-            <p>Our handiwork sparks powerful outcomes that will open up a world of opportunities for your business. Plus, our stunning designs and tailored content will give your brand the look and feel of excellence.</p>
+            <p>Give your brand the look and feel of excellence to spark powerful outcomes. Our stunning designs and tailored content will open up a world of opportunities..</p>
         </div>
     </section>
     {/if} 

@@ -29,9 +29,9 @@ export const employees = [
                title: 'Lead Optimization Envisioneer',
                nick: 'The Meg',
                bioStart:
-                   'Meghan has expertise in business consulting, project management, teaching, marketing, volunteerism, and entrepreneurship. Yup—we all wish we could be Meghan',
+                   'Meghan is that amazing type of person who can master anything she sets her mind to and do it better than anyone else.',
                bio:
-                   'Meghan’s work with goHere centers on project management, and her skillset adds value to just about everything we do. Her creative and uplifting energy gives everyone around her the drive to reach the next level and the inspiration to think outside the box.',
+                   'She has expertise in business consulting and development, project management, teaching, marketing, and entrepreneurship. Meghan’s work with goHere centers on project management, and her skillset adds value to just about everything we do. Her creative and uplifting energy gives everyone around her the drive to reach the next level and the inspiration to think outside the box.',
                picture: 'img/headshots/meg3.png',
                stats: [
                    {
@@ -56,7 +56,7 @@ export const employees = [
                bioStart:
                    'Texas raised, Jack has been bringing his creative mind and energy to the tech world since 2010.',
                bio:
-                   'While attending the Art Institute of Austin for Web Development and Graphic Design, he fatefully moved in next door to Chris. Thus began their entrepreneurial adventures. If Chris is the architect, Jack is the builder. With expert knowledge in all things IT, he builds technology solutions that are on the cutting edge and extremely effective. His commitment to excellence is matched only by the passion he brings to his work.',
+                   'While attending the Art Institute of Austin for Web Development and Graphic Design, he fatefully moved in next door to Chris. Thus began their entrepreneurial adventures. With expert knowledge in all things IT, Jack builds technology solutions that are on the cutting edge and extremely effective. His commitment to excellence is matched only by the passion he brings to his work.',
                picture: 'img/headshots/jack.png',
                stats: [
                    {
@@ -103,9 +103,9 @@ export const employees = [
                name: 'Elisabeth "Pippi" Balistreri',
                title: 'Content Envisioneer',
                nick: 'Long- stocking',
-               bioStart: ' ',
+               bioStart: 'Pippi has a natural talent for using storytelling to simplify complex information and bring any topic to life.',
                bio:
-                   'While studying psychology, research, and writing at Washington and Lee University, Pippi’s talent for storytelling and ability to understand and translate complex information is what brings any topic she writes about to life.  Pippi’s greatest passion in life is helping people, so she strives to make a positive impact by managing our work with charities and non-profits.',
+                   'While studying psychology and research methods at Washington and Lee University, Pippi developed the vision and versatility needed to convey powerful messages in a way that people can understand and connect with. Her greatest passion in life is helping people, so she strives to make a positive impact by managing goHere’s work with non-profits.',
                picture: 'img/headshots/pip1.png',
                stats: [
                    {

@@ -3,11 +3,11 @@
     display:flex;
     justify-content:center;
     align-items:center;
-    min-height: 100vh;    
+    min-height: 100vh;  
+    padding: 120px 80px;
 }
-    .cont{
+    .cd{
         position:relative;
-        width:90%;
         display:grid;
         grid-template-columns: repeat(4, minmax(260px, 1fr));
         grid-template-rows: auto;
@@ -15,12 +15,16 @@
     }
     .box{
         position:relative;
-        height:500px;
+        height:650px;
         background: #131414;
         display:flex;
         justify-content: center;
         align-items:center;
         border: 1px solid #000;
+        transition: 0.5s;
+    }
+    .box:hover{
+        transform:scale(1.01);
     }
     .box::before{
         content: '';
@@ -56,7 +60,7 @@
     h2{
         position:absolute;
         top: -60px;
-        right: 20px;
+        right: 40px;
         margin: 0;
         padding: 0;
         font-size: 10em;
@@ -64,12 +68,18 @@
         transition: 0.5s;
     }
     .box:hover h2{
-        top:-140px;
+        top:-100px;
     }
     h3{
+        margin: 0 0 30px;
+        padding: 0;
+        font-size: 20px;
+        color:#fff;
+    }
+    h4{
         margin: 0 0 10px;
         padding: 0;
-        font-size: 28px;
+        font-size: 40px;
         font-weight: 500;
         color:#fff;
     }
@@ -96,43 +106,81 @@
         transform: translateY(0);
         opacity: 1;
         visibility: visible;
+        
     }
     a:hover{
         color: #000;
         background:white;
     }
+    li{
+        color:white;
+        font-size: 18px;
+    }
 </style>
 <div class="bb">
-    <div class="cont">
+    <div class="cd">
         <div class="box">
             <div class="content">
                 <h2>1</h2>
-                <h3>Base Package</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem nihil error assumenda qui, tempore explicabo hic non in! Blanditiis quaerat dolorem fugiat corrupti labore totam laboriosam quam nesciunt dignissimo.</p>
+                <h3>Web Design</h3>
+                <h4>Captivate Your Audience.</h4>
+                <p>We create user-friendly interfacing and distinctive navigation and scroll techniques that keep your customers naturally engaged.</p>
+                    <ul>
+                        <li>UI/UX Designs</li>
+                        <li>Front and Back-end Development</li>
+                        <li>Mobile Web Apps</li>
+                        <li>Content Strategy</li>
+                        <li>2D and 3D Animation</li>
+                    </ul>
+                
                 <a href="#">Apply Now</a>
             </div>
         </div>
         <div class="box">
             <div class="content">
                 <h2>2</h2>
-                <h3>Premium Package</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem nihil error assumenda qui, tempore explicabo hic non in! Blanditiis quaerat dolorem fugiat corrupti labore totam laboriosam quam nesciunt dignissimo.</p>
+                <h3>Brand Development</h3>
+                <h4>Tell Your Customers Who You Are.</h4>
+                <p>We develop brand identities that reflect your company’s values and resonate with your specific customers.</p>
+                <ul>
+                    <li>Brand Identity Development</li>
+                    <li>Logo Creation</li>
+                    <li>Graphic Design</li>
+                    <li>Asset Production</li>
+                    <li>SEO</li>
+                </ul>
                 <a href="#">Apply Now</a>
             </div>
         </div>
         <div class="box">
             <div class="content">
                 <h2>3</h2>
-                <h3>Ultimate Package</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem nihil error assumenda qui, tempore explicabo hic non in! Blanditiis quaerat dolorem fugiat corrupti labore totam laboriosam quam nesciunt dignissimo.</p>
+                <h3>Marketing</h3>
+                <h4>Draw Your Customers In.</h4>
+                <p>Through extensive research, we identify your optimal consumer demographic, uncover their digital habits, and reach them through the digital channels they frequent.</p>
+                <ul>
+                    <li>Campaign Strategy & Planning</li>
+                    <li>Media Planning & Management</li>
+                    <li>Google Adwords/PPC</li>
+                    <li>Content Marketing</li>
+                    <li>Analytics & Reporting</li>
+                </ul>
                 <a href="#">Apply Now</a>
             </div>
         </div>
         <div class="box">
             <div class="content">
                 <h2>4</h2>
-                <h3>Enterprise Package</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem nihil error assumenda qui, tempore explicabo hic non in! Blanditiis quaerat dolorem fugiat corrupti labore totam laboriosam quam nesciunt dignissimo.</p>
+                <h3>Creative Solutions</h3>
+                <h4>Use Your Imagination!</h4>
+                <p>We’re a company that thinks outside the box and has the technological versatility and expertise to back it up. Think you could reach your goals using technology? Run it by us!</p>
+                <!-- <ul>
+                    <li>Brand Identity Development</li>
+                    <li>Logo Creation</li>
+                    <li>Graphic Design</li>
+                    <li>Asset Production</li>
+                    <li>SEO</li>
+                </ul> -->
                 <a href="#">Apply Now</a>
             </div>
         </div>

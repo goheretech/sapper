@@ -337,17 +337,20 @@
       </div>
     {/if}
   </section>
+ 
   <section class="gg bottom">
+   
     <div class="divider-top colorChange" />
     <div class="divider-top black" />
     <div class="space">
+    
       {#if showing}
         <div class="hold" transition:fade={{ delay: 150, duration: 300 }}>
           {#if page == 0}
             <Who /><Clouds />
           {/if}
           {#if page == 1}
-            <What /><Clouds />
+            <SelectService /><Clouds />
           {/if}
           {#if page == 2}
             <Where /><Clouds />
@@ -371,8 +374,8 @@
 </div>
 {#if page < 4}
   <div class="blackback">
-        <SelectService />
-    <!-- {#if !frmShow}
+        
+    {#if !frmShow}
       <section class="CTA gg" transition:fade={{ delay: 150, duration: 300 }}>
         <div class="cc">
         
@@ -397,7 +400,7 @@
     {:else}
     <div transition:fade={{ delay: 150, duration: 300 }}><CTA /></div>
       
-    {/if}-->
+    {/if}
 
   </div>
 {/if}
