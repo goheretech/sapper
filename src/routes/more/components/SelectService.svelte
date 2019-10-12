@@ -118,6 +118,40 @@
         color:white;
         font-size: 18px;
     }
+
+    @media screen and (max-width:500px) { 
+        .bb{
+            padding: 20px 20px;
+        }
+        .cd{
+            grid-template-columns: repeat(1, minmax(260px, 1fr));
+            grid-gap: 40px 0;
+        }
+
+        .box{
+            height:auto;
+            padding: 20px 20px;
+        }
+
+        h2{
+            top:0px;
+        }
+        h3{
+            margin-bottom:10px;
+            font-size:28px;
+        }
+        h4{
+            font-size:28px;
+        }
+        .content{
+            padding:0;
+        }
+        .box a{        
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;            
+        }
+    } 
 </style>
 <div class="bb">
     <div class="cd">
