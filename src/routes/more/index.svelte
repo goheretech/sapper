@@ -151,7 +151,7 @@
   .bottom {
     height: auto !important;
     min-height: 800px;
-     
+    background:black;
   }
   .bottom .hold {
     display: flex;
@@ -291,7 +291,7 @@
   </nav>
 </header>
 
-<div>
+<div style="background:black">
   <!-- <button class="changer" on:click="{changePage}">Next Page</button> -->
   <section class="Hero who">
     <div class="cont">
