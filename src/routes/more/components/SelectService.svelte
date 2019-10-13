@@ -160,7 +160,7 @@
                 <h2>1</h2>
                 <h3>Web Design</h3>
                 <h4>Captivate Your Audience.</h4>
-                <p>We create user-friendly interfacing and distinctive navigation and scroll techniques that keep your customers naturally engaged.</p>
+                <p>We create user-friendly interfacing and distinctive navigation and scroll techniques that keep your customers naturally engaged, increase conversion, and drive revenue.</p>
                     <ul>
                         <li>UI/UX Designs</li>
                         <li>Front and Back-end Development</li>
@@ -177,13 +177,14 @@
                 <h2>2</h2>
                 <h3>Brand Development</h3>
                 <h4>Tell Your Customers Who You Are.</h4>
-                <p>We develop brand identities that reflect your company’s values and resonate with your specific customers.</p>
+                <p>We develop brand identities that reflect your company’s values and resonate with your customers.</p>
                 <ul>
                     <li>Brand Identity Development</li>
+                    <li>Creative Direction</li>
                     <li>Logo Creation</li>
                     <li>Graphic Design</li>
                     <li>Asset Production</li>
-                    <li>SEO</li>
+                    
                 </ul>
                 <a href="#">Apply Now</a>
             </div>
@@ -195,10 +196,10 @@
                 <h4>Draw Your Customers In.</h4>
                 <p>Through extensive research, we identify your optimal consumer demographic, uncover their digital habits, and reach them through the digital channels they frequent.</p>
                 <ul>
+                    <li>SEO</li>
                     <li>Campaign Strategy & Planning</li>
                     <li>Media Planning & Management</li>
                     <li>Google Adwords/PPC</li>
-                    <li>Content Marketing</li>
                     <li>Analytics & Reporting</li>
                 </ul>
                 <a href="#">Apply Now</a>
@@ -207,15 +208,15 @@
         <div class="box">
             <div class="content">
                 <h2>4</h2>
-                <h3>Creative Solutions</h3>
-                <h4>Use Your Imagination!</h4>
-                <p>We’re a company that thinks outside the box and has the technological versatility and expertise to back it up. Think you could reach your goals using technology? Run it by us!</p>
+                <h3>Business Consulting</h3>
+                <h4>Reach Your Goals.</h4>
+                <p>We empower businesses to achieve strategic outcomes through future-oriented actions that create long-term opportunities for growth. We think outside the box and have the technological versatility to back it up.</p>
                 <ul>
-                    <li>Brand Identity Development</li>
-                    <li>Logo Creation</li>
-                    <li>Graphic Design</li>
-                    <li>Asset Production</li>
-                    <li>SEO</li>
+                    <li>Infrastrcuture & Process Development</li>
+                    <li>System Optimization</li>
+                    <li>Strategic Planning</li>
+                    <li>Lead Generation</li>
+                    <li>Creatve Solutions</li>
                 </ul>
                 <a href="#">Apply Now</a>
             </div>

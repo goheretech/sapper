@@ -104,7 +104,7 @@
         <h2>We Can Help</h2>
         <h3>Let's Create Together</h3>
         <p>
-          From small local businesses to global giants; from start-ups to industry leaders; from real estate agencies to sports bars; goHere can add value to any organization. Our dynamic team of experts is equipped to understand your unique needs and meet them in beautiful and effective ways. 
+          From small local businesses to global giants; from start-ups to industry leaders; from nutrition clinics to sports bars; goHere can add value to any organization. Our dynamic team of experts is equipped to understand and meet your unique needs and meet them in beautiful and effective ways. 
           
           Think you can’t afford our services? We choose our clients based on harmony, not purse strings; we'd love to hear from you regardless of your budget.
         </p>

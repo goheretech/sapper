@@ -2,12 +2,12 @@ export let pages = [
            {
                page: 'Who',
                planet: '/img/Planets/np1.png',
-               titleColor: 'Passionate',
-               title: 'Envisioneers',
+               titleColor: 'Trailblazers',
+               title: 'of Tech',
                tag: 'Nerd Alert',
                head: 'New Strategies. Old Values.',
                par:
-                   'The founders of goHere have watched and experienced how tastes and technology have evolved since the internet’s inception, giving them a particular talent for predicting—and shaping—where things are headed next.',
+                   'The founders of goHere have been watching tastes and technology evolve since the internet’s inception, giving them a particular talent for predicting—and shaping—where things are headed next.',
                button: 'Check It Out',
                buttonHref: 'more#what'
            },

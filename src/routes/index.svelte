@@ -63,7 +63,7 @@
         {
             tag: 'INCITING INSPIRATION',
             head: 'Be Exceptional',
-            par: 'At goHere, we have built a community where uninhibited creativity can flourish, a spirit of excellence is embraced, and adding value is a way of life. Helping you dream big is what we love to do.',
+            par: 'At goHere, we have built a community where creative minds flourish, a spirit of excellence is embraced, and adding value is a way of life. Helping you dream big is what we love to do.',
             button: 'Get Started',
             link: 'more#who',
         }
@@ -169,7 +169,7 @@
     <section class="gg" transition:fade={{ duration: 300 }}>
         <div class="cc al-left" id="midSec" style="opacity:1;">
             <h2>Creative Solutions <br>Are Our Business.</h2>
-            <p>Give your brand the look and feel of excellence to spark powerful outcomes. Our stunning designs and tailored content will open up a world of opportunities..</p>
+            <p>Give your brand the look and feel of excellence to spark powerful outcomes. Our stunning designs and tailored content will open up a world of opportunities for you and your business.</p>
         </div>
     </section>
     {/if} 
@@ -181,7 +181,7 @@
                 <h6>be creative</h6>
             </div>
             <h2>Join us at</h2><h2 class="bigBoy">the Cutting Edge</h2>            
-            <a href="more#contact">Get Started</a>
+            <a href="more#contact">Let's Go</a>
         </div>
     </section>
     {/if} 

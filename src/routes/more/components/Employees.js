@@ -52,7 +52,7 @@ export const employees = [
            {
                name: 'Corey "Jack" LeMay',
                title: 'Lead Technology Envisioneer',
-               nick: 'Wonder Boy',
+               nick: 'Wunder Boy',
                bioStart:
                    'Texas raised, Jack has been bringing his creative mind and energy to the tech world since 2010.',
                bio:
