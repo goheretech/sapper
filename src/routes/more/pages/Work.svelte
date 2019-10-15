@@ -114,7 +114,6 @@
         {#if viewerOpen}
             <div class="clientHolder">
                 <Review clientID={clientID}/>
-                <button id="back" >View Website</button>
                 <button id="back" on:click="{checkHash}">Back</button>
             </div>
         {/if}

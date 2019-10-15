@@ -1,12 +1,12 @@
 <script>
     import Index from '../components/space.js';
     import { fade } from "svelte/transition";
-    import Loader from '../components/Loader.svelte';
+    
     import Section from '../components/Section.svelte'    
     import Nav from '../components/Nav.svelte';
     import {onMount} from 'svelte';    
     let phase = 1;
-    let loaded = false;
+    
     let topSec, midSec, bottomSec;
     onMount(()=>{
         let old = document.getElementById('nebula');
@@ -15,17 +15,15 @@
             let create3d = new Index();
             resolve(create3d);
         })
+        createScene;
         window.addEventListener('scroll', fadeScroll);
         topSec = document.getElementById('topSec');
         midSec = document.getElementById('midSec');
         bottomSec = document.getElementById('lastSec');
-        createScene.then((value)=>{
-            setTimeout(function() {
-                loaded = true;   
-            }, 600);                     
-            console.log('done')
-        })
+        
     })
+
+    
 
     function fadeScroll(){
         //Get percent scrolled
@@ -58,13 +56,13 @@
             head: 'What are Creative solutions?',
             par: 'We develop customized, technology-based strategies to help you solve problems, optimize growth, and reach your unique goals.',
             button: "Learn More",
-            link: 'more#contact',
+            link: 'more#what',
         },
         {
             tag: 'INCITING INSPIRATION',
             head: 'Be Exceptional',
-            par: 'At goHere, we have built a community where creative minds flourish, a spirit of excellence is embraced, and adding value is a way of life. Helping you dream big is what we love to do.',
-            button: 'Get Started',
+            par: 'At goHere, we have built a community where creative minds flourish, a spirit of excellence is embraced, and adding value is a way of life. Helping you create is what we love to do.',
+            button: 'Who We Are',
             link: 'more#who',
         }
     ]
@@ -106,13 +104,15 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         animation: colorScroll 20s linear infinite;
-        line-height: 112%;
+        line-height: 100%;
+        margin:0;
+        padding:0;
         position: relative;
     }
     .colored::after{
         content: attr(data-glow);
         position: absolute;
-        top: 10;
+        top: -10px;
         right: 0;
         filter: blur(10px);
         line-height: 112%;
@@ -141,14 +141,16 @@
             padding:20px;
             font-size:90px;
         }
+
+        .spacer{
+            height: 800px;
+        }
     }
 </style>
 <svelte:head>
 	<title>goHere | Creative Solutions</title>
 </svelte:head>
-{#if !loaded}
-    <Loader />
-{/if}
+
 <Nav />
 <div class="spacer top">
     <canvas id="canvas"></canvas>
@@ -160,9 +162,9 @@
 
 <div class="overlay">
     {#if phase == 1}
-        <div class="crt" style="" id="topSec" transition:fade={{ duration: 300 }}>
+        <div class="crt" style="" id="topSec" transition:fade={{ duration: 300 }} >
             <div class="colored" data-glow="Creative">Creative</div>
-            Solutions
+            <span style="margin:0; padding:0;">Solutions</span> 
         </div>   
     {/if} 
     {#if phase == 2}
@@ -180,7 +182,7 @@
                 <div class="icon ico-purple"></div>
                 <h6>be creative</h6>
             </div>
-            <h2>Join us at</h2><h2 class="bigBoy">the Cutting Edge</h2>            
+            <h2>Join us at</h2><h2 class="bigBoy">the Cutting Edge.</h2>            
             <a href="more#contact">Let's Go</a>
         </div>
     </section>

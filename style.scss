@@ -657,7 +657,10 @@ section {
             justify-content: stretch;
 
 
-
+            @media screen and (max-width:$break-phone) {
+                align-items:flex-end;
+                justify-content:center;
+            }
 
             .creative {
                 font-size: 160px;
@@ -672,8 +675,9 @@ section {
                     bottom: 1.5em;
                     right: .7em;
                      @media screen and (max-width:$break-tablet) {
-                         bottom:4.4em;
-                         right:.2em;
+                        position:relative; 
+                        bottom:-1.5em;
+                        right:auto;
                      }
                 }
 
@@ -683,7 +687,7 @@ section {
 
                 @media screen and (max-width:$break-phone) {
                     font-size: 4em;
-                    text-align: right;
+                    text-align: center;
                     margin-right: 0;
                 }
 

@@ -81,7 +81,7 @@ export const employees = [
                   bioStart:
                       'When it comes to determination, Teddy stands above the rest—on one leg.',
                   bio:
-                      'Teddy lost his leg as an adult and was faced with the challenge of learning how to walk again. His ability to overcome obstacles sets him apart in everything he does. Bringing that same determination and fight to his work has launched Teddy to levels of success that few rarely see. We mostly keep Teddy around to tell jokes and do our dishes.',
+                      'Teddy lost his leg as an adult and was faced with the challenge of learning how to walk again. His ability to overcome obstacles sets him apart in everything he does. Bringing that same determination and fight to his work has launched Teddy to levels of success that few rarely see.',
                   picture: 'img/headshots/ted1.png',
                   stats: [
                       {

@@ -78,6 +78,11 @@
     font-size:42px;
   }
 
+  .h3{
+    font-size:32px;
+    margin-top:0px;
+  }
+
    @media screen and (max-width:500px) {
            .clH{
              flex-direction:column;
@@ -101,8 +106,8 @@
   <div class="cc clH">
     {#if !showThanks}
       <div class="cl leftCol">
-        <h2>We Can Help</h2>
-        <h3>Let's Create Together</h3>
+        <h2>Got A Problem?</h2>
+        <h3>We'll Solve It.</h3>
         <p>
           From small local businesses to global giants; from start-ups to industry leaders; from nutrition clinics to sports bars; goHere can add value to any organization. Our dynamic team of experts is equipped to understand and meet your unique needs and meet them in beautiful and effective ways. 
           
@@ -167,9 +172,7 @@
         <h1>Thank You, {contactForm.name}</h1>
         <h3>Our team will review your website, {contactForm.website}</h3>
         <span>
-          One of our ambassadors will contact you shortly. Please note that your data is
-          now forfit and all intelectual property assocaited with your brand is
-          now the property of goHere. Chump.
+          One of our ambassadors will contact you shortly. 
         </span>
       </div>
     {/if}

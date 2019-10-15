@@ -1,3 +1,12 @@
+<script>
+    import page from "../index.svelte"
+
+    function goToContact(){
+        location.assign("/more#contact");
+        location.reload();        
+    }
+</script>
+
 <style>
 .bb{
     display:flex;
@@ -169,7 +178,7 @@
                         <li>2D and 3D Animation</li>
                     </ul>
                 
-                <a href="#">Apply Now</a>
+                <a href="/more#contact" on:click={goToContact}>Apply Now</a>
             </div>
         </div>
         <div class="box">
@@ -186,7 +195,7 @@
                     <li>Asset Production</li>
                     
                 </ul>
-                <a href="#">Apply Now</a>
+                <a href="/more#contact" on:click={goToContact}>Apply Now</a>
             </div>
         </div>
         <div class="box">
@@ -202,7 +211,7 @@
                     <li>Google Adwords/PPC</li>
                     <li>Analytics & Reporting</li>
                 </ul>
-                <a href="#">Apply Now</a>
+                <a href="/more#contact" on:click={goToContact}>Apply Now</a>
             </div>
         </div>
         <div class="box">
@@ -218,7 +227,7 @@
                     <li>Lead Generation</li>
                     <li>Creatve Solutions</li>
                 </ul>
-                <a href="#">Apply Now</a>
+                <a href="/more#contact" on:click={goToContact}>Apply Now</a>
             </div>
         </div>
     </div>

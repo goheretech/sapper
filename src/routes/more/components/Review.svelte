@@ -19,6 +19,6 @@
                     <h3>{service}</h3>
                 {/each}
             
-                
+                <a href="{client.url}" style="margin-top:20px">View Site</a>
         {/if}
 {/each}

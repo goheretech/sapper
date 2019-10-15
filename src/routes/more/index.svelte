@@ -17,7 +17,7 @@
   let frmShow = false;
   let displayMenu = false;
   let hash;
-  let page = 0;
+  export let page = 0;
   let pageName = "Who";
   let showing = false;
   function toggleFrm() {
@@ -298,7 +298,9 @@
   <!-- <button class="changer" on:click="{changePage}">Next Page</button> -->
   <section class="Hero who">
     <div class="cont">
-      <canvas id="nebula" ></canvas>
+      {#if page == 1 || page == 4 }
+        <canvas id="nebula" ></canvas>
+      {/if}
       {#if showing}
         <div
           transition:fade={{ delay: 150, duration: 300 }}
@@ -334,9 +336,9 @@
         </div>
         <h2>{pages[page].head}</h2>
         <p>{pages[page].par}</p>
-        <a rel=prefetch on:click={goWhat} href={pages[page].buttonHref}>
+        <!-- <a rel=prefetch on:click={goWhat} href={pages[page].buttonHref}>
           {pages[page].button}
-        </a>
+        </a> -->
       </div>
     {/if}
   </section>
@@ -350,16 +352,16 @@
       {#if showing}
         <div class="hold" transition:fade={{ delay: 150, duration: 300 }}>
           {#if page == 0}
-            <Who /><Clouds />
+            <Who />
           {/if}
           {#if page == 1}
             <SelectService /><Clouds />
           {/if}
           {#if page == 2}
-            <Where /><Clouds />
+            <Where />
           {/if}
           {#if page == 3}
-            <Work /><Clouds />
+            <Work />
           {/if}
           {#if page == 4}
             <CTA /><Clouds />
@@ -393,7 +395,7 @@
           </h2>
           <h3 class="ctah3">Reach out today and find out what goHere can do for you.</h3>
           <div class="buttonHold">
-            <a class="ctaa" on:click={toggleFrm}>Lets Go</a>
+            <a class="ctaa" on:click={toggleFrm}>Let's Go</a>
             <a rel=prefetch class="ctaa" on:click={goContact} href="more#contact">
               Contact Us
             </a>

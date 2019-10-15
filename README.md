@@ -1,13 +1,18 @@
-# goHere Website v2.2
-[Deployment](https://gh-gh.herokuapp.com/)
+# goHere Website v2.0
+[Experimental Version](https://gh-gh.herokuapp.com/)
 
-[Old Deployment](https://gohere-test.herokuapp.com/)
-
-~~[Asteroid Testing Grounds](https://gohere-test.herokuapp.com/testgrounds.html)~~
+[Stable Version](https://gohere-test.herokuapp.com/)
 
 
 
 ## Changelog
+### v 1.0.2
+*  Bug Fixes
+### v 1.0.1
+* Bug Fixes
+### v 1.0
+* Bug fixes
+* Uploaded to gohere.tech
 ### v0.9.9
 * New content
 * Created new services section
