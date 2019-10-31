@@ -148,6 +148,42 @@
 </script>
 
 <style>
+
+  .phone{
+    background:transparent;
+    font-size:100px !important;
+    color:white;
+    font-family: 'Abel', sans-serif;
+    text-align: center;    
+    
+    font-weight:bold;
+    margin: 0;
+    padding: 40px 0;
+    background-image: linear-gradient(to right, #d624a6, #f7a140, green, #22d8d8, purple, #d624a6);
+    background-clip: text;
+    background-size: 600%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: white;
+    cursor: pointer;
+    animation: colorScroll 20s linear infinite;    
+    z-index: 2;
+  }
+  .phone:hover{
+    -webkit-text-fill-color: transparent;
+  }
+  .phone::before{
+      color: white;
+      content: '305.998.0398';
+      position: absolute;
+      z-index: -1;    
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-image: linear-gradient(to right, #d624a6, #f7a140, green, #22d8d8, purple, #d624a6);
+      background-size: 600%;
+      animation: colorScroll 20s linear infinite;
+      filter:blur(8px)
+  }
   .bottom {
     height: auto !important;
     min-height: 800px;
@@ -216,6 +252,18 @@
     top:0;
     left:0;
     z-index:1;
+  }
+  @media screen and (max-width: 1100px){
+    .Hero.who{
+      height:900px;
+    }
+    .creative.fixed{
+      bottom: -1em;
+    }
+
+    .phone{
+      font-size: 42px !important;
+    }
   }
   @media screen and (max-width:500px) {
            
@@ -336,6 +384,9 @@
         </div>
         <h2>{pages[page].head}</h2>
         <p>{pages[page].par}</p>
+        {#if page==4}
+          <a style="position:relative; border:none;" data-glow="305.998.0398" href="tel:305.998.0398"><span class='phone colorChange'>305.998.0398</span> </a>
+        {/if}
         <!-- <a rel=prefetch on:click={goWhat} href={pages[page].buttonHref}>
           {pages[page].button}
         </a> -->

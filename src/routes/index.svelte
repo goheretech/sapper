@@ -40,7 +40,7 @@
             phase = 1;
         } else if (y > 48 && y < 67) {
             phase = 2;
-        } else if (y > 99) {
+        } else if (y > 95) {
             phase = 3;
         } else{
             phase = 0;
@@ -179,7 +179,7 @@
     <section class="gg" transition:fade={{ duration: 300 }}>
         <div id="lastSec" class="cc" style="opacity:1;" >
             <div class="mini">
-                <div class="icon ico-purple"></div>
+                <div class="icon colorChange"></div>
                 <h6>be creative</h6>
             </div>
             <h2>Join us at</h2><h2 class="bigBoy">the Cutting Edge.</h2>            

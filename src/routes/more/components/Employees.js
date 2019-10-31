@@ -75,7 +75,7 @@ export const employees = [
                side: 'right'
            },
               {
-                  name: 'Theodore Balistreri',
+                  name: 'Theodore "Teddy" Balistreri',
                   title: 'Lead Growth Envisioneer',
                   nick: 'Odd Job',
                   bioStart:
@@ -105,7 +105,7 @@ export const employees = [
                nick: 'Long- stocking',
                bioStart: 'Pippi has a natural talent for using storytelling to simplify complex information and bring any topic to life.',
                bio:
-                   'While studying psychology and research methods at Washington and Lee University, Pippi developed the vision and versatility needed to convey powerful messages in a way that people can understand and connect with. Her greatest passion in life is helping people, so she strives to make a positive impact by managing goHere’s work with non-profits.',
+                   'While studying psychology and research methods at Washington and Lee University, Pippi developed the vision and versatility needed to convey powerful messages in a way that people understand and connect with. Her greatest passion in life is helping people, so she strives to make a positive impact by managing goHere’s work with non-profits.',
                picture: 'img/headshots/pip1.png',
                stats: [
                    {

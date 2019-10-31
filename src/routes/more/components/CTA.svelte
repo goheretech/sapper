@@ -78,7 +78,7 @@
     font-size:42px;
   }
 
-  .h3{
+  h3{
     font-size:32px;
     margin-top:0px;
   }

@@ -128,6 +128,15 @@
         font-size: 18px;
     }
 
+    @media screen and (max-width:1100px) {
+            .cd{
+                grid-template-columns: repeat(2, minmax(260px, 1fr));
+            }
+            .box{
+                margin-bottom:60px;
+            }
+        }
+
     @media screen and (max-width:500px) { 
         .bb{
             padding: 20px 20px;
@@ -160,6 +169,8 @@
             opacity: 1;
             visibility: visible;            
         }
+
+        
     } 
 </style>
 <div class="bb">
@@ -169,7 +180,7 @@
                 <h2>1</h2>
                 <h3>Web Design</h3>
                 <h4>Captivate Your Audience.</h4>
-                <p>We create user-friendly interfacing and distinctive navigation and scroll techniques that keep your customers naturally engaged, increase conversion, and drive revenue.</p>
+                <p>We create user-friendly interfacing and employ distinctive navigation and scroll techniques that keep your customers naturally engaged, increase conversion, and drive revenue.</p>
                     <ul>
                         <li>UI/UX Designs</li>
                         <li>Front and Back-end Development</li>
@@ -185,8 +196,8 @@
             <div class="content">
                 <h2>2</h2>
                 <h3>Brand Development</h3>
-                <h4>Tell Your Customers Who You Are.</h4>
-                <p>We develop brand identities that reflect your company’s values and resonate with your customers.</p>
+                <h4>Refine Your Identity</h4>
+                <p>Develop brand identities that reflect your company’s values and resonate with your customers.</p>
                 <ul>
                     <li>Brand Identity Development</li>
                     <li>Creative Direction</li>
@@ -202,13 +213,13 @@
             <div class="content">
                 <h2>3</h2>
                 <h3>Marketing</h3>
-                <h4>Draw Your Customers In.</h4>
+                <h4>Make An Impression.</h4>
                 <p>Through extensive research, we identify your optimal consumer demographic, uncover their digital habits, and reach them through the digital channels they frequent.</p>
                 <ul>
                     <li>SEO</li>
                     <li>Campaign Strategy & Planning</li>
-                    <li>Media Planning & Management</li>
                     <li>Google Adwords/PPC</li>
+                    <li>Media Planning & Management</li>
                     <li>Analytics & Reporting</li>
                 </ul>
                 <a href="/more#contact" on:click={goToContact}>Apply Now</a>
@@ -219,7 +230,7 @@
                 <h2>4</h2>
                 <h3>Business Consulting</h3>
                 <h4>Reach Your Goals.</h4>
-                <p>We empower businesses to achieve strategic outcomes through future-oriented actions that create long-term opportunities for growth. We think outside the box and have the technological versatility to back it up.</p>
+                <p>Empower your business to achieve strategic outcomes through future-oriented actions that create long-term opportunities for growth. We think outside the box and have the technological versatility to back it up.</p>
                 <ul>
                     <li>Infrastrcuture & Process Development</li>
                     <li>System Optimization</li>

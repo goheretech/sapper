@@ -7,6 +7,20 @@
 	<link href="https://fonts.googleapis.com/css?family=Abel|Montserrat+Alternates&display=swap" rel="stylesheet">
 	<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-firestore.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135886991-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-135886991-1');
+	</script>
+
+	<link rel="stylesheet" href="pace-theme.css">
 	<script>
 		// Your web app's Firebase configuration
 		var firebaseConfig = {
@@ -34,7 +48,5 @@
 	%sapper.scripts%
 	
 </body>
-<script src="js/scrollFade.js" defer>
-</script>
-</script>
+<script src="js/pace.min.js"></script>
 </html>

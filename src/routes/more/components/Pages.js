@@ -5,7 +5,7 @@ export let pages = [
                titleColor: 'Trailblazers',
                title: 'of Tech',
                tag: 'Nerd Alert',
-               head: 'New Strategies. Old Values.',
+               head: 'New Strategies, Old Values.',
                par:
                    'The founders of goHere have been watching tastes and technology evolve since the internet’s inception, giving them a particular talent for predicting—and shaping—where things are headed next.',
                button: 'Check It Out',
@@ -17,7 +17,7 @@ export let pages = [
                titleColor: 'Strategic',
                title: 'Outcomes',
                tag: 'Masterminds',
-               head: 'Sharpening The Cutting Edge',
+               head: 'Sharpening The Cutting Edge.',
                par:
                    'We develop and apply technology in creative ways aimed at adding value to your organization. Every move we make is client focused and carefully calculated using the latest insights and analytics.',
                button: 'Check It Out',
@@ -41,7 +41,7 @@ export let pages = [
                titleColor: 'Tech',
                title: 'Renaissance',
                tag: 'Powerful',
-               head: 'Our Amazing Partners',
+               head: 'Our Amazing Partners.',
                par:
                    'We develop a creative partnership with each of our clients to deliver the best results. We select brands that we can add value to — brands we can be passionate about helping.',
                button: 'Check It Out',
@@ -53,7 +53,7 @@ export let pages = [
                titleColor: 'Call',
                title: 'Today',
                tag: 'Lets Go!',
-               head: 'We Want to Hear from You',
+               head: 'We Want to Hear from You!',
                par:
                    'We work with organizations of all types across all industries. Stand out from the competition and stay ahead of the trends with goHere.',
                button: 'Apply Today',

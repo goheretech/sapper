@@ -3,15 +3,16 @@ export let clients = [
                slug: 'hofp',
                name: 'House of Providence',
                desc:
-                   'The House of Providence is a permanent home for the foster youth of Michigan. Their goal is to instill hope in minors who have only known the intense instability of the foster care system by allowing them to stabilize and heal in a therapeutic and familial environment.<br>  We chose to partner with House of Providence because we saw how much value we could add to their organization by helping them reach vulnerable foster children as well as potential donors.<br>  We completely revitalized every aspect of their online presence and marketing strategy to make it easier for people to understand their work and make donations.',
-               shortD:
+                   'The House of Providence is more than a permanent home for the foster youth of Michigan; it’s a place where foster youth can stabilize and heal in a therapeutic and familial environment. <br><br> We chose to partner with House of Providence to help them more effectively broadcast their message and services through branding and marketing. We also built infrastructure and systems aimed at streamlining operations and maximizing time the staff has to focus on the kids.',
+            shortD:
                    'The House of Providence is a permanent home for the foster youth of Michigan. Their goal is to instill hope in minors who have only known the intense instability of the foster care system by allowing them to stabilize and heal in a therapeutic and familial environment.',
-               services: [
-                   'UX',
+
+services: [
+                   'UI/UX',
+                   'SEO',
                    'Branding',
-                   'Visual Design',
                    'Creative Direction',
-                   'System Development',
+                   'Infrastructure & Process Development',
                    'Marketing'
                ],
                year: '2019',
@@ -22,33 +23,33 @@ export let clients = [
                slug: 'barnes',
                name: 'Barnes Homebuilders',
                desc:
-                   'Barnes Homebuilders has always had an impeccable reputation for their commitment to service with integrity; what they were missing was a brand story and web presence that matches the excellence of their work. <br> goHere partnered with Barnes to showcase what makes them stand out in the marketplace in all their projects: craftsmanship, quality, pride, and high standards.',
+                   'Founded in 1964, Barnes Homebuilders has been serving Central Texas with excellence, integrity, and loyalty for over half a century. <br><br>With a refreshed, cleaner look, goHere helped Barnes Homebuilders build a more professional web presence to match their commitment to quality.',
                shortD:
                    'A new vision for 2019. With over 35 years of experience, PLM is one of the largest concrete and asphalt maintenance companies in Wisconsin.',
                services: [
-                   'UX',
-                   'Visual Design',
+                   'UI/UX',
+                   'SEO',
                    'Branding',
                    'Creative Direction',
                    'Marketing'
                ],
                year: '2019',
-               url: 'https://plmpaving.com',
+               url: 'https://barneshb.com',
                img: '/img/clients/plm.png'
            },
            {
                slug: 'plm',
                name: 'PLM Paving',
                desc:
-                   'PLM has always had an impeccable reputation for their commitment to service with integrity; what they were missing was a brand story and web presence that matches the excellence of their work. <br> goHere partnered with PLM to showcase what makes them stand out in the marketplace in all their projects: craftsmanship, quality, pride, and high standards.',
+                   'PLM is one of the largest concrete and asphalt maintenance companies in Wisconsin. With over 35 years of experience, PLM has always had an impeccable reputation for their commitment to service with integrity. <br><br> goHere partnered with PLM to build a brand story and web presence that reflects what makes them stand out in all their projects: craftsmanship, quality, pride, and high standards.',
                shortD:
                    'A new vision for 2019. With over 35 years of experience, PLM is one of the largest concrete and asphalt maintenance companies in Wisconsin.',
                services: [
-                   'UX',
-                   'Visual Design',
+                   'UI/UX',
                    'Branding',
+                   'SEO',
+                   'Marketing',
                    'Creative Direction',
-                   'Marketing'
                ],
                year: '2019',
                url: 'https://plmpaving.com',
