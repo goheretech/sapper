@@ -1,27 +1,4 @@
-<script defer>
-// import {onMount} from 'svelte';
-    
 
-    // onMount( async () => {
-    //     const textFront = document.getElementById(textFront);
-    //     const textBack = document.getElementById(textBack);
-    //     const box = document.getElementById(box);
-	// // });
-    // window.addEventListener('scroll', onScroll);
-    // function onScroll(){
-    //     var h = document.documentElement, 
-    //     b = document.body,
-    //     st = 'scrollTop',
-    //     sh = 'scrollHeight';
-    //     var p = (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
-
-    //     console.log(p);
-
-    //     let frontMove = p;
-    //     textFront.style.transform = "transformY(",frontMove,"px)";
-    // }
-    
-</script>
 
 <style>
   * {
@@ -32,9 +9,9 @@
   .img{
       position:fixed;
       top:0px;
+      background: url("img/mount.jpg");
       background-size: cover;
       background-position:center;
-      background: url("img/mount.jpg");
       height:100vh;
       width:100%;
   }
@@ -199,3 +176,28 @@
   style="display:inline-block;font-family:Helvetica,Arial,sans-serif;font-size:18px;line-height:48px;height:48px;padding-left:48px;padding-right:48px;color:#fff;background-color:#000;border-radius:4px;">
   Sign Up
 </a>
+
+<script>
+        import {onMount} from 'svelte';
+    
+
+    onMount(async () => {
+        let textFront = document.getElementById(textFront);
+        let textBack = document.getElementById(textBack);
+        let box = document.getElementById(box);
+	});
+    window.addEventListener('scroll', onScroll);
+    function onScroll(){
+        var h = document.documentElement, 
+        b = document.body,
+        st = 'scrollTop',
+        sh = 'scrollHeight';
+        var p = (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
+
+        console.log(p);
+
+        let frontMove = p;
+        textFront.style.transform = "transformY(",frontMove,"px)";
+    }
+    
+</script>
