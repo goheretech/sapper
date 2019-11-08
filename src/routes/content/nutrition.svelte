@@ -1,19 +1,25 @@
-<script>
-    const textFront = document.getElementById('textFront');
-    const textBack = document.getElementById('textBack');
-    const box = document.getElementById('box');
+<script defer>
+// import {onMount} from 'svelte';
+    
 
-    window.addEventListener('scroll', onScroll);
-    function onScroll(){
-        var h = document.documentElement, 
-        b = document.body,
-        st = 'scrollTop',
-        sh = 'scrollHeight';
-        var p = (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
+    // onMount( async () => {
+    //     const textFront = document.getElementById(textFront);
+    //     const textBack = document.getElementById(textBack);
+    //     const box = document.getElementById(box);
+	// // });
+    // window.addEventListener('scroll', onScroll);
+    // function onScroll(){
+    //     var h = document.documentElement, 
+    //     b = document.body,
+    //     st = 'scrollTop',
+    //     sh = 'scrollHeight';
+    //     var p = (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
 
-        console.log(p);
-        
-    }
+    //     console.log(p);
+
+    //     let frontMove = p;
+    //     textFront.style.transform = "transformY(",frontMove,"px)";
+    // }
     
 </script>
 
@@ -82,10 +88,10 @@
     /* padding: 140px 20px 20px 140px; */
   }
   .cc h3 {
-      font-size: 43px;
+      font-size: 40px;
   }
   .cc h4 {
-      font-size: 22px;
+      font-size: 20px;
       font-weight:200;
   }
   .box{
