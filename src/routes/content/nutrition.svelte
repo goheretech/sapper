@@ -26,7 +26,8 @@
   .img{
       position:fixed;
       top:0px;
-      background-position:bottom;
+      background-size: cover;
+      background-position:center;
       background: url("img/mount.jpg");
       height:100vh;
       width:100%;
