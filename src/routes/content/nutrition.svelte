@@ -1,22 +1,33 @@
+<script>
+    // your script goes here
+</script>
+
 <style>
   * {
     font-family: "Lora", serif;
     margin: 0;
     padding: 0;
   }
-  .bg {
+  .img{
+      position:fixed;
+      top:0px;
+      background-size: cover;
+      background: url("img/mount.jpg");
+      left:0px;
+      right:0px;
+      bottom:0px;
+  }
+  .bg4 {
     position: absolute;
     top: 0;
     left: 0;
     padding: 0;
     margin: 0;
-    background: url("img/mount.jpg");
     width: 100%;
     min-height: 140vh;
-    background-size: cover;
   }
     .top-s{
-        height:140vh;
+        height:120vh;
         position:relative;
     }
   .v {
@@ -79,7 +90,7 @@
       text-align:right;
   }
   .art-holder{
-      background: rgba(135, 167, 104, 85%);
+      background: rgba(135, 167, 104, 65%);
       color:white;
       position:relative;
       z-index:5;
@@ -112,16 +123,16 @@
       margin-top:20px;
       margin-bottom:20px;
   }
-  .outlet-right{
-      /* text-align:right; */
-  }
+  
 
 </style>
 
 <link
   href="https://fonts.googleapis.com/css?family=Lora:400,700,700i&display=swap"
   rel="stylesheet" />
-<div class="bg">
+  <div class="img">
+  </div>
+<div class="bg4">
     <div class="top-s">
         <h2 class="v side1">Premium</h2>
         <h2 class="v side2">Content</h2>
