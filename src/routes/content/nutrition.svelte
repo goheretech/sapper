@@ -41,7 +41,7 @@
     top: 0px;
     background: url("img/mount.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: 50%;
     height: 100vh;
     width: 100%;
   }
@@ -90,7 +90,7 @@
     margin-top: 70px;
     padding-top: 60px;
     margin-left: 60px;
-    padding-left: 60px;
+    padding-left: 30px;
     padding-bottom: 40px;
     /* padding: 140px 20px 20px 140px; */
   }
