@@ -1,5 +1,20 @@
 <script>
-    // your script goes here
+    const textFront = document.getElementById('textFront');
+    const textBack = document.getElementById('textBack');
+    const box = document.getElementById('box');
+
+    window.addEventListener('scroll', onScroll);
+    function onScroll(){
+        var h = document.documentElement, 
+        b = document.body,
+        st = 'scrollTop',
+        sh = 'scrollHeight';
+        var p = (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
+
+        console.log(p);
+        
+    }
+    
 </script>
 
 <style>
@@ -11,11 +26,10 @@
   .img{
       position:fixed;
       top:0px;
-      background-size: cover;
+      background-position:bottom;
       background: url("img/mount.jpg");
-      left:0px;
-      right:0px;
-      bottom:0px;
+      height:100vh;
+      width:100%;
   }
   .bg4 {
     position: absolute;
@@ -90,7 +104,7 @@
       text-align:right;
   }
   .art-holder{
-      background: rgba(135, 167, 104, 65%);
+      background: rgba(135, 167, 104, 75%);
       color:white;
       position:relative;
       z-index:5;
@@ -134,9 +148,9 @@
   </div>
 <div class="bg4">
     <div class="top-s">
-        <h2 class="v side1">Premium</h2>
-        <h2 class="v side2">Content</h2>
-        <div class="cc">
+        <h2 class="v side1" id="textBack">Premium</h2>
+        <h2 class="v side2" id="textFront">Content</h2>
+        <div class="cc" id="box">
             <h3>Join Today</h3>
             <h4>Content Tomorrow</h4>
             <div class="box">
