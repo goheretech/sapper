@@ -212,7 +212,7 @@
     right: 10px;
     color: white;
     text-decoration: none;
-    padding: 10px 25px;
+    padding: 10px 20px;
     border: white solid 2px;
   }
   .bb-cont .monthly{
