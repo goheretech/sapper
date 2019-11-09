@@ -24,7 +24,7 @@
     console.log(p);
 
     let frontMove = -p * 3;
-    textFront.style.transform = "translateY(" + frontMove + "px) translateX(-30px)";
+    textFront.style.transform = "translateY(" + frontMove + "px) translateX(-130px)";
 
     let backMove = p * 6;
     textBack.style.transform = "translateY(" + backMove + "px)";
@@ -76,10 +76,10 @@
     z-index: 1;
   }
   .side2 {
-    margin-left: 0px;
+    margin-left: 90px;
     margin-top: 220px;
     z-index: 3;
-    transform: translateX(-30px);
+    transform: translateX(-130px);
   }
   .cc {
     background: rgba(86, 112, 51, 85%);
@@ -232,7 +232,7 @@
 <div class="bg4">
   <div class="top-s">
     <h2 class="v side1" id="textBack">Premium</h2>
-    <h2 class="v side2" id="textFront" style="margin-left: 0px;">Content</h2>
+    <h2 class="v side2" id="textFront" >Content</h2>
     <div class="cc" id="box">
 
       <div class="box">
