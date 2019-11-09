@@ -3,6 +3,14 @@
   let textFront, textBack, box;
 
   window.addEventListener("scroll", onScroll);
+
+  function scrollCTA(){
+    console.log('moving');
+    
+    var cta = document.getElementById('cta');
+    cta.scrollIntoView(true);
+  }
+
   function onScroll() {
     textFront = document.getElementById("textFront");
     textBack = document.getElementById("textBack");
@@ -125,6 +133,25 @@
   .article-body {
     padding: 20px;
   }
+
+  #cta{
+    padding-top:40px;
+  }
+  .cta-a{
+    margin-top: 40px;
+  }
+
+  .cta-a h3{
+    font-size:36px;
+    margin-bottom: 40px;
+  }
+
+  .cta-a .btn222{
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    border: white solid 2px;
+  }
   .art-top h6 {
     font-size: 10px;
   }
@@ -188,7 +215,9 @@
     padding: 10px 25px;
     border: white solid 2px;
   }
-
+  .bb-cont .monthly{
+    right: 115px;
+  }
   .bb-cont a:hover {
     background: white;
     color: black;
@@ -211,7 +240,7 @@
       </div>
     </div>
   </div>
-  <div class="cta">
+  <div id="cta">
     <div class="bb bb-1">
       <div class="bb-title">
         <h3>Content</h3>
@@ -224,10 +253,15 @@
           <li>36 Professionally Written Articles</li>
         </ul>
         <h6>$50/month Annually</h6>
-        <a
-          href="https://checkout.square.site/pay/36f690825069495d90719034d96cbbb6"
+        <a class="monthly"
+          href="https://gohere.chargifypay.com/subscribe/mhkrv9dkqw68"
           target="_blank">
-          Sign Up
+          Monthly
+        </a>
+        <a
+          href="https://gohere.chargifypay.com/subscribe/48wd9x744mwb"
+          target="_blank">
+          Annual
         </a>
       </div>
     </div>
@@ -243,10 +277,15 @@
           <li>Brand Specific Calls to Action</li>
         </ul>
         <h6>$75/month Annually</h6>
-        <a
-          href="https://checkout.square.site/pay/42269c576b9e4cd49578d396358208de"
+        <a class="monthly"
+          href="https://gohere.chargifypay.com/subscribe/h8nwk79y8zv7"
           target="_blank">
-          Sign Up
+          Monthly
+        </a>
+        <a
+          href="https://gohere.chargifypay.com/subscribe/ybs7dgprksjn"
+          target="_blank">
+          Annual
         </a>
       </div>
     </div>
@@ -265,9 +304,9 @@
         </ul>
         <h6>$10,000 with 50% deposit</h6>
         <a
-          href="https://checkout.square.site/pay/ee93889d65364d29b3c8c602302801e6"
+          href="https://gohere.chargifypay.com/subscribe/5b77j5xf24cj"
           target="_blank">
-          Sign Up
+          Deposit
         </a>
       </div>
     </div>
@@ -348,13 +387,15 @@
         in the image below to see how these phases of the stress response are
         altered by..
       </p>
+      <div class="cta-a">
+      <hr style="margin-bottom: 40px;">
+        <h3>
+        Sign up to view the full article
+        </h3>
+        <button class="btn222" on:click="{scrollCTA}">Find Your Package</button>
+      </div>
     </div>
   </div>
 
 </div>
-<a
-  href="https://checkout.square.site/pay/36f690825069495d90719034d96cbbb6"
-  target="_blank"
-  style="display:inline-block;font-family:Helvetica,Arial,sans-serif;font-size:18px;line-height:48px;height:48px;padding-left:48px;padding-right:48px;color:#fff;background-color:#000;border-radius:4px;">
-  Sign Up
-</a>
+
