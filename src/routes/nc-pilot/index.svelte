@@ -24,7 +24,7 @@
     console.log(p);
 
     let frontMove = -p * 3;
-    textFront.style.transform = "translateY(" + frontMove + "px)";
+    textFront.style.transform = "translateY(" + frontMove + "px) translateX(-30px)";
 
     let backMove = p * 6;
     textBack.style.transform = "translateY(" + backMove + "px)";
@@ -79,6 +79,7 @@
     margin-left: 0px;
     margin-top: 220px;
     z-index: 3;
+    transform: translateX(-30px);
   }
   .cc {
     background: rgba(86, 112, 51, 85%);
