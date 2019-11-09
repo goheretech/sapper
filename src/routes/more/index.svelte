@@ -457,6 +457,6 @@
     <div transition:fade={{ delay: 150, duration: 300 }}><CTA /></div>
       
     {/if}
-
+      <a style="opacity:0" href="/nc-pilot">What if</a>
   </div>
 {/if}

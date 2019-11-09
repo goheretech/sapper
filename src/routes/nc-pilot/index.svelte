@@ -76,7 +76,7 @@
     z-index: 1;
   }
   .side2 {
-    margin-left: -40px;
+    margin-left: 0px;
     margin-top: 220px;
     z-index: 3;
   }
