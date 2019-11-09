@@ -55,7 +55,7 @@
     min-height: 140vh;
   }
   .top-s {
-    height: 120vh;
+    height: 80vh;
     position: relative;
   }
   .v {
@@ -91,31 +91,23 @@
     padding-top: 60px;
     margin-left: 60px;
     padding-left: 30px;
-    padding-bottom: 40px;
+    padding-bottom: 80px;
     /* padding: 140px 20px 20px 140px; */
   }
   .cc h3 {
     font-size: 40px;
+    text-align:right;
   }
   .cc h4 {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 200;
   }
   .box {
     border: white 4px solid;
     margin-top: 40px;
-    padding: 10px;
+    padding: 40px 10px;
   }
-  .box p {
-    text-align: right;
-    font-size: 14px;
-  }
-  .box h5 {
-    font-size: 22px;
-    font-weight: bold;
-    margin-top: 10px;
-    text-align: right;
-  }
+ 
   .art-holder {
     background: rgba(135, 167, 104, 75%);
     color: white;
@@ -148,6 +140,61 @@
     margin-top: 20px;
     margin-bottom: 20px;
   }
+
+.bb{
+    border: white 4px solid;
+    display:flex;
+    color:white;
+    margin: 50px 20px;
+}
+
+.bb-title{
+    font-size: 30px;
+    writing-mode: vertical-rl;
+    text-align:center;
+    padding: 40px 20px;
+    border-right:solid 4px white;
+}
+
+.bb-cont{
+    padding: 20px 40px;
+    padding-bottom: 100px;
+    font-size:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction: column;
+    position:relative;
+}
+
+.bb-cont h6{
+    text-align:right;
+    font-size: 14px;
+    margin-top: 20px;
+    position:absolute;
+    bottom: 70px;
+    right: 10px;
+}
+.bb-cont p{
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.bb-cont a{
+     position:absolute;
+    bottom: 20px;
+    right: 10px;
+    color:white;
+    text-decoration:none;
+    padding: 10px 25px;
+    border: white solid 2px;
+}
+
+.bb-cont a:hover{
+    background:white;
+    color: black;
+
+}
+
 </style>
 
 <link
@@ -159,21 +206,60 @@
     <h2 class="v side1" id="textBack">Premium</h2>
     <h2 class="v side2" id="textFront">Content</h2>
     <div class="cc" id="box">
-      <h3>Join Today</h3>
-      <h4>Content Tomorrow</h4>
+      
       <div class="box">
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi magni
-          ratione tenetur facere minus quo architecto. Ratione, dolorem quidem
-          voluptatibus cupiditate eos voluptates, rerum quasi unde
-          necessitatibus molestiae alias ipsa obcaecati autem cum perferendis ab
-          quis ea nobis. Fugit, deleniti.
-        </p>
-        <h5>Morbi sodales</h5>
+        <h3>Join Today</h3>
+        <h4>Start Attracting New Business</h4>
       </div>
     </div>
   </div>
-
+<div class="cta">
+    <div class="bb bb-1">
+        <div class="bb-title">
+            <h3>Content</h3>
+        </div>
+        <div class="bb-cont">
+            <p>Long-form articles get attention and establish you as an influencer.</p>
+            <ul>
+                <li>36 Professionally Written Articles</li>
+            </ul>
+            <h6>$50/month Annually</h6>
+            <a href=https://checkout.square.site/pay/36f690825069495d90719034d96cbbb6 target="_blank">Sign Up</a>
+        </div>
+    </div>
+    <div class="bb bb-2">
+        <div class="bb-title">
+            <h3>Performance</h3>
+        </div>
+        <div class="bb-cont">
+            <ul>
+                <li>36 Professionally Written Articles</li>
+                <li>Internal Support and Formatting</li>
+                <li>Branded Articles</li>
+                <li>Brand Specific Calls to Action</li>
+            </ul>
+            <h6>$75/month Annually</h6>
+            <a href=https://checkout.square.site/pay/42269c576b9e4cd49578d396358208de target="_blank">Sign Up</a>
+        </div>
+    </div>
+    <div class="bb bb-3">
+        <div class="bb-title">
+            <h3>Premium</h3>
+        </div>
+        <div class="bb-cont">
+            <ul style="margin-bottom: 20px;">
+                <li>36 Professionally Written Articles</li>
+                <li>Internal Support and Formatting</li>
+                <li>Branded Articles</li>
+                <li>Brand Specific Calls to Action</li>
+                <li>Updated Customized Website & Branding</li>
+                <li>Targeted Advertisments</li>
+            </ul>
+            <h6>$10,000 with 50% deposit</h6>
+            <a href=https://checkout.square.site/pay/ee93889d65364d29b3c8c602302801e6 target="_blank">Sign Up</a>
+        </div>
+    </div>
+  </div>
   <div class="art-holder">
     <div class="art-top">
       <h2>Adaptogenic Herbs and Stress- Analysis</h2>
@@ -252,6 +338,7 @@
       </p>
     </div>
   </div>
+  
 </div>
 <a
   href="https://checkout.square.site/pay/36f690825069495d90719034d96cbbb6"
