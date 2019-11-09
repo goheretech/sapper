@@ -216,7 +216,7 @@
     border: white solid 2px;
   }
   .bb-cont .monthly{
-    right: 115px;
+    right: 105px;
   }
   .bb-cont a:hover {
     background: white;
