@@ -232,7 +232,7 @@
 <div class="bg4">
   <div class="top-s">
     <h2 class="v side1" id="textBack">Premium</h2>
-    <h2 class="v side2" id="textFront">Content</h2>
+    <h2 class="v side2" id="textFront" style="margin-left: 0px;">Content</h2>
     <div class="cc" id="box">
 
       <div class="box">
