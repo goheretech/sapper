@@ -24,10 +24,10 @@
     console.log(p);
 
     let frontMove = -p * 3;
-    textFront.style.transform = "translateY(" + frontMove + "px) translateX(-130px)";
+    textFront.style.transform = "translateY(" + frontMove + "px) translateX(-180px)";
 
     let backMove = p * 6;
-    textBack.style.transform = "translateY(" + backMove + "px)";
+    textBack.style.transform = "translateY(" + backMove + "px) translateX(-40px)";
 
     let boxMove = p * 3;
     box.style.transform = "translateY(" + boxMove + "px)";
@@ -71,15 +71,16 @@
     font-weight: 300;
   }
   .side1 {
-    margin-left: 90px;
+    margin-left: 150px;
     margin-top: 30px;
     z-index: 1;
+    transform: translateX(-40px);
   }
   .side2 {
-    margin-left: 90px;
+    margin-left: 150px;
     margin-top: 220px;
     z-index: 3;
-    transform: translateX(-130px);
+    transform: translateX(-180px);
   }
   .cc {
     background: rgba(86, 112, 51, 85%);
