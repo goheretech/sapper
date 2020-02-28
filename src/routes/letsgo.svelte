@@ -1,6 +1,12 @@
 <script>
   import Nav from "../components/Nav.svelte";
   import Clouds from "./go/components/Clouds.svelte";
+  import {onMount} from "svelte";
+
+  onMount(()=>{
+    
+  })
+
 </script>
 
 <style>
@@ -53,7 +59,6 @@
     justify-content: center;
   }
 
-
   .container {
     width: 1300px;
     text-align: center;
@@ -71,10 +76,11 @@
     <span class="glowy" data-glow="Lets Make Magic">Lets Make Magic</span>
     <span class="glowy white">Yeah Baby!</span>
   </h1>
+
+</section>
+<section class="sectionBlack">
   <div class="divider-bottom colorChange" />
   <div class="divider-bottom black" />
-</section>
-<div class="sectionBlack">
   <div class="container gg">
     <div
       transition:fade={{ delay: 150, duration: 300 }}
@@ -98,4 +104,4 @@
       </p>
     </div>
   </div>
-</div>
+</section>
