@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            /* outline:blue 1px solid; */
+        }
+        form{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        .button_holder{
+            display:flex;
+            align-items:center;
+        }
+        .arrow{
+            display:block;
+            border-top:60px transparent solid;
+            border-bottom:60px transparent solid;
+            width:0px;
+            height:0px;
+        }
+        .arrow_left{
+            border-right:20px black solid;
+            transform: translateX(-50%);
+
+        }
+        .arrow_right{
+            border-left:20px black solid;
+            transform: translateX(50%);
+        }
+        label{
+            font-size: 65px;
+        }
+        input{
+            font-size:96px;
+            padding:30px 75px;
+        }
+
+        .progress_holder{
+            margin-top:20px;
+            height:15px;
+            width:100%;
+            background:grey;
+        }
+        .progress{
+            width:25%;
+            background:red;
+            height:100%;
+        }
+    </style>
+</head>
+<body>
+    <form action="">        
+        <div class="cta__holder">
+                <label>
+                    <h3>Name</h3>
+                    <div class="button_holder">
+                        <button class="arrow arrow_left"></button>
+                        <input type="text" placeholder="Marty McFly" />
+                        <button class="arrow arrow_right"></button>
+                    </div>
+                </label>
+                <div class="progress_holder">
+                    <div class="progress"> </div>
+                </div>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,5 +1,11 @@
 <script>
-  let formPos = 0;
+  let form = {
+    position: 0,
+    canBack: false,
+    canForward: false,
+    label: ["Name", "Email", "Phone Number", "Website"],
+    ready: false
+  };
   let contactForm = {
     name: "",
     email: "",
@@ -22,10 +28,45 @@
     }
   }
 
-  function handleClick(event) {
-    let bar = document.getElementById("prgB");
-    formPos++;
-    bar.style.width = 25 * (formPos + 1) + "%";
+  function formNext(event) {
+    let bar = document.getElementById("progress_glow");
+
+    console.log("Pre:", form.position);
+    form.position++;
+    console.log("Post:", form.position);
+    bar.style.width = 25 * (form.position + 1) + "%";
+    bar.style.opacity = 25 * (form.position + 1) + "%";
+    form.canForward = false;
+    if (contactForm[Object.keys(contactForm)[form.position]] != "") {
+      form.canForward = true;
+    }
+
+    if (form.position != 0) {
+      form.canBack = true;
+    } else {
+      form.canBack = false;
+    }
+  }
+  function formBack(event) {
+    let bar = document.getElementById("progress_glow");
+    form.position = form.position - 1;
+    bar.style.width = 25 * (form.position + 1) + "%";
+    form.canForward = true;
+    if (form.position >= 0) {
+      form.canBack = true;
+    } else {
+      form.canBack = false;
+    }
+  }
+
+  function enableForward() {
+    contactForm.name.trim().length >= 3;
+    // alert(form.label[form.position]);
+    form.canForward = true;
+  }
+
+  function enableButton() {
+    form.ready = true;
   }
 </script>
 
@@ -44,76 +85,6 @@
   }
   .rightCol {
     width: 70%;
-  }
-  .ctaform {
-    margin-top: 30px;
-    display: flex;
-  }
-  .ctalabel {
-    font-size: 64px;
-    padding: 10px 0px;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-  .ctainput {
-    width: 100%;
-    font-size: 124px;
-    background: transparent;
-    background-attachment: fixed;
-    background-size: contain;
-    animation: colorRotate2 2s infinite;
-    color: black;
-    padding: 40px 80px;
-    outline: none;
-    border-left: 0px;
-    border-right: 0px;
-    border-top: 0px;
-    border-bottom:0px;
-  }
-
-  .ctainput:focus {
-    color: white;
-  }
-  button {
-    margin-left: 50px;
-    margin-top: 35px;
-    border-width:100px;
-    border-left-color:white;
-    border:solid;
-  }
-
-  .button_last {
-    color: black;
-    background: white;
-  }
-
-  span {
-    text-align: left;
-  }
-
-  .frmB {
-    width: 100%;
-  }
-
-  small {
-    font-size: 12px;
-    color: red;
-  }
-
-  .prgs {
-    width: 100%;
-    height: 5px;
-    background: rgba(255, 255, 255, 0.849);
-  }
-
-  .prgs div {
-    height: 100%;
-    width: 25%;
-    background: red;
-    animation: colorRotate 8s infinite;
   }
 
   .thanks h1 {
@@ -135,11 +106,114 @@
     .cl.rightCol {
       width: 90%;
     }
-    .CTA {
+    /* .CTA {
       height: auto;
     }
     .ctainput {
       background-size: cover;
+    } */
+  }
+
+  .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .button_holder {
+    display: flex;
+    align-items: center;
+  }
+  .arrow {
+    display: block;
+    border: 40px rgb(57, 209, 27) solid;
+    width: 0px;
+    padding: 0px;
+    height: 0px;
+  }
+
+  .arrow_left {
+    opacity: 0;
+    border: 40px rgb(207, 107, 89) solid;
+    margin-left: -40px;
+    border-left: 0px transparent solid;
+    border-top: 80px transparent solid;
+    border-bottom: 80px transparent solid;
+    transform: translateX(-50%);
+  }
+  .arrow_left.active {
+    opacity: 100%;
+    margin-left: 0px;
+  }
+  .arrow_right {
+    opacity: 0;
+    margin-right: -40px;
+    border-right: 0px transparent solid;
+    border-top: 80px transparent solid;
+    border-bottom: 80px transparent solid;
+    transform: translateX(50%);
+  }
+  .arrow_right.active {
+    opacity: 100%;
+    margin-right: 0px;
+  }
+  label {
+    text-align: left;
+  }
+  label h3 {
+    font-size: 65px;
+  }
+  input {
+    font-size: 96px;
+    padding: 30px 75px;
+  }
+
+  .progress_holder {
+    margin-top: 20px;
+    height: 25px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  #progress {
+    width: 100%;
+    opacity: 25%;
+    background-image: url("img/grad2.png");
+    animation: colorRotate 2s infinite;
+    height: 100%;
+    background-size: cover;
+  }
+  #progress_glow {
+    opacity: 25%;
+    padding: 4px;
+    width: 25%;
+    background-image: url("img/grad2.png");
+    animation: colorRotateGlow 2s infinite;
+    -webkit-filter: blur(120px);
+    filter: blur(120px);
+    height: 100%;
+    background-size: cover;
+  }
+
+  .buttonOn {
+    height: 150px;
+    width: 100%;
+  }
+
+  @keyframes colorRotateGlow {
+    0% {
+      filter: hue-rotate(0deg) blur(8px);
+    }
+
+    100% {
+      filter: hue-rotate(-359deg) blur(8px);
+    }
+  }
+
+  @keyframes growSubmit {
+    0% {
+      padding: 0px 0px;
+    }
+    100% {
+      padding: 60px 100px;
     }
   }
 </style>
@@ -163,22 +237,93 @@
       </div> -->
       <div class="cl">
         <div class="ctaform">
-          <div class="frmB">
-            {#if formPos == 0}
+          {#if showThanks == false}
+            <div class="form">
+              <div class="cta__holder">
+                <label>
+                  <h3>{form.label[form.position]}</h3>
+                  <div class="button_holder">
+                    {#if form.position == 0}
+                      <input
+                        type="text"
+                        bind:value={contactForm.name}
+                        placeholder="Marty McFly"
+                        on:input={enableForward} />
+                    {:else if form.position == 1}
+                      <button
+                        class="arrow arrow_left"
+                        class:active={form.canBack}
+                        on:click={formBack}
+                        on:input={enableForward} />
+                      <input
+                        type="text"
+                        bind:value={contactForm.email}
+                        placeholder="smart@person.com"
+                        on:input={enableForward} />
+                    {/if}
+                    {#if form.position == 2}
+                      <button
+                        class="arrow arrow_left"
+                        class:active={form.canBack}
+                        on:click={formBack}
+                        on:input={enableForward} />
+                      <input
+                        type="text"
+                        bind:value={contactForm.phone}
+                        placeholder="555-867-5309"
+                        on:input={enableForward} />
+                    {/if}
+                    {#if form.position == 3}
+                      <button
+                        class="arrow arrow_left"
+                        class:active={form.canBack}
+                        on:click={formBack} />
+                      <input
+                        type="text"
+                        bind:value={contactForm.website}
+                        placeholder="www.mycoolsite.com"
+                        on:input={enableButton} />
+                    {/if}
+                    <button
+                      class="arrow arrow_right"
+                      class:active={form.canForward}
+                      on:click={formNext} />
+                  </div>
+                </label>
+                <div class="progress_holder" class:buttonOn={form.ready}>
+                  <div id="progress_glow">
+                    <div id="progress" on:click={sendContactMessage}>
+                      Submit
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          {:else}
+            <div class="thanks">
+              <h1>Thank You, {contactForm.name}</h1>
+              <h3>Our team will review your website, {contactForm.website}</h3>
+              <span>One of our ambassadors will contact you shortly.</span>
+            </div>
+          {/if}
+
+          <!-- <div class="frmB">
+            {#if form.position == 0}
               <label class="ctalabel">
                 <span>Name</span>
                 <input
                   class="ctainput"
                   type="text"
                   bind:value={contactForm.name}
-                  placeholder="Mr. Cool"
+                  placeholder="Marty McFly"
                   required />
                 {#if error & (contactForm.name.trim().length == 0)}
                   <small>Please enter your name</small>
                 {/if}
               </label>
             {/if}
-            {#if formPos == 1}
+            {#if form.position == 1}
               <label class="ctalabel">
                 <span>E-Mail</span>
                 <input
@@ -192,7 +337,7 @@
                 {/if}
               </label>
             {/if}
-            {#if formPos == 2}
+            {#if form.position == 2}
               <label class="ctalabel">
                 <span>Phone Number</span>
                 <input
@@ -206,7 +351,7 @@
                 {/if}
               </label>
             {/if}
-            {#if formPos == 3}
+            {#if form.position == 3}
               <label class="ctalabel">
                 <span>Website</span>
                 <input
@@ -224,13 +369,11 @@
               <div id="prgB" />
             </div>
           </div>
-          {#if formPos == 3}
-            <button class="button_last" on:click={sendContactMessage}>
-              Submit
-            </button>
+          {#if form.position == 3}
+            <button class="button_last" on:click={sendContactMessage} />
           {:else}
-            <button on:click={handleClick}>{formPos + 1}/4</button>
-          {/if}
+            <button on:click={formNext} />
+          {/if} -->
 
         </div>
       </div>
