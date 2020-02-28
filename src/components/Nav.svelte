@@ -1,10 +1,9 @@
 <script>
   import { onMount } from "svelte";
   let displayMenu = false;
-  function toggleMenu(){
+  function toggleMenu() {
     displayMenu = !displayMenu;
     console.log(displayMenu);
-    
   }
   onMount(() => {
     let logo = document.querySelector("#logo");
@@ -55,8 +54,9 @@
 <header>
   <nav>
     <div style="position:relative">
-      <a rel=prefetch href="/" class="logo">
-        go<strong>Here</strong>
+      <a rel="prefetch" href="/" class="logo">
+        go
+        <strong>Here</strong>
       </a>
       <div class="logoHolder" style="">
         <img src="/img/newLogo1.png" style=" z-index:2;" alt="" id="logo" />
@@ -69,34 +69,34 @@
     </div>
 
     <ul class="nav-link" class:nav-active={displayMenu}>
-      <li class:act="{displayMenu}">
-        <a rel=prefetch href="more#who">
+      <li class:act={displayMenu}>
+        <a rel="prefetch" href="go#who">
           <span>who</span>
         </a>
       </li>
-      <li class:act="{displayMenu}">
-        <a  rel=prefetch href="more#what">
+      <li class:act={displayMenu}>
+        <a rel="prefetch" href="go#what">
           <span>what</span>
         </a>
       </li>
       <!-- <li class:act="{displayMenu}">
-        <a  rel=prefetch href="more#where">
+        <a  rel=prefetch href="go#where">
           <span>where</span>
         </a>
       </li> -->
-      <li class:act="{displayMenu}">
-        <a  rel=prefetch href="more#work">
+      <li class:act={displayMenu}>
+        <a rel="prefetch" href="go#work">
           <span>work</span>
         </a>
       </li>
-      <li class:act="{displayMenu}">
-        <a  rel=prefetch href="more#contact">
+      <li class:act={displayMenu}>
+        <a rel="prefetch" href="go#contact">
           <span>contact</span>
         </a>
       </li>
     </ul>
 
-    <div class="burger" class:toggle='{displayMenu}' on:click='{toggleMenu}'>
+    <div class="burger" class:toggle={displayMenu} on:click={toggleMenu}>
       <div class="line1" />
       <div class="line2" />
       <div class="line3" />

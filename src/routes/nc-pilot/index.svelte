@@ -387,8 +387,51 @@
         intensity of all phases of the stress response and even diminish the
         body’s sensitivity to future stressors. Compare the pink and blue lines
         in the image below to see how these phases of the stress response are
-        altered by..
+        altered bythe presence of adaptogens.</p>
+      <p>
+There are three phases in the stress response: the alarm phase, the phase of resistance, and the phase of exhaustion. Adaptogens moderate the intensity of the alarm and resistance phases, extend the phase of resistance--thereby eliminating the phase of exhaustion, and raise the sensitivity threshold for future stressors. In simpler terms, adaptogens make the stress response less intense and protect us from stress long-term.
       </p>
+      <p>
+Taking adaptogenic herbs is only one of the many ways to mitigate the negative effects of stress on your health. Doing things like eating well, getting plenty of exercise and sleep, and thinking positively can help you better prepare for and manage stressful situations, therefore reducing stress-related wear and tear on the body.
+      </p>
+      <p>
+Adaptogens have positive effects that reach far beyond stress protection. Between eleutheracoccus, rhodiola, and chinensis, researchers have found a long list of positive effects that come without the toxic side effects usually found with man-made pharmaceuticals:
+      </p>
+      <ul>
+        <li>Central Nervous System stimulant (boosting physical and cognitive performance)</li>
+        <li>Lowers blood pressure</li>
+        <li>Anti-anxiety</li>
+        <li>Anti-depressive</li>
+        <li>Anti-inflammatory</li>
+        <li>Anti-hyperglycemic</li>
+        <li>Neuroprotective</li>
+        <li>Gastroprotective</li>
+        <li>Hepatoprotective</li>
+        <li>Radioprotective</li>
+        <li>Cardioprotective</li>
+      </ul>
+
+
+
+
+
+
+
+
+
+
+
+<p>
+Researchers are also beginning to uncover the role of these herbs in facilitating longevity. They are clearly a promising frontier in promoting health and wellness in the modern world.
+</p>
+<p>
+Ponassian, A. & Wikman, G. (2010). Effects of adaptogens on the Central Nervous System and the molecular mechanisms associated with their stress-protective activity. Pharmaceuticals, 3, 188-224.
+</p>
+<p>
+Bone, K. (2009). Clinical monitor: UNE conference on evidence-based complimentary medicine: selected highlights. MediHerb, 1-3.
+</p>
+
+
       <div class="cta-a">
       <hr style="margin-bottom: 40px;">
         <h3>
