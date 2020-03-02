@@ -435,6 +435,7 @@
     color: #6d6d6d;
     opacity: 20%;
     text-align: center;
+    transition: 200ms;
   }
   .cta .form input:focus {
     outline: none;
@@ -452,6 +453,7 @@
     color: #6d6d6d;
     opacity: 20%;
     text-align: center;
+    transition: 200ms;
   }
   .cta .form select:focus {
     outline: none;
