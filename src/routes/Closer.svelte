@@ -39,36 +39,140 @@
   ];
   (function($) {
     $(document).ready(function() {
-        $.jScrollability([
-            {
-                'selector': '.astro',
-                'start': function($el) { return $el.offset().top; },
-                'end': function($el) { return $el.offset().top + $el.height()+1000; },
-                'fn': {
-                    'bottom': {
-                        'start': 100,
-                        'end': -500,
-                        'unit': 'px'
-                    }
-                }
+      $.jScrollability([
+        {
+          selector: ".astro",
+          start: function($el) {
+            return $el.offset().top;
+          },
+          end: function($el) {
+            return $el.offset().top + $el.height() + 1000;
+          },
+          fn: {
+            bottom: {
+              start: 100,
+              end: -400,
+              unit: "px"
             }
-        ]);
-        $.jScrollability([
-            {
-                'selector': '.planet',
-                'start': function($el) { return $el.offset().top+500; },
-                'end': function($el) { return $el.offset().top + $el.height()+1000; },
-                'fn': {
-                    'top': {
-                        'start': -50,
-                        'end': -10,
-                        'unit': '%'
-                    }
-                }
+          }
+        }
+      ]);
+      $.jScrollability([
+        {
+          selector: ".planet",
+          start: function($el) {
+            return $el.offset().top + 500;
+          },
+          end: function($el) {
+            return $el.offset().top + $el.height() + 1000;
+          },
+          fn: {
+            top: {
+              start: -50,
+              end: -20,
+              unit: "%"
             }
-        ]);
+          }
+        }
+      ]);
+      $.jScrollability([
+        {
+          selector: ".keywords h3:first-child",
+          start: function($el) {
+            return $el.offset().top;
+          },
+          end: function($el) {
+            return $el.offset().top + $el.height() + 1000;
+          },
+          fn: {
+            right: {
+              start: 0,
+              end: 90,
+              unit: "vw"
+            }
+          }
+        }
+      ]);
+      $.jScrollability([
+        {
+          selector: ".keywords h3:last-child",
+          start: function($el) {
+            return $el.offset().top;
+          },
+          end: function($el) {
+            return $el.offset().top + $el.height() + 1000;
+          },
+          fn: {
+            right: {
+              start: 90,
+              end: 0,
+              unit: "vw"
+            }
+          }
+        }
+      ]);
+      $.jScrollability([
+        {
+          selector: ".feed h3",
+          start: function($el) {
+            return $el.offset().top + 500;
+          },
+          end: function($el) {
+            return $el.offset().top + $el.height() + 500;
+          },
+          fn: {
+            opacity: {
+              start: 0,
+              end: 100,
+              unit: "%"
+            }
+          }
+        }
+      ]);
+      $.jScrollability([
+        {
+          selector: ".feed h2",
+          start: function($el) {
+            return $el.offset().top + 500;
+          },
+          end: function($el) {
+            return $el.offset().top + $el.height() + 500;
+          },
+          fn: {
+            opacity: {
+              start: 0,
+              end: 100,
+              unit: "%"
+            }
+          }
+        }
+      ]);
+      $.jScrollability([
+        {
+          selector: ".feed p",
+          start: function($el) {
+            return $el.offset().top + 200;
+          },
+          end: function($el) {
+            return $el.offset().top + $el.height() + 900;
+          },
+          fn: {
+            opacity: {
+              start: 0,
+              end: 100,
+              unit: "%"
+            }
+          }
+        }
+      ]);
+
+      // $(".feed h2").jScrollability(1000, 1500, function($el, pcnt) {
+      //   $el.css({
+      //    'opacity': (pcnt) * 100 + "%"
+      //   });
+      // });
     });
-})(jQuery);
+  })(jQuery);
 </script>
 
 <style>
@@ -95,7 +199,6 @@
     height: 100vh;
     position: relative;
     padding: 0px;
-    /* overflow-x: hidden; */
   }
   .hero .planet {
     position: absolute;
@@ -132,7 +235,7 @@
   }
   .hero .text h1 {
     font-size: 160px;
-    line-height: 130px;
+    line-height: 150px;
     margin-top: 50px;
   }
   .hero_scroll {
@@ -154,6 +257,7 @@
   .feed {
     color: #e5e5e5;
     padding-top: 270px;
+    padding-bottom: 170px;
   }
   .feed h3 {
     font-size: 63px;
@@ -163,11 +267,17 @@
     margin-top: 42px;
     font-size: 268px;
     line-height: 250px;
+    color: #cecece;
+  }
+  .feed .hh {
+    font-size: 300px;
+    color: #b9b9b9;
   }
 
   .feed p {
     margin-top: 150px;
     font-size: 145px;
+    color: rgb(78, 78, 78);
   }
 
   .brands {
@@ -314,13 +424,13 @@
   </div>
 </section>
 <section class="feed">
-  <h3>Mind Freak</h3>
-  <h2>Big dicks.</h2>
-  <h2>Bigger hearts.</h2>
+  <h3>Envisioning</h3>
+  <h2>Creative.</h2>
+  <h2 class="hh">Solutions.</h2>
   <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim rerum harum,
-    atque deserunt odit eos reprehenderit quia exercitationem inventore.
+    We love creating <b>unique, authentic,</b> and <b>memorable experiences.</b>
   </p>
+  <p>Join us at the cutting edge.</p>
 </section>
 <section class="brands">
   <div class="row">
@@ -349,8 +459,14 @@
   </div>
 </section>
 <section class="keywords">
-  <h3>high-end. luxury. boutique. cutting edge. classic.</h3>
-  <h3>high-end. luxury. boutique. cutting edge. classic.</h3>
+  <h3>
+    high-end. luxury. boutique. cutting edge. classic. high-end. luxury.
+    boutique. cutting edge. classic.
+  </h3>
+  <h3>
+    high-end. luxury. boutique. cutting edge. classic. high-end. luxury.
+    boutique. cutting edge. classic.
+  </h3>
 </section>
 <section class="cta">
   <h3>Tell us about your project.</h3>
