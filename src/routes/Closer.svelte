@@ -395,9 +395,10 @@
   }
   .cta .form {
     color: #353535;
-    font-size: 65px;
+    font-size: 35px;
     display: flex;
     flex-direction: column;
+    padding:0 10vw;
   }
   .form .form__section {
     margin-bottom: 100px;
@@ -407,15 +408,15 @@
   }
   .cta .form p {
     display: inline;
-    line-height: 150px;
+    line-height: 80px;
   }
   .cta .form input {
     display: inline;
     border: none;
     border-bottom: #6d6d6d solid 2px;
-    padding: 10px 30px;
+    padding: 10px 10px;
     margin: 0px 20px;
-    font-size: 42px;
+    font-size: 37px;
     color: #6d6d6d;
     opacity: 20%;
     text-align: center;
@@ -530,7 +531,7 @@
     <img class="planet" src="img/Planets/planet1.png" alt="" />
     <img class="astro" src="img/astro.png" alt="" />
     <div class="text">
-      <h3>Making Magic</h3>
+      <h3>Creative Vision</h3>
       <h1>
         Let's get
         <br />
