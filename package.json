@@ -12,6 +12,7 @@
     "test": "run-p --race dev cy:run"
   },
   "dependencies": {
+    "@mojs/core": "^0.288.2",
     "compression": "^1.7.1",
     "polka": "next",
     "postprocessing": "^6.8.2",

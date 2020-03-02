@@ -1,42 +1,74 @@
 <script>
   const brands = [
     {
-      img: "img/brands/logo1.png",
+      img: "img/brands/ico-09.png",
       name: " Svelte"
     },
     {
-      img: "img/brands/logo1.png",
+      img: "img/brands/ico-02.png",
       name: " Svelte"
     },
     {
-      img: "img/brands/logo1.png",
+      img: "img/brands/ico-03.png",
       name: " Svelte"
     },
     {
-      img: "img/brands/logo1.png",
+      img: "img/brands/ico-04.png",
       name: " Svelte"
     },
     {
-      img: "img/brands/logo1.png",
+      img: "img/brands/ico-05.png",
       name: " Svelte"
     },
     {
-      img: "img/brands/logo1.png",
+      img: "img/brands/ico-06.png",
       name: " Svelte"
     },
     {
-      img: "img/brands/logo1.png",
+      img: "img/brands/ico-07.png",
       name: " Svelte"
     },
     {
-      img: "img/brands/logo1.png",
+      img: "img/brands/ico-08.png",
       name: " Svelte"
     },
     {
-      img: "img/brands/logo1.png",
+      img: "img/brands/ico-10.png",
       name: " Svelte"
     }
   ];
+  (function($) {
+    $(document).ready(function() {
+        $.jScrollability([
+            {
+                'selector': '.astro',
+                'start': function($el) { return $el.offset().top; },
+                'end': function($el) { return $el.offset().top + $el.height()+1000; },
+                'fn': {
+                    'bottom': {
+                        'start': 100,
+                        'end': -500,
+                        'unit': 'px'
+                    }
+                }
+            }
+        ]);
+        $.jScrollability([
+            {
+                'selector': '.planet',
+                'start': function($el) { return $el.offset().top+500; },
+                'end': function($el) { return $el.offset().top + $el.height()+1000; },
+                'fn': {
+                    'top': {
+                        'start': -50,
+                        'end': -10,
+                        'unit': '%'
+                    }
+                }
+            }
+        ]);
+    });
+})(jQuery);
 </script>
 
 <style>
@@ -63,7 +95,7 @@
     height: 100vh;
     position: relative;
     padding: 0px;
-    overflow: hidden;
+    /* overflow-x: hidden; */
   }
   .hero .planet {
     position: absolute;
@@ -72,7 +104,6 @@
     left: -50%;
     width: 100vw;
     height: 100vh;
-    background: url("img/Planets/planet1.png");
     z-index: 1;
   }
   .hero .astro {
@@ -142,128 +173,125 @@
   .brands {
     display: flex;
     flex-direction: column;
-    align-items:center;
+    align-items: center;
     justify-content: center;
     overflow: hidden;
     outline: none;
     border: none;
     padding: 40px 0px;
   }
-  .brands .row{
+  .brands .row {
     display: flex;
     flex-direction: row;
     margin: 40px 0px;
   }
- 
+
   .brands img {
-    width: 300px;
+    width: 200px;
     margin: 0px 90px;
-    opacity:70%;
+    opacity: 70%;
   }
-  .quote{
-      background:#B0B8BF;
-      padding-top:345px;
-      padding-bottom:182px;
-      position:relative;
-      flex-direction: column;
-      color:white;
+  .quote {
+    background: #b0b8bf;
+    padding-top: 345px;
+    padding-bottom: 182px;
+    position: relative;
+    flex-direction: column;
+    color: white;
   }
-    .quote .mark{
-        position:absolute;
-        top: -100px;
-        left:100px;
-        font-size:1000px;
-        opacity:40%;
-    }
-  .quote p{
-      font-size:112px;
-      margin-bottom:130px;
-      text-indent: 200px;
+  .quote .mark {
+    position: absolute;
+    top: -100px;
+    left: 100px;
+    font-size: 1000px;
+    opacity: 40%;
   }
-  .quote .author{
-      align-self:flex-end;
-      text-align:right;
+  .quote p {
+    font-size: 112px;
+    margin-bottom: 130px;
+    text-indent: 200px;
   }
-  .quote .author h4{
-      font-size:83px;
+  .quote .author {
+    align-self: flex-end;
+    text-align: right;
   }
-  .quote .author h6{
-      font-size:58px;
+  .quote .author h4 {
+    font-size: 83px;
   }
-
-  .keywords{
-      overflow:hidden;
-      flex-direction: column;
-      background:#F1F1F1;
-  }
-  .keywords h3{
-      font-size:186px;
-      white-space: nowrap;
-      position:relative;
-  }
-  .keywords h3:first-child{
-      text-align: right;
-      right:75vw;
-  }
-  .cta h3{
-      margin:200px 0px;
-      font-size:132px;
-      text-align:right;
-  }
-  .cta .form{
-      
-      color:#C5C5C5;
-      font-size: 65px;
-      display:flex;
-      flex-direction:column;
-  }
-  .form .form__section{
-      margin-bottom:100px;
-      
-  }
-  .form__section.form__close{
-      align-self:flex-end;
-  }
-  .cta .form p{
-      display: inline;
-      
-  }
-  .cta .form input{
-      display: inline;
-      border:none;
-      border-bottom: #B0B8BF solid 2px;
-      padding: 10px 40px;
-      margin: 0px 20px;
-      font-size: 42px;
-      color:#C5C5C5;
-      opacity: 20%;
-      text-align:center;
-  }
-  .cta .form select{
-      display: inline;
-      border:none;
-      border-bottom: #B0B8BF solid 2px;
-      padding: 10px 40px;
-      margin: 0px 20px;
-      font-size: 42px;
-      color:#C5C5C5;
-      opacity: 20%;
-      text-align:center;
+  .quote .author h6 {
+    font-size: 58px;
   }
 
-  .call{
-      padding: 20px 10vw 100px;;
+  .keywords {
+    overflow: hidden;
+    flex-direction: column;
+    background: #f1f1f1;
   }
-  .call h2:first-child{
-      font-size:386px;
-      color:#E4E4E4;
+  .keywords h3 {
+    font-size: 186px;
+    white-space: nowrap;
+    position: relative;
   }
-  .call h2:last-child{
-      font-size:253px;
-      color:black;
-      text-align:right;
-      margin-top:-230px;
-      font-weight:500;
+  .keywords h3:first-child {
+    text-align: right;
+    right: 75vw;
+  }
+  .cta h3 {
+    margin: 200px 0px;
+    font-size: 132px;
+    text-align: right;
+  }
+  .cta .form {
+    color: #c5c5c5;
+    font-size: 65px;
+    display: flex;
+    flex-direction: column;
+  }
+  .form .form__section {
+    margin-bottom: 100px;
+  }
+  .form__section.form__close {
+    align-self: flex-end;
+  }
+  .cta .form p {
+    display: inline;
+  }
+  .cta .form input {
+    display: inline;
+    border: none;
+    border-bottom: #b0b8bf solid 2px;
+    padding: 10px 40px;
+    margin: 0px 20px;
+    font-size: 42px;
+    color: #c5c5c5;
+    opacity: 20%;
+    text-align: center;
+  }
+  .cta .form select {
+    display: inline;
+    border: none;
+    border-bottom: #b0b8bf solid 2px;
+    padding: 10px 40px;
+    margin: 0px 20px;
+    font-size: 42px;
+    color: #c5c5c5;
+    opacity: 20%;
+    text-align: center;
+  }
+
+  .call {
+    padding: 20px 10vw 100px;
+  }
+  .call h2:first-child {
+    font-size: 386px;
+    color: #e4e4e4;
+  }
+  .call h2:last-child {
+    font-size: 253px;
+    color: black;
+    text-align: right;
+    margin-top: -230px;
+    font-weight: 500;
   }
 </style>
 
@@ -329,9 +357,9 @@
   <div class="form">
     <div class="form__section">
       <p>Help! I'm making a</p>
-      <input type="text" placeholder="Type of Project"/>
+      <input type="text" placeholder="Type of Project" />
       <p>project for</p>
-      <input type="text" placeholder="Company Name"/>
+      <input type="text" placeholder="Company Name" />
       <p>and need goHere's help!</p>
     </div>
     <div class="form__section">
@@ -345,15 +373,15 @@
     </div>
     <div class="form__section">
       <p>Please call me at</p>
-      <input type="text" placeholder="Phone Number"/>
+      <input type="text" placeholder="Phone Number" />
       <p>or email me at</p>
-      <input type="text" placeholder="Email Address"/>
+      <input type="text" placeholder="Email Address" />
       <p>at your earliest convenience.</p>
     </div>
     <div class="form__section form__close">
       <p>Thanks,</p>
       <br />
-      <input type="text" placeholder="Full Name"/>
+      <input type="text" placeholder="Full Name" />
       <button>Send It</button>
     </div>
   </div>
