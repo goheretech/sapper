@@ -115,7 +115,7 @@
         {
           selector: ".feed h3",
           start: function($el) {
-            return $el.offset().top + 500;
+            return $el.offset().top + 300;
           },
           end: function($el) {
             return $el.offset().top + $el.height() + 500;
@@ -169,15 +169,15 @@
         {
           selector: ".quote p",
           start: function($el) {
-            return $el.offset().top-200;
+            return $el.offset().top - 500;
           },
           end: function($el) {
-            return $el.offset().top + $el.height() + 900;
+            return $el.offset().top + $el.height() + 1500;
           },
           fn: {
             top: {
               start: 200,
-              end: -100,
+              end: -50,
               unit: "px"
             }
           }
@@ -190,7 +190,7 @@
             return $el.offset().top + 200;
           },
           end: function($el) {
-            return $el.offset().top + $el.height()+400;
+            return $el.offset().top + $el.height() + 400;
           },
           fn: {
             opacity: {
@@ -201,14 +201,14 @@
           }
         }
       ]);
-       $.jScrollability([
+      $.jScrollability([
         {
           selector: ".call h2:last-child",
           start: function($el) {
             return $el.offset().top + 200;
           },
           end: function($el) {
-            return $el.offset().top + $el.height() ;
+            return $el.offset().top + $el.height();
           },
           fn: {
             opacity: {
@@ -375,7 +375,7 @@
     font-size: 112px;
     margin-bottom: 0px;
     text-indent: 200px;
-    position:relative;
+    position: relative;
   }
   .quote .author {
     align-self: flex-end;
@@ -383,6 +383,7 @@
   }
   .quote .author h4 {
     font-size: 83px;
+    margin-top: 100px;
   }
   .quote .author h6 {
     font-size: 58px;
@@ -422,7 +423,7 @@
   }
   .cta .form p {
     display: inline;
-    line-height: 50px;
+    line-height: 150px;
   }
   .cta .form input {
     display: inline;
@@ -439,6 +440,7 @@
     outline: none;
     border-bottom: #1b1b1b solid 2px;
     color: black;
+    opacity: 80%;
   }
   .cta .form select {
     display: inline;
@@ -455,6 +457,7 @@
     outline: none;
     border-bottom: #1b1b1b solid 2px;
     color: black;
+    opacity: 80%;
   }
 
   .call {
@@ -471,7 +474,7 @@
     margin-top: -230px;
     font-weight: 500;
   }
-  .color{
+  .color {
     background: transparent;
     background-image: linear-gradient(
       to right,
@@ -489,7 +492,7 @@
     animation: colorScroll 20s linear infinite;
     z-index: 2;
   }
-   .color.muted{
+  .color.muted {
     background-image: linear-gradient(
       to right,
       #d624a621,
@@ -499,10 +502,8 @@
       rgba(128, 0, 128, 0.164),
       #d624a61e
     );
-    z-index:0;
+    z-index: 0;
   }
-
- 
 </style>
 
 <section class="hero">
@@ -529,11 +530,17 @@
   <h2 class="hh">Solutions.</h2>
   <p>
     We love to create
-    <b class="color">unique,</b><br><b class="color">authentic,</b>
+    <b class="color">unique,</b>
+    <br />
+    <b class="color">authentic,</b>
     and
-    <b class="color">memorable</b> experiences.
+    <b class="color">memorable</b>
+    experiences.
   </p>
-  <p>Join us at the <b class="color">cutting edge.</b></p>
+  <p>
+    Join us at the
+    <b class="color">cutting edge.</b>
+  </p>
 </section>
 <section class="brands">
   <div class="row">
@@ -572,40 +579,43 @@
   </h3>
 </section> -->
 <section class="cta">
-  <h3>Tell us about <span class="color">your project.</span></h3>
+  <h3>
+    Tell us about
+    <span class="color">your project.</span>
+  </h3>
   <div class="form">
     <div class="form__section">
       <p>Help! I'm making a</p>
-      <input type="text" placeholder="Type of Project" />
+      <input type="text" class="color" placeholder="Type of Project" />
       <p>project for</p>
-      <input type="text" placeholder="Company Name" />
+      <input type="text" class="color" placeholder="Company Name" />
       <p>and need goHere's help!</p>
     </div>
     <div class="form__section">
       <p>My budget is between</p>
-      <select>
-        <option value="0-15k">$0 - $15,000</option>
-        <option value="15k-50k">$15,000 - $50,000</option>
-        <option value="50k-250k">$50,000 - $250,000</option>
-        <option value="250k-2m">$250,000 - $2M</option>
+      <select class="color">
+        <option class="color" value="0-15k">$0 - $15,000</option>
+        <option class="color" value="15k-50k">$15,000 - $50,000</option>
+        <option class="color" value="50k-250k">$50,000 - $250,000</option>
+        <option class="color" value="250k-2m">$250,000 - $2M</option>
       </select>
     </div>
     <div class="form__section">
       <p>Please call me at</p>
-      <input type="text" placeholder="Phone Number" />
+      <input class="color" type="text" placeholder="Phone Number" />
       <p>or email me at</p>
-      <input type="text" placeholder="Email Address" />
+      <input class="color" type="text" placeholder="Email Address" />
       <p>at your earliest convenience.</p>
     </div>
     <div class="form__section form__close">
       <p>Thanks,</p>
       <br />
-      <input type="text" placeholder="Full Name" />
+      <input class="color" type="text" placeholder="Full Name" />
       <button>Send It</button>
     </div>
   </div>
 </section>
 <section class="call">
   <h2 class="color muted">Call Now</h2>
-  <h2 >305.999.5595</h2>
+  <h2>305.999.5595</h2>
 </section>
