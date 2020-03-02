@@ -205,7 +205,7 @@
         {
           selector: ".call h2:last-child",
           start: function($el) {
-            return $el.offset().top + 200;
+            return $el.offset().top - 200;
           },
           end: function($el) {
             return $el.offset().top + $el.height();
