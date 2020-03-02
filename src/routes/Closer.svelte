@@ -165,6 +165,60 @@
           }
         }
       ]);
+      $.jScrollability([
+        {
+          selector: ".quote p",
+          start: function($el) {
+            return $el.offset().top-200;
+          },
+          end: function($el) {
+            return $el.offset().top + $el.height() + 900;
+          },
+          fn: {
+            top: {
+              start: 200,
+              end: -100,
+              unit: "px"
+            }
+          }
+        }
+      ]);
+      $.jScrollability([
+        {
+          selector: ".form__section",
+          start: function($el) {
+            return $el.offset().top + 200;
+          },
+          end: function($el) {
+            return $el.offset().top + $el.height()+400;
+          },
+          fn: {
+            opacity: {
+              start: 0,
+              end: 100,
+              unit: "%"
+            }
+          }
+        }
+      ]);
+       $.jScrollability([
+        {
+          selector: ".call h2:last-child",
+          start: function($el) {
+            return $el.offset().top + 200;
+          },
+          end: function($el) {
+            return $el.offset().top + $el.height() ;
+          },
+          fn: {
+            opacity: {
+              start: 0,
+              end: 100,
+              unit: "%"
+            }
+          }
+        }
+      ]);
 
       // $(".feed h2").jScrollability(1000, 1500, function($el, pcnt) {
       //   $el.css({
@@ -217,6 +271,7 @@
     position: absolute;
     left: 0px;
     bottom: 0px;
+    animation: colorRotate3 2s linear infinite;
   }
   .hero .text {
     padding-left: 25vw;
@@ -302,9 +357,9 @@
     opacity: 70%;
   }
   .quote {
-    background: #b0b8bf;
+    background: transparent;
     padding-top: 345px;
-    padding-bottom: 182px;
+    padding-bottom: 200px;
     position: relative;
     flex-direction: column;
     color: white;
@@ -314,12 +369,13 @@
     top: -100px;
     left: 100px;
     font-size: 1000px;
-    opacity: 40%;
+    opacity: 10%;
   }
   .quote p {
     font-size: 112px;
-    margin-bottom: 130px;
+    margin-bottom: 0px;
     text-indent: 200px;
+    position:relative;
   }
   .quote .author {
     align-self: flex-end;
@@ -350,9 +406,10 @@
     margin: 200px 0px;
     font-size: 132px;
     text-align: right;
+    color: #b9b9b9;
   }
   .cta .form {
-    color: #c5c5c5;
+    color: #353535;
     font-size: 65px;
     display: flex;
     flex-direction: column;
@@ -365,17 +422,23 @@
   }
   .cta .form p {
     display: inline;
+    line-height: 50px;
   }
   .cta .form input {
     display: inline;
     border: none;
-    border-bottom: #b0b8bf solid 2px;
+    border-bottom: #6d6d6d solid 2px;
     padding: 10px 40px;
     margin: 0px 20px;
     font-size: 42px;
-    color: #c5c5c5;
+    color: #6d6d6d;
     opacity: 20%;
     text-align: center;
+  }
+  .cta .form input:focus {
+    outline: none;
+    border-bottom: #1b1b1b solid 2px;
+    color: black;
   }
   .cta .form select {
     display: inline;
@@ -384,9 +447,14 @@
     padding: 10px 40px;
     margin: 0px 20px;
     font-size: 42px;
-    color: #c5c5c5;
+    color: #6d6d6d;
     opacity: 20%;
     text-align: center;
+  }
+  .cta .form select:focus {
+    outline: none;
+    border-bottom: #1b1b1b solid 2px;
+    color: black;
   }
 
   .call {
@@ -403,6 +471,38 @@
     margin-top: -230px;
     font-weight: 500;
   }
+  .color{
+    background: transparent;
+    background-image: linear-gradient(
+      to right,
+      #d624a6,
+      #f7a140,
+      green,
+      #22d8d8,
+      purple,
+      #d624a6
+    );
+    background-clip: text;
+    background-size: 600%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: colorScroll 20s linear infinite;
+    z-index: 2;
+  }
+   .color.muted{
+    background-image: linear-gradient(
+      to right,
+      #d624a621,
+      #f7a24021,
+      rgba(0, 128, 0, 0.13),
+      #22d8d82d,
+      rgba(128, 0, 128, 0.164),
+      #d624a61e
+    );
+    z-index:0;
+  }
+
+ 
 </style>
 
 <section class="hero">
@@ -413,7 +513,7 @@
     <h1>
       Let's get
       <br />
-      astro-naughty.
+      <span class="color">astro-naughty.</span>
     </h1>
     <div class="hero_scroll">
       <h3>Scroll Down</h3>
@@ -428,9 +528,12 @@
   <h2>Creative.</h2>
   <h2 class="hh">Solutions.</h2>
   <p>
-    We love creating <b>unique, authentic,</b> and <b>memorable experiences.</b>
+    We love to create
+    <b class="color">unique,</b><br><b class="color">authentic,</b>
+    and
+    <b class="color">memorable</b> experiences.
   </p>
-  <p>Join us at the cutting edge.</p>
+  <p>Join us at the <b class="color">cutting edge.</b></p>
 </section>
 <section class="brands">
   <div class="row">
@@ -458,7 +561,7 @@
     <h6>2011</h6>
   </div>
 </section>
-<section class="keywords">
+<!-- <section class="keywords">
   <h3>
     high-end. luxury. boutique. cutting edge. classic. high-end. luxury.
     boutique. cutting edge. classic.
@@ -467,9 +570,9 @@
     high-end. luxury. boutique. cutting edge. classic. high-end. luxury.
     boutique. cutting edge. classic.
   </h3>
-</section>
+</section> -->
 <section class="cta">
-  <h3>Tell us about your project.</h3>
+  <h3>Tell us about <span class="color">your project.</span></h3>
   <div class="form">
     <div class="form__section">
       <p>Help! I'm making a</p>
@@ -503,6 +606,6 @@
   </div>
 </section>
 <section class="call">
-  <h2>Call Now</h2>
-  <h2>305.999.5595</h2>
+  <h2 class="color muted">Call Now</h2>
+  <h2 >305.999.5595</h2>
 </section>
