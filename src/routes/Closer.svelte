@@ -1,4 +1,11 @@
+
+
 <script>
+
+  let form = {
+    name: ""
+  };
+
   const brands = [
     {
       img: "img/brands/ico-09.png",
@@ -78,12 +85,8 @@
       $.jScrollability([
         {
           selector: ".keywords h3:first-child",
-          start: function($el) {
-            return $el.offset().top;
-          },
-          end: function($el) {
-            return $el.offset().top + $el.height() + 1000;
-          },
+          start: 0,
+          end: 1000,
           fn: {
             right: {
               start: 0,
@@ -96,12 +99,8 @@
       $.jScrollability([
         {
           selector: ".keywords h3:last-child",
-          start: function($el) {
-            return $el.offset().top;
-          },
-          end: function($el) {
-            return $el.offset().top + $el.height() + 1000;
-          },
+         start: 0,
+          end: 1000,
           fn: {
             right: {
               start: 90,
@@ -235,7 +234,7 @@
     padding: 0px;
   }
   section {
-    background: white;
+    /* background: white; */
     color: black;
     padding: 50px 10vw;
     display: flex;
@@ -357,7 +356,9 @@
     opacity: 70%;
   }
   .quote {
-    background: transparent;
+    background-image: url("img/Planets/space.jpg");
+    background-size: cover;
+    background-attachment: fixed;
     padding-top: 345px;
     padding-bottom: 200px;
     position: relative;
@@ -389,20 +390,7 @@
     font-size: 58px;
   }
 
-  .keywords {
-    overflow: hidden;
-    flex-direction: column;
-    background: #f1f1f1;
-  }
-  .keywords h3 {
-    font-size: 186px;
-    white-space: nowrap;
-    position: relative;
-  }
-  .keywords h3:first-child {
-    text-align: right;
-    right: 75vw;
-  }
+  
   .cta h3 {
     margin: 200px 0px;
     font-size: 132px;
@@ -429,7 +417,7 @@
     display: inline;
     border: none;
     border-bottom: #6d6d6d solid 2px;
-    padding: 10px 40px;
+    padding: 10px 30px;
     margin: 0px 20px;
     font-size: 42px;
     color: #6d6d6d;
@@ -506,8 +494,42 @@
     );
     z-index: 0;
   }
+
+  .background{
+    background:white;
+  }
+  .keywords {
+    overflow: hidden;
+    flex-direction: column;
+    position:fixed;
+    top:0;
+   left:-2000px;
+    transform:rotate(90deg);
+    opacity:5%;
+    font-family: 'Inria Serif', ;
+  }
+  .keywords h3 {
+    font-size: 226px;
+    white-space: nowrap;
+    position: relative;
+  }
+  .keywords h3:first-child {
+    text-align: right;
+    right: 75vw;
+  }
 </style>
 
+<div class="background">
+  <section class="keywords">
+    <h3 class="color">
+      high-end. luxury. boutique. cutting edge. classic. high-end. luxury.
+      boutique. cutting edge. classic.
+    </h3>
+    <h3 class="color">
+      high-end. luxury. boutique. cutting edge. classic. high-end. luxury.
+      boutique. cutting edge. classic.
+    </h3>
+  </section>
 <section class="hero">
   <img class="planet" src="img/Planets/planet1.png" alt="" />
   <img class="astro" src="img/astro.png" alt="" />
@@ -539,11 +561,13 @@
     <b class="color">memorable</b>
     experiences.
   </p>
-  <p>
+
+  <!-- <p>
     Join us at the
     <b class="color">cutting edge.</b>
-  </p>
+  </p> -->
 </section>
+  
 <section class="brands">
   <div class="row">
     {#each brands as brand, i}
@@ -570,16 +594,7 @@
     <h6>2011</h6>
   </div>
 </section>
-<!-- <section class="keywords">
-  <h3>
-    high-end. luxury. boutique. cutting edge. classic. high-end. luxury.
-    boutique. cutting edge. classic.
-  </h3>
-  <h3>
-    high-end. luxury. boutique. cutting edge. classic. high-end. luxury.
-    boutique. cutting edge. classic.
-  </h3>
-</section> -->
+
 <section class="cta">
   <h3>
     Tell us about
@@ -587,11 +602,13 @@
   </h3>
   <div class="form">
     <div class="form__section">
-      <p>Help! I'm making a</p>
+      <p>Hi, my name is </p>
+      <input class="color" bind:value="{form.name}" type="text" placeholder="Full Name" />
+      <p>and I am creating a </p>
       <input type="text" class="color" placeholder="Type of Project" />
       <p>project for</p>
       <input type="text" class="color" placeholder="Company Name" />
-      <p>and need goHere's help!</p>
+      <p>and want to get goHere's input.</p>
     </div>
     <div class="form__section">
       <p>My budget is between</p>
@@ -610,9 +627,9 @@
       <p>at your earliest convenience.</p>
     </div>
     <div class="form__section form__close">
-      <p>Thanks,</p>
-      <br />
-      <input class="color" type="text" placeholder="Full Name" />
+      <p>Thanks!</p>
+      <h3 class="color" style="margin:0;">{form.name}</h3>
+      
       <button>Send It</button>
     </div>
   </div>
@@ -621,3 +638,4 @@
   <h2 class="color muted">Call Now</h2>
   <h2>305.999.5595</h2>
 </section>
+</div>
