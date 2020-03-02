@@ -1,7 +1,4 @@
-
-
 <script>
-
   let form = {
     name: ""
   };
@@ -99,7 +96,7 @@
       $.jScrollability([
         {
           selector: ".keywords h3:last-child",
-         start: 0,
+          start: 0,
           end: 1000,
           fn: {
             right: {
@@ -390,7 +387,6 @@
     font-size: 58px;
   }
 
-  
   .cta h3 {
     margin: 200px 0px;
     font-size: 132px;
@@ -495,18 +491,18 @@
     z-index: 0;
   }
 
-  .background{
-    background:white;
+  .background {
+    background: white;
   }
   .keywords {
     overflow: hidden;
     flex-direction: column;
-    position:fixed;
-    top:0;
-   left:-2000px;
-    transform:rotate(90deg);
-    opacity:5%;
-    font-family: 'Inria Serif', ;
+    position: fixed;
+    top: 0;
+    left: -2000px;
+    transform: rotate(90deg);
+    opacity: 5%;
+    font-family: "Inria Serif";
   }
   .keywords h3 {
     font-size: 226px;
@@ -530,112 +526,107 @@
       boutique. cutting edge. classic.
     </h3>
   </section>
-<section class="hero">
-  <img class="planet" src="img/Planets/planet1.png" alt="" />
-  <img class="astro" src="img/astro.png" alt="" />
-  <div class="text">
-    <h3>Making Magic</h3>
-    <h1>
-      Let's get
-      <br />
-      <span class="color">astro-naughty.</span>
-    </h1>
-    <div class="hero_scroll">
-      <h3>Scroll Down</h3>
-      <div class="circle">
-        <div class="arrow" />
+  <section class="hero">
+    <img class="planet" src="img/Planets/planet1.png" alt="" />
+    <img class="astro" src="img/astro.png" alt="" />
+    <div class="text">
+      <h3>Making Magic</h3>
+      <h1>
+        Let's get
+        <br />
+        <span class="color">astro-naughty.</span>
+      </h1>
+      <div class="hero_scroll">
+        <h3>Scroll Down</h3>
+        <div class="circle">
+          <div class="arrow" />
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<section class="feed">
-  <h3>Envisioning</h3>
-  <h2>Creative.</h2>
-  <h2 class="hh">Solutions.</h2>
-  <p>
-    We love to create
-    <b class="color">unique,</b>
-    <br />
-    <b class="color">authentic,</b>
-    and
-    <b class="color">memorable</b>
-    experiences.
-  </p>
+  </section>
+  <section class="feed">
+    <h3>Envisioning</h3>
+    <h2>Creative.</h2>
+    <h2 class="hh">Solutions.</h2>
+    <p>
+      We love to create
+      <b class="color">unique,</b>
+      <br />
+      <b class="color">authentic,</b>
+      and
+      <b class="color">memorable</b>
+      experiences.
+    </p>
 
-  <!-- <p>
+    <!-- <p>
     Join us at the
     <b class="color">cutting edge.</b>
   </p> -->
-</section>
-  
-<section class="brands">
-  <div class="row">
-    {#each brands as brand, i}
-      {#if i % 2 != 1}
-        <img src={brand.img} alt={brand.name} />
-      {/if}
-    {/each}
-  </div>
-  <div class="row">
-    {#each brands as brand, i}
-      {#if i % 2 == 1}
-        <img src={brand.img} alt={brand.name} />
-      {/if}
-    {/each}
-  </div>
-</section>
-<section class="quote">
-  <div class="mark">"</div>
-  <p>
-    goHere changed my life. The price of my unborn child was more than fair!
-  </p>
-  <div class="author">
-    <h4>-Bad Mom of the Year</h4>
-    <h6>2011</h6>
-  </div>
-</section>
+  </section>
 
-<section class="cta">
-  <h3>
-    Tell us about
-    <span class="color">your project.</span>
-  </h3>
-  <div class="form">
-    <div class="form__section">
-      <p>Hi, my name is </p>
-      <input class="color" bind:value="{form.name}" type="text" placeholder="Full Name" />
-      <p>and I am creating a </p>
-      <input type="text" class="color" placeholder="Type of Project" />
-      <p>project for</p>
-      <input type="text" class="color" placeholder="Company Name" />
-      <p>and want to get goHere's input.</p>
+  <section class="brands">
+    <div class="row">
+      {#each brands as brand, i}
+        {#if i % 2 != 1}
+          <img src={brand.img} alt={brand.name} />
+        {/if}
+      {/each}
     </div>
-    <div class="form__section">
-      <p>My budget is between</p>
-      <select class="color">
-        <option class="color" value="0-15k">$0 - $15,000</option>
-        <option class="color" value="15k-50k">$15,000 - $50,000</option>
-        <option class="color" value="50k-250k">$50,000 - $250,000</option>
-        <option class="color" value="250k-2m">$250,000 - $2M</option>
-      </select>
+    <div class="row">
+      {#each brands as brand, i}
+        {#if i % 2 == 1}
+          <img src={brand.img} alt={brand.name} />
+        {/if}
+      {/each}
     </div>
-    <div class="form__section">
-      <p>Please call me at</p>
-      <input class="color" type="text" placeholder="Phone Number" />
-      <p>or email me at</p>
-      <input class="color" type="text" placeholder="Email Address" />
-      <p>at your earliest convenience.</p>
+  </section>
+  <section class="quote">
+    <div class="mark">"</div>
+    <p>
+      Many people have visions of prosperity; few have prosperity of vision.
+    </p>
+    <div class="author">
+      <h4>- Christopher Reid</h4>
+      <h6>Founder and CEO of goHere</h6><span style="font-size: 16px;margin-bottom:32px;">®</span>
     </div>
-    <div class="form__section form__close">
-      <p>Thanks!</p>
-      <h3 class="color" style="margin:0;">{form.name}</h3>
-      
-      <button>Send It</button>
+  </section>
+
+  <section class="cta">
+    <h3>
+      Tell us about
+      <span class="color">your project.</span>
+    </h3>
+    <div class="form">
+      <div class="form__section">
+        <p>Hi, my name is</p>
+        <input
+          class="color"
+          bind:value={form.name}
+          type="text"
+          placeholder="Full Name" />
+        <p>and I am creating a</p>
+        <input type="text" class="color" placeholder="Type of Project" />
+        <p>project for</p>
+        <input type="text" class="color" placeholder="Company Name" />
+        <p>and want to get goHere's input.</p>
+      </div>
+      <div class="form__section">
+        <p>Please call me at</p>
+        <input class="color" type="text" placeholder="Phone Number" />
+        <p>or email me at</p>
+        <input class="color" type="text" placeholder="Email Address" />
+        <p>at your earliest convenience.</p>
+      </div>
+      <div class="form__section form__close">
+        <p>Thank You!</p>
+        <h3 class="color" style="margin:0;">{form.name}</h3>
+
+        <button>Send It</button>
+      </div>
     </div>
-  </div>
-</section>
-<section class="call">
-  <h2 class="color muted">Call Now</h2>
-  <h2>305.999.5595</h2>
-</section>
+  </section>
+  <section class="call">
+    <h2 class="color muted">Call Now</h2>
+    <h2>305.999.5595</h2>
+  </section>
 </div>
