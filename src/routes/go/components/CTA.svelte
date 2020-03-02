@@ -37,7 +37,7 @@
     bar.style.width = 25 * (form.position + 1) + "%";
     bar.style.opacity = 25 * (form.position + 1) + "%";
     form.canForward = false;
-    if (contactForm[Object.keys(contactForm)[form.position]] != "") {
+    if (contactForm[Object.keys(contactForm)[form.position]] != "" && form.position <3) {
       form.canForward = true;
     }
 
@@ -133,7 +133,7 @@
 
   .arrow_left {
     opacity: 0;
-    border: 40px rgb(207, 107, 89) solid;
+    border: 40px rgb(206, 58, 32) solid;
     margin-left: -40px;
     border-left: 0px transparent solid;
     border-top: 80px transparent solid;
@@ -169,16 +169,15 @@
 
   .progress_holder {
     margin-top: 20px;
-    height: 25px;
     width: 100%;
     background: rgba(255, 255, 255, 0.2);
   }
   #progress {
+    height:25px;
     width: 100%;
     opacity: 25%;
     background-image: url("img/grad2.png");
     animation: colorRotate 2s infinite;
-    height: 100%;
     background-size: cover;
   }
   #progress_glow {
@@ -189,13 +188,16 @@
     animation: colorRotateGlow 2s infinite;
     -webkit-filter: blur(120px);
     filter: blur(120px);
-    height: 100%;
     background-size: cover;
   }
 
-  .buttonOn {
+  #progress.buttonOn {
     height: 150px;
     width: 100%;
+    /* animation: colorRotateGlowFast 1s infinite; */
+    filter: blur(0px);
+    color:white;
+    font-size: 65;
   }
 
   @keyframes colorRotateGlow {
@@ -205,6 +207,15 @@
 
     100% {
       filter: hue-rotate(-359deg) blur(8px);
+    }
+  }
+  @keyframes colorRotateGlowFast {
+    0% {
+      filter: hue-rotate(0deg) blur(15px);
+    }
+
+    100% {
+      filter: hue-rotate(-359deg) blur(15px);
     }
   }
 
@@ -290,9 +301,9 @@
                       on:click={formNext} />
                   </div>
                 </label>
-                <div class="progress_holder" class:buttonOn={form.ready}>
-                  <div id="progress_glow">
-                    <div id="progress" on:click={sendContactMessage}>
+                <div class="progress_holder" >
+                  <div id="progress_glow" >
+                    <div id="progress" class="buttonOn"  on:click={sendContactMessage}>
                       Submit
                     </div>
 
