@@ -276,7 +276,7 @@
 
   .feed p {
     margin-top: 150px;
-    font-size: 145px;
+    font-size: 135px;
     color: rgb(78, 78, 78);
   }
 
