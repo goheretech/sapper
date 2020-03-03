@@ -11,7 +11,7 @@
 		time = parseInt((EstimatedTime/1000)%60)*100;
 
 		
-		document.addEventListener('load', ()=>{
+		windows.addEventListener('load', ()=>{
 				loaded = true;
 			})
 	})
