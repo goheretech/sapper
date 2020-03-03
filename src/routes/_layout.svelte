@@ -11,8 +11,7 @@
 		time = parseInt((EstimatedTime/1000)%60)*100;
 
 		
-		window.addEventListener('load', ()=>{
-				console.log('everything has loaded');
+		document.addEventListener('load', ()=>{
 				loaded = true;
 			})
 	})
@@ -49,6 +48,8 @@
 <main>
 {#if !loaded}
 	<Loader />
+{:else}
+	<slot></slot>	
 {/if}
-	<slot></slot>
+	
 </main>

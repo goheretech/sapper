@@ -1,45 +1,18 @@
-<script>
-  var i = 0;
-  function move() {
-    if (i == 0) {
-      i = 1;
-      var elem = document.getElementById("myBar");
-      var width = 1;
-      var id = setInterval(frame, 10);
-      function frame() {
-        if (width >= 100) {
-          clearInterval(id);
-          i = 0;
-        } else {
-          width++;
-          elem.style.opacity = width + "%";
-          console.log(width, " yaaa");
-        }
-      }
-    }
-  }
-</script>
-
 <style>
-  #myProgress {
-    width: 100%;
-    background-color: grey;
+  * {
+    outline: #333333 solid 1px;
   }
-
-  #myBar {
-    width: 100%;
-    height: 30px;
-    background-color: green;
+  section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('img/gif/loading2.gif');
+    background-size: cover;
   }
 </style>
 
-<div id="loader">
-  <div class="loading">
+<section>
 
-    <!-- <div class="loader"></div>
-        <span>Loading...</span> -->
-  </div>
-  <div id="myProgress">
-    <div id="myBar" />
-  </div>
-</div>
+</section>
