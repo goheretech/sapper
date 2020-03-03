@@ -5,6 +5,8 @@
     border-radius: 50%;
 }
 
+
+
 html {
     width: 100vw;
     overflow-x: none
@@ -1310,221 +1312,170 @@ section .cont .HomeHero-Col .creative .colorChange::after {
     clip-path: polygon(51% 59%, 71% 30%, 100% 72%, 100% 100%, 52% 100%, 18% 100%, 0 100%, 0 75%, 21% 21%)
 }
 
-#loader {
-    width: 100vw;
-    height: 100vh;
-    background: black;
-    position: fixed;
-    z-index: 999
+.loaded {
+    animation: fadeOut 800ms;
+    animation-fill-mode: forwards;
+    animation-delay: 2.5s;
 }
 
-.loading {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    background: black;
-    z-index: 999;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    background: url(/img/gif/loading.gif);
-    background-size: cover;
-    background-position: center;
-    background-repeat: none
-}
-
-.loading .loader {
-    width: 200px;
-    height: 200px;
-    background: #200e18;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    border-radius: 50%;
-    border-top: 20px solid #ca8aa8;
-    -webkit-animation: growMoon 1s ease-out infinite alternate;
-    animation: growMoon 1s ease-out infinite alternate;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-transition: all 200ms;
-    transition: all 200ms
-}
-
-.loading .loader:hover {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2)
-}
-
-.loading span {
-    color: white;
-    margin-top: 20px;
-    font-size: 20px
-}
-
-@-webkit-keyframes colorScroll {
-    0% {
-        background-position: 600%
-    }
-
-    100% {
-        background-position: 0%
-    }
-}
-
-@keyframes colorScroll {
-    0% {
-        background-position: 600%
-    }
-
-    100% {
-        background-position: 0%
-    }
-}
-
-@-webkit-keyframes growMoon {
-    from {
-        border-top: 2px solid #df6aa0;
-        background-color: #200e18;
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg)
-    }
-
-    to {
-        border-top: 40px solid #a82993;
-        background-color: #682a4c;
-        -webkit-transform: rotate(45deg);
-        transform: rotate(45deg)
-    }
-}
-
-@keyframes growMoon {
-    from {
-        border-top: 2px solid #df6aa0;
-        background-color: #200e18;
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg)
-    }
-
-    to {
-        border-top: 40px solid #a82993;
-        background-color: #682a4c;
-        -webkit-transform: rotate(45deg);
-        transform: rotate(45deg)
-    }
-}
-
-@-webkit-keyframes navLinkFade {
-    from {
+@keyframes fadeOut {
+    80%{
         opacity: 0;
-        -webkit-transform: translateY(20px);
-        transform: translateY(20px)
     }
-
-    to {
-        opacity: 1;
-        -webkit-transform: translateY(0px);
-        transform: translateY(0px)
-    }
-}
-
-@keyframes navLinkFade {
-    from {
+    100% {
         opacity: 0;
-        -webkit-transform: translateY(20px);
-        transform: translateY(20px)
-    }
-
-    to {
-        opacity: 1;
-        -webkit-transform: translateY(0px);
-        transform: translateY(0px)
+        visibility:hidden;
     }
 }
 
-@-webkit-keyframes colorRotate {
-    0% {
-        -webkit-filter: hue-rotate(0deg) brightness(160%);
-        filter: hue-rotate(0deg) brightness(160%)
+    @-webkit-keyframes colorScroll {
+        0% {
+            background-position: 600%
+        }
+
+        100% {
+            background-position: 0%
+        }
     }
 
-    100% {
-        -webkit-filter: hue-rotate(-359deg) brightness(160%);
-        filter: hue-rotate(-359deg) brightness(160%)
-    }
-}
+    @keyframes colorScroll {
+        0% {
+            background-position: 600%
+        }
 
-@keyframes colorRotate {
-    0% {
-        -webkit-filter: hue-rotate(0deg) brightness(160%);
-        filter: hue-rotate(0deg) brightness(160%)
+        100% {
+            background-position: 0%
+        }
     }
 
-    100% {
-        -webkit-filter: hue-rotate(-359deg) brightness(160%);
-        filter: hue-rotate(-359deg) brightness(160%)
-    }
-}
+    @-webkit-keyframes growMoon {
+        from {
+            border-top: 2px solid #df6aa0;
+            background-color: #200e18;
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg)
+        }
 
-@-webkit-keyframes colorRotate2 {
-    0% {
-        -webkit-filter: hue-rotate(0deg) saturate(80%);
-        filter: hue-rotate(0deg) saturate(80%)
-    }
-
-    100% {
-        -webkit-filter: hue-rotate(-359deg) saturate(80%);
-        filter: hue-rotate(-359deg) saturate(80%)
-    }
-}
-
-@keyframes colorRotate2 {
-    0% {
-        -webkit-filter: hue-rotate(0deg) saturate(80%);
-        filter: hue-rotate(0deg) saturate(80%)
+        to {
+            border-top: 40px solid #a82993;
+            background-color: #682a4c;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg)
+        }
     }
 
-    100% {
-        -webkit-filter: hue-rotate(-359deg) saturate(80%);
-        filter: hue-rotate(-359deg) saturate(80%)
-    }
-}
+    @keyframes growMoon {
+        from {
+            border-top: 2px solid #df6aa0;
+            background-color: #200e18;
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg)
+        }
 
-@-webkit-keyframes colorRotate3 {
-    0% {
-        -webkit-filter: hue-rotate(0deg);
-        filter: hue-rotate(0deg)
-    }
-
-    100% {
-        -webkit-filter: hue-rotate(-359deg);
-        filter: hue-rotate(-359deg)
-    }
-}
-
-@keyframes colorRotate3 {
-    0% {
-        -webkit-filter: hue-rotate(0deg);
-        filter: hue-rotate(0deg)
+        to {
+            border-top: 40px solid #a82993;
+            background-color: #682a4c;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg)
+        }
     }
 
-    100% {
-        -webkit-filter: hue-rotate(-359deg);
-        filter: hue-rotate(-359deg)
+    @-webkit-keyframes navLinkFade {
+        from {
+            opacity: 0;
+            -webkit-transform: translateY(20px);
+            transform: translateY(20px)
+        }
+
+        to {
+            opacity: 1;
+            -webkit-transform: translateY(0px);
+            transform: translateY(0px)
+        }
     }
-}
+
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            -webkit-transform: translateY(20px);
+            transform: translateY(20px)
+        }
+
+        to {
+            opacity: 1;
+            -webkit-transform: translateY(0px);
+            transform: translateY(0px)
+        }
+    }
+
+    @-webkit-keyframes colorRotate {
+        0% {
+            -webkit-filter: hue-rotate(0deg) brightness(160%);
+            filter: hue-rotate(0deg) brightness(160%)
+        }
+
+        100% {
+            -webkit-filter: hue-rotate(-359deg) brightness(160%);
+            filter: hue-rotate(-359deg) brightness(160%)
+        }
+    }
+
+    @keyframes colorRotate {
+        0% {
+            -webkit-filter: hue-rotate(0deg) brightness(160%);
+            filter: hue-rotate(0deg) brightness(160%)
+        }
+
+        100% {
+            -webkit-filter: hue-rotate(-359deg) brightness(160%);
+            filter: hue-rotate(-359deg) brightness(160%)
+        }
+    }
+
+    @-webkit-keyframes colorRotate2 {
+        0% {
+            -webkit-filter: hue-rotate(0deg) saturate(80%);
+            filter: hue-rotate(0deg) saturate(80%)
+        }
+
+        100% {
+            -webkit-filter: hue-rotate(-359deg) saturate(80%);
+            filter: hue-rotate(-359deg) saturate(80%)
+        }
+    }
+
+    @keyframes colorRotate2 {
+        0% {
+            -webkit-filter: hue-rotate(0deg) saturate(80%);
+            filter: hue-rotate(0deg) saturate(80%)
+        }
+
+        100% {
+            -webkit-filter: hue-rotate(-359deg) saturate(80%);
+            filter: hue-rotate(-359deg) saturate(80%)
+        }
+    }
+
+    @-webkit-keyframes colorRotate3 {
+        0% {
+            -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg)
+        }
+
+        100% {
+            -webkit-filter: hue-rotate(-359deg);
+            filter: hue-rotate(-359deg)
+        }
+    }
+
+    @keyframes colorRotate3 {
+        0% {
+            -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg)
+        }
+
+        100% {
+            -webkit-filter: hue-rotate(-359deg);
+            filter: hue-rotate(-359deg)
+        }
+    }
