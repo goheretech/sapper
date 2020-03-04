@@ -572,11 +572,6 @@
     margin-bottom: 2vw;
 
   }
-  .cta p{
-    
-    font-size: 2vw;
-
-  }
 
   @media screen and (max-width: 1100px) {
     section {
@@ -826,8 +821,7 @@
         Thank you, 
         <span class="color">{form.name}!</span>
       </h3>
-      <h5>Your submision will be reviewed shortly.</h5>
-      <p>We look forward to speaking with you soon. Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati vitae necessitatibus impedit debitis totam atque illo molestiae voluptatum, quod consequatur. Illum consequuntur reprehenderit libero omnis eos ratione hic odio eaque!</p>
+      <h5>We look forward to speaking with you soon.</h5>
 
       
     {/if}
