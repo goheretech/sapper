@@ -1,5 +1,5 @@
-<script>     
-    import Nav from '../components/Nav.svelte';
+<script>
+  import Nav from "../components/Nav.svelte";
   let form = {
     name: ""
   };
@@ -130,7 +130,7 @@
         {
           selector: ".feed h2",
           start: function($el) {
-            return $el.offset().top ;
+            return $el.offset().top;
           },
           end: function($el) {
             return $el.offset().top + $el.height() + 500;
@@ -216,7 +216,7 @@
           }
         }
       ]);
-       $.jScrollability([
+      $.jScrollability([
         {
           selector: ".cta h3",
           start: function($el) {
@@ -316,20 +316,19 @@
     background: rgb(255, 255, 255);
     width: 40px;
     height: 40px;
-    position:relative;
-    top:3px;
-    left:-13px;
+    position: relative;
+    top: 3px;
+    left: -13px;
   }
-  .hero_scroll .arrow{
-    
+  .hero_scroll .arrow {
     border: solid rgb(0, 0, 0) 10px;
     border-left-color: transparent;
     border-right-color: transparent;
     border-bottom-color: transparent;
     width: 0px;
     height: 0px;
-    margin-left:10px;
-    margin-top:18px;
+    margin-left: 10px;
+    margin-top: 18px;
   }
 
   .feed {
@@ -391,7 +390,7 @@
   }
   .quote .mark {
     position: absolute;
-    color:#ffffff21;
+    color: #ffffff21;
     top: -100px;
     left: 100px;
     font-size: 1000px;
@@ -423,18 +422,18 @@
   .cta .form {
     color: #353535;
     font-size: 4vw;
-    line-height:8vw;
+    line-height: 8vw;
     display: flex;
     flex-direction: column;
-    padding:0 0vw;
+    padding: 0 0vw;
   }
   .form .form__section {
     margin-bottom: 100px;
-    padding-right:0vw;
+    padding-right: 0vw;
   }
   .form__section.form__close {
     align-self: flex-end;
-    text-align:right;
+    text-align: right;
   }
   .cta .form p {
     display: inline;
@@ -544,111 +543,110 @@
     right: 75vw;
   }
 
-  @media screen and (max-width:1100px){
-    section{
+  @media screen and (max-width: 1100px) {
+    section {
       padding: 50px 4vw;
     }
-    .hero .astro{
-      left:auto;
-      right:-20vw;
-      width:135vw;
+    .hero .astro {
+      left: auto;
+      right: -20vw;
+      width: 135vw;
     }
-    .hero .text{
-      padding-right:2vw;
-      padding-bottom:7vw;
+    .hero .text {
+      padding-right: 2vw;
+      padding-bottom: 15vw;
     }
-    .hero .text h3{
-      font-size:24px;
-      visibility:hidden;
+    .hero .text h3 {
+      font-size: 24px;
+      visibility: hidden;
     }
-    .hero .text h1{
-      font-size:36px;
-      line-height:34px;
-      visibility:hidden;
+    .hero .text h1 {
+      font-size: 36px;
+      line-height: 34px;
+      visibility: hidden;
     }
 
-    .feed h3{
-      margin-top:0px;
-      font-size:7vw;
+    .feed h3 {
+      margin-top: 0px;
+      font-size: 7vw;
     }
-    .feed h2{
-      font-size:20vw;
+    .feed h2 {
+      font-size: 20vw;
       line-height: 19vw;
     }
-    .feed .hh{
+    .feed .hh {
       font-size: 21vw;
       line-height: 20vw;
-      margin-top:20px;
+      margin-top: 20px;
     }
-    .feed p{
-      margin-top:60px;
-      font-size:13vw;
+    .feed p {
+      margin-top: 60px;
+      font-size: 13vw;
     }
 
-    .feed{
+    .feed {
       padding-bottom: 80px;
-      padding-top:140px;
+      padding-top: 140px;
     }
 
-    .brands img{
-      width:auto;
-      height:10vw;
-      margin:0px 3vw;
+    .brands img {
+      width: auto;
+      height: 10vw;
+      margin: 0px 3vw;
     }
 
-    .quote{
+    .quote {
       padding-top: 14px;
       padding-bottom: 64px;
     }
 
-    .quote p{
-      text-indent:55px;
-      font-size:11vw;
+    .quote p {
+      text-indent: 55px;
+      font-size: 11vw;
     }
-    .quote .author h4{
-      font-size:9vw;
+    .quote .author h4 {
+      font-size: 9vw;
     }
-    .quote .author h6{
-      font-size:4vw;
+    .quote .author h6 {
+      font-size: 4vw;
     }
 
-    .cta{
+    .cta {
       padding: 0px 4vw;
     }
 
-    .cta h3{
-      font-size:8vw;
+    .cta h3 {
+      font-size: 8vw;
       margin: 50px 0;
     }
 
-    .cta .form{
+    .cta .form {
       font-size: 6vw;
-      padding:0px;
-      margin-bottom:3vw;
-      line-height:13vw;
-
+      padding: 0px;
+      margin-bottom: 3vw;
+      line-height: 13vw;
     }
-    .form .form__section{
-      padding-right:0vw;
+    .form .form__section {
+      padding-right: 0vw;
       margin-bottom: 6vw;
     }
-    .cta .form input{
+    .cta .form input {
       font-size: 6vw;
       margin: 0px 4vw;
     }
-    form{
-      background:transparent;
+    form {
+      background: transparent;
     }
-    .call{
+    .call {
       padding: 00px 4vw 50px 4vw;
     }
 
-    .call h2:first-child{
-      font-size:25vw;
+    .call h2:first-child {
+      font-size: 25vw;
     }
-    .call h2:last-child{
-      font-size:16vw;
-      margin-top:-16vw;
+    .call h2:last-child {
+      font-size: 16vw;
+      margin-top: -16vw;
     }
   }
 </style>
@@ -725,7 +723,10 @@
     </p>
     <div class="author">
       <h4>- Christopher Reid</h4>
-      <div style="display:flex;"><h6>Founder and CEO of goHere</h6><span style="font-size: 6px;margin-bottom:32px;">®</span></div>
+      <div style="display:flex;">
+        <h6>Founder and CEO of goHere</h6>
+        <span style="font-size: 6px;margin-bottom:32px;">®</span>
+      </div>
     </div>
   </section>
 
@@ -735,34 +736,34 @@
       <span class="color">your project.</span>
     </h3>
     <div class="form">
-    <form action="none">
-      <div class="form__section">
-        <p>Hi, my name is</p>
-        <input
-          class="color"
-          bind:value={form.name}
-          type="text"
-          placeholder="Full Name" />
-        <p>and I am creating a</p>
-        <input type="text" class="color" placeholder="Type of Project" />
-        <p>project for</p>
-        <input type="text" class="color" placeholder="Company Name" />
-        <p>and want to get goHere's input.</p>
-      </div>
-      <div class="form__section">
-        <p>Please call me at</p>
-        <input class="color" type="text" placeholder="Phone Number" />
-        <p>or email me at</p>
-        <input class="color" type="text" placeholder="Email Address" />
-        <p>at your earliest convenience.</p>
-      </div>
-      <div class="form__section form__close">
-        <p>Thank You!</p>
-        <h3 class="color" style="margin:0;">{form.name}</h3>
+      <form action="none">
+        <div class="form__section">
+          <p>Hi, my name is</p>
+          <input
+            class="color"
+            bind:value={form.name}
+            type="text"
+            placeholder="Full Name" />
+          <p>and I am creating a</p>
+          <input type="text" class="color" placeholder="Type of Project" />
+          <p>project for</p>
+          <input type="text" class="color" placeholder="Company Name" />
+          <p>and want to get goHere's input.</p>
+        </div>
+        <div class="form__section">
+          <p>Please call me at</p>
+          <input class="color" type="text" placeholder="Phone Number" />
+          <p>or email me at</p>
+          <input class="color" type="text" placeholder="Email Address" />
+          <p>at your earliest convenience.</p>
+        </div>
+        <div class="form__section form__close">
+          <p>Thank You!</p>
+          <h3 class="color" style="margin:0;">{form.name}</h3>
 
-        <button>Send It</button>
-      </div>
-    </form>
+          <button>Send It</button>
+        </div>
+      </form>
     </div>
   </section>
   <section class="call">
