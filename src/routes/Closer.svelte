@@ -549,7 +549,7 @@
     }
     .hero .astro {
       left: auto;
-      right: -20vw;
+      right: -6vw;
       width: 135vw;
     }
     .hero .text {
