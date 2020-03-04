@@ -553,8 +553,8 @@
       width: 135vw;
     }
     .hero .text {
-      padding-right: 2vw;
-      padding-bottom: 15vw;
+      padding-right: 7vw;
+      padding-bottom: 25vw;
     }
     .hero .text h3 {
       font-size: 24px;
