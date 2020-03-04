@@ -15,12 +15,28 @@
     top:0;
     left:0;
     z-index:9999;
+    animation: colorRotate2 2s linear infinite;
   }
   h2{
     outline:none;
     border:none;
     font-size:15vw;
-    color:rgb(58, 58, 58);
+     background: transparent;
+    background-image: linear-gradient(
+      to right,
+      #d624a6,
+      #f7a140,
+      green,
+      #22d8d8,
+      purple,
+      #d624a6
+    );
+    background-clip: text;
+    background-size: 600%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: colorScroll 20s linear infinite;
+    z-index: 2;
   }
 
   

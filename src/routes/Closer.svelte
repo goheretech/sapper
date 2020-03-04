@@ -387,6 +387,7 @@
     outline: none;
     border: none;
     padding: 40px 0px;
+    padding-bottom:140px;
   }
   .brands .row {
     display: flex;
