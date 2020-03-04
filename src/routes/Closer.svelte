@@ -1,5 +1,6 @@
 <script>
   import Nav from "../components/Nav.svelte";
+  let submitted = false;
   let form = {
     name: "",
     project: "",
@@ -9,14 +10,13 @@
   };
 
   let error = false;
-  let showThanks = false;
   async function sendContactMessage() {
     console.log("Send form...", form);
     let db = firebase.firestore();
     try {
       await db.collection("leads").add(form);
-      showThanks = true;
-      alert('submitted')
+      submitted = true;
+      alert("submitted");
     } catch (e) {
       console.log(";(", e);
       console.log("Big Error: " + e);
@@ -93,9 +93,9 @@
           },
           fn: {
             top: {
-              start: -50,
-              end: -20,
-              unit: "%"
+              start: -90,
+              end: 0,
+              unit: "vh"
             }
           }
         }
@@ -132,7 +132,7 @@
         {
           selector: ".hero .text",
           start: function($el) {
-            return $el.offset().top+700;
+            return $el.offset().top + 700;
           },
           end: function($el) {
             return $el.offset().top + $el.height() + 700;
@@ -218,7 +218,7 @@
           }
         }
       ]);
-     
+
       $.jScrollability([
         {
           selector: ".call h2:last-child",
@@ -509,6 +509,8 @@
     text-align: right;
     margin-top: -230px;
     font-weight: 500;
+    position: relative;
+    z-index: 10;
   }
   .color {
     background: transparent;
@@ -564,10 +566,22 @@
     right: 75vw;
   }
 
+  .cta h5{
+    
+    font-size: 3vw;
+    margin-bottom: 2vw;
+
+  }
+  .cta p{
+    
+    font-size: 2vw;
+
+  }
+
   @media screen and (max-width: 1100px) {
     section {
       padding: 50px 4vw;
-      position:relative;
+      position: relative;
     }
     .hero .astro {
       left: auto;
@@ -577,9 +591,9 @@
     .hero .text {
       padding-right: 7vw;
       padding-bottom: 7vw;
-      position:absolute;
-      bottom:0px;
-      right:0px;
+      position: absolute;
+      bottom: 5vh;
+      right: 0px;
     }
     .hero .text h3 {
       font-size: 24px;
@@ -756,40 +770,67 @@
   </section>
 
   <section class="cta">
-    <h3>
-      Tell us about
-      <span class="color">your project.</span>
-    </h3>
-    <div class="form">
-      <form on:submit|preventDefault={sendContactMessage}>
-        <div class="form__section">
-          <p>Hi, my name is</p>
-          <input
-            class="color muted"
-            bind:value={form.name}
-            type="text"
-            placeholder="Full Name" />
-          <p>and I am creating a</p>
-          <input bind:value={form.project} type="text" class="color muted" placeholder="Type of Project" />
-          <p>project for</p>
-          <input type="text" class="color muted" bind:value={form.website} placeholder="Company" />
-          <p>and want to get goHere's input.</p>
-        </div>
-        <div class="form__section">
-          <p>Please call me at</p>
-          <input class="color muted" bind:value={form.phone} type="text" placeholder="Phone Number" />
-          <p>or email me at</p>
-          <input class="color muted" type="text" bind:value={form.email} placeholder="Email Address" />
-          <p>at your earliest convenience.</p>
-        </div>
-        <div class="form__section form__close">
-          <p>Thank You!</p>
-          <h3 class="color muted" style="margin:0;">{form.name}</h3>
+    {#if !submitted}
+      <h3>
+        Tell us about
+        <span class="color">your project.</span>
+      </h3>
+      <div class="form">
+        <form on:submit|preventDefault={sendContactMessage}>
+          <div class="form__section">
+            <p>Hi, my name is</p>
+            <input
+              class="color"
+              bind:value={form.name}
+              type="text"
+              placeholder="Full Name" />
+            <p>and I am creating a</p>
+            <input
+              bind:value={form.project}
+              type="text"
+              class="color"
+              placeholder="Type of Project" />
+            <p>project for</p>
+            <input
+              type="text"
+              class="color"
+              bind:value={form.website}
+              placeholder="Company" />
+            <p>and want to get goHere's input.</p>
+          </div>
+          <div class="form__section">
+            <p>Please call me at</p>
+            <input
+              class="color"
+              bind:value={form.phone}
+              type="text"
+              placeholder="Phone Number" />
+            <p>or email me at</p>
+            <input
+              class="color"
+              type="text"
+              bind:value={form.email}
+              placeholder="Email Address" />
+            <p>at your earliest convenience.</p>
+          </div>
+          <div class="form__section form__close">
+            <p>Thank You!</p>
+            <h3 class="color" style="margin:0;">{form.name}</h3>
 
-          <button >Send It</button>
-        </div>
-      </form>
-    </div>
+            <button>Send It</button>
+          </div>
+        </form>
+      </div>
+    {:else}
+      <h3>
+        Thank you, 
+        <span class="color">{form.name}!</span>
+      </h3>
+      <h5>Your submision will be reviewed shortly.</h5>
+      <p>We look forward to speaking with you soon. Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati vitae necessitatibus impedit debitis totam atque illo molestiae voluptatum, quod consequatur. Illum consequuntur reprehenderit libero omnis eos ratione hic odio eaque!</p>
+
+      
+    {/if}
   </section>
   <section class="call">
     <h2 class="color muted">Call Now</h2>
