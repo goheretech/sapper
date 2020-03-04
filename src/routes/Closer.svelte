@@ -339,7 +339,7 @@
 
   .feed p {
     margin-top: 150px;
-    font-size: 135px;
+    font-size: 8vw;
     color: rgb(78, 78, 78);
   }
 
@@ -407,14 +407,15 @@
   }
   .cta .form {
     color: #353535;
-    font-size: 25px;
+    font-size: 4vw;
+    line-height:8vw;
     display: flex;
     flex-direction: column;
-    padding:0 10vw;
+    padding:0 0vw;
   }
   .form .form__section {
     margin-bottom: 100px;
-    padding-right:10vw;
+    padding-right:0vw;
   }
   .form__section.form__close {
     align-self: flex-end;
@@ -422,7 +423,6 @@
   }
   .cta .form p {
     display: inline;
-    line-height: 80px;
   }
   .cta .form input {
     display: inline;
@@ -551,7 +551,7 @@
 
     .feed h3{
       margin-top:0px;
-      font-size:10vw;
+      font-size:7vw;
     }
     .feed h2{
       font-size:20vw;
