@@ -592,6 +592,10 @@
       font-size:4vw;
     }
 
+    .cta{
+      padding: 50px 4vw;
+    }
+
     .cta h3{
       font-size:8vw;
       margin: 50px 0;
