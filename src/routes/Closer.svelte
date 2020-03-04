@@ -233,12 +233,6 @@
           }
         }
       ]);
-
-      // $(".feed h2").jScrollability(1000, 1500, function($el, pcnt) {
-      //   $el.css({
-      //    'opacity': (pcnt) * 100 + "%"
-      //   });
-      // });
     });
   })(jQuery);
 </script>
@@ -532,6 +526,45 @@
   .keywords h3:first-child {
     text-align: right;
     right: 75vw;
+  }
+
+  @media screen and (max-width:1100px){
+    section{
+      padding: 50px 4vw;
+    }
+    .hero .astro{
+      left:auto;
+      right:-20vw;
+      width:135vw;
+    }
+    .text{
+      visibility:hidden;
+    }
+    .hero .text h3{
+      font-size:24px;
+    }
+    .hero .text h1{
+      font-size:36px;
+      line-height:34px;
+    }
+
+    .feed h3{
+      margin-top:100px;
+      font-size:10vw;
+    }
+    .feed h2{
+      font-size:20vw;
+      line-height: 19vw;
+    }
+    .feed .hh{
+      font-size: 21vw;
+      line-height: 20vw;
+      margin-top:20px;
+    }
+    .feed p{
+      margin-top:20px;
+      font-size:16vw;
+    }
   }
 </style>
 
