@@ -10,6 +10,7 @@
     justify-content: center;
     background: url('img/gif/loading2.gif');
     background-size: cover;
+    background-position: 100% 50%;
     position:fixed;
     top:0;
     left:0;

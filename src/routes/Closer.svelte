@@ -553,15 +553,18 @@
       right:-20vw;
       width:135vw;
     }
-    .text{
-      visibility:hidden;
+    .hero .text{
+      padding-right:2vw;
+      padding-bottom:7vw;
     }
     .hero .text h3{
       font-size:24px;
+      visibility:hidden;
     }
     .hero .text h1{
       font-size:36px;
       line-height:34px;
+      visibility:hidden;
     }
 
     .feed h3{
