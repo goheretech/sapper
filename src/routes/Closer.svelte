@@ -186,7 +186,7 @@
             return $el.offset().top + 200;
           },
           end: function($el) {
-            return $el.offset().top + $el.height() + 400;
+            return $el.offset().top + $el.height() + 100;
           },
           fn: {
             opacity: {
@@ -710,6 +710,7 @@
       <span class="color">your project.</span>
     </h3>
     <div class="form">
+    <form action="none">
       <div class="form__section">
         <p>Hi, my name is</p>
         <input
@@ -736,6 +737,7 @@
 
         <button>Send It</button>
       </div>
+    </form>
     </div>
   </section>
   <section class="call">
