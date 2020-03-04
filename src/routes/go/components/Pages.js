@@ -5,9 +5,9 @@ export let pages = [
                titleColor: 'Trailblazers',
                title: 'of Tech',
                tag: 'Nerd Alert',
-               head: 'New Strategies, Old Values.',
+               head: 'Envisioneers',
                par:
-                   'The founders of goHere have been watching tastes and technology evolve since the internet’s inception, giving them a particular talent for predicting—and shaping—where things are headed next.',
+                   'We combine <b>technology</b>, <b>design</b>, and <b>communication</b> to <i>give life to ambitious creative vision.</i>',
                button: 'Check It Out',
                buttonHref: 'more#what'
            },
@@ -43,7 +43,7 @@ export let pages = [
                tag: 'Powerful',
                head: 'Our Amazing Partners.',
                par:
-                   'We develop a creative partnership with each of our clients to deliver the best results. We select brands that we can add value to — brands we can be passionate about helping.',
+                   'Whether you’re a startup, nonprofit, or a household brand, goHere <b>adds value.</b> We select clients we <b>resonate</b> with, bringing the right amount of <b>passion and inspiration</b> to any project.',
                button: 'Check It Out',
                buttonHref: 'more#what'
            },

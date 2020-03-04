@@ -19,6 +19,7 @@
                 flex-direction: column;
                 align-items:center;
                 justify-content: space-evenly;
+                position:relative;
             }
             .goTo{
                 background:transparent;
@@ -84,6 +85,12 @@
                 color:white;
                 padding: 15px 30px;
                 margin-top:50px;
+            }
+
+            #back{
+                position:absolute;
+                top:0px;
+                left:30px;
             }
 
              @media screen and (max-width:500px) {

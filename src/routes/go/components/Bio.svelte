@@ -31,9 +31,9 @@
                         {nick}
                     </h2>
                     <h3 class="main">
-                        {bioStart}
+                        {@html bioStart}
                     </h3>
-                    <p class="desc" v-html="rawHtml">{bio}
+                    <p class="desc" v-html="rawHtml">{@html bio}
                     </p>
                 {/if}
                 {#if side == 'left'}
@@ -92,10 +92,9 @@
                 {nick}
             </h2>
             <h3 class="main">
-                {bioStart}
+                {@html bioStart}
             </h3>
-            <p class="desc" v-html="rawHtml">{bio}
-            </p>
+            <p class="desc">{@html bio}</p>
         {/if}
             </div>
         </div>

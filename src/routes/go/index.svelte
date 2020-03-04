@@ -419,7 +419,7 @@
           <h6>{pages[page].tag}</h6>
         </div>
         <h2>{pages[page].head}</h2>
-        <p>{pages[page].par}</p>
+        <p>{@html pages[page].par}</p>
         {#if page == 4}
           <a
             style="position:relative; border:none;"
@@ -491,13 +491,13 @@
             Reach out today and find out what goHere can do for you.
           </h3>
           <div class="buttonHold">
-            <a class="ctaa" on:click={toggleFrm}>Let's Go</a>
+            
             <a
               rel="prefetch"
               class="ctaa"
               on:click={goContact}
               href="go#contact">
-              Contact Us
+              Let's Go
             </a>
           </div>
         </div>

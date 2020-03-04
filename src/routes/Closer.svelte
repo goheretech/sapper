@@ -699,8 +699,8 @@
     </h3>
   </section>
   <section class="hero">
-    <img class="planet" src="img/Planets/planet1.png" alt="" />
-    <img class="astro" src="img/astro.png" alt="" />
+    <img class="planet" src="img/Planets/planet1-min.png" alt="" />
+    <img class="astro" src="img/astro-opt.png" alt="" />
     <div class="text">
       <h3>Creative Vision</h3>
       <h1>
