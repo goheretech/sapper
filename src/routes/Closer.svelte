@@ -492,7 +492,7 @@
     outline: none;
     border-bottom: #1b1b1b solid 2px;
     color: black;
-    opacity: 80%;
+    opacity: 100%;
   }
   .cta .form select {
     display: inline;
