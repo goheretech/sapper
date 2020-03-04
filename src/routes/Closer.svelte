@@ -636,7 +636,9 @@
       font-size: 6vw;
       margin: 0px 4vw;
     }
-
+    form{
+      background:transparent;
+    }
     .call{
       padding: 00px 4vw 50px 4vw;
     }
