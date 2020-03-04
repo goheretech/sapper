@@ -572,8 +572,8 @@
     }
 
     .brands img{
-      width:90px;
-      margin:0px 20px;
+      width:15vw;
+      margin:0px 3vw;
     }
 
     .quote{
@@ -598,14 +598,28 @@
     }
 
     .cta .form{
-      font-size: 25px;
+      font-size: 5vw;
       padding:0px;
+      margin-bottom:3vw;
     }
     .form .form__section{
       padding-right:0vw;
     }
-    .form input{
-      font-size: 25px;
+    .cta .form input{
+      font-size: 3vw;
+    }
+
+    .call{
+      padding:auto;
+
+    }
+
+    .call h2:first-child{
+      font-size:27vw;
+    }
+    .call h2:last-child{
+      font-size:16vw;
+      margin-top:-16vw;
     }
   }
 </style>
