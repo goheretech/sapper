@@ -268,7 +268,7 @@
     background-size: contain;
     top: -50%;
     left: -50%;
-    width: 100vw;
+    width: auto;
     height: 100vh;
     z-index: 1;
   }
@@ -290,7 +290,7 @@
     align-items: flex-end;
     flex-direction: column;
     padding-right: 10vw;
-    padding-bottom: 5vw;
+    padding-bottom: 15vw;
     z-index: 2;
   }
   .hero .text h3 {
