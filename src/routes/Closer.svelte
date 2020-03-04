@@ -606,7 +606,7 @@
       font-size: 5vw;
       padding:0px;
       margin-bottom:3vw;
-      line-height:auto;
+      line-height:5vw;
 
     }
     .form .form__section{
