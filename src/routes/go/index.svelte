@@ -127,6 +127,13 @@
       showing = true;
     }, 500);
   }
+  function goWhy() {
+    var elem = document.querySelector('#nebula');
+    if (elem){
+      elem.style.display = 'none';
+    }
+    window.location.href = "/Closer";
+  }
   function goContact() {
     hash = window.location.hash;
     showing = false;
@@ -345,6 +352,9 @@
         </a>
       </li> -->
       </li>
+      <li>
+        <a on:click={goWhy}>Why</a>
+      </li>
       <li class:active={page === 3} class:act={displayMenu}>
         <a
           rel="prefetch"
@@ -356,6 +366,7 @@
           <span>work</span>
         </a>
       </li>
+      
       <li class:active={page === 4} class:act={displayMenu}>
         <a
           rel="prefetch"
@@ -367,6 +378,7 @@
           <span>contact</span>
         </a>
       </li>
+      
     </ul>
 
     <div class="burger" class:toggle={displayMenu} on:click={toggleMenu}>

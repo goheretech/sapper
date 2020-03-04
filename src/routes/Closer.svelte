@@ -700,7 +700,7 @@
   </section>
   <section class="hero">
     <img class="planet" src="img/Planets/planet1-min.png" alt="" />
-    <img class="astro" src="img/astro-opt.png" alt="" />
+    <img class="astro" src="img/astro.png" alt="" />
     <div class="text">
       <h3>Creative Vision</h3>
       <h1>

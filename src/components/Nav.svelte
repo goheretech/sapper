@@ -79,6 +79,11 @@
           <span>what</span>
         </a>
       </li>
+      <li class:act={displayMenu}>
+        <a rel="prefetch" href="Closer">
+          <span>why</span>
+        </a>
+      </li>
       <!-- <li class:act="{displayMenu}">
         <a  rel=prefetch href="go#where">
           <span>where</span>
