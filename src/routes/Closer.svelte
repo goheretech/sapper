@@ -617,10 +617,10 @@
     }
 
     .cta .form{
-      font-size: 5vw;
+      font-size: 6vw;
       padding:0px;
       margin-bottom:3vw;
-      line-height:5vw;
+      line-height:13vw;
 
     }
     .form .form__section{
@@ -628,7 +628,7 @@
       margin-bottom: 6vw;
     }
     .cta .form input{
-      font-size: 3vw;
+      font-size: 6vw;
       margin: 0px 4vw;
     }
 
