@@ -110,6 +110,24 @@
       ]);
       $.jScrollability([
         {
+          selector: ".hero .text",
+          start: function($el) {
+            return $el.offset().top+500;
+          },
+          end: function($el) {
+            return $el.offset().top + $el.height() + 500;
+          },
+          fn: {
+            opacity: {
+              start: 100,
+              end: 0,
+              unit: "%"
+            }
+          }
+        }
+      ]);
+      $.jScrollability([
+        {
           selector: ".feed h3",
           start: function($el) {
             return $el.offset().top + 100;
@@ -546,6 +564,7 @@
   @media screen and (max-width: 1100px) {
     section {
       padding: 50px 4vw;
+      position:relative;
     }
     .hero .astro {
       left: auto;
@@ -554,7 +573,10 @@
     }
     .hero .text {
       padding-right: 7vw;
-      padding-bottom: 25vw;
+      padding-bottom: 7vw;
+      position:absolute;
+      bottom:0px;
+      right:0px;
     }
     .hero .text h3 {
       font-size: 24px;
