@@ -611,7 +611,7 @@
 
     .call{
       padding:auto;
-
+      padding: 50px 4vw;
     }
 
     .call h2:first-child{
