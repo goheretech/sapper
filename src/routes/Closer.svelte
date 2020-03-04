@@ -1,8 +1,28 @@
 <script>
   import Nav from "../components/Nav.svelte";
   let form = {
-    name: ""
+    name: "",
+    project: "",
+    phone: "",
+    email: "",
+    website: ""
   };
+
+  let error = false;
+  let showThanks = false;
+  async function sendContactMessage() {
+    console.log("Send form...", form);
+    let db = firebase.firestore();
+    try {
+      await db.collection("leads").add(form);
+      showThanks = true;
+      alert('submitted')
+    } catch (e) {
+      console.log(";(", e);
+      console.log("Big Error: " + e);
+      error = true;
+    }
+  }
 
   const brands = [
     {
@@ -112,10 +132,10 @@
         {
           selector: ".hero .text",
           start: function($el) {
-            return $el.offset().top+500;
+            return $el.offset().top+700;
           },
           end: function($el) {
-            return $el.offset().top + $el.height() + 500;
+            return $el.offset().top + $el.height() + 700;
           },
           fn: {
             opacity: {
@@ -308,7 +328,7 @@
     align-items: flex-end;
     flex-direction: column;
     padding-right: 10vw;
-    padding-bottom: 15vw;
+    padding-bottom: 7vw;
     z-index: 2;
   }
   .hero .text h3 {
@@ -464,7 +484,7 @@
     margin: 0px 20px;
     font-size: 37px;
     color: #6d6d6d;
-    opacity: 50%;
+    opacity: 70%;
     text-align: center;
     transition: 200ms;
   }
@@ -482,7 +502,7 @@
     margin: 0px 20px;
     font-size: 42px;
     color: #6d6d6d;
-    opacity: 30%;
+    opacity: 100%;
     text-align: center;
     transition: 200ms;
   }
@@ -758,32 +778,32 @@
       <span class="color">your project.</span>
     </h3>
     <div class="form">
-      <form action="none">
+      <form on:submit|preventDefault={sendContactMessage}>
         <div class="form__section">
           <p>Hi, my name is</p>
           <input
-            class="color"
+            class="color muted"
             bind:value={form.name}
             type="text"
             placeholder="Full Name" />
           <p>and I am creating a</p>
-          <input type="text" class="color" placeholder="Type of Project" />
+          <input bind:value={form.project} type="text" class="color muted" placeholder="Type of Project" />
           <p>project for</p>
-          <input type="text" class="color" placeholder="Company Name" />
+          <input type="text" class="color muted" bind:value={form.website} placeholder="Current Website" />
           <p>and want to get goHere's input.</p>
         </div>
         <div class="form__section">
           <p>Please call me at</p>
-          <input class="color" type="text" placeholder="Phone Number" />
+          <input class="color muted" bind:value={form.phone} type="text" placeholder="Phone Number" />
           <p>or email me at</p>
-          <input class="color" type="text" placeholder="Email Address" />
+          <input class="color muted" type="text" bind:value={form.email} placeholder="Email Address" />
           <p>at your earliest convenience.</p>
         </div>
         <div class="form__section form__close">
           <p>Thank You!</p>
-          <h3 class="color" style="margin:0;">{form.name}</h3>
+          <h3 class="color muted" style="margin:0;">{form.name}</h3>
 
-          <button>Send It</button>
+          <button >Send It</button>
         </div>
       </form>
     </div>
