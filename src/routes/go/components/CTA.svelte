@@ -125,7 +125,7 @@
   }
   .arrow {
     display: block;
-    border: 40px rgb(57, 209, 27) solid;
+    border: 40px white solid;
     width: 0px;
     padding: 0px;
     height: 0px;
@@ -133,7 +133,7 @@
 
   .arrow_left {
     opacity: 0;
-    border: 40px rgb(206, 58, 32) solid;
+    border: 40px white solid;
     margin-left: -40px;
     border-left: 0px transparent solid;
     border-top: 80px transparent solid;
@@ -303,7 +303,7 @@
                 </label>
                 <div class="progress_holder" >
                   <div id="progress_glow" >
-                    <div id="progress" class="buttonOn"  on:click={sendContactMessage}>
+                    <div id="progress"  on:click={sendContactMessage}>
                       Submit
                     </div>
 

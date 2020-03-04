@@ -86,11 +86,32 @@
                 padding: 15px 30px;
                 margin-top:50px;
             }
+            .clientHolder{
+                padding-top:30px;
+                max-width: 1000px;
+            }
 
-            #back{
+            .backBt{
                 position:absolute;
                 top:0px;
                 left:30px;
+                color:white;
+            }
+            #back{
+                
+                background:white;
+                color:black;
+                border-radius:50%;
+                padding:6px;
+            }
+
+            #back .arrow{
+                position:relative;
+                left:-6px;
+                border: black solid 10px;
+                border-top-color: transparent;
+                border-left-color: transparent;
+                border-bottom-color: transparent;
             }
 
              @media screen and (max-width:500px) {
@@ -121,7 +142,7 @@
         {#if viewerOpen}
             <div class="clientHolder">
                 <Review clientID={clientID}/>
-                <button id="back" on:click="{checkHash}">Back</button>
+                <div class="backBt"> <div id="back" on:click="{checkHash}"><div class="arrow"></div></div>Back</div>
             </div>
         {/if}
         </div>

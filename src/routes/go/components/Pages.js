@@ -55,7 +55,7 @@ export let pages = [
                tag: 'Lets Go!',
                head: 'We Want to Hear from You!',
                par:
-                   'We work with organizations of all types across all industries. Stand out from the competition and stay ahead of the trends with goHere.',
+                   'We tackle projects of all types and work with organizations across all industries. Discover the power of creative tech solutions for any project you might have.',
                button: 'Apply Today',
                buttonHref: 'more#app'
            },

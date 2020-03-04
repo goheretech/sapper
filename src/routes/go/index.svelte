@@ -304,7 +304,7 @@
     <div style="position:relative">
       <a rel="prefetch" href="/" class="logo">
         go
-        <strong style="margin-left:-10px;">Here</strong>
+        <strong style="margin-left:-12px;">Here</strong>
       </a>
       <div class="logoHolder" style="">
         <img src="/img/newLogo1.png" style=" z-index:2;" alt="" id="logo" />
@@ -423,9 +423,9 @@
         {#if page == 4}
           <a
             style="position:relative; border:none;"
-            data-glow="305.998.0398"
-            href="tel:305.998.0398">
-            <span class="phone colorChange">305.998.0398</span>
+            data-glow="305.999.5595"
+            href="tel:305.999.5595">
+            <span class="phone colorChange">305.999.5595</span>
           </a>
         {/if}
         <!-- <a rel=prefetch on:click={goWhat} href={pages[page].buttonHref}>
