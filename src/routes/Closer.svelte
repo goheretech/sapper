@@ -1,4 +1,5 @@
-<script>
+<script>     
+    import Nav from '../components/Nav.svelte';
   let form = {
     name: ""
   };
@@ -390,10 +391,10 @@
   }
   .quote .mark {
     position: absolute;
+    color:#ffffff21;
     top: -100px;
     left: 100px;
     font-size: 1000px;
-    opacity: 10%;
   }
   .quote p {
     font-size: 6vw;
@@ -578,7 +579,7 @@
     }
     .feed p{
       margin-top:60px;
-      font-size:16vw;
+      font-size:13vw;
     }
 
     .feed{
@@ -587,7 +588,8 @@
     }
 
     .brands img{
-      width:15vw;
+      width:auto;
+      height:10vw;
       margin:0px 3vw;
     }
 
@@ -637,7 +639,7 @@
     }
 
     .call h2:first-child{
-      font-size:27vw;
+      font-size:25vw;
     }
     .call h2:last-child{
       font-size:16vw;
@@ -646,6 +648,7 @@
   }
 </style>
 
+<Nav />
 <div class="background">
   <section class="keywords">
     <h3 class="color">
@@ -682,7 +685,6 @@
     <p>
       We love to create
       <b class="color">unique,</b>
-      <br />
       <b class="color">authentic,</b>
       and
       <b class="color">memorable</b>
