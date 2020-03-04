@@ -602,7 +602,7 @@
       margin-top: 20px;
     }
     .feed p {
-      margin-top: 60px;
+      margin-top: 100px;
       font-size: 13vw;
     }
 
@@ -667,7 +667,7 @@
       font-size: 25vw;
     }
     .call h2:last-child {
-      font-size: 16vw;
+      font-size: 15vw;
       margin-top: -16vw;
     }
   }
