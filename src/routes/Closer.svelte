@@ -418,6 +418,7 @@
   }
   .form__section.form__close {
     align-self: flex-end;
+    text-align:right;
   }
   .cta .form p {
     display: inline;
@@ -593,7 +594,7 @@
     }
 
     .cta{
-      padding: 50px 4vw;
+      padding: 0px 4vw;
     }
 
     .cta h3{
@@ -605,17 +606,20 @@
       font-size: 5vw;
       padding:0px;
       margin-bottom:3vw;
+      line-height:auto;
+
     }
     .form .form__section{
       padding-right:0vw;
+      margin-bottom: 6vw;
     }
     .cta .form input{
       font-size: 3vw;
+      margin: 0px 4vw;
     }
 
     .call{
-      padding:auto;
-      padding: 50px 4vw;
+      padding: 00px 4vw 50px 4vw;
     }
 
     .call h2:first-child{
