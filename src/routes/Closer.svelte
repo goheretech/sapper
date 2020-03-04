@@ -312,9 +312,23 @@
   .hero_scroll .circle {
     margin-left: 35px;
     border-radius: 50%;
-    background: rgb(95, 95, 95);
+    background: rgb(255, 255, 255);
     width: 40px;
     height: 40px;
+    position:relative;
+    top:3px;
+    left:-13px;
+  }
+  .hero_scroll .arrow{
+    
+    border: solid rgb(0, 0, 0) 10px;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    width: 0px;
+    height: 0px;
+    margin-left:10px;
+    margin-top:18px;
   }
 
   .feed {
@@ -382,7 +396,7 @@
     opacity: 10%;
   }
   .quote p {
-    font-size: 112px;
+    font-size: 6vw;
     margin-bottom: 0px;
     text-indent: 200px;
     position: relative;
