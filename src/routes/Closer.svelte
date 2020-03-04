@@ -218,24 +218,7 @@
           }
         }
       ]);
-      $.jScrollability([
-        {
-          selector: ".form__section",
-          start: function($el) {
-            return $el.offset().top + 200;
-          },
-          end: function($el) {
-            return $el.offset().top + $el.height() + 100;
-          },
-          fn: {
-            opacity: {
-              start: 0,
-              end: 100,
-              unit: "%"
-            }
-          }
-        }
-      ]);
+     
       $.jScrollability([
         {
           selector: ".call h2:last-child",
