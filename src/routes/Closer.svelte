@@ -725,7 +725,7 @@
     </p>
     <div class="author">
       <h4>- Christopher Reid</h4>
-      <h6>Founder and CEO of goHere</h6><span style="font-size: 16px;margin-bottom:32px;">®</span>
+      <div style="display:flex;"><h6>Founder and CEO of goHere</h6><span style="font-size: 6px;margin-bottom:32px;">®</span></div>
     </div>
   </section>
 
