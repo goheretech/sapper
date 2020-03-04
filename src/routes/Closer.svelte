@@ -111,7 +111,7 @@
         {
           selector: ".feed h3",
           start: function($el) {
-            return $el.offset().top + 300;
+            return $el.offset().top + 100;
           },
           end: function($el) {
             return $el.offset().top + $el.height() + 500;
@@ -129,7 +129,7 @@
         {
           selector: ".feed h2",
           start: function($el) {
-            return $el.offset().top + 500;
+            return $el.offset().top ;
           },
           end: function($el) {
             return $el.offset().top + $el.height() + 500;
@@ -549,7 +549,7 @@
     }
 
     .feed h3{
-      margin-top:100px;
+      margin-top:0px;
       font-size:10vw;
     }
     .feed h2{
@@ -562,8 +562,50 @@
       margin-top:20px;
     }
     .feed p{
-      margin-top:20px;
+      margin-top:60px;
       font-size:16vw;
+    }
+
+    .feed{
+      padding-bottom: 80px;
+      padding-top:140px;
+    }
+
+    .brands img{
+      width:90px;
+      margin:0px 20px;
+    }
+
+    .quote{
+      padding-top: 14px;
+      padding-bottom: 64px;
+    }
+
+    .quote p{
+      text-indent:55px;
+      font-size:11vw;
+    }
+    .quote .author h4{
+      font-size:9vw;
+    }
+    .quote .author h6{
+      font-size:4vw;
+    }
+
+    .cta h3{
+      font-size:8vw;
+      margin: 50px 0;
+    }
+
+    .cta .form{
+      font-size: 25px;
+      padding:0px;
+    }
+    .form .form__section{
+      padding-right:0vw;
+    }
+    .form input{
+      font-size: 25px;
     }
   }
 </style>
