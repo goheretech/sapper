@@ -772,7 +772,7 @@
           <p>and I am creating a</p>
           <input bind:value={form.project} type="text" class="color muted" placeholder="Type of Project" />
           <p>project for</p>
-          <input type="text" class="color muted" bind:value={form.website} placeholder="Current Website" />
+          <input type="text" class="color muted" bind:value={form.website} placeholder="Company" />
           <p>and want to get goHere's input.</p>
         </div>
         <div class="form__section">
