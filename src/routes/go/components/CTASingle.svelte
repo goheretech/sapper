@@ -212,6 +212,8 @@
       }
       button{
           margin-top:12px;
+      }
+  }
 </style>
 
 <form action="" on:submit|preventDefault={sendContactMessage}>
