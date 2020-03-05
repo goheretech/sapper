@@ -35,42 +35,40 @@
     let bar = document.getElementById("progress");
 
     if (position < 4) {
-        position++;
+      position++;
     }
     if (position == 4) {
-        visible.next = false;
+      visible.next = false;
     } else {
-        visible.next = true;
+      visible.next = true;
     }
 
     if (position == 0) {
-        visible.previous = false;
+      visible.previous = false;
     } else {
-        visible.previous = true;
+      visible.previous = true;
     }
     bar.style.width = 20 * (position + 1) + "%";
-   
   }
   function previousPosition() {
     let bar = document.getElementById("progress");
 
     if (position > 0) {
-        position--;
+      position--;
     }
 
     if (position == 4) {
-        visible.next = false;
+      visible.next = false;
     } else {
-        visible.next = true;
+      visible.next = true;
     }
 
     if (position == 0) {
-        visible.previous = false;
+      visible.previous = false;
     } else {
-        visible.previous = true;
+      visible.previous = true;
     }
     bar.style.width = 20 * (position + 1) + "%";
-   
   }
 
   function focus0() {
@@ -78,7 +76,7 @@
 
     let bar = document.getElementById("progress");
     bar.style.width = 20 * (position + 1) + "%";
-   
+
     if (position == 4) {
       visible.next = false;
     } else {
@@ -96,7 +94,7 @@
 
     let bar = document.getElementById("progress");
     bar.style.width = 20 * (position + 1) + "%";
-   
+
     if (position == 4) {
       visible.next = false;
     } else {
@@ -114,7 +112,7 @@
 
     let bar = document.getElementById("progress");
     bar.style.width = 20 * (position + 1) + "%";
-   
+
     if (position == 4) {
       visible.next = false;
     } else {
@@ -132,7 +130,7 @@
 
     let bar = document.getElementById("progress");
     bar.style.width = 20 * (position + 1) + "%";
-   
+
     if (position == 4) {
       visible.next = false;
     } else {
@@ -149,7 +147,7 @@
     position = 4;
     let bar = document.getElementById("progress");
     bar.style.width = 20 * (position + 1) + "%";
-   
+
     if (position == 4) {
       visible.next = false;
     } else {
@@ -210,7 +208,7 @@
     width: 100%;
     margin-top: 40px;
     background-image: url("img/grad2.png");
-    /* animation: colorRotate 2s infinite; */
+    animation: colorRotate 2s infinite;
     background-size: cover;
     font-size: 0px;
     width: 20%;
@@ -227,10 +225,10 @@
     margin-top: 28vh;
   }
 
-  .ready{
-      font-size: 40px;
-        color:rgb(200, 40, 206);
-        animation: colorRotate 2s infinite;
+  .ready {
+    font-size: 40px;
+    color: rgb(244, 224, 245);
+    animation: colorRotate 2s infinite;
   }
 
   @media screen and (max-width: 1100px) {
@@ -250,49 +248,64 @@
   }
 </style>
 
-<form action="" on:submit|preventDefault={sendContactMessage}>
+{#if submitted}
+  <form action="" on:submit|preventDefault={sendContactMessage}>
 
-  <div class="holder">
-    <div
-      class="arrow arrow__right"
-      class:visible={visible.previous}
-      on:click={previousPosition} />
-    <div class="frm">
-      <input
-        type="text"
-        class:visible={position == 0}
-        bind:value={form.name}
-        on:focus={focus0}
-        placeholder="Name" />
-      <input
-        type="text"
-        class:visible={position == 1}
-        bind:value={form.project}
-        on:focus={focus1}
-        placeholder="Type of Project" />
-      <input
-        type="text"
-        class:visible={position == 2}
-        bind:value={form.website}
-        on:focus={focus2}
-        placeholder="Company" />
-      <input
-        type="text"
-        class:visible={position == 3}
-        bind:value={form.phone}
-        on:focus={focus3}
-        placeholder="Phone" />
-      <input
-        type="text"
-        class:visible={position == 4}
-        bind:value={form.email}
-        on:focus={focus4}
-        placeholder="Email" />
+    <div class="holder">
+      <div
+        class="arrow arrow__right"
+        class:visible={visible.previous}
+        on:click={previousPosition} />
+      <div class="frm">
+        <input
+          type="text"
+          class:visible={position == 0}
+          bind:value={form.name}
+          on:focus={focus0}
+          placeholder="Name" />
+        <input
+          type="text"
+          class:visible={position == 1}
+          bind:value={form.project}
+          on:focus={focus1}
+          placeholder="Type of Project" />
+        <input
+          type="text"
+          class:visible={position == 2}
+          bind:value={form.website}
+          on:focus={focus2}
+          placeholder="Company" />
+        <input
+          type="text"
+          class:visible={position == 3}
+          bind:value={form.phone}
+          on:focus={focus3}
+          placeholder="Phone" />
+        <input
+          type="text"
+          class:visible={position == 4}
+          bind:value={form.email}
+          on:focus={focus4}
+          placeholder="Email" />
+      </div>
+      {#if position == 4}
+        <div
+          class="arrow arrow__left visible"
+          id="submit"
+          on:click={sendContactMessage} />
+      {:else}
+        <div
+          class="arrow arrow__left"
+          class:visible={visible.next}
+          on:click={nextPosition} />
+      {/if}
     </div>
-    <div
-      class="arrow arrow__left"
-      class:visible={visible.next}
-      on:click={nextPosition} />
+    <button id="progress">Submit</button>
+  </form>
+{:else}
+  <div class="thanks">
+    <h1>Thank You, {form.name}</h1>
+    <h3>Our team will review your website, {form.website}</h3>
+    <span>One of our ambassadors will contact you shortly.</span>
   </div>
-  <button id="progress" class:ready={position==4} >Submit</button>
-</form>
+{/if}
