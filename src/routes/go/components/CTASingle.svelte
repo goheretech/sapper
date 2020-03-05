@@ -20,7 +20,6 @@
     try {
       await db.collection("leads").add(form);
       submitted = true;
-      alert("submitted");
     } catch (e) {
       console.log(";(", e);
       console.log("Big Error: " + e);
