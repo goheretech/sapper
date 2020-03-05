@@ -161,6 +161,7 @@
     left: 50%;
     width:93%;
     height:13vh;
+    padding:0px 15px;
   }
 
   .arrow {
