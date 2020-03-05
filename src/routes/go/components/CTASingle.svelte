@@ -231,6 +231,16 @@
     animation: colorRotate 2s infinite;
   }
 
+  .thanks{
+      color:White;
+  }
+  .thanks h1{
+      font-size:3vw
+  }
+  .thanks h3{
+      font-size:2em;
+  }
+
   @media screen and (max-width: 1100px) {
     form {
       width: 95vw;
@@ -248,7 +258,7 @@
   }
 </style>
 
-{#if submitted}
+{#if !submitted}
   <form action="" on:submit|preventDefault={sendContactMessage}>
 
     <div class="holder">
