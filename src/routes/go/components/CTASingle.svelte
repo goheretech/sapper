@@ -32,42 +32,53 @@
   }
 
   function nextPosition() {
+    let bar = document.getElementById("progress");
+
     if (position < 4) {
-      position++;
+        position++;
     }
     if (position == 4) {
-      visible.next = false;
+        visible.next = false;
     } else {
-      visible.next = true;
+        visible.next = true;
     }
 
     if (position == 0) {
-      visible.previous = false;
+        visible.previous = false;
     } else {
-      visible.previous = true;
+        visible.previous = true;
     }
+    bar.style.width = 20 * (position + 1) + "%";
+   
   }
   function previousPosition() {
+    let bar = document.getElementById("progress");
+
     if (position > 0) {
-      position--;
+        position--;
     }
 
     if (position == 4) {
-      visible.next = false;
+        visible.next = false;
     } else {
-      visible.next = true;
+        visible.next = true;
     }
 
     if (position == 0) {
-      visible.previous = false;
+        visible.previous = false;
     } else {
-      visible.previous = true;
+        visible.previous = true;
     }
+    bar.style.width = 20 * (position + 1) + "%";
+   
   }
 
   function focus0() {
     position = 0;
 
+    let bar = document.getElementById("progress");
+    bar.style.width = 20 * (position + 1) + "%";
+   
     if (position == 4) {
       visible.next = false;
     } else {
@@ -83,6 +94,9 @@
   function focus1() {
     position = 1;
 
+    let bar = document.getElementById("progress");
+    bar.style.width = 20 * (position + 1) + "%";
+   
     if (position == 4) {
       visible.next = false;
     } else {
@@ -98,6 +112,9 @@
   function focus2() {
     position = 2;
 
+    let bar = document.getElementById("progress");
+    bar.style.width = 20 * (position + 1) + "%";
+   
     if (position == 4) {
       visible.next = false;
     } else {
@@ -113,6 +130,9 @@
   function focus3() {
     position = 3;
 
+    let bar = document.getElementById("progress");
+    bar.style.width = 20 * (position + 1) + "%";
+   
     if (position == 4) {
       visible.next = false;
     } else {
@@ -127,7 +147,9 @@
   }
   function focus4() {
     position = 4;
-
+    let bar = document.getElementById("progress");
+    bar.style.width = 20 * (position + 1) + "%";
+   
     if (position == 4) {
       visible.next = false;
     } else {
@@ -149,7 +171,7 @@
     height: 49vh;
     margin-top: -20vh;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     position: relative;
   }
   input {
@@ -159,9 +181,9 @@
     position: absolute;
     top: 0%;
     left: 50%;
-    width:93%;
-    height:13vh;
-    padding:0px 15px;
+    width: 93%;
+    height: 13vh;
+    padding: 0px 15px;
   }
 
   .arrow {
@@ -171,7 +193,7 @@
   }
   .arrow {
     opacity: 0;
-    width:2vw;    
+    width: 2vw;
   }
   .arrow__left {
     right: 0px;
@@ -186,34 +208,45 @@
   }
   button {
     width: 100%;
-    margin-top:40px;
+    margin-top: 40px;
+    background-image: url("img/grad2.png");
+    /* animation: colorRotate 2s infinite; */
+    background-size: cover;
+    font-size: 0px;
+    width: 20%;
   }
   .frm {
     width: 100%;
     height: 100%;
-    display:flex;
+    display: flex;
     position: relative;
   }
-  .holder{
-      display:flex;
-      height:13vh;
-      margin-top:28vh;
+  .holder {
+    display: flex;
+    height: 13vh;
+    margin-top: 28vh;
+  }
+
+  .ready{
+      font-size: 40px;
+        color:rgb(200, 40, 206);
+        animation: colorRotate 2s infinite;
   }
 
   @media screen and (max-width: 1100px) {
-      form{
-          width:95vw;
-      }
-      .holder{
-          margin-top:25vh;
-          height:6vh;
-      }
-      input{
-          height:5vh;
-      }
-      button{
-          margin-top:12px;
-      }
+    form {
+      width: 95vw;
+    }
+    .holder {
+      margin-top: 25vh;
+      height: 6vh;
+    }
+    input {
+      height: 5vh;
+    }
+    button {
+      margin-top: 12px;
+    }
   }
 </style>
 
@@ -223,8 +256,7 @@
     <div
       class="arrow arrow__right"
       class:visible={visible.previous}
-      on:click={previousPosition}>
-    </div>
+      on:click={previousPosition} />
     <div class="frm">
       <input
         type="text"
@@ -260,8 +292,7 @@
     <div
       class="arrow arrow__left"
       class:visible={visible.next}
-      on:click={nextPosition}>
-    </div>
+      on:click={nextPosition} />
   </div>
-  <button>Submit</button>
+  <button id="progress" class:ready={position==4} >Submit</button>
 </form>
