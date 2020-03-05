@@ -440,9 +440,11 @@
             <span class="phone colorChange">305.999.5595</span>
           </a>
         {/if}
-        <!-- <a rel=prefetch on:click={goWhat} href={pages[page].buttonHref}>
-          {pages[page].button}
-        </a> -->
+        {#if pages[page].button != ''}
+          <a rel=prefetch on:click={goWhy} href={pages[page].buttonHref}>
+            {pages[page].button}
+          </a>
+        {/if}
       </div>
     {/if}
   </section>
@@ -491,7 +493,7 @@
         <div class="cc">
 
           <div class="mini">
-            <div class="icon ico-purple" />
+            <div class="icon ico-purple colorChange" />
             <h6>be creative</h6>
           </div>
           <h2 class="ctah2">

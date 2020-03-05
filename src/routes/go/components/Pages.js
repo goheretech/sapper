@@ -8,8 +8,8 @@ export let pages = [
                head: 'Envisioneers',
                par:
                    'We combine <b>technology</b>, <b>design</b>, and <b>communication</b> to <i>give life to ambitious creative vision.</i>',
-               button: 'Check It Out',
-               buttonHref: 'more#what'
+               button: 'Find Out Why',
+               buttonHref: 'Closer'
            },
            {
                page: 'What',
@@ -20,7 +20,7 @@ export let pages = [
                head: 'Sharpening The Cutting Edge.',
                par:
                    'We develop and apply technology in creative ways aimed at adding value to your organization. Every move we make is client focused and carefully calculated using the latest insights and analytics.',
-               button: 'Check It Out',
+               button: '',
                buttonHref: 'more#what'
            },
            {
@@ -44,8 +44,8 @@ export let pages = [
                head: 'Our Amazing Partners.',
                par:
                    'Whether you’re a startup, nonprofit, or a household brand, goHere <b>adds value.</b> We select clients we <b>resonate</b> with, bringing the right amount of <b>passion and inspiration</b> to any project.',
-               button: 'Check It Out',
-               buttonHref: 'more#what'
+               button: 'Become a Partner',
+               buttonHref: 'Closer'
            },
            {
                page: 'Contact',
@@ -56,7 +56,7 @@ export let pages = [
                head: 'We Want to Hear from You!',
                par:
                    'We tackle projects of all types and work with organizations across all industries. Discover the power of creative tech solutions for any project you might have.',
-               button: 'Apply Today',
+               button: '',
                buttonHref: 'more#app'
            },
            {
