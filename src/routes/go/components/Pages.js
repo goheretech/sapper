@@ -43,7 +43,7 @@ export let pages = [
                tag: 'Powerful',
                head: 'Our Amazing Partners.',
                par:
-                   'Whether you’re a startup, nonprofit, or a household brand, goHere <b>adds value.</b> We select clients we <b>resonate</b> with, bringing the right amount of <b>passion and inspiration</b> to any project.',
+                   'Whether you’re a startup, nonprofit, or a household brand, goHere <b>adds value</b>. We select clients we resonate with, <b>bringing passion and inspiration</b> to any project.',
                button: 'Become a Partner',
                buttonHref: 'Closer'
            },

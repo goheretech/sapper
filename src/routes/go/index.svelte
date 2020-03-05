@@ -4,7 +4,7 @@
   import { fade } from "svelte/transition";
   import { quintOut } from "svelte/easing";
   import { pages } from "./components/Pages.js";
-  import CTA from "./components/CTA.svelte";
+  import CTASingle from "./components/CTASingle.svelte";
   import Who from "./pages/Who.svelte";
   import What from "./pages/What.svelte";
   import Where from "./pages/Where.svelte";
@@ -471,7 +471,7 @@
             <Work />
           {/if}
           {#if page == 4}
-            <CTA />
+            <CTASingle />
             <Clouds />
           {/if}
           {#if page == 5}
@@ -518,9 +518,8 @@
       </section>
     {:else}
       <div transition:fade={{ delay: 150, duration: 300 }}>
-        <CTA />
+        <CTASingle />
       </div>
     {/if}
-    <a style="opacity:0" href="/nc-pilot">What if</a>
   </div>
 {/if}

@@ -68,6 +68,10 @@
   function enableButton() {
     form.ready = true;
   }
+
+  function blank(){
+    console.log('nothing happened')
+  }
 </script>
 
 <style>
@@ -249,7 +253,7 @@
       <div class="cl">
         <div class="ctaform">
           {#if showThanks == false}
-            <div class="form">
+            <form class="form" on:submit|preventDefault={blank}>
               <div class="cta__holder">
                 <label>
                   <h3>{form.label[form.position]}</h3>
@@ -261,7 +265,7 @@
                         placeholder="Marty McFly"
                         on:input={enableForward} />
                     {:else if form.position == 1}
-                      <button
+                      <div
                         class="arrow arrow_left"
                         class:active={form.canBack}
                         on:click={formBack}
@@ -273,11 +277,10 @@
                         on:input={enableForward} />
                     {/if}
                     {#if form.position == 2}
-                      <button
+                      <div
                         class="arrow arrow_left"
                         class:active={form.canBack}
-                        on:click={formBack}
-                        on:input={enableForward} />
+                        on:click={formBack}/>
                       <input
                         type="text"
                         bind:value={contactForm.phone}
@@ -285,7 +288,7 @@
                         on:input={enableForward} />
                     {/if}
                     {#if form.position == 3}
-                      <button
+                      <div
                         class="arrow arrow_left"
                         class:active={form.canBack}
                         on:click={formBack} />
@@ -295,7 +298,7 @@
                         placeholder="www.mycoolsite.com"
                         on:input={enableButton} />
                     {/if}
-                    <button
+                    <div
                       class="arrow arrow_right"
                       class:active={form.canForward}
                       on:click={formNext} />
@@ -310,7 +313,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </form>
           {:else}
             <div class="thanks">
               <h1>Thank You, {contactForm.name}</h1>
