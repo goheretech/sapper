@@ -759,7 +759,7 @@
     <div class="author">
       <h4>- Christopher Reid</h4>
       <div style="display:flex;">
-        <h6>Lead Envisioneer</h6>
+        <h6>Founder and Lead Envisioneer of goHere</h6>
         <span style="font-size: 6px;margin-bottom:32px;">®</span>
       </div>
     </div>

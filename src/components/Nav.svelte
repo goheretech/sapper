@@ -56,7 +56,7 @@
     <div style="position:relative">
       <a rel="prefetch" href="/" class="logo">
         go
-        <strong style="margin-left:-10px;">Here</strong>
+        <strong style="margin-left:-15px;">Here</strong>
       </a>
       <div class="logoHolder" style="">
         <img src="/img/newLogo1.png" style=" z-index:2;" alt="" id="logo" />
@@ -79,11 +79,6 @@
           <span>what</span>
         </a>
       </li>
-      <li class:act={displayMenu}>
-        <a rel="prefetch" href="Closer">
-          <span>why</span>
-        </a>
-      </li>
       <!-- <li class:act="{displayMenu}">
         <a  rel=prefetch href="go#where">
           <span>where</span>
@@ -94,6 +89,11 @@
           <span>work</span>
         </a>
       </li>
+      <!-- <li class:act={displayMenu}>
+        <a rel="prefetch" href="Closer">
+          <span>why</span>
+        </a>
+      </li> -->
       <li class:act={displayMenu}>
         <a rel="prefetch" href="go#contact">
           <span>contact</span>

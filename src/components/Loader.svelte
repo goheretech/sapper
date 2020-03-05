@@ -15,7 +15,7 @@
     top:0;
     left:0;
     z-index:9999;
-    animation: colorRotate3 700ms linear infinite;
+    animation: colorRotate3 1s linear infinite;
   }
   h2{
     outline:none;

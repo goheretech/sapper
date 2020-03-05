@@ -311,7 +311,7 @@
     <div style="position:relative">
       <a rel="prefetch" href="/" class="logo">
         go
-        <strong style="margin-left:-12px;">Here</strong>
+        <strong style="margin-left:-15px;">Here</strong>
       </a>
       <div class="logoHolder" style="">
         <img src="/img/newLogo1.png" style=" z-index:2;" alt="" id="logo" />
@@ -352,9 +352,6 @@
         </a>
       </li> -->
       </li>
-      <li>
-        <a on:click={goWhy}>Why</a>
-      </li>
       <li class:active={page === 3} class:act={displayMenu}>
         <a
           rel="prefetch"
@@ -366,6 +363,9 @@
           <span>work</span>
         </a>
       </li>
+      <!-- <li class:act={displayMenu}>
+        <a href="/Closer" on:click={goWhy}>Why</a>
+      </li> -->
       
       <li class:active={page === 4} class:act={displayMenu}>
         <a
@@ -500,7 +500,7 @@
             Something Beautiful
           </h2>
           <h3 class="ctah3">
-            Reach out today and find out what goHere can do for you.
+            Reach out today and find out what goHere can do for you!
           </h3>
           <div class="buttonHold">
             
@@ -509,7 +509,7 @@
               class="ctaa"
               on:click={goContact}
               href="go#contact">
-              Let's Go
+              Let's Go!
             </a>
           </div>
         </div>

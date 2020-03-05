@@ -56,14 +56,14 @@
             head: 'What are Creative solutions?',
             par: 'We develop customized, technology-based strategies to help you solve problems, optimize growth, and reach your unique goals.',
             button: "Learn More",
-            link: 'more#what',
+            link: 'go#what',
         },
         {
             tag: 'INCITING INSPIRATION',
-            head: 'Be Exceptional',
+            head: 'Be Exceptional.',
             par: 'At goHere, we have built a community where creative minds flourish, a spirit of excellence is embraced, and adding value is a way of life. Helping you create is what we love to do.',
             button: 'Who We Are',
-            link: 'more#who',
+            link: 'go#who',
         }
     ]
 </script>
@@ -183,7 +183,7 @@
                 <h6>be creative</h6>
             </div>
             <h2>Join us at</h2><h2 class="bigBoy">the Cutting Edge.</h2>            
-            <a href="more#contact">Let's Go</a>
+            <a href="Closer">Let's Go</a>
         </div>
     </section>
     {/if} 
