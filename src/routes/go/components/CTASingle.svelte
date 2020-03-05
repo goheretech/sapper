@@ -31,7 +31,7 @@
   }
 
   function nextPosition() {
-    let bar = document.getElementById("progress");
+    let bar = document.getElementById("pOT");
 
     if (position < 4) {
       position++;
@@ -50,7 +50,7 @@
     bar.style.width = 20 * (position + 1) + "%";
   }
   function previousPosition() {
-    let bar = document.getElementById("progress");
+    let bar = document.getElementById("pOT");
 
     if (position > 0) {
       position--;
@@ -73,7 +73,7 @@
   function focus0() {
     position = 0;
 
-    let bar = document.getElementById("progress");
+    let bar = document.getElementById("pOT");
     bar.style.width = 20 * (position + 1) + "%";
 
     if (position == 4) {
@@ -91,7 +91,7 @@
   function focus1() {
     position = 1;
 
-    let bar = document.getElementById("progress");
+    let bar = document.getElementById("pOT");
     bar.style.width = 20 * (position + 1) + "%";
 
     if (position == 4) {
@@ -109,7 +109,7 @@
   function focus2() {
     position = 2;
 
-    let bar = document.getElementById("progress");
+    let bar = document.getElementById("pOT");
     bar.style.width = 20 * (position + 1) + "%";
 
     if (position == 4) {
@@ -127,7 +127,7 @@
   function focus3() {
     position = 3;
 
-    let bar = document.getElementById("progress");
+    let bar = document.getElementById("pOT");
     bar.style.width = 20 * (position + 1) + "%";
 
     if (position == 4) {
@@ -144,7 +144,7 @@
   }
   function focus4() {
     position = 4;
-    let bar = document.getElementById("progress");
+    let bar = document.getElementById("pOT");
     bar.style.width = 20 * (position + 1) + "%";
 
     if (position == 4) {
@@ -184,19 +184,26 @@
   }
 
   .arrow {
-    background: rgb(255, 255, 255);
+    /* background: rgb(255, 255, 255); */
     /* position: absolute; */
     top: 50%;
   }
   .arrow {
     opacity: 0;
     width: 2vw;
+    border: 40px white solid;
   }
   .arrow__left {
     right: 0px;
+    border-right: 0px transparent solid;
+    border-top: 60px transparent solid;
+    border-bottom: 60px transparent solid;
   }
   .arrow__right {
     left: 0px;
+    border-left: 0px transparent solid;
+    border-top: 60px transparent solid;
+    border-bottom: 60px transparent solid;
   }
 
   .visible {
@@ -205,12 +212,22 @@
   }
   button {
     width: 100%;
-    margin-top: 40px;
-    background-image: url("img/grad2.png");
-    animation: colorRotate 2s infinite;
-    background-size: cover;
+    
+    background-image: linear-gradient(to right, #d624a6, #f7a140, green, #22d8d8, purple, #d624a6);
+    background-size: 600%;
+    animation: colorScroll 20s linear infinite;
     font-size: 0px;
-    width: 20%;
+    
+    border:none;
+    filter: blur(15px);
+  }
+  #pOT{
+      margin-top: 40px;
+     background:white;
+     border-radius:20px;
+      width:100%;
+      height:100%;
+      width: 20%;
   }
   .frm {
     width: 100%;
@@ -309,7 +326,9 @@
           on:click={nextPosition} />
       {/if}
     </div>
-    <button id="progress">Submit</button>
+    <span id="pOT">
+        <button id="progress"><span>Submit</span></button>
+    </span>
   </form>
 {:else}
   <div class="thanks">
