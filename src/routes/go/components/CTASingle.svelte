@@ -45,10 +45,10 @@
 
 <style>
   input {
-    visibility: hidden;
+    opacity:0;
   }
   .visible {
-    visibility: visible;
+    opacity:1;
   }
 
   .arrow {
