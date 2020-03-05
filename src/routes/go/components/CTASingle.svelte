@@ -204,9 +204,14 @@
           width:95vw;
       }
       .holder{
-          margin-top:21vh;
+          margin-top:25vh;
+          height:6vh;
       }
-  }
+      input{
+          height:5vh;
+      }
+      button{
+          margin-top:12px;
 </style>
 
 <form action="" on:submit|preventDefault={sendContactMessage}>
