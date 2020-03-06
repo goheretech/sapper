@@ -49,6 +49,15 @@
     position: absolute;
     top: 0px;
   }
+  .logo strong{
+    margin-left:-15px;
+  }
+
+  @media screen and (max-width: 1100px) {
+   .logo strong{
+    margin-left:-10px;
+  }
+  }
 </style>
 
 <header>
@@ -56,7 +65,7 @@
     <div style="position:relative">
       <a rel="prefetch" href="/" class="logo">
         go
-        <strong style="margin-left:-15px;">Here</strong>
+        <strong >Here</strong>
       </a>
       <div class="logoHolder" style="">
         <img src="/img/newLogo1.png" style=" z-index:2;" alt="" id="logo" />

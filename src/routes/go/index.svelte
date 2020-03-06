@@ -241,6 +241,9 @@
     position: absolute;
     top: 0px;
   }
+  .logo strong{
+    margin-left:-15px;
+  }
 
   .CTA {
     z-index: 10;
@@ -285,6 +288,9 @@
     .phone {
       font-size: 42px !important;
     }
+    .logo strong{
+      margin-left: -10px;
+    }
   }
   @media screen and (max-width: 500px) {
     .space {
@@ -311,7 +317,7 @@
     <div style="position:relative">
       <a rel="prefetch" href="/" class="logo">
         go
-        <strong style="margin-left:-15px;">Here</strong>
+        <strong style="">Here</strong>
       </a>
       <div class="logoHolder" style="">
         <img src="/img/newLogo1.png" style=" z-index:2;" alt="" id="logo" />
