@@ -226,7 +226,6 @@
      background:white;
      border-radius:20px;
       width:100%;
-      height:100%;
       width: 20%;
   }
   .frm {
@@ -270,6 +269,19 @@
     }
     button {
       margin-top: 12px;
+    }
+
+    #pOT{
+      margin-top: 20px;
+    }
+    .arrow{
+      border-width:20px;
+    }
+    .arrow__left{
+      margin-left:20px;
+    }
+    .arrow__right{
+      margin-right:20px;
     }
   }
 </style>

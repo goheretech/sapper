@@ -3,9 +3,9 @@ export let pages = [
                page: 'Who',
                planet: '/img/Planets/np1.png',
                titleColor: 'Trailblazers',
-               title: 'of Tech.',
+               title: 'of Tech',
                tag: 'Nerd Alert',
-               head: 'Envisioneers',
+               head: 'Envisioneers.',
                par:
                    'We combine <b>technology</b>, <b>design</b>, and <b>communication</b> to <i>give life to ambitious creative vision.</i>',
                button: 'Find Out Why',
@@ -15,7 +15,7 @@ export let pages = [
                page: 'What',
                planet: '/img/Planets/np2.png',
                titleColor: 'Strategic',
-               title: 'Outcomes.',
+               title: 'Outcomes',
                tag: 'Masterminds',
                head: 'Sharpening The Cutting Edge.',
                par:
@@ -29,7 +29,7 @@ export let pages = [
                titleColor: 'Brilliance',
                title: 'Inventors.',
                tag: 'Noticeably Nationwide',
-               head: 'The Creative Agency of Miami Beach',
+               head: 'The Creative Agency of Miami Beach.',
                par:
                    'Immersed in the design culture characteristic of Miami, goHere easily brings inspiration and artistry to its work with clients all over the U.S.',
                button: 'Check It Out',
@@ -39,7 +39,7 @@ export let pages = [
                page: 'Work',
                planet: '/img/Planets/planet1-min.png',
                titleColor: 'Tech',
-               title: 'Renaissance.',
+               title: 'Renaissance',
                tag: 'Powerful',
                head: 'Our Amazing Partners.',
                par:
