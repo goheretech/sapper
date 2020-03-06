@@ -32,8 +32,8 @@
       rotation++;
       let newR = rotation / 10;
       let wave = Math.abs(Math.sin(newR / 10));
-      // console.log(wave)
-      // console.log(logo.style.transform)
+      console.log(wave)
+      console.log(logo.style.transform)
       logo.style.transform = `rotate(${newR}deg)`;
       blur.style.transform = `rotate(${newR}deg)`;
       blur.style.filter = `blur(${wave * 5}px) hue-rotate(${newR * 15}deg)`;
@@ -85,10 +85,10 @@
     pageName = "Who";
     setTimeout(() => {
       animateScroll.scrollToTop();
-      console.log("fade in");
+      // console.log("fade in");
       showing = true;
       frmShow = false;
-      console.log(frmShow);
+      // console.log(frmShow);
     }, 500);
   }
   function goWhat() {
@@ -100,7 +100,7 @@
     setTimeout(() => {
       animateScroll.scrollToTop();
       showing = true;
-      console.log(frmShow);
+      // console.log(frmShow);
     }, 500);
   }
   function goWhere() {
@@ -109,7 +109,7 @@
     page = 2;
     pageName = "Where";
     frmShow = false;
-    console.log(frmShow);
+    // console.log(frmShow);
     setTimeout(() => {
       animateScroll.scrollToTop();
       showing = true;
@@ -119,7 +119,7 @@
     hash = window.location.hash;
     showing = false;
     frmShow = false;
-    console.log(frmShow);
+    // console.log(frmShow);
     page = 3;
     pageName = "Work";
     setTimeout(() => {
@@ -132,13 +132,13 @@
     if (elem){
       elem.style.display = 'none';
     }
-    window.location.href = "/Closer";
+    window.location.href = "/Closer#cta";
   }
   function goContact() {
     hash = window.location.hash;
     showing = false;
     frmShow = false;
-    console.log(frmShow);
+    // console.log(frmShow);
     page = 4;
     pageName = "Contact";
     setTimeout(() => {
@@ -149,7 +149,7 @@
 
   function toggleMenu() {
     displayMenu = !displayMenu;
-    console.log(displayMenu);
+    // console.log(displayMenu);
   }
 </script>
 
@@ -515,7 +515,7 @@
             <a
               rel="prefetch"
               class="ctaa"
-              on:click={goContact}
+              on:click={goWhy}
               href="Closer#cta">
               Let's Go!
             </a>
