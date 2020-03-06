@@ -240,11 +240,11 @@
     margin-top: 28vh;
   }
 
-  .ready {
+  /* .ready {
     font-size: 40px;
     color: rgb(244, 224, 245);
     animation: colorRotate 2s infinite;
-  }
+  } */
 
   .thanks{
       color:White;

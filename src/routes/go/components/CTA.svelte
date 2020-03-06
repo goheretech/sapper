@@ -37,7 +37,10 @@
     bar.style.width = 25 * (form.position + 1) + "%";
     bar.style.opacity = 25 * (form.position + 1) + "%";
     form.canForward = false;
-    if (contactForm[Object.keys(contactForm)[form.position]] != "" && form.position <3) {
+    if (
+      contactForm[Object.keys(contactForm)[form.position]] != "" &&
+      form.position < 3
+    ) {
       form.canForward = true;
     }
 
@@ -69,8 +72,8 @@
     form.ready = true;
   }
 
-  function blank(){
-    console.log('nothing happened')
+  function blank() {
+    console.log("nothing happened");
   }
 </script>
 
@@ -83,13 +86,13 @@
   .cl {
     width: 100%;
   }
-  .leftCol {
+  /* .leftCol {
     text-align: left;
     width: 30%;
   }
   .rightCol {
     width: 70%;
-  }
+  } */
 
   .thanks h1 {
     font-size: 42px;
@@ -104,12 +107,12 @@
     .clH {
       flex-direction: column;
     }
-    .cl.leftCol {
+    /* .cl.leftCol {
       width: 90%;
     }
     .cl.rightCol {
       width: 90%;
-    }
+    } */
     /* .CTA {
       height: auto;
     }
@@ -177,7 +180,7 @@
     background: rgba(255, 255, 255, 0.2);
   }
   #progress {
-    height:25px;
+    height: 25px;
     width: 100%;
     opacity: 25%;
     background-image: url("img/grad2.png");
@@ -193,15 +196,6 @@
     -webkit-filter: blur(120px);
     filter: blur(120px);
     background-size: cover;
-  }
-
-  #progress.buttonOn {
-    height: 150px;
-    width: 100%;
-    /* animation: colorRotateGlowFast 1s infinite; */
-    filter: blur(0px);
-    color:white;
-    font-size: 65;
   }
 
   @keyframes colorRotateGlow {
@@ -280,7 +274,7 @@
                       <div
                         class="arrow arrow_left"
                         class:active={form.canBack}
-                        on:click={formBack}/>
+                        on:click={formBack} />
                       <input
                         type="text"
                         bind:value={contactForm.phone}
@@ -304,9 +298,9 @@
                       on:click={formNext} />
                   </div>
                 </label>
-                <div class="progress_holder" >
-                  <div id="progress_glow" >
-                    <div id="progress"  on:click={sendContactMessage}>
+                <div class="progress_holder">
+                  <div id="progress_glow">
+                    <div id="progress" on:click={sendContactMessage}>
                       Submit
                     </div>
 

@@ -484,24 +484,7 @@
     color: black;
     opacity: 100%;
   }
-  .cta .form select {
-    display: inline;
-    border: none;
-    border-bottom: #b0b8bf solid 2px;
-    padding: 10px 40px;
-    margin: 0px 20px;
-    font-size: 42px;
-    color: #6d6d6d;
-    opacity: 100%;
-    text-align: center;
-    transition: 200ms;
-  }
-  .cta .form select:focus {
-    outline: none;
-    border-bottom: #1b1b1b solid 2px;
-    color: black;
-    opacity: 80%;
-  }
+
 
   .call {
     padding: 20px 10vw 100px;
