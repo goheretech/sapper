@@ -43,5 +43,5 @@
 </style>
 
 <section>
-  <h2>Loading...</h2>
+  <h2>Creating...</h2>
 </section>
