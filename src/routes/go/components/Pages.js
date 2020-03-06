@@ -9,7 +9,7 @@ export let pages = [
                par:
                    'We combine <b>technology</b>, <b>design</b>, and <b>communication</b> to <i>create engineered outcomes.</i> <br>Join us at the cutting edge.',
                button: "Let's Get Started",
-               buttonHref: 'Closer'
+               buttonHref: 'Closer#cta'
            },
            {
                page: 'What',
@@ -19,7 +19,7 @@ export let pages = [
                tag: 'Masterminds',
                head: 'Sharpening The Cutting Edge.',
                par:
-                   'We develop and apply technology in creative ways aimed at adding value to your organization. Every move we make is client focused and carefully calculated using the latest insights and analytics.',
+                   'Create engaging experiences, designed for connection.  Engineer outcomes, designed for growth.  Discover solutions, designed for the future.',
                button: '',
                buttonHref: 'more#what'
            },
@@ -45,7 +45,7 @@ export let pages = [
                par:
                    'Whether you’re a startup, nonprofit, or a household brand, goHere <b>adds value</b>. We select clients we resonate with, <b>bringing passion and inspiration</b> to any project.',
                button: 'Become a Partner',
-               buttonHref: 'Closer'
+               buttonHref: 'Closer#cta'
            },
            {
                page: 'Contact',

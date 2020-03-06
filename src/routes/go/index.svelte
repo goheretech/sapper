@@ -516,7 +516,7 @@
               rel="prefetch"
               class="ctaa"
               on:click={goContact}
-              href="go#contact">
+              href="Closer#cta">
               Let's Go!
             </a>
           </div>

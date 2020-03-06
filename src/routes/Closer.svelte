@@ -1,5 +1,7 @@
 <script>
   import Nav from "../components/Nav.svelte";
+  import * as animateScroll from "svelte-scrollto";
+  // import { onMount } from "svelte";
   let submitted = false;
   let form = {
     name: "",
@@ -8,18 +10,21 @@
     email: "",
     website: ""
   };
+  import { onMount } from "svelte";
+  let hash = window.location.hash;
+  onMount(() => {
+    if (hash == "#cta") {
+      animateScroll.scrollTo({ element: "#cta" });
+    }
+  });
 
   let error = false;
   async function sendContactMessage() {
-    console.log("Send form...", form);
     let db = firebase.firestore();
     try {
       await db.collection("leads").add(form);
       submitted = true;
-      alert("submitted");
     } catch (e) {
-      console.log(";(", e);
-      console.log("Big Error: " + e);
       error = true;
     }
   }
@@ -62,6 +67,7 @@
       name: " Svelte"
     }
   ];
+
   (function($) {
     $(document).ready(function() {
       $.jScrollability([
@@ -387,7 +393,7 @@
     outline: none;
     border: none;
     padding: 40px 0px;
-    padding-bottom:140px;
+    padding-bottom: 140px;
   }
   .brands .row {
     display: flex;
@@ -567,11 +573,9 @@
     right: 75vw;
   }
 
-  .cta h5{
-    
+  .cta h5 {
     font-size: 3vw;
     margin-bottom: 2vw;
-
   }
 
   @media screen and (max-width: 1100px) {
@@ -765,7 +769,7 @@
     </div>
   </section>
 
-  <section class="cta">
+  <section id="cta" class="cta">
     {#if !submitted}
       <h3>
         Tell us about
@@ -819,12 +823,10 @@
       </div>
     {:else}
       <h3>
-        Thank you, 
+        Thank you,
         <span class="color">{form.name}!</span>
       </h3>
       <h5>We look forward to speaking with you soon.</h5>
-
-      
     {/if}
   </section>
   <section class="call">
