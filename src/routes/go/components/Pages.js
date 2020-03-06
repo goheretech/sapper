@@ -7,8 +7,8 @@ export let pages = [
                tag: 'Nerd Alert',
                head: 'Envisioneers.',
                par:
-                   'We combine <b>technology</b>, <b>design</b>, and <b>communication</b> to <i>give life to ambitious creative vision.</i>',
-               button: 'Find Out Why',
+                   'We combine <b>technology</b>, <b>design</b>, and <b>communication</b> to <i>create engineered outcomes.</i> <br>Join us at the cutting edge.',
+               button: "Let's Get Started",
                buttonHref: 'Closer'
            },
            {
@@ -33,7 +33,7 @@ export let pages = [
                par:
                    'Immersed in the design culture characteristic of Miami, goHere easily brings inspiration and artistry to its work with clients all over the U.S.',
                button: 'Check It Out',
-               buttonHref: 'more#what'
+               buttonHref: 'go#what'
            },
            {
                page: 'Work',
@@ -69,6 +69,6 @@ export let pages = [
                par:
                    'We develop a creative partnership with each of our clients to deliver the best results. We select brands that we can add value to — brands we can be passionate about helping.',
                button: 'Lets Go',
-               buttonHref: 'more#app'
+               buttonHref: 'go#app'
            }
        ];
