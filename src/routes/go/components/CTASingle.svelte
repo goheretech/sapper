@@ -282,6 +282,8 @@
     }
     .arrow__right{
       margin-right:20px;
+    }.thanks{
+      margin:0px 10vw;
     }
   }
 </style>
