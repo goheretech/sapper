@@ -265,7 +265,7 @@
       height: 6vh;
     }
     input {
-      height: 5vh;
+      height: 7vh;
     }
     button {
       margin-top: 12px;
@@ -275,7 +275,7 @@
       margin-top: 20px;
     }
     .arrow{
-      border-width:20px;
+      border-width:4vw;
     }
     .arrow__left{
       margin-left:20px;
