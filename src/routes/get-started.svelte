@@ -485,7 +485,6 @@
     opacity: 100%;
   }
 
-
   .call {
     padding: 20px 10vw 100px;
   }
@@ -672,6 +671,7 @@
     }
   }
 </style>
+
 <svelte:head>
   <title>Get Started | goHere</title>
 </svelte:head>
