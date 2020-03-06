@@ -672,7 +672,9 @@
     }
   }
 </style>
-
+<svelte:head>
+  <title>Get Started | goHere</title>
+</svelte:head>
 <Nav />
 <div class="background">
   <section class="keywords">

@@ -9,7 +9,7 @@ export let pages = [
         par:
             'We combine <b>technology</b>, <b>design</b>, and <b>communication</b> to <i>create engineered outcomes.</i> <br>Join us at the cutting edge.',
         button: "Let's Get Started",
-        buttonHref: 'Closer'
+        buttonHref: 'get-started'
     },
     {
         page: 'What',
@@ -45,7 +45,7 @@ export let pages = [
         par:
             'Whether you’re a startup, nonprofit, or a household brand, goHere <b>adds value</b>. We select clients we resonate with, <b>bringing passion and inspiration</b> to any project.',
         button: 'Become a Partner',
-        buttonHref: 'Closer'
+        buttonHref: 'get-started'
     },
     {
         page: 'Contact',

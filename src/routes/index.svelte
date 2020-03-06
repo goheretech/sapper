@@ -183,7 +183,7 @@
                 <h6>be creative</h6>
             </div>
             <h2>Join us at</h2><h2 class="bigBoy">the Cutting Edge.</h2>            
-            <a href="Closer">Let's Go</a>
+            <a href="get-started">Let's Go</a>
         </div>
     </section>
     {/if} 

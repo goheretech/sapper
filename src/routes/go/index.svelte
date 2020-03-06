@@ -132,7 +132,7 @@
     if (elem){
       elem.style.display = 'none';
     }
-    window.location.href = "/Closer#cta";
+    window.location.href = "/get-started#cta";
   }
   function goContact() {
     hash = window.location.hash;
@@ -370,7 +370,7 @@
         </a>
       </li>
       <!-- <li class:act={displayMenu}>
-        <a href="/Closer" on:click={goWhy}>Why</a>
+        <a href="/get-started" on:click={goWhy}>Why</a>
       </li> -->
       
       <li class:active={page === 4} class:act={displayMenu}>
@@ -516,7 +516,7 @@
               rel="prefetch"
               class="ctaa"
               on:click={goWhy}
-              href="Closer#cta">
+              href="get-started#cta">
               Let's Go!
             </a>
           </div>
