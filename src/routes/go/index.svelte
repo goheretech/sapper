@@ -13,6 +13,7 @@
   import Contact from "./pages/Contact.svelte";
   import Clouds from "./components/Clouds.svelte";
   import SelectService from "./components/SelectService.svelte";
+  import Footer from "../../components/Footer.svelte";
 
   let frmShow = false;
   let displayMenu = false;
@@ -529,3 +530,4 @@
     {/if}
   </div>
 {/if}
+<Footer/>

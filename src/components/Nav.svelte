@@ -27,13 +27,11 @@
       const nav = document.querySelector(".navlink");
 
       burger.addEventListener("click", () => {
-        console.log("clicked");
 
         // nav.classList.toggle("nav-active");
       });
     };
 
-    console.log("sep1");
     setTimeout(navSlide(), 50000);
   });
 </script>
@@ -49,14 +47,14 @@
     position: absolute;
     top: 0px;
   }
-  .logo strong{
-    margin-left:-15px;
+  .logo strong {
+    margin-left: -15px;
   }
 
   @media screen and (max-width: 1100px) {
-   .logo strong{
-    margin-left:-10px;
-  }
+    .logo strong {
+      margin-left: -10px;
+    }
   }
 </style>
 
@@ -65,7 +63,7 @@
     <div style="position:relative">
       <a rel="prefetch" href="/" class="logo">
         go
-        <strong >Here</strong>
+        <strong>Here</strong>
       </a>
       <div class="logoHolder" style="">
         <img src="/img/newLogo1.png" style=" z-index:2;" alt="" id="logo" />

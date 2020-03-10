@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
 	<meta charset='utf-8'>
 	<meta name='viewport' content='width=device-width,initial-scale=1.0'>
@@ -8,9 +9,9 @@
 	<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-firestore.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="js/jScrollability.min.js"></script>
+	<script src="https://www.gohere.tech/js/jScrollability.min.js"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135886991-1"></script>
+	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135886991-1"></script>
 
 	<script>
 		window.dataLayer = window.dataLayer || [];
@@ -21,9 +22,8 @@
 		gtag('js', new Date());
 
 		gtag('config', 'UA-135886991-1');
-	</script>
+	</script> -->
 
-	<link rel="stylesheet" href="pace-theme.css">
 	<script>
 		// Your web app's Firebase configuration
 		var firebaseConfig = {
@@ -38,6 +38,18 @@
 		// Initialize Firebase
 		firebase.initializeApp(firebaseConfig);
 	</script>
+
+	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-663514642"></script> -->
+	<!-- <script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'AW-663514642');
+	</script> -->
 	%sapper.base%
 
 	<link rel='stylesheet' href='style.css'>
@@ -46,10 +58,34 @@
 	%sapper.styles%
 	%sapper.head%
 </head>
+
 <body id="space">
 	<div id='sapper'>%sapper.html%</div>
 	%sapper.scripts%
-	
+
 </body>
 <!-- <script src="js/pace.min.js"></script> -->
+
 </html>
+
+<script>
+	var x = 0;
+	var myVar = setInterval(function () {
+		if (x == 0) {
+			if (jQuery('.avia-form-success').is(":visible")) {
+				//gtag
+				alert('test')
+				gtag('event', 'aaa', {
+					'event_category': 'bbb',
+					'event_label': 'ccc'
+				});
+				ga('send', 'event', 'form', 'submit', 'success');
+				dataLayer.push({
+					'event': 'formSubmitRegister'
+				});
+				clearInterval(myVar);
+				x = 1;
+			}
+		}
+	}, 1000);
+</script>

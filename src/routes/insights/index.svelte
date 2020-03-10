@@ -14,14 +14,25 @@ import { onMount } from "svelte";
 </script>
 
 <style>
-    .bg{
+    
+    .bg1{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    .col{
+        padding:5vw 10vw;
+        margin: 0vw 10vw;
         background:white ;
     }
 </style>
 
-<div class="bg">
+<div class="bg1">
 {#each posts as post}
-    <h1>{post.title}</h1>
-    {@html post.html}
+    <div class="col">
+        <a href="insights/{post.slug}">
+            <h1>{post.title}</h1>
+        </a>
+    </div>
 {/each}
 </div>

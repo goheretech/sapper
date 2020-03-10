@@ -20,6 +20,20 @@
 
   let error = false;
   async function sendContactMessage() {
+
+
+    //gtag
+				
+				gtag('event', 'aaa', {
+					'event_category': 'bbb',
+					'event_label': 'ccc'
+				});
+				ga('send', 'event', 'form', 'submit', 'success');
+				dataLayer.push({
+					'event': 'formSubmitRegister'
+				});
+				clearInterval(myVar);
+
     let db = firebase.firestore();
     try {
       await db.collection("leads").add(form);
