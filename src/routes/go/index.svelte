@@ -530,4 +530,3 @@
     {/if}
   </div>
 {/if}
-<Footer/>
