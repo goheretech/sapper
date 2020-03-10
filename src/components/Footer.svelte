@@ -14,17 +14,15 @@
 </script>
 
 <style>
-    section{
+    .sc{
         background:black;
         padding: 100px 0;
         z-index: 999;
         color:white;
     }
 </style>
-<section>
+<div class="sc">
     {#each posts as insight}
-        <div>
-            <a href="/insights/{insight.slug}"><h3>{insight.title}</h3></a>
-        </div>
+            <a href="/insights"><h3>Insights</h3></a>
     {/each}
-</section>
+</div>
